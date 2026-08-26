@@ -4,16 +4,26 @@
  *
  *   npm i sharp
  *
- *   node prepare-images.mjs match ./originals          # 1. propose folder -> project mapping
- *   node prepare-images.mjs build ./originals ./assets # 2. process + emit images.json
+ *   node prepare-images.mjs match ./assets-src          # 1. propose folder -> project mapping
+ *   node prepare-images.mjs build ./assets-src ./assets # 2. process a local folder drop
+ *   node prepare-images.mjs cms ./assets                # or: process CMS-uploaded (Cloudinary) images
+ *
+ * `match`/`build` are for you, doing a manual bulk import from a folder of
+ * originals (see docs/IMAGES.md) — unchanged from before the CMS existed.
+ * `cms` is what Netlify's build runs on every deploy: it reads the `images`
+ * block Decap CMS writes into content/projects/<id>.json (Cloudinary URLs),
+ * fetches and processes anything new or changed, and leaves everything else
+ * alone. Both commands merge into the existing assets/images.json rather
+ * than regenerating it — a project untouched by either command keeps
+ * whatever images it already has.
  *
  * The `match` step exists so folder names don't have to be perfect. It reads
- * the project ids straight out of jake-caminero.html, fuzzy-matches whatever
- * came out of Pixieset against them, and writes mapping.json for you to check.
+ * the project list from content/projects/*.json, fuzzy-matches whatever came
+ * out of Pixieset against it, and writes mapping.json for you to check.
  * Nothing is processed until you're happy with that file.
  *
- * EXPECTED INPUT — one folder per project, any name:
- *   originals/Cuyama Buckhorn - Foraging/
+ * EXPECTED INPUT for `build` — one folder per project, any name:
+ *   assets-src/Cuyama Buckhorn - Foraging/
  *     main.jpg        the frame that represents the project
  *     og.jpg          optional social card; falls back to main
  *     01.jpg 02.jpg   gallery, in display order (zero-pad past 9)
@@ -23,36 +33,35 @@ import { readdir, mkdir, writeFile, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join, extname, basename } from "node:path";
 
-const WIDTHS  = [800, 1600, 2400];
-const FORMATS = [["avif",{quality:58,effort:4}],["webp",{quality:80}],["jpeg",{quality:84,mozjpeg:true}]];
-const OK      = new Set([".jpg",".jpeg",".png",".tif",".tiff",".webp"]);
-const MAPFILE = "mapping.json";
-const SITE    = "index.html";
+const WIDTHS      = [800, 1600, 2400];
+const FORMATS     = [["avif",{quality:58,effort:4}],["webp",{quality:80}],["jpeg",{quality:84,mozjpeg:true}]];
+const OK          = new Set([".jpg",".jpeg",".png",".tif",".tiff",".webp"]);
+const MAPFILE     = "mapping.json";
+const PROJECTS_DIR = "content/projects";
 
-/* ── read the project list from the site so it can never drift ───────── */
-async function projectIds(sitePath = SITE) {
-  const h = await readFile(sitePath, "utf8");
+/* ── read the project list from content/, so it can never drift ──────── */
+async function readContentProjects() {
+  const files = (await readdir(PROJECTS_DIR)).filter(f => f.endsWith(".json"));
   const out = [];
-  const re = /\{id:"([\w-]+)",\s*\n?\s*t:"([^"]+)",\s*\n?\s*client:"([^"]+)"/g;
-  let m; while ((m = re.exec(h))) out.push({ id: m[1], title: m[2], client: m[3] });
-  if (!out.length) throw new Error(`No projects found in ${sitePath}`);
+  for (const f of files) out.push(JSON.parse(await readFile(join(PROJECTS_DIR, f), "utf8")));
+  if (!out.length) throw new Error(`No projects found in ${PROJECTS_DIR}/`);
   return out;
 }
 
-/* ── fuzzy match ─────────────────────────────────────────────────────── */
+/* ── fuzzy match (local bulk import) ──────────────────────────────────── */
 const norm  = s => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 const toks  = s => new Set(norm(s).split(" ").filter(t => t.length > 2));
 function score(folder, p) {
-  const f = toks(folder), t = toks(p.title + " " + p.client + " " + p.id.replace(/-/g," "));
+  const f = toks(folder), t = toks(p.t + " " + p.client + " " + p.id.replace(/-/g," "));
   if (!f.size || !t.size) return 0;
   let hit = 0; for (const x of f) if (t.has(x)) hit++;
   const jaccard = hit / new Set([...f, ...t]).size;
-  const sub = norm(p.title).includes(norm(folder)) || norm(folder).includes(norm(p.title)) ? .35 : 0;
+  const sub = norm(p.t).includes(norm(folder)) || norm(folder).includes(norm(p.t)) ? .35 : 0;
   return jaccard + sub;
 }
 
 async function match(src) {
-  const projects = await projectIds();
+  const projects = await readContentProjects();
   const folders = (await readdir(src, { withFileTypes: true })).filter(d => d.isDirectory()).map(d => d.name);
   const taken = new Set(), map = {}, review = [];
 
@@ -73,20 +82,34 @@ async function match(src) {
   if (review.length) { console.log("Needs your eyes:"); review.forEach(r => console.log("  ! " + r)); console.log(); }
   if (unmatched.length) {
     console.log(`${unmatched.length} project(s) with no folder yet (they keep their placeholder):`);
-    unmatched.forEach(p => console.log(`    ${p.id.padEnd(28)} ${p.title} — ${p.client}`));
+    unmatched.forEach(p => console.log(`    ${p.id.padEnd(28)} ${p.t} — ${p.client}`));
   }
 }
 
-/* ── build ───────────────────────────────────────────────────────────── */
-/* Filenames are a convention, not a requirement. Sorted order is display
-   order; `main.*` and `og.*` are the only two reserved names, and if there's
-   no main.* the first file leads. */
+/* ── shared manifest read/write ───────────────────────────────────────── */
+async function loadManifest(out) {
+  const file = join(out, "images.json");
+  if (!existsSync(file)) return {};
+  try { return JSON.parse(await readFile(file, "utf8")); } catch { return {}; }
+}
+async function writeManifest(out, images) {
+  await mkdir(out, { recursive: true });
+  const json = JSON.stringify(images, null, 2);
+  await writeFile(join(out, "images.json"), json);
+  await writeFile(join(out, "images.js"),
+    `/* Generated by prepare-images.mjs — do not edit. */\nwindow.JC_IMAGES = ${json};\n`);
+}
+
+/* ── processing ──────────────────────────────────────────────────────── */
+/* Filenames are a convention for `build`, not a requirement. Sorted order
+   is display order; `main.*` and `og.*` are the only two reserved names,
+   and if there's no main.* the first file leads. */
 const kindOf = n => {
   const b = basename(n, extname(n)).toLowerCase();
   return b === "main" ? "main" : b === "og" ? "og" : "gallery";
 };
 
-/* sharp is a native dependency and only the build step needs it, so it's
+/* sharp is a native dependency and only processing needs it, so it's
    imported lazily — `match` runs on a clean checkout with no npm install. */
 let sharp;
 async function loadSharp() {
@@ -96,15 +119,15 @@ async function loadSharp() {
   return sharp;
 }
 
-async function variants(src, destDir, stem) {
+async function variants(input, destDir, stem) {
   await mkdir(destDir, { recursive: true });
   await loadSharp();
-  const meta = await sharp(src).metadata();
+  const meta = await sharp(input).metadata();
   const widths = WIDTHS.filter(w => w <= meta.width);
   if (!widths.length) widths.push(meta.width);
   for (const w of widths)
     for (const [fmt, opts] of FORMATS)
-      await sharp(src).rotate().resize({ width: w, withoutEnlargement: true })
+      await sharp(input).rotate().resize({ width: w, withoutEnlargement: true })
         .toFormat(fmt, opts).toFile(join(destDir, `${stem}-${w}.${fmt === "jpeg" ? "jpg" : fmt}`));
   return { widest: Math.max(...widths), w: meta.width, h: meta.height };
 }
@@ -112,7 +135,8 @@ async function variants(src, destDir, stem) {
 async function build(src, out) {
   if (!existsSync(MAPFILE)) { console.error(`No ${MAPFILE}. Run the match step first.`); process.exit(1); }
   const map = JSON.parse(await readFile(MAPFILE, "utf8"));
-  const images = {}, warn = []; let n = 0;
+  const images = await loadManifest(out); // merge onto whatever's already there
+  const warn = []; let n = 0;
 
   for (const [folder, id] of Object.entries(map)) {
     if (!id) { warn.push(`${folder} — unmapped, skipped`); continue; }
@@ -140,22 +164,81 @@ async function build(src, out) {
     images[id] = rec;
   }
 
-  await mkdir(out, { recursive: true });
-  const json = JSON.stringify(images, null, 2);
-  await writeFile(join(out, "images.json"), json);
-  await writeFile(join(out, "images.js"),
-    `/* Generated by prepare-images.mjs — do not edit. */\nwindow.JC_IMAGES = ${json};\n`);
+  await writeManifest(out, images);
   console.log(`\n${n} sources → ${n * WIDTHS.length * FORMATS.length} variants`);
-  console.log(`Wrote ${join(out, "images.json")}`);
   if (warn.length) { console.log(`\n${warn.length} thing(s) to look at:`); warn.forEach(w => console.log("  ! " + w)); }
-  const named = Object.keys(images).length;
   console.log(`\nWrote ${join(out, "images.js")} — the page picks it up on load.`);
-  console.log(`${named} project(s) now have real images. Nothing to paste.`);
-  console.log(`Anything not in the manifest keeps its placeholder, so you can add`);
-  console.log(`folders and re-run this as often as you like.`);
+  console.log(`Anything not in mapping.json keeps whatever images it already had.`);
 }
 
-const [, , cmd, a = "./originals", b = "./assets"] = process.argv;
-if (cmd === "match") await match(a);
-else if (cmd === "build") await build(a, b);
-else { console.log("Usage:\n  node prepare-images.mjs match ./originals\n  node prepare-images.mjs build ./originals ./assets"); process.exit(1); }
+/* ── cms: Cloudinary-sourced images from content/projects/<id>.json ────── */
+async function fetchBuf(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Fetch failed (${res.status}): ${url}`);
+  return Buffer.from(await res.arrayBuffer());
+}
+const galleryUrls = gallery => (gallery || []).map(g => (typeof g === "string" ? g : g && g.src)).filter(Boolean);
+
+async function cms(out) {
+  const images = await loadManifest(out);
+  const projects = await readContentProjects();
+  let processed = 0, skipped = 0, untouched = 0, removed = 0;
+
+  for (const p of projects) {
+    if (!p.images || !p.images.main) {
+      /* Jake cleared this project's photos in the CMS. Drop it back to a
+         placeholder — but only if we're the ones who put it there (marked
+         by _src); never touch an entry the local `build` command made. */
+      if (images[p.id] && images[p.id]._src) { delete images[p.id]; removed++; }
+      else untouched++;
+      continue;
+    }
+    const gallery = galleryUrls(p.images.gallery);
+    const srcKey = JSON.stringify({ main: p.images.main, og: p.images.og || null, gallery });
+
+    if (images[p.id] && images[p.id]._src === srcKey) { skipped++; continue; }
+
+    const dir = join(out, p.id);
+    const rec = { gallery: [] };
+
+    const mainInfo = await variants(await fetchBuf(p.images.main), dir, "main");
+    rec.main = `${p.id}/main-${mainInfo.widest}.jpg`;
+
+    if (p.images.og) {
+      const ogInfo = await variants(await fetchBuf(p.images.og), dir, "og");
+      rec.og = `${p.id}/og-${ogInfo.widest}.jpg`;
+    }
+
+    let g = 0;
+    for (const url of gallery) {
+      const stem = String(++g).padStart(2, "0");
+      const info = await variants(await fetchBuf(url), dir, stem);
+      rec.gallery.push(`${p.id}/${stem}-${info.widest}.jpg`);
+    }
+    if (!rec.gallery.length) delete rec.gallery;
+    rec._src = srcKey; // internal — lets the next run skip if nothing changed
+
+    images[p.id] = rec;
+    processed++;
+    console.log(`  ${p.id}: processed (${1 + (p.images.og ? 1 : 0) + gallery.length} source file(s))`);
+  }
+
+  await writeManifest(out, images);
+  console.log(`\n${processed} project(s) processed, ${skipped} unchanged, ${removed} removed, ${untouched} with no CMS images yet.`);
+}
+
+function usage() {
+  console.log([
+    "Usage:",
+    "  node prepare-images.mjs match ./assets-src",
+    "  node prepare-images.mjs build ./assets-src ./assets",
+    "  node prepare-images.mjs cms ./assets",
+  ].join("\n"));
+  process.exit(1);
+}
+
+const [, , cmd, ...rest] = process.argv;
+if (cmd === "match") await match(rest[0] || "./assets-src");
+else if (cmd === "build") await build(rest[0] || "./assets-src", rest[1] || "./assets");
+else if (cmd === "cms") await cms(rest[0] || "./assets");
+else usage();
