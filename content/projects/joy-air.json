@@ -1,0 +1,28 @@
+{
+  "id": "joy-air",
+  "order": 18,
+  "t": "Joy Air",
+  "client": "Joy Air",
+  "date": "2024",
+  "yr": "2024",
+  "roles": [
+    "stills"
+  ],
+  "selected": false,
+  "loc": "Southern California",
+  "del": [
+    "Social and web imagery"
+  ],
+  "tags": [
+    "Photography",
+    "Campaign",
+    "Wellness"
+  ],
+  "desc": "Social media and web imagery.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    }
+  ]
+}

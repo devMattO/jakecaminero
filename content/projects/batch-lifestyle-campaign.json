@@ -1,0 +1,61 @@
+{
+  "id": "batch-lifestyle-campaign",
+  "order": 11,
+  "t": "Batch Lifestyle Campaign",
+  "client": "Batch",
+  "date": "July 16, 2025",
+  "yr": "2025",
+  "roles": [
+    "motion"
+  ],
+  "selected": true,
+  "loc": "Los Angeles, California",
+  "del": [
+    "Lifestyle film",
+    "Social and web assets"
+  ],
+  "tags": [
+    "Cinematography",
+    "Campaign",
+    "Food & Drink"
+  ],
+  "desc": "Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
+  "credits": [
+    {
+      "r": "DP",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Edit",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Photography",
+      "n": "Zach Sorensen"
+    },
+    {
+      "r": "AC",
+      "n": "Thomas Kovacik"
+    },
+    {
+      "r": "Lighting Tech",
+      "n": "Chase Thompson"
+    },
+    {
+      "r": "Producer",
+      "n": "Matt Hume"
+    },
+    {
+      "r": "Production Manager",
+      "n": "Emalee Caminero"
+    },
+    {
+      "r": "Production Assistant",
+      "n": "Cherish McDonald"
+    },
+    {
+      "r": "Creative Direction",
+      "n": "Megan Powell"
+    }
+  ]
+}

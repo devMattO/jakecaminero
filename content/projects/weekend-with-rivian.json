@@ -1,0 +1,32 @@
+{
+  "id": "weekend-with-rivian",
+  "order": 19,
+  "t": "Weekend with Rivian",
+  "client": "Test",
+  "date": "August 25, 2024",
+  "yr": "2024",
+  "roles": [
+    "stills"
+  ],
+  "selected": true,
+  "loc": "San Francisco, California",
+  "del": [
+    "Documentary stills"
+  ],
+  "tags": [
+    "Photography",
+    "Documentary",
+    "Automotive"
+  ],
+  "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Friends & Partners",
+      "n": "Peden+Munk"
+    }
+  ]
+}

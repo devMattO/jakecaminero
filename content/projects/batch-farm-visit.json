@@ -1,0 +1,41 @@
+{
+  "id": "batch-farm-visit",
+  "order": 6,
+  "t": "Farm Visit",
+  "client": "Batch",
+  "date": "January 20, 2026",
+  "yr": "2026",
+  "roles": [
+    "motion"
+  ],
+  "selected": true,
+  "loc": "Viroqua, Wisconsin",
+  "del": [
+    "Documentary film",
+    "Stills selects"
+  ],
+  "tags": [
+    "Cinematography",
+    "Documentary",
+    "Food & Drink"
+  ],
+  "desc": "DP work from a visit to the Batch hemp farm in Wisconsin. We spent 3 days documenting their processes of farming and the special people that make it all happen.",
+  "credits": [
+    {
+      "r": "DP",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Creative Direction",
+      "n": "Megan Powell"
+    },
+    {
+      "r": "Photography",
+      "n": "Zach Sorensen"
+    },
+    {
+      "r": "Client Team",
+      "n": "Batch"
+    }
+  ]
+}

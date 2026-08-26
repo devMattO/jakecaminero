@@ -1,0 +1,28 @@
+{
+  "id": "rt-the-spot",
+  "order": 25,
+  "t": "The Spot",
+  "client": "Road & Track",
+  "date": "2023",
+  "yr": "2023",
+  "roles": [
+    "stills"
+  ],
+  "selected": false,
+  "loc": "Southern California",
+  "del": [
+    "Single page commission"
+  ],
+  "tags": [
+    "Photography",
+    "Editorial",
+    "Automotive"
+  ],
+  "desc": "A single page commission for Road & Track.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    }
+  ]
+}

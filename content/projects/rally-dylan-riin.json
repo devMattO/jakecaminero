@@ -1,0 +1,47 @@
+{
+  "id": "rally-dylan-riin",
+  "order": 15,
+  "t": "Dylan + RiiN",
+  "client": "The Rally Project",
+  "date": "January 25, 2025",
+  "yr": "2025",
+  "roles": [
+    "stills",
+    "motion"
+  ],
+  "selected": true,
+  "loc": "Southern California",
+  "del": [
+    "Portrait stills",
+    "Short film"
+  ],
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Documentary",
+    "Fashion"
+  ],
+  "desc": "Getting to know Dylan has been so refreshing. His overwhelming stoke and creativity is contagious, and his story is incredible. Having overcome having a brain tumor, Dylan has continued to pursue his creative project, RiiN, and live his life to the fullest.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Creative Direction",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Camera Operator",
+      "n": "Zach Sorensen"
+    },
+    {
+      "r": "Edit",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Talent",
+      "n": "Dylan Trumbul"
+    }
+  ]
+}

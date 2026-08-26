@@ -1,0 +1,130 @@
+{
+  "swi-endo": {
+    "tone": "clay",
+    "overlay": "SWI + ENDO",
+    "gal": 5
+  },
+  "fullest-25-26": {
+    "tone": "sage",
+    "gal": 4
+  },
+  "fullest-ecology-center": {
+    "tone": "forest",
+    "gal": 5
+  },
+  "agronomy-ss-launch": {
+    "tone": "sage",
+    "gal": 4
+  },
+  "buckhorn-foraging": {
+    "tone": "sage",
+    "gal": 6
+  },
+  "rally-tristan-detwiller": {
+    "tone": "clay",
+    "gal": 5
+  },
+  "batch-farm-visit": {
+    "tone": "pale",
+    "gal": 6
+  },
+  "rally-luke-davis": {
+    "tone": "black",
+    "gal": 5
+  },
+  "toyota-tundra-rathkamp": {
+    "tone": "black",
+    "overlay": "TUNDRA",
+    "gal": 5
+  },
+  "velotric-nomad-2": {
+    "tone": "grey",
+    "gal": 4
+  },
+  "buckhorn-summer-cocktail": {
+    "tone": "clay",
+    "gal": 5
+  },
+  "batch-lifestyle-campaign": {
+    "tone": "pale",
+    "gal": 6
+  },
+  "haus-of-wellness": {
+    "tone": "sage",
+    "gal": 4
+  },
+  "pryml-hog-hunt": {
+    "tone": "forest",
+    "gal": 6
+  },
+  "son-of-cobra-bristol": {
+    "tone": "grey",
+    "gal": 5
+  },
+  "rally-dylan-riin": {
+    "tone": "grey",
+    "gal": 5
+  },
+  "oak-morning-ride": {
+    "tone": "forest",
+    "gal": 4
+  },
+  "whitney": {
+    "tone": "black",
+    "overlay": "WHITNEY",
+    "gal": 6
+  },
+  "joy-air": {
+    "tone": "forest",
+    "gal": 4
+  },
+  "weekend-with-rivian": {
+    "tone": "pale",
+    "gal": 5
+  },
+  "tumbleweeds": {
+    "tone": "clay",
+    "gal": 5
+  },
+  "dino-motorsport": {
+    "tone": "black",
+    "gal": 5
+  },
+  "rally-matt-allen": {
+    "tone": "sage",
+    "gal": 4
+  },
+  "lucid-air-sapphire": {
+    "tone": "black",
+    "overlay": "SAPPHIRE",
+    "gal": 6
+  },
+  "honda-crv": {
+    "tone": "forest",
+    "gal": 5
+  },
+  "rt-the-spot": {
+    "tone": "grey",
+    "gal": 3
+  },
+  "rt-everatti": {
+    "tone": "black",
+    "gal": 4
+  },
+  "rt-breakdance": {
+    "tone": "grey",
+    "gal": 6
+  },
+  "rt-rimac-nevera": {
+    "tone": "pale",
+    "gal": 5
+  },
+  "rt-cyan-p1800": {
+    "tone": "clay",
+    "gal": 5
+  },
+  "uniqlo-vans": {
+    "tone": "pale",
+    "gal": 4
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "fullest-ecology-center",
+  "order": 2,
+  "t": "The Fullest + Ecology Center",
+  "client": "The Fullest",
+  "date": "April 10, 2026",
+  "yr": "2026",
+  "roles": [
+    "motion"
+  ],
+  "selected": true,
+  "loc": "San Juan Capistrano, California",
+  "del": [
+    "Brand film",
+    "Social cutdowns"
+  ],
+  "tags": [
+    "Cinematography",
+    "Brand Film",
+    "Wellness"
+  ],
+  "desc": "Video work for the collaboration of The Fullest with The Ecology Center.",
+  "credits": [
+    {
+      "r": "DP",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Photography",
+      "n": "Chase Thompson"
+    },
+    {
+      "r": "Client Team",
+      "n": "The Fullest"
+    }
+  ]
+}

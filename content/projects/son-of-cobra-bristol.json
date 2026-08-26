@@ -1,0 +1,32 @@
+{
+  "id": "son-of-cobra-bristol",
+  "order": 14,
+  "t": "The Bristol Car",
+  "client": "Son of Cobra",
+  "date": "March 15, 2025",
+  "yr": "2025",
+  "roles": [
+    "stills"
+  ],
+  "selected": true,
+  "loc": "Julian, California",
+  "del": [
+    "Documentary stills"
+  ],
+  "tags": [
+    "Photography",
+    "Documentary",
+    "Automotive"
+  ],
+  "desc": "The documentation of delivering the first complete production car from Son of Cobra to his client, Dave, the owner of Julian Pie Company.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Talent",
+      "n": "Paul Lefevre, Son of Cobra"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "uniqlo-vans",
+  "order": 30,
+  "t": "Uniqlo + Vans",
+  "client": "Test",
+  "date": "2021",
+  "yr": "2021",
+  "roles": [
+    "stills",
+    "cd"
+  ],
+  "selected": false,
+  "loc": "Los Angeles, California",
+  "del": [
+    "Spec campaign stills"
+  ],
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Campaign",
+    "Fashion"
+  ],
+  "desc": "A speculative project of two brands.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Motion & Assist",
+      "n": "Zach Sorensen"
+    },
+    {
+      "r": "Talent",
+      "n": "Andrew Simila"
+    }
+  ]
+}

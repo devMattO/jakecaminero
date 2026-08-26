@@ -1,0 +1,31 @@
+{
+  "id": "oak-morning-ride",
+  "order": 16,
+  "t": "Morning Ride",
+  "client": "Oak Cycling",
+  "date": "January 18, 2025",
+  "yr": "2025",
+  "roles": [
+    "stills"
+  ],
+  "selected": false,
+  "loc": "Orange County, California",
+  "del": [
+    "Documentary stills"
+  ],
+  "tags": [
+    "Photography",
+    "Cycling"
+  ],
+  "desc": "A short ride with Wyatt Funk and Oak Cycling.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Talent",
+      "n": "Wyatt Funk"
+    }
+  ]
+}

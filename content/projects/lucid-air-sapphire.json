@@ -1,0 +1,57 @@
+{
+  "id": "lucid-air-sapphire",
+  "order": 23,
+  "t": "Lucid Air Sapphire",
+  "client": "Road & Track",
+  "date": "February 1, 2024",
+  "yr": "2024",
+  "roles": [
+    "motion",
+    "stills",
+    "cd"
+  ],
+  "selected": true,
+  "loc": "Southern California",
+  "del": [
+    "Editorial stills",
+    "Editorial film"
+  ],
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Cinematography",
+    "Editorial",
+    "Automotive"
+  ],
+  "desc": "An editorial piece focusing on the then unreleased Lucid Air Sapphire. We had the opportunity to take the car for 5 days and put it through its paces. Though the weather was unfavorable we were able to get both photo and video of the car.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Creative Direction",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "DP",
+      "n": "Rob Trent"
+    },
+    {
+      "r": "AC",
+      "n": "Asriel Jaska"
+    },
+    {
+      "r": "Photo Assistant and Driver",
+      "n": "Spencer Kofoed"
+    },
+    {
+      "r": "Editorial Creative Direction",
+      "n": "Cassidy Zobl"
+    },
+    {
+      "r": "Car",
+      "n": "Lucid Motors"
+    }
+  ]
+}

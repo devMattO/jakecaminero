@@ -1,0 +1,37 @@
+{
+  "id": "agronomy-ss-launch",
+  "order": 3,
+  "t": "Agronomy S/S Launch",
+  "client": "Agronomy Workshop",
+  "date": "April 1, 2026",
+  "yr": "2026",
+  "roles": [
+    "motion"
+  ],
+  "selected": true,
+  "loc": "Costa Mesa, California",
+  "del": [
+    "16mm and digital film",
+    "Launch assets"
+  ],
+  "tags": [
+    "Cinematography",
+    "Brand Film",
+    "Fashion"
+  ],
+  "desc": "16mm and digital video work for the spring/summer launch for Agronomy Workshop.",
+  "credits": [
+    {
+      "r": "DP",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Creative Direction",
+      "n": "Rob, Agronomy Workshop"
+    },
+    {
+      "r": "Photography",
+      "n": "Chase Thompson"
+    }
+  ]
+}

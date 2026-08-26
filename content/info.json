@@ -1,0 +1,133 @@
+{
+  "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. Recent work includes {Road & Track}, {Batch}, and {Cuyama Buckhorn}.",
+  "bio": "Jake Caminero is a photographer and director based in Costa Mesa, California. He works on location, in available light, across automotive, outdoor, and hospitality — and takes on creative direction when the whole campaign needs to hold together rather than just the frames.",
+  "portrait": null,
+  "emails": [
+    "jake@jakecaminero.com"
+  ],
+  "socials": [
+    {
+      "n": "Instagram",
+      "u": "https://instagram.com/jakecaminero"
+    },
+    {
+      "n": "Vimeo",
+      "u": "https://vimeo.com"
+    },
+    {
+      "n": "LinkedIn",
+      "u": "https://linkedin.com"
+    }
+  ],
+  "contact": [
+    {
+      "h": "Representation",
+      "lines": [
+        "Field & Range",
+        "reps@fieldandrange.com"
+      ]
+    },
+    {
+      "h": "Studio",
+      "lines": [
+        "1503 Superior Avenue",
+        "Costa Mesa, CA 92627"
+      ]
+    },
+    {
+      "h": "Phone",
+      "lines": [
+        "+1 949 555 0147"
+      ]
+    },
+    {
+      "h": "Availability",
+      "lines": [
+        "Booking from October 2026",
+        "Travel-ready, US + Japan"
+      ]
+    }
+  ],
+  "gear": [
+    {
+      "h": "Bodies",
+      "list": [
+        "Sony FX3",
+        "Sony a7R V",
+        "Bolex H16 — 16mm",
+        "Mamiya 7II — 120",
+        "Contax G2 — 35mm"
+      ]
+    },
+    {
+      "h": "Glass",
+      "list": [
+        "Sony 24–70mm f/2.8 GM II",
+        "Sony 70–200mm f/2.8 GM II",
+        "Sigma 14–24mm f/2.8 Art",
+        "Zeiss Loxia 50mm f/2",
+        "Rehoused Canon FD primes"
+      ]
+    },
+    {
+      "h": "Motion & Support",
+      "list": [
+        "DJI RS 4 Pro",
+        "Tilta Nucleus-M",
+        "Sachtler flowtech 75",
+        "DJI Mavic 3 Pro",
+        "Low-mode and slider rig"
+      ]
+    },
+    {
+      "h": "Light & Sound",
+      "list": [
+        "Aputure 600d Pro",
+        "Aputure 300x",
+        "Astera Titan tubes",
+        "Sennheiser MKH 416",
+        "Zoom F6 recorder"
+      ]
+    }
+  ],
+  "clients": [
+    "Road & Track",
+    "Batch",
+    "Cuyama Buckhorn",
+    "The Rally Project",
+    "The Fullest",
+    "PRYML",
+    "Agronomy Workshop",
+    "Son of Cobra",
+    "Oak Cycling",
+    "Velotric",
+    "Haus of Wellness",
+    "Dino Motorsport",
+    "Joy Air",
+    "Max Griffin"
+  ],
+  "recognition": [
+    "TEST DATA — replace with Jake's actual credits",
+    "TEST DATA — awards, features, publications",
+    "TEST DATA — or cut this block entirely"
+  ],
+  "approach": "A bias toward the location over the studio, and toward available light over rigs. Most projects run two to five shoot days with a producer, a first AC, and whatever the terrain will allow. Full campaign packages — direction, stills, and film planned together rather than bid out separately — are the work he likes best.",
+  "ongoing": [
+    {
+      "t": "Field Notes",
+      "d": "A monthly letter on location scouting, gear that survived, and gear that did not."
+    },
+    {
+      "t": "Editions",
+      "d": "Limited archival prints released twice a year from personal and unused frames."
+    },
+    {
+      "t": "The Cuyama Series",
+      "d": "An ongoing personal record of a valley slowly changing hands."
+    },
+    {
+      "t": "Mentorship",
+      "d": "Two open portfolio reviews each quarter for photographers starting out."
+    }
+  ]
+}

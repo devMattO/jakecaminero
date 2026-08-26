@@ -1,0 +1,33 @@
+{
+  "id": "buckhorn-summer-cocktail",
+  "order": 10,
+  "t": "Summer Cocktail Menu",
+  "client": "Cuyama Buckhorn",
+  "date": "August 20, 2025",
+  "yr": "2025",
+  "roles": [
+    "stills"
+  ],
+  "selected": true,
+  "loc": "Cuyama Valley, California",
+  "del": [
+    "Menu photography",
+    "Web and social assets"
+  ],
+  "tags": [
+    "Photography",
+    "Food & Drink",
+    "Hospitality"
+  ],
+  "desc": "Photography work for the Cuyama Buckhorn's summer drink menu.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Talent",
+      "n": "Sam, Cuyama Rambler"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "rally-luke-davis",
+  "order": 7,
+  "t": "Luke Davis",
+  "client": "The Rally Project",
+  "date": "January 1, 2026",
+  "yr": "2026",
+  "roles": [
+    "cd"
+  ],
+  "selected": true,
+  "loc": "Los Angeles, California",
+  "del": [
+    "Creative direction",
+    "Short film"
+  ],
+  "tags": [
+    "Creative Direction",
+    "Documentary"
+  ],
+  "desc": "Luke Davis. A man who seeks the creative ingenuity in all facets of life, Luke enthralls his viewers with paintings, drawings, poetry, and even food in his pursuit of self-expression. For the first time, Luke will be displaying all aspects of his creative process in his methodical, all-encompassing vision.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Zach Sorensen"
+    },
+    {
+      "r": "DP",
+      "n": "Nick Warren"
+    },
+    {
+      "r": "Edit",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Talent",
+      "n": "Luke Davis"
+    }
+  ],
+  "video": "https://vimeo.com/1204339928"
+}

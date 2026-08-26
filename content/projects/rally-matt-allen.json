@@ -1,0 +1,33 @@
+{
+  "id": "rally-matt-allen",
+  "order": 22,
+  "t": "Matt Allen",
+  "client": "The Rally Project",
+  "date": "May 1, 2024",
+  "yr": "2024",
+  "roles": [
+    "stills",
+    "cd"
+  ],
+  "selected": true,
+  "loc": "Los Angeles, California",
+  "del": [
+    "Portrait stills"
+  ],
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Documentary"
+  ],
+  "desc": "A look into a day in the life of multifaceted artist, Matt Allen.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Creative Direction",
+      "n": "Jake Caminero"
+    }
+  ]
+}

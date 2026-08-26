@@ -1,0 +1,32 @@
+{
+  "id": "rt-everatti",
+  "order": 26,
+  "t": "Everatti",
+  "client": "Road & Track",
+  "date": "2023",
+  "yr": "2023",
+  "roles": [
+    "stills"
+  ],
+  "selected": false,
+  "loc": "Southern California",
+  "del": [
+    "Editorial stills"
+  ],
+  "tags": [
+    "Photography",
+    "Editorial",
+    "Automotive"
+  ],
+  "desc": "Editorial project for Road & Track.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Photo Assistant",
+      "n": "Zach Sorensen"
+    }
+  ]
+}

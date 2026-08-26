@@ -1,0 +1,65 @@
+{
+  "id": "swi-endo",
+  "order": 0,
+  "t": "SWI + ENDO",
+  "client": "Test Shoot",
+  "date": "June 15, 2026",
+  "yr": "2026",
+  "roles": [
+    "stills",
+    "motion",
+    "cd"
+  ],
+  "selected": true,
+  "loc": "Orange County, California",
+  "del": [
+    "Brand film",
+    "Campaign stills"
+  ],
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Cinematography",
+    "Cycling"
+  ],
+  "desc": "A speculative photo and video project made in collaboration with SWI cycling and Endociety.",
+  "credits": [
+    {
+      "r": "DP",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Creative Direction",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Talent",
+      "n": "Michael Greene"
+    },
+    {
+      "r": "Talent",
+      "n": "Devon Polk"
+    },
+    {
+      "r": "Assistant",
+      "n": "Chase Thompson"
+    },
+    {
+      "r": "Assistant",
+      "n": "Zach Sorensen"
+    },
+    {
+      "r": "Special Thanks",
+      "n": "Josh Stiller, SWI"
+    },
+    {
+      "r": "Special Thanks",
+      "n": "Zev Friedman, SWI"
+    }
+  ],
+  "video": "https://vimeo.com/1204022679"
+}

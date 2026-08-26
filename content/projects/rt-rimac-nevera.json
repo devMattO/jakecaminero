@@ -1,0 +1,32 @@
+{
+  "id": "rt-rimac-nevera",
+  "order": 28,
+  "t": "Rimac Nevera",
+  "client": "Road & Track",
+  "date": "2022",
+  "yr": "2022",
+  "roles": [
+    "stills"
+  ],
+  "selected": false,
+  "loc": "Big Sur, California",
+  "del": [
+    "Editorial stills"
+  ],
+  "tags": [
+    "Photography",
+    "Editorial",
+    "Automotive"
+  ],
+  "desc": "Editorial project for Road & Track in Big Sur for the then unreleased Rimac Nevera.",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Assistant",
+      "n": "Nick Warren"
+    }
+  ]
+}
