@@ -2,16 +2,14 @@
 # backend: DecapBridge (decapbridge.com), PKCE auth — generated from the
 # DecapBridge dashboard for this site, not hand-typed.
 #
-# Images use a custom "cloudinary-upload" widget (registered in
-# admin/index.html) instead of Decap's built-in Cloudinary media library.
-# The built-in one opens Cloudinary's Assets/DAM product, which needs a
-# separate sales-gated plan; this widget just does a plain unsigned upload
-# to Cloudinary's REST API — no gated product involved. Uploaded photos
-# never touch git either way — see CLAUDE.md for why that matters.
-#
-# REPLACE_WITH_UPLOAD_PRESET below: Cloudinary console → Settings (gear) →
-# Upload → Upload presets → Add upload preset → Signing Mode: Unsigned →
-# Save. Paste the generated preset name in both spots it appears below.
+# Images use Decap's plain built-in git-based image widget — uploaded
+# photos get committed straight into content/media/<project-id>/ (a
+# separate directory from assets-src/, which stays local-only for bulk
+# imports; see docs/IMAGES.md). No external media host: after trying
+# Cloudinary's Media Library first and hitting its gated Assets/DAM
+# product plus an unrelated console error, git-based storage is the
+# simpler, more reliable choice — the tradeoff (repo grows with every
+# photo, no cleanup path later) is accepted deliberately. See CLAUDE.md.
 
 backend:
   name: git-gateway
@@ -39,8 +37,9 @@ auth:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 site_url: https://jakecaminero.com
 
-# Required by Decap even though every image field below uses the custom
-# cloudinary-upload widget instead — this path is never actually used.
+# Fallback only — every image field below sets its own media_folder/
+# public_folder (scoped per project via {{slug}}), so this path in
+# practice never gets used.
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
@@ -120,14 +119,33 @@ collections:
         widget: object
         required: false
         fields:
-          - {label: "Main image", name: main, widget: cloudinary-upload, cloud_name: drgp7am1x, upload_preset: REPLACE_WITH_UPLOAD_PRESET, hint: "The lead photo for this project."}
-          - {label: "Social card image", name: og, widget: cloudinary-upload, cloud_name: drgp7am1x, upload_preset: REPLACE_WITH_UPLOAD_PRESET, required: false, hint: "Optional — falls back to the main image if left blank."}
+          - label: "Main image"
+            name: main
+            widget: image
+            choose_url: false
+            media_folder: "/content/media/{{slug}}"
+            public_folder: "/content/media/{{slug}}"
+            hint: "The lead photo for this project."
+          - label: "Social card image"
+            name: og
+            widget: image
+            choose_url: false
+            required: false
+            media_folder: "/content/media/{{slug}}"
+            public_folder: "/content/media/{{slug}}"
+            hint: "Optional — falls back to the main image if left blank."
           - label: "Gallery images"
             name: gallery
             widget: list
             required: false
             summary: "{{fields.src}}"
-            field: {label: Image, name: src, widget: cloudinary-upload, cloud_name: drgp7am1x, upload_preset: REPLACE_WITH_UPLOAD_PRESET}
+            field:
+              label: Image
+              name: src
+              widget: image
+              choose_url: false
+              media_folder: "/content/media/{{slug}}"
+              public_folder: "/content/media/{{slug}}"
 
   - name: info
     label: "Site Info"
@@ -141,10 +159,11 @@ collections:
           - {label: Bio, name: bio, widget: text}
           - label: Portrait
             name: portrait
-            widget: cloudinary-upload
-            cloud_name: drgp7am1x
-            upload_preset: REPLACE_WITH_UPLOAD_PRESET
+            widget: image
+            choose_url: false
             required: false
+            media_folder: "/content/media/site"
+            public_folder: "/content/media/site"
           - {label: Emails, name: emails, widget: list}
           - label: Socials
             name: socials

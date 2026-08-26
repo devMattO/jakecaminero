@@ -6,16 +6,17 @@
  *
  *   node prepare-images.mjs match ./assets-src          # 1. propose folder -> project mapping
  *   node prepare-images.mjs build ./assets-src ./assets # 2. process a local folder drop
- *   node prepare-images.mjs cms ./assets                # or: process CMS-uploaded (Cloudinary) images
+ *   node prepare-images.mjs cms ./assets                # or: process CMS-uploaded images
  *
  * `match`/`build` are for you, doing a manual bulk import from a folder of
  * originals (see docs/IMAGES.md) — unchanged from before the CMS existed.
  * `cms` is what Netlify's build runs on every deploy: it reads the `images`
- * block Decap CMS writes into content/projects/<id>.json (Cloudinary URLs),
- * fetches and processes anything new or changed, and leaves everything else
- * alone. Both commands merge into the existing assets/images.json rather
- * than regenerating it — a project untouched by either command keeps
- * whatever images it already has.
+ * block Decap CMS writes into content/projects/<id>.json (repo-relative
+ * paths under content/media/<id>/ — Decap commits uploads straight into
+ * git, see admin/config.yml), processes anything new or changed, and
+ * leaves everything else alone. Both commands merge into the existing
+ * assets/images.json rather than regenerating it — a project untouched by
+ * either command keeps whatever images it already has.
  *
  * The `match` step exists so folder names don't have to be perfect. It reads
  * the project list from content/projects/*.json, fuzzy-matches whatever came
@@ -171,13 +172,13 @@ async function build(src, out) {
   console.log(`Anything not in mapping.json keeps whatever images it already had.`);
 }
 
-/* ── cms: Cloudinary-sourced images from content/projects/<id>.json ────── */
-async function fetchBuf(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Fetch failed (${res.status}): ${url}`);
-  return Buffer.from(await res.arrayBuffer());
-}
-const galleryUrls = gallery => (gallery || []).map(g => (typeof g === "string" ? g : g && g.src)).filter(Boolean);
+/* ── cms: git-committed images from content/projects/<id>.json ─────────── */
+/* Decap's image widget stores repo-relative paths like
+   "/content/media/whitney/IMG_0231.jpg" — already sitting in the checkout
+   (Netlify's clone, or a developer's pulled repo) by the time this runs,
+   no network fetch needed. */
+const resolveLocal = p => p.replace(/^\/+/, "");
+const galleryPaths = gallery => (gallery || []).map(g => (typeof g === "string" ? g : g && g.src)).filter(Boolean);
 
 async function cms(out) {
   const images = await loadManifest(out);
@@ -193,7 +194,7 @@ async function cms(out) {
       else untouched++;
       continue;
     }
-    const gallery = galleryUrls(p.images.gallery);
+    const gallery = galleryPaths(p.images.gallery);
     const srcKey = JSON.stringify({ main: p.images.main, og: p.images.og || null, gallery });
 
     if (images[p.id] && images[p.id]._src === srcKey) { skipped++; continue; }
@@ -201,19 +202,24 @@ async function cms(out) {
     const dir = join(out, p.id);
     const rec = { gallery: [] };
 
-    const mainInfo = await variants(await fetchBuf(p.images.main), dir, "main");
-    rec.main = `${p.id}/main-${mainInfo.widest}.jpg`;
+    try {
+      const mainInfo = await variants(resolveLocal(p.images.main), dir, "main");
+      rec.main = `${p.id}/main-${mainInfo.widest}.jpg`;
 
-    if (p.images.og) {
-      const ogInfo = await variants(await fetchBuf(p.images.og), dir, "og");
-      rec.og = `${p.id}/og-${ogInfo.widest}.jpg`;
-    }
+      if (p.images.og) {
+        const ogInfo = await variants(resolveLocal(p.images.og), dir, "og");
+        rec.og = `${p.id}/og-${ogInfo.widest}.jpg`;
+      }
 
-    let g = 0;
-    for (const url of gallery) {
-      const stem = String(++g).padStart(2, "0");
-      const info = await variants(await fetchBuf(url), dir, stem);
-      rec.gallery.push(`${p.id}/${stem}-${info.widest}.jpg`);
+      let g = 0;
+      for (const path of gallery) {
+        const stem = String(++g).padStart(2, "0");
+        const info = await variants(resolveLocal(path), dir, stem);
+        rec.gallery.push(`${p.id}/${stem}-${info.widest}.jpg`);
+      }
+    } catch (e) {
+      console.error(`  ${p.id}: skipped — ${e.message}`);
+      continue;
     }
     if (!rec.gallery.length) delete rec.gallery;
     rec._src = srcKey; // internal — lets the next run skip if nothing changed

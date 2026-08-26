@@ -19,6 +19,7 @@ hosted as flat files. The only tooling is the image pipeline in `tools/`.
     assets/content.js       generated; sets window.JC_CONTENT (projects + site)
     assets/images.js        generated manifest; maps project id -> image paths
     assets/<project-id>/    processed images, committed
+    content/media/<id>/     raw CMS uploads, committed straight into git (see admin/config.yml)
     assets-src/             raw originals for local bulk imports, gitignored
     tools/prepare-images.mjs image pipeline — match/build (local) + cms (Netlify)
     tools/migrate-content.mjs one-time script that produced content/*.json — not part
@@ -98,12 +99,17 @@ overwriting it wholesale — a project untouched by either keeps whatever it had
 
 - **CMS uploads** (`node tools/prepare-images.mjs cms ./assets`) — what
   Netlify's build runs on every deploy. Reads the `images` block Decap CMS
-  writes into `content/projects/<id>.json` (Cloudinary URLs — see the
-  `media_library` config in `admin/config.yml`), fetches and processes
-  anything new or changed, and drops a project back to its placeholder if its
-  CMS images get cleared. Explicit fields (main/og/gallery, gallery
-  drag-reordered in the CMS), not a filename convention — a non-coder
-  shouldn't need to know `main.jpg` is special.
+  writes into `content/projects/<id>.json` — repo-relative paths under
+  `content/media/<id>/`, since uploads commit straight into git (Decap's
+  plain built-in image widget; see `admin/config.yml`). Tried Cloudinary's
+  external media library first, but its Media Library/Assets product needs a
+  separate sales-gated plan — not available self-serve, so this uses git
+  instead. That's a deliberate tradeoff (the repo grows with every photo, no
+  cleanup path later) rather than an oversight. Processes anything new or
+  changed and drops a project back to its placeholder if its CMS images get
+  cleared. Explicit fields (main/og/gallery, gallery drag-reordered in the
+  CMS), not a filename convention — a non-coder shouldn't need to know
+  `main.jpg` is special.
 - **Local bulk import** (`match` then `build`, via `assets-src/<folder>/` +
   `mapping.json`) — unchanged from before the CMS existed, for you doing a
   large one-off drop of a client's Pixieset export. Filename convention
@@ -146,11 +152,10 @@ will read as a bug on a live site.
 
 ## Next up, roughly in order
 
-1. **Populate images**, the remaining ~20 projects — via the CMS now, once
-   DecapBridge/Cloudinary credentials are live in `admin/config.yml` (see the
-   placeholders in that file). Check homepage crops as they land — slots
-   assume shapes and `object-fit: cover` will crop a portrait hard through the
-   middle in the wide band.
+1. **Populate images**, the remaining ~20 projects — via the CMS at `/admin`.
+   Check homepage crops as they land — slots assume shapes and
+   `object-fit: cover` will crop a portrait hard through the middle in the
+   wide band.
 2. **Info and Contact** haven't had a proper pass since the aesthetic settled
    — Recognition is still literal "TEST DATA" (`content/info.json`), and Gear
    is a plausible-but-invented kit list. Both are now CMS-editable directly.
@@ -158,6 +163,8 @@ will read as a bug on a live site.
    search. A build step should emit real `/work/{id}/index.html` files with per
    project meta tags from the same `CONTENT` object.
 4. ~~Airtable as the CMS~~ — done, via Decap CMS instead (see `admin/`,
-   `content/`, `tools/build-content.mjs`). Same shape as originally planned
-   here (attachment/build-time-pull/never-link-directly), Cloudinary in place
-   of Airtable's attachment fields.
+   `content/`, `tools/build-content.mjs`). Images ended up git-committed
+   rather than pulled from an external attachment host at build time as
+   originally sketched here — Cloudinary's external media library needed a
+   sales-gated plan, so this uses Decap's plain built-in git-based image
+   widget instead (`content/media/<id>/`, see the Images section above).

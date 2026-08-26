@@ -14,13 +14,15 @@ server. Everything works either way.
 Jake edits project details and photos himself at `/admin` (Decap CMS) — no
 terminal, no repo. What he can and can't touch is defined in
 `admin/config.yml`; the underlying files are `content/projects/<id>.json` and
-`content/info.json`. Publishing in the CMS commits directly and Netlify
-redeploys automatically, running `npm run build` (see `netlify.toml`), which
+`content/info.json`. Uploaded photos commit straight into git, under
+`content/media/<id>/` — Decap's plain built-in image widget, no external
+media host. Publishing in the CMS commits directly and Netlify redeploys
+automatically, running `npm run build` (see `netlify.toml`), which
 regenerates `assets/content.js` and processes any new/changed photos.
 
-`admin/config.yml` has two placeholder blocks (`backend`, `media_library`)
-that need real values from your DecapBridge and Cloudinary accounts before
-the CMS panel actually works — see the comments at the top of that file.
+`admin/config.yml`'s `backend` block needs real values from your DecapBridge
+account (auth) before the CMS panel actually works — see the comments at the
+top of that file.
 
 For a large one-off bulk import instead (e.g. a full Pixieset export), the
 original local pipeline below still works unchanged.
