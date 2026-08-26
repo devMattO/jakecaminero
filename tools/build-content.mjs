@@ -25,7 +25,11 @@ async function loadProjects() {
   const tones = existsSync(TONES_FILE) ? JSON.parse(await readFile(TONES_FILE, "utf8")) : {};
   const projects = [];
   for (const f of files) {
-    const p = JSON.parse(await readFile(join(PROJECTS_DIR, f), "utf8"));
+    // `images` is pipeline input for prepare-images.mjs (raw upload paths),
+    // not page data — index.html gets real image paths from window.JC_IMAGES
+    // (assets/images.js) instead, so drop it here rather than bloat
+    // content.js with duplicate gallery references.
+    const { images, ...p } = JSON.parse(await readFile(join(PROJECTS_DIR, f), "utf8"));
     Object.assign(p, tones[p.id] || {});
     projects.push(p);
   }

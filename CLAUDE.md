@@ -24,6 +24,8 @@ hosted as flat files. The only tooling is the image pipeline in `tools/`.
     tools/prepare-images.mjs image pipeline — match/build (local) + cms (Netlify)
     tools/migrate-content.mjs one-time script that produced content/*.json — not part
                              of the ongoing pipeline, kept for reference
+    tools/backfill-images.mjs one-time fix for projects bulk-imported before the CMS
+                             existed (see Images section) — kept for reference
     tools/serve.mjs          zero-dependency local server
     mapping.json            folder name -> project id, curated, committed (local bulk imports only)
     netlify.toml             `npm run build` on every deploy
@@ -117,6 +119,28 @@ overwriting it wholesale — a project untouched by either keeps whatever it had
 
 Any project absent from the manifest keeps its generated SVG placeholder,
 which is what makes incremental population safe either way.
+
+Output filenames are content-hashed (`main-<hash>-800.jpg`, not `main-800.jpg`)
+because `/assets/*` is served with a year-long immutable `Cache-Control`
+(`_headers`) — without the hash, replacing a photo would reuse the exact
+same URL, and any browser that had already cached the old one would just
+keep serving it forever, ignoring the new content entirely.
+
+**Incident, worth knowing about:** the 12 projects bulk-imported before the
+CMS existed originally had no `images` block in `content/projects/<id>.json`
+at all — their images only lived in `assets/images.json`, generated once by
+the old `build` command and never touched again. That made those projects
+invisible in the CMS's Images section, which silently destroyed one
+project's entire gallery the first time someone uploaded a single new main
+image through `/admin` — the CMS had no idea the gallery existed, so saving
+just replaced the whole thing. Fixed two ways: `tools/backfill-images.mjs`
+(run once) wrote each of those 12 projects' existing images into
+`content/projects/<id>.json` as `/assets/<id>/...` references, so the CMS
+now shows everything Jake actually has; and `cms` in `prepare-images.mjs`
+recognizes an `assets/`-prefixed reference as already-processed and passes
+it through untouched rather than reprocessing it, so partially editing one
+of these projects (e.g. just swapping the main image) no longer wipes the
+rest.
 
 When real photographs are in for a project, its `tone`/`overlay`/`gal` entry in
 `tools/placeholder-tones.json` becomes dead weight — harmless to leave (it's

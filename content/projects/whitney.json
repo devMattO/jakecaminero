@@ -23,5 +23,214 @@
       "r": "Photography",
       "n": "Jake Caminero"
     }
-  ]
+  ],
+  "images": {
+    "main": "/assets/whitney/01-800.jpg",
+    "gallery": [
+      {
+        "src": "/assets/whitney/01-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/02-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/03-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/04-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/05-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/06-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/07-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/08-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/09-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/10-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/11-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/12-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/13-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/14-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/15-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/16-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/17-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/18-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/19-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/20-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/21-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/22-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/23-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/24-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/25-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/26-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/27-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/28-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/29-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/30-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/31-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/32-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/33-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/34-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/35-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/36-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/37-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/38-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/39-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/40-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/41-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/42-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/43-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/44-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/45-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/46-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/47-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/48-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/49-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/50-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/51-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/52-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/53-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/54-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/55-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/56-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/57-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/58-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/59-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/60-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/61-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/62-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/63-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/64-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/65-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/66-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/67-800.jpg"
+      },
+      {
+        "src": "/assets/whitney/68-800.jpg"
+      }
+    ]
+  }
 }

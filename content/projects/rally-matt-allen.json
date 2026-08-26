@@ -29,5 +29,79 @@
       "r": "Creative Direction",
       "n": "Jake Caminero"
     }
-  ]
+  ],
+  "images": {
+    "main": "/assets/rally-matt-allen/01-800.jpg",
+    "gallery": [
+      {
+        "src": "/assets/rally-matt-allen/01-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/02-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/03-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/04-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/05-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/06-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/07-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/08-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/09-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/10-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/11-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/12-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/13-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/14-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/15-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/16-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/17-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/18-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/19-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/20-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/21-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/22-800.jpg"
+      },
+      {
+        "src": "/assets/rally-matt-allen/23-800.jpg"
+      }
+    ]
+  }
 }

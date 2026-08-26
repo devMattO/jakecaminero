@@ -656,29 +656,23 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
-      "id": "rally-dylan-riin",
-      "order": 15,
-      "t": "Dylan + RiiN",
-      "client": "The Rally Project",
-      "date": "January 25, 2025",
-      "yr": "2025",
-      "roles": [
-        "stills",
-        "motion"
-      ],
-      "selected": true,
       "loc": "Southern California",
       "del": [
         "Portrait stills",
         "Short film"
       ],
+      "client": "The Rally Project",
+      "order": 15,
+      "date": "January 25, 2025",
+      "desc": "Getting to know Dylan has been so refreshing. His overwhelming stoke and creativity is contagious, and his story is incredible. Having overcome having a brain tumor, Dylan has continued to pursue his creative project, RiiN, and live his life to the fullest.",
+      "t": "Dylan + RiiN",
       "tags": [
         "Photography",
         "Creative Direction",
         "Documentary",
         "Fashion"
       ],
-      "desc": "Getting to know Dylan has been so refreshing. His overwhelming stoke and creativity is contagious, and his story is incredible. Having overcome having a brain tumor, Dylan has continued to pursue his creative project, RiiN, and live his life to the fullest.",
+      "yr": "2025",
       "credits": [
         {
           "r": "Photography",
@@ -700,6 +694,12 @@ window.JC_CONTENT = {
           "r": "Talent",
           "n": "Dylan Trumbul"
         }
+      ],
+      "id": "rally-dylan-riin",
+      "selected": true,
+      "roles": [
+        "stills",
+        "motion"
       ],
       "tone": "grey",
       "gal": 5

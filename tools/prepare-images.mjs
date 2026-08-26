@@ -33,6 +33,7 @@
 import { readdir, mkdir, writeFile, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join, extname, basename } from "node:path";
+import { createHash } from "node:crypto";
 
 const WIDTHS      = [800, 1600, 2400];
 const FORMATS     = [["avif",{quality:58,effort:4}],["webp",{quality:80}],["jpeg",{quality:84,mozjpeg:true}]];
@@ -120,17 +121,25 @@ async function loadSharp() {
   return sharp;
 }
 
+/* `/assets/*` is served with a year-long immutable Cache-Control (see
+   _headers) — great for performance, but it means a browser that already
+   loaded, say, whitney/main-800.jpg will never re-fetch that exact URL even
+   after the source photo changes underneath it. Content-hashing the
+   filename gives a replaced photo a genuinely new URL, so the old cached
+   one is simply never requested again instead of silently going stale. */
 async function variants(input, destDir, stem) {
   await mkdir(destDir, { recursive: true });
   await loadSharp();
-  const meta = await sharp(input).metadata();
+  const buf = typeof input === "string" ? await readFile(input) : input;
+  const hash = createHash("sha256").update(buf).digest("hex").slice(0, 8);
+  const meta = await sharp(buf).metadata();
   const widths = WIDTHS.filter(w => w <= meta.width);
   if (!widths.length) widths.push(meta.width);
   for (const w of widths)
     for (const [fmt, opts] of FORMATS)
-      await sharp(input).rotate().resize({ width: w, withoutEnlargement: true })
-        .toFormat(fmt, opts).toFile(join(destDir, `${stem}-${w}.${fmt === "jpeg" ? "jpg" : fmt}`));
-  return { widest: Math.max(...widths), w: meta.width, h: meta.height };
+      await sharp(buf).rotate().resize({ width: w, withoutEnlargement: true })
+        .toFormat(fmt, opts).toFile(join(destDir, `${stem}-${hash}-${w}.${fmt === "jpeg" ? "jpg" : fmt}`));
+  return { widest: Math.max(...widths), w: meta.width, h: meta.height, hash };
 }
 
 async function build(src, out) {
@@ -152,7 +161,7 @@ async function build(src, out) {
       const kind = kindOf(f);
       const stem = kind === "gallery" ? String(++g).padStart(2, "0") : kind;
       const info = await variants(join(dir, f), join(out, id), stem);
-      const ref = `${id}/${stem}-${info.widest}.jpg`;
+      const ref = `${id}/${stem}-${info.hash}-${info.widest}.jpg`;
       kind === "gallery" ? rec.gallery.push(ref) : (rec[kind] = ref);
       n++; process.stdout.write(`  ${id}/${f} → ${info.w}×${info.h}\n`);
     }
@@ -180,6 +189,20 @@ async function build(src, out) {
 const resolveLocal = p => p.replace(/^\/+/, "");
 const galleryPaths = gallery => (gallery || []).map(g => (typeof g === "string" ? g : g && g.src)).filter(Boolean);
 
+/* A reference under assets/ is already a processed variant (backfilled from
+   an earlier local `build`, or from a previous `cms` run — see
+   tools/backfill-images.mjs) — pass it straight through, no reprocessing.
+   Anything else is a raw upload under content/media/ that still needs
+   `variants()`. This is what lets Jake replace just a project's main image
+   in the CMS without silently deleting a gallery he can't even see yet
+   unless it's been backfilled into content/projects/<id>.json first. */
+async function resolveImage(path, destDir, stem, id) {
+  const local = resolveLocal(path);
+  if (local.startsWith("assets/")) return local.slice("assets/".length);
+  const info = await variants(local, destDir, stem);
+  return `${id}/${stem}-${info.hash}-${info.widest}.jpg`;
+}
+
 async function cms(out) {
   const images = await loadManifest(out);
   const projects = await readContentProjects();
@@ -203,19 +226,13 @@ async function cms(out) {
     const rec = { gallery: [] };
 
     try {
-      const mainInfo = await variants(resolveLocal(p.images.main), dir, "main");
-      rec.main = `${p.id}/main-${mainInfo.widest}.jpg`;
-
-      if (p.images.og) {
-        const ogInfo = await variants(resolveLocal(p.images.og), dir, "og");
-        rec.og = `${p.id}/og-${ogInfo.widest}.jpg`;
-      }
+      rec.main = await resolveImage(p.images.main, dir, "main", p.id);
+      if (p.images.og) rec.og = await resolveImage(p.images.og, dir, "og", p.id);
 
       let g = 0;
       for (const path of gallery) {
         const stem = String(++g).padStart(2, "0");
-        const info = await variants(resolveLocal(path), dir, stem);
-        rec.gallery.push(`${p.id}/${stem}-${info.widest}.jpg`);
+        rec.gallery.push(await resolveImage(path, dir, stem, p.id));
       }
     } catch (e) {
       console.error(`  ${p.id}: skipped — ${e.message}`);

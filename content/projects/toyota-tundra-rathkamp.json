@@ -37,5 +37,55 @@
       "r": "Retouching",
       "n": "Schinken Studio"
     }
-  ]
+  ],
+  "images": {
+    "main": "/assets/toyota-tundra-rathkamp/01-800.jpg",
+    "gallery": [
+      {
+        "src": "/assets/toyota-tundra-rathkamp/01-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/02-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/03-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/04-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/05-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/06-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/07-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/08-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/09-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/10-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/11-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/12-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/13-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/14-800.jpg"
+      },
+      {
+        "src": "/assets/toyota-tundra-rathkamp/15-800.jpg"
+      }
+    ]
+  }
 }
