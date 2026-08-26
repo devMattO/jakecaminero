@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jake Caminero — Photography &amp; Direction</title>
+<meta name="description" content="Jake Caminero is a photographer and director working in stills, motion, and creative direction for brands in automotive, outdoor, and hospitality.">
+<meta property="og:title" content="Jake Caminero" id="ogTitle">
+<meta property="og:description" content="Photographer and director. Stills, motion, creative direction." id="ogDesc">
+<meta property="og:image" content="" id="ogImage">
+<style>
+/* ════════════════════════════════════════════════════
+   TOKENS
+   ════════════════════════════════════════════════════ */
+:root{
+  --shell:1360px;
+  --gut:clamp(18px,3.4vw,44px);
+  --t:280ms; --ease:cubic-bezier(.19,1,.22,1);
+  --grot:"Helvetica Neue",Helvetica,Inter,"Segoe UI",system-ui,Arial,sans-serif;
+  --micro:10.5px;
+}
+html[data-theme="light"]{
+  --paper:#f2f1ef; --ink:#0b0b0a;
+  --ghost:#6e6c67;          /* 4.65:1 on paper — readable secondary text */
+  --whisper:#a6a49f;        /* decorative only: rules, keys, non-text marks */
+  --hair:rgba(11,11,10,.16); --chip:rgba(11,11,10,.055);
+  --deep:#0b0b0a; --deepink:#f2f1ef;
+}
+html[data-theme="dark"]{
+  --paper:#0c0c0b; --ink:#f0efec;
+  --ghost:#7e7c78;          /* 4.70:1 on paper */
+  --whisper:#5c5b57;
+  --hair:rgba(240,239,236,.18); --chip:rgba(240,239,236,.07);
+  --deep:#000; --deepink:#f0efec;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper); color:var(--ink);
+  font:400 13px/1.5 var(--grot);
+  -webkit-font-smoothing:antialiased;
+  transition:background var(--t) var(--ease),color var(--t) var(--ease);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;letter-spacing:inherit}
+:focus-visible{outline:1.5px solid var(--ink);outline-offset:4px}
+.wrap{max-width:var(--shell);margin:0 auto;padding:0 var(--gut)}
+
+.display{font-weight:500;letter-spacing:-.028em;line-height:1.08}
+.statement{font-weight:500;letter-spacing:-.021em;line-height:1.26;font-size:clamp(20px,2.45vw,33px)}
+.h-sec{font-size:clamp(25px,3.3vw,44px)}
+.label{font-size:var(--micro);letter-spacing:.055em;text-transform:uppercase;font-weight:500}
+.dim{color:var(--ghost)}
+.mono-list{font-size:11.5px;line-height:1.62;color:var(--ghost)}
+
+/* discipline glyphs — the encoding used everywhere on the site */
+.g{display:inline-block;width:8px;height:8px;flex:none;background:currentColor}
+.g.stills{border-radius:50%}
+.g.motion{border-radius:1px}
+.g.cd{background:none;width:0;height:0;
+  border-left:4.6px solid transparent;border-right:4.6px solid transparent;border-bottom:8px solid currentColor}
+
+/* ════════════════════════════════════════════════════
+   NAV / FOOTER
+   ════════════════════════════════════════════════════ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;
+  background:color-mix(in srgb,var(--paper) 86%,transparent);
+  backdrop-filter:saturate(140%) blur(12px);
+  border-bottom:1px solid transparent;
+  transition:border-color var(--t) var(--ease)}
+.nav.stuck{border-bottom-color:var(--hair)}
+.nav .wrap{display:flex;align-items:center;gap:clamp(14px,2.6vw,32px);height:46px;font-size:11.5px}
+.mark{font-weight:600;letter-spacing:-.02em;font-size:14px;margin-right:clamp(8px,3vw,48px)}
+.nav .to{color:var(--ghost);transition:color 180ms var(--ease)}
+.nav .to:hover,.nav .to.on{color:var(--ink)}
+.nav .end{margin-left:auto;display:flex;align-items:center;gap:16px}
+/* ── COLOUR MODE ────────────────────────────────────────────────
+   A step wedge — the graduated strip used to check tonal range on a
+   print. The bars are fixed percentages of --ink, so when --ink flips
+   the whole wedge inverts on its own; staggered delays make it read
+   left to right, like the page re-exposing. Six bars for the six
+   frames in the hero.
+   TO REVERT: swap the button markup back to the .swap version noted
+   beside it in the nav, and delete this block. .swap is kept below. */
+.wedge{display:flex;align-items:flex-end;gap:2px;height:18px;padding:0}
+.wedge i{width:3px;height:13px;background:var(--ink);
+  transition:background-color 300ms var(--ease), height 220ms var(--ease)}
+.wedge:hover i{height:18px}
+.wedge i:nth-child(1){opacity:.12;transition-delay:0ms,0ms}
+.wedge i:nth-child(2){opacity:.28;transition-delay:55ms,0ms}
+.wedge i:nth-child(3){opacity:.44;transition-delay:110ms,0ms}
+.wedge i:nth-child(4){opacity:.62;transition-delay:165ms,0ms}
+.wedge i:nth-child(5){opacity:.8;transition-delay:220ms,0ms}
+.wedge i:nth-child(6){opacity:1;transition-delay:275ms,0ms}
+
+/* previous version — kept for a one-paste revert */
+.swap{width:28px;height:15px;border:1px solid var(--hair);border-radius:8px;
+  display:flex;align-items:center;padding:2px;transition:border-color 180ms var(--ease)}
+.swap:hover{border-color:var(--ink)}
+.swap i{width:9px;height:9px;border-radius:50%;background:var(--ink);transition:transform var(--t) var(--ease)}
+html[data-theme="dark"] .swap i{transform:translateX(13px)}
+
+.foot{padding:clamp(60px,9vw,110px) 0 26px;border-top:1px solid var(--hair);margin-top:clamp(70px,11vw,150px)}
+.foot .row{display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between;align-items:flex-end}
+.foot .mails a{display:block;font-size:clamp(19px,2.4vw,31px);color:var(--ghost);transition:color 200ms var(--ease)}
+.foot .mails a:hover{color:var(--ink)}
+.foot .base{display:flex;justify-content:space-between;gap:20px;margin-top:56px;font-size:11px;color:var(--ghost)}
+
+/* ════════════════════════════════════════════════════
+   ROUTER
+   ════════════════════════════════════════════════════ */
+.page{display:none}
+.page.on{display:block;animation:in 460ms var(--ease) both}
+@keyframes in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.top-pad{padding-top:46px}
+
+/* shared section head */
+.shead{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;
+  padding-bottom:clamp(30px,4.5vw,58px)}
+.shead .lhs{display:flex;align-items:baseline;gap:16px}
+.shead .viewall{font-size:11px;color:var(--ghost);transition:color 200ms var(--ease)}
+.shead .viewall:hover{color:var(--ink)}
+.rlist{display:flex;gap:18px}
+.rlist .label{padding-top:2px}
+.rlist ul{list-style:none}
+.rlist li a{font-size:11.5px;line-height:1.62;color:var(--ghost);transition:color 180ms var(--ease)}
+.rlist li a:hover{color:var(--ink)}
+
+/* ════════════════════════════════════════════════════
+   HOME
+   ════════════════════════════════════════════════════ */
+.hero{background:var(--deep);color:var(--deepink);margin-top:12px;aspect-ratio:16/10;
+  display:grid;place-items:center;position:relative;overflow:hidden}
+.hero svg{width:min(90%,1150px);height:auto;overflow:visible}
+.hero .fr{fill:none;stroke:currentColor;stroke-width:1.2;vector-effect:non-scaling-stroke;
+  stroke-dasharray:var(--len);stroke-dashoffset:var(--len);
+  animation:draw 1.5s var(--ease) forwards;animation-delay:var(--d)}
+.hero .axis{stroke:currentColor;stroke-width:.7;opacity:.45;
+  stroke-dasharray:300;stroke-dashoffset:300;animation:draw 1.1s var(--ease) .1s forwards}
+.hero .ratio{font-size:3.7px;letter-spacing:.06em;fill:currentColor;opacity:0;
+  animation:fade 700ms var(--ease) forwards;animation-delay:var(--d)}
+.hero .axcap{font-size:4.6px;letter-spacing:.28em;fill:currentColor;opacity:0;
+  animation:fade 900ms var(--ease) .9s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:.55}}
+
+.intro{padding:clamp(46px,7vw,86px) 0 clamp(64px,10vw,128px);max-width:74ch}
+.intro a{color:var(--ghost);transition:color 200ms var(--ease);border-bottom:1px solid transparent}
+.intro a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(26px,4vw,56px) clamp(14px,2vw,26px)}
+.card{display:block;text-align:left;width:100%}
+.card .shot{position:relative;overflow:hidden;background:var(--chip);max-height:80vh}
+.card .shot img{width:100%;height:100%;object-fit:cover;transition:transform 700ms var(--ease)}
+.card:hover .shot img{transform:scale(1.028)}
+.card .cap{margin-top:11px}
+.card .cap .t{font-size:11.5px}
+.card .chips{display:flex;flex-wrap:wrap;gap:7px 8px;margin-top:8px}
+.chip{font-size:9.5px;letter-spacing:.02em;color:var(--ghost);background:var(--chip);
+  padding:4px 10px;border-radius:2px;white-space:nowrap}
+.card.hidden{display:none}
+
+/* ── APPROACH ───────────────────────────────────────────────────
+   Same ruled-row grammar as the index and the filter key, so this
+   reads as part of the system rather than a poster dropped between
+   two image sections. Counts come from the projects' own tags. */
+.approach{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.45fr);
+  gap:clamp(28px,5vw,80px);align-items:start;
+  padding:clamp(58px,9vw,118px) 0 clamp(48px,7vw,96px)}
+.approach .h-sub{font-weight:500;letter-spacing:-.026em;line-height:1.12;
+  font-size:clamp(19px,2.2vw,30px);max-width:14ch}
+.approach .note{font-size:12px;line-height:1.65;color:var(--ghost);max-width:34ch;margin-top:16px}
+.aplists{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,44px)}
+.aplist ul{list-style:none;border-top:1px solid var(--hair)}
+.aplist li{display:flex;align-items:center;gap:11px;font-size:12px;
+  padding:9px 0;border-bottom:1px solid var(--hair)}
+.aplist li svg{width:17px;height:17px;flex:none;color:var(--ghost)}
+.aplist li svg *{fill:none;stroke:currentColor;stroke-width:1.1;
+  stroke-linecap:round;stroke-linejoin:round}
+.aplist li .r{margin-left:auto;padding-left:12px;font-size:10.5px;
+  color:var(--whisper);text-align:right;white-space:nowrap}
+.eco{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,20px);
+  padding-top:clamp(26px,4vw,50px)}
+.eco .it .shot{aspect-ratio:4/3;overflow:hidden;background:var(--chip)}
+.eco .it .shot img{width:100%;height:100%;object-fit:cover;transition:transform 700ms var(--ease)}
+.eco .it:hover .shot img{transform:scale(1.03)}
+.eco .it h4{font:inherit;font-weight:400;font-size:11.5px;margin:11px 0 5px}
+.eco .it p{font-size:11.5px;line-height:1.5;color:var(--ghost);max-width:30ch}
+
+/* ════════════════════════════════════════════════════
+   WORK — the index, in the paper language
+   ════════════════════════════════════════════════════ */
+/* Two proportional columns, not a 12-track grid. The index was previously
+   landing in a single 1fr track because the grid item is the wrapper, not .idx. */
+.idx-lay{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);
+  gap:clamp(30px,5.5vw,88px);align-items:start}
+.idx-col{min-width:0}
+.idx-view{position:sticky;top:78px;min-width:0}
+
+.ientry{border-bottom:1px solid var(--hair)}
+.ientry.hidden{display:none}
+.irow{
+  display:grid;grid-template-columns:1fr 42px 44px;
+  align-items:center;gap:clamp(10px,1.6vw,22px);
+  width:100%;text-align:left;padding:12px 0;
+  transition:opacity 260ms var(--ease),padding-left 380ms var(--ease);
+}
+.idx.hot .irow{opacity:.34}
+.idx.hot .irow:hover,.idx.hot .irow.on{opacity:1;padding-left:9px}
+.irow .tw{min-width:0}
+.irow .t{font-size:clamp(12.5px,1.15vw,15px);letter-spacing:-.012em;display:flex;align-items:center;gap:7px}
+.irow .sub{display:block;font-size:10.5px;line-height:1.35;color:var(--ghost);
+  margin-top:3px;padding-left:12px}
+/* the Selects mark is a diamond so it stays distinct from the Motion square */
+.irow .star{width:5px;height:5px;background:var(--ink);transform:rotate(45deg);flex:none;opacity:0}
+.irow.sel .star{opacity:.6}
+.irow .yr{font-size:11px;color:var(--ghost);white-space:nowrap;text-align:right}
+.irow .roles{display:flex;gap:6px;justify-content:flex-end}
+.irow .roles .g{opacity:.16;transition:opacity 220ms var(--ease)}
+.irow .roles .g.has{opacity:.85}
+.irow:hover .roles .g.has,.irow.on .roles .g.has{opacity:1}
+.irow .exp{display:none}
+/* discipline filter, sitting directly above the index — doubles as the glyph key */
+/* ── MOBILE ACCORDION ───────────────────────────────────────────
+   No hover on touch, so the sticky preview has nothing to react to.
+   Below 1000px each row expands in place instead. The 0fr→1fr grid
+   trick animates to the content's natural height without measuring it. */
+.ipanel{display:none;grid-template-rows:0fr;opacity:0;
+  transition:grid-template-rows 520ms var(--ease),opacity 340ms var(--ease)}
+.ientry.open .ipanel{grid-template-rows:1fr;opacity:1}
+.ipanel>.ipin{overflow:hidden;min-height:0}
+.ibody{padding:6px 0 24px}
+.ibody .ishot{aspect-ratio:4/3;overflow:hidden;background:var(--chip);margin-bottom:14px}
+.ibody .ishot img{width:100%;height:100%;object-fit:cover}
+.ibody .iwho{font-size:11px;color:var(--ghost);margin-bottom:9px}
+.ibody .iwho b{font-weight:400;color:var(--ink)}
+.ibody .idesc{font-size:12.5px;line-height:1.6;max-width:46ch;margin-bottom:12px}
+.ibody .igo{display:inline-block;margin-top:14px;font-size:11.5px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px;transition:border-color 200ms var(--ease)}
+.ibody .igo:hover{border-color:var(--ink)}
+
+/* ── DISCIPLINE KEY ─────────────────────────────────────────────
+   The index rows already encode discipline as filled vs. hollow glyphs.
+   This control is the same notation at legend scale: hollow means the
+   filter is off, filled means it's on — so the key teaches the mark and
+   operates the page with one grammar. Ruled cells, no rounded corners.
+   ──────────────────────────────────────────────────────────────── */
+.keyrow{display:flex;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.key{flex:1;min-width:0;display:flex;align-items:center;gap:13px;
+  padding:17px 18px;border-left:1px solid var(--hair);color:var(--ghost);
+  transition:color 220ms var(--ease),background 220ms var(--ease)}
+.key:first-child{border-left:0;padding-left:0}
+.key:hover{color:var(--ink);background:var(--chip)}
+.key[aria-pressed="true"]{color:var(--ink)}
+.key .ky{width:23px;height:23px;flex:none}
+.key .ky>*{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:miter;
+  transition:fill 300ms var(--ease)}
+.key[aria-pressed="true"] .ky>*{fill:currentColor}
+.key .kl{font-size:11.5px;letter-spacing:-.005em;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.key .kn{margin-left:auto;font-size:10.5px;color:var(--whisper);
+  font-variant-numeric:tabular-nums;transition:color 220ms var(--ease)}
+.key[aria-pressed="true"] .kn,.key:hover .kn{color:var(--ghost)}
+.keyhead{display:block;color:var(--ghost);margin-bottom:11px}
+.keywrap{padding-bottom:clamp(30px,5vw,62px)}
+@media (max-width:640px){
+  .keyrow{display:block}
+  .key{width:100%;border-left:0;border-top:1px solid var(--hair);padding:14px 0}
+  .key:first-child{border-top:0}
+}
+
+.idx-frame{position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:var(--chip)}
+.idx-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity 340ms var(--ease)}
+.idx-frame img.live{opacity:1}
+.idx-meta{margin-top:12px;min-height:60px}
+.idx-meta .who{display:block;font-size:11px;color:var(--ghost);
+  padding-bottom:9px;margin-bottom:9px;border-bottom:1px solid var(--hair)}
+.idx-meta .who b{font-weight:400;color:var(--ink)}
+.idx-meta .cr{display:block;font-size:11px;color:var(--ghost)}
+.idx-meta .cr b{font-weight:400;color:var(--ink)}
+.idx-meta .chips{display:flex;flex-wrap:wrap;gap:7px 8px;margin-top:12px}
+
+/* ════════════════════════════════════════════════════
+   ARCHIVE
+   ════════════════════════════════════════════════════ */
+/* Page header shared by Work and Archive: title left, live count far right,
+   both at section size and sitting on the same baseline. */
+.pagehead{display:flex;align-items:baseline;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;padding:clamp(58px,8vw,104px) 0 clamp(28px,4vw,50px)}
+.pagehead .ct{color:var(--ghost)}
+.scatter{position:relative;padding-bottom:clamp(80px,12vw,180px)}
+.sc{position:relative;z-index:1;display:block;width:max-content;max-width:92%;
+  margin-block:clamp(4px,1.1vw,16px);will-change:transform}
+.sc:hover{z-index:3}                    /* hovered title rides above the preview */
+.sc .t{font-weight:500;letter-spacing:-.028em;line-height:1.02;font-size:clamp(21px,3.5vw,50px);
+  transition:opacity 320ms var(--ease),transform 480ms var(--ease);display:inline-block}
+.sc .yr{font-size:10.5px;letter-spacing:.05em;color:var(--ghost);vertical-align:super;margin-left:9px}
+.sc .rl{display:block;font-size:10px;letter-spacing:.05em;color:var(--ghost);margin-top:5px;
+  opacity:0;transform:translateY(-4px);transition:opacity 320ms var(--ease),transform 320ms var(--ease)}
+.scatter.hot .sc .t{opacity:.24}
+.scatter.hot .sc:hover .t{opacity:1;transform:translateX(11px)}
+.sc:hover .rl{opacity:1;transform:none}
+.sc.mute{opacity:.12;pointer-events:none;filter:blur(.4px)}
+
+/* Absolute, not fixed: the preview lives inside .scatter so it can layer against
+   the titles, and a fixed child of that subtree stops tracking the viewport
+   reliably. We convert cursor coords into scatter-space each frame instead. */
+.peek{position:absolute;top:0;left:0;z-index:2;pointer-events:none;
+  width:clamp(190px,20vw,290px);aspect-ratio:4/5;overflow:hidden;opacity:0;
+  transition:opacity 340ms var(--ease)}
+.peek.on{opacity:1}
+.peek img{width:100%;height:100%;object-fit:cover}
+@media (hover:none){.peek{display:none}.scatter.hot .sc .t{opacity:1}}
+
+/* ════════════════════════════════════════════════════
+   PROJECT DETAIL
+   ════════════════════════════════════════════════════ */
+.back{display:inline-block;font-size:11px;color:var(--ghost);padding:clamp(26px,4vw,48px) 0 0;
+  transition:color 180ms var(--ease)}
+.back:hover{color:var(--ink)}
+.det-hero{margin-top:20px;aspect-ratio:16/9;overflow:hidden;background:var(--chip)}
+.det-hero img{width:100%;height:100%;object-fit:cover}
+.det-top{display:flex;justify-content:space-between;align-items:flex-start;gap:34px;flex-wrap:wrap;
+  padding:clamp(26px,4vw,46px) 0 clamp(18px,2.6vw,30px)}
+.det-top .roles{display:flex;gap:8px;padding-top:10px}
+.det-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,40px);
+  border-top:1px solid var(--hair);padding:22px 0 clamp(40px,6vw,74px)}
+.det-facts .blk h3{font:inherit;font-weight:500;font-size:var(--micro);letter-spacing:.055em;
+  text-transform:uppercase;color:var(--ghost);margin-bottom:9px}
+.det-facts .blk p,.det-facts .blk li{font-size:12.5px;line-height:1.65}
+.det-facts .blk ul{list-style:none}
+.det-desc{max-width:56ch;padding-bottom:clamp(44px,7vw,86px)}
+
+.film{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--deep);
+  margin-bottom:clamp(44px,7vw,86px);display:block}
+.film img{width:100%;height:100%;object-fit:cover;opacity:.55;transition:opacity 500ms var(--ease),transform 800ms var(--ease)}
+.film:hover img{opacity:.72;transform:scale(1.02)}
+.film .pl{position:absolute;inset:0;display:grid;place-items:center;color:#fff;
+  font-size:clamp(15px,2.2vw,26px);font-weight:500;letter-spacing:-.02em}
+
+.det-gal{display:grid;grid-template-columns:repeat(12,1fr);
+  gap:clamp(14px,2.4vw,34px) clamp(12px,1.8vw,24px)}
+.det-gal .shot{overflow:hidden;background:var(--chip);max-height:80vh}
+.det-gal .shot img{width:100%;height:100%;object-fit:cover}
+
+.det-credits{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:14px 24px;border-top:1px solid var(--hair);margin-top:clamp(50px,8vw,100px);padding-top:22px}
+.det-credits .c{font-size:12px}
+.det-credits .c span{display:block;color:var(--ghost);font-size:var(--micro);
+  letter-spacing:.055em;text-transform:uppercase;margin-bottom:3px}
+
+.det-next{border-top:1px solid var(--hair);margin-top:clamp(50px,8vw,100px);padding-top:22px;display:block}
+.det-next .label{color:var(--ghost);display:block;margin-bottom:10px}
+.det-next .n{font-weight:500;letter-spacing:-.028em;font-size:clamp(24px,4vw,54px);line-height:1.06;
+  display:inline-block;transition:transform 480ms var(--ease)}
+.det-next:hover .n{transform:translateX(13px)}
+
+/* ════════════════════════════════════════════════════
+   INFO / CONTACT
+   ════════════════════════════════════════════════════ */
+.lede{padding:clamp(58px,8vw,110px) 0 clamp(40px,6vw,80px);max-width:70ch}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:start;
+  padding-bottom:clamp(50px,8vw,110px)}
+.portrait{aspect-ratio:4/5;overflow:hidden;background:var(--chip)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.deets{display:grid;gap:clamp(20px,2.6vw,34px)}
+.deets .blk h3{font:inherit;font-weight:500;font-size:var(--micro);letter-spacing:.055em;
+  text-transform:uppercase;color:var(--ghost);padding-bottom:8px;margin-bottom:9px;
+  border-bottom:1px solid var(--hair)}
+.deets .blk p,.deets .blk li{font-size:12.5px;line-height:1.65}
+.deets .blk ul{list-style:none;columns:2;column-gap:22px}
+.deets .blk .body{max-width:52ch}
+
+/* Info page: crew + gear band, sharing the ruled-row grammar */
+.iband-head{display:flex;align-items:baseline;justify-content:space-between;
+  gap:24px;flex-wrap:wrap;padding-bottom:clamp(16px,2.4vw,28px)}
+.leadin{font-size:12px;line-height:1.6;color:var(--ghost);max-width:34ch}
+.ibands{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,2fr);
+  gap:clamp(28px,5vw,74px);align-items:start;
+  border-top:1px solid var(--hair);padding:clamp(30px,4.5vw,54px) 0 clamp(50px,8vw,110px)}
+.geargrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2.2vw,32px);margin-top:13px}
+.geargrid .gg h4{font:inherit;font-weight:500;font-size:var(--micro);letter-spacing:.055em;
+  text-transform:uppercase;color:var(--whisper);margin-bottom:8px}
+.geargrid .gg ul{list-style:none;border-top:1px solid var(--hair)}
+.geargrid .gg li{font-size:11.5px;line-height:1.4;padding:8px 0;border-bottom:1px solid var(--hair)}
+.gearnote{margin-top:18px;font-size:11px;line-height:1.6;color:var(--whisper);max-width:56ch}
+
+.contact-hero{padding:clamp(64px,10vw,130px) 0 clamp(40px,6vw,74px)}
+.contact-hero .mails a{display:block;font-weight:500;letter-spacing:-.028em;
+  font-size:clamp(24px,4.4vw,62px);line-height:1.14;color:var(--ghost);transition:color 220ms var(--ease)}
+.contact-hero .mails a:hover{color:var(--ink)}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,44px);
+  border-top:1px solid var(--hair);padding-top:26px}
+.cgrid .blk h3{font:inherit;font-weight:500;font-size:var(--micro);letter-spacing:.055em;
+  text-transform:uppercase;color:var(--ghost);margin-bottom:9px}
+.cgrid .blk p,.cgrid .blk a{font-size:12.5px;line-height:1.65;display:block}
+.cgrid .blk a{transition:color 180ms var(--ease)}
+.cgrid .blk a:hover{color:var(--ghost)}
+
+/* ════════════════════════════════════════════════════
+   RESPONSIVE + MOTION
+   ════════════════════════════════════════════════════ */
+@media (max-width:1000px){
+  .idx-lay{grid-template-columns:1fr;gap:0}
+  .idx-view{display:none}                /* the accordion replaces the sticky preview */
+  .idx.hot .irow{opacity:1}
+  .idx.hot .irow:hover,.idx.hot .irow.on{padding-left:0}
+  .ipanel{display:grid}
+  .irow{grid-template-columns:1fr 34px auto 12px;padding:15px 0;cursor:pointer}
+  .irow .exp{display:block;position:relative;width:9px;height:9px;justify-self:end}
+  .irow .exp::before,.irow .exp::after{content:"";position:absolute;background:var(--ghost);
+    transition:transform 420ms var(--ease),background 260ms var(--ease)}
+  .irow .exp::before{left:0;top:4px;width:9px;height:1px}
+  .irow .exp::after{left:4px;top:0;width:1px;height:9px}
+  .ientry.open .irow .exp::after{transform:scaleY(0)}
+  .ientry.open .irow .exp::before{background:var(--ink)}
+  .ientry.open .irow{opacity:1}
+  .ientry.open .irow .t{color:var(--ink)}
+}
+@media (max-width:900px){
+  .approach,.ibands{grid-template-columns:1fr}
+  .geargrid{grid-template-columns:repeat(2,1fr)}
+  .eco,.cgrid,.det-facts{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+  .hero{aspect-ratio:4/3.1}
+  .hero svg{width:96%}
+  .deets .blk ul{columns:1}
+}
+@media (max-width:620px){
+  .grid>.card,.det-gal>.shot{grid-column:1/-1 !important;margin-top:0 !important}
+  .eco,.cgrid,.det-facts,.aplists,.geargrid{grid-template-columns:1fr}
+  .nav .wrap{gap:12px;font-size:11px}
+  .mark{margin-right:4px}
+  .irow{grid-template-columns:1fr auto auto 12px;row-gap:4px}
+  .sc{max-width:100%}
+  .scatter .sc{margin-left:0 !important}
+  .det-hero{aspect-ratio:4/3}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#/" class="mark">J.C</a>
+    <a href="#/work" class="to" data-r="/work">Work</a>
+    <a href="#/archive" class="to" data-r="/archive">Archive</a>
+    <a href="#/info" class="to" data-r="/info">Info</a>
+    <div class="end">
+      <a href="#/contact" class="to" data-r="/contact">Contact</a>
+      <!-- REVERT: <button class="swap" id="swap" aria-label="Switch colour mode"><i></i></button> -->
+      <button class="wedge" id="swap" aria-label="Switch colour mode">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════ HOME ══════════════ -->
+<section class="page top-pad" id="p-home">
+  <div class="wrap">
+    <div class="hero">
+      <div id="heroArt"></div>
+    </div>
+    <p class="intro statement" id="intro"></p>
+    <div class="shead">
+      <div class="lhs">
+        <h2 class="display h-sec">Selects</h2>
+        <a class="viewall" href="#/work">View all</a>
+      </div>
+    </div>
+    <div class="keywrap">
+      <span class="label keyhead">Filter</span>
+      <div class="keyrow" id="homeKeys" role="group" aria-label="Filter by discipline"></div>
+    </div>
+    <div class="grid" id="workGrid"></div>
+    <div class="approach">
+      <div>
+        <span class="label keyhead">Approach</span>
+        <h2 class="h-sub">Small Crews,<br>Long Days</h2>
+        <p class="note">Most projects run two to five days with
+          <a href="#/info">the same handful of people</a>, shoot after shoot. Direction,
+          stills, and film get planned in one conversation rather than bid out separately.</p>
+      </div>
+      <div class="aplists">
+        <div class="aplist"><span class="label keyhead">Capabilities</span><ul id="capList"></ul></div>
+        <div class="aplist"><span class="label keyhead">Sectors</span><ul id="secList"></ul></div>
+      </div>
+    </div>
+    <h2 class="display h-sec">Ongoing</h2>
+    <div class="eco" id="ecoGrid"></div>
+  </div>
+</section>
+
+<!-- ══════════════ WORK (index) ══════════════ -->
+<section class="page top-pad" id="p-work">
+  <div class="wrap">
+    <div class="pagehead">
+      <h1 class="display h-sec">Work</h1>
+      <span class="display h-sec ct" id="workCount"></span>
+    </div>
+    <div class="keywrap">
+      <span class="label keyhead">Filter</span>
+      <div class="keyrow" id="workKeys" role="group" aria-label="Filter projects"></div>
+    </div>
+    <div class="idx-lay">
+      <div class="idx-col">
+        <div class="idx" id="idx"></div>
+      </div>
+      <div class="idx-view">
+        <div class="idx-frame" id="idxFrame">
+          <img id="lyA" alt=""><img id="lyB" alt="">
+        </div>
+        <div class="idx-meta" id="idxMeta"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ARCHIVE ══════════════ -->
+<section class="page top-pad" id="p-archive">
+  <div class="wrap">
+    <div class="pagehead">
+      <h1 class="display h-sec">Archive</h1>
+      <span class="display h-sec ct" id="arcCount"></span>
+    </div>
+    <div class="keywrap">
+      <span class="label keyhead">Filter</span>
+      <div class="keyrow" id="arcKeys" role="group" aria-label="Filter by discipline"></div>
+    </div>
+    <div class="scatter" id="scatter"></div>
+  </div>
+</section>
+<div class="peek" id="peek"><img id="peekImg" alt=""></div>
+
+<!-- ══════════════ PROJECT DETAIL ══════════════ -->
+<section class="page top-pad" id="p-project"><div class="wrap" id="detWrap"></div></section>
+
+<!-- ══════════════ INFO ══════════════ -->
+<section class="page top-pad" id="p-info">
+  <div class="wrap">
+    <p class="lede statement" id="bio"></p>
+    <div class="split">
+      <div class="portrait"><img id="portrait" alt="Jake Caminero on location"></div>
+      <div class="deets" id="infoBlocks"></div>
+    </div>
+    <div class="iband-head">
+      <h2 class="display h-sec">On Set</h2>
+      <p class="leadin">The people who turn up, and the kit that comes with them.</p>
+    </div>
+    <div class="ibands">
+      <div class="aplist">
+        <span class="label keyhead">Regular Crew</span>
+        <ul id="crewList"></ul>
+      </div>
+      <div>
+        <span class="label keyhead">Gear</span>
+        <div class="geargrid" id="gearList"></div>
+        <p class="gearnote">Owned and travels with him. Anything a job needs beyond this
+          gets packaged through a rental house and quoted with the bid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section class="page top-pad" id="p-contact">
+  <div class="wrap">
+    <div class="contact-hero">
+      <p class="label dim" style="margin-bottom:20px">Get in touch</p>
+      <div class="mails" id="contactMails"></div>
+    </div>
+    <div class="cgrid" id="contactGrid"></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <p class="label dim" style="margin-bottom:16px">Get in touch</p>
+        <div class="mails" id="footMails"></div>
+      </div>
+      <div class="rlist"><span class="label">Elsewhere</span><ul class="mono-list" id="socials"></ul></div>
+    </div>
+    <div class="base"><span>Jake Caminero — Costa Mesa, CA</span><span id="year"></span></div>
+  </div>
+</footer>
+
+<!-- Generated by tools/prepare-images.mjs. Empty until the first image
+     build; every project falls back to a generated placeholder. -->
+<script src="assets/images.js"></script>
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   CONTENT — everything in this object is Jake-editable.
+   Generated from Airtable at build time in production.
+   ══════════════════════════════════════════════════════════════════════ */
+const CONTENT = {
+  site:{
+    intro:"Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. Recent work includes {Road & Track}, {Batch}, and {Cuyama Buckhorn}.",
+    bio:"Jake Caminero is a photographer and director based in Costa Mesa, California. He works on location, in available light, across automotive, outdoor, and hospitality — and takes on creative direction when the whole campaign needs to hold together rather than just the frames.",
+    capabilities:["Photography","Cinematography","Creative Direction","Documentary","Campaign","Editorial","Brand Film"],
+    sectors:["Automotive","Cycling","Fashion","Food & Drink","Hospitality","Outdoor","Sport","Wellness"],
+    portrait:null,                       // e.g. "site/portrait.jpg"
+    emails:["jake@jakecaminero.com"],
+    socials:[{n:"Instagram",u:"https://instagram.com/jakecaminero"},{n:"Vimeo",u:"https://vimeo.com"},{n:"LinkedIn",u:"https://linkedin.com"}],
+    contact:[
+      {h:"Representation",lines:["Field & Range","reps@fieldandrange.com"]},
+      {h:"Studio",lines:["1503 Superior Avenue","Costa Mesa, CA 92627"]},
+      {h:"Phone",lines:["+1 949 555 0147"]},
+      {h:"Availability",lines:["Booking from October 2026","Travel-ready, US + Japan"]}
+    ],
+    /* TEST DATA — plausible kit for the work shown, not Jake's actual inventory.
+       Replace wholesale, or delete this array and the Gear block disappears. */
+    gear:[
+      {h:"Bodies",list:["Sony FX3","Sony a7R V","Bolex H16 — 16mm","Mamiya 7II — 120","Contax G2 — 35mm"]},
+      {h:"Glass",list:["Sony 24–70mm f/2.8 GM II","Sony 70–200mm f/2.8 GM II","Sigma 14–24mm f/2.8 Art","Zeiss Loxia 50mm f/2","Rehoused Canon FD primes"]},
+      {h:"Motion & Support",list:["DJI RS 4 Pro","Tilta Nucleus-M","Sachtler flowtech 75","DJI Mavic 3 Pro","Low-mode and slider rig"]},
+      {h:"Light & Sound",list:["Aputure 600d Pro","Aputure 300x","Astera Titan tubes","Sennheiser MKH 416","Zoom F6 recorder"]}
+    ],
+    info:[
+      {h:"Clients",list:["Road & Track","Batch","Cuyama Buckhorn","The Rally Project","The Fullest","PRYML","Agronomy Workshop","Son of Cobra","Oak Cycling","Velotric","Haus of Wellness","Dino Motorsport","Joy Air","Max Griffin"]},
+      {h:"Recognition",list:["TEST DATA — replace with Jake's actual credits","TEST DATA — awards, features, publications","TEST DATA — or cut this block entirely"]},
+      {h:"Approach",body:"A bias toward the location over the studio, and toward available light over rigs. Most projects run two to five shoot days with a producer, a first AC, and whatever the terrain will allow. Full campaign packages — direction, stills, and film planned together rather than bid out separately — are the work he likes best."}
+    ],
+    ongoing:[
+      {t:"Field Notes",d:"A monthly letter on location scouting, gear that survived, and gear that did not.",tone:"black"},
+      {t:"Editions",d:"Limited archival prints released twice a year from personal and unused frames.",tone:"grey"},
+      {t:"The Cuyama Series",d:"An ongoing personal record of a valley slowly changing hands.",tone:"forest"},
+      {t:"Mentorship",d:"Two open portfolio reviews each quarter for photographers starting out.",tone:"sage"}
+    ]
+  },
+
+  /* Per project — roles: "cd" | "stills" | "motion"
+     selected:true = a Select (Work + homepage); false = archive-only.
+     tone, overlay and gal are placeholder-imagery fields; delete on real assets. */
+  projects:[
+    {id:"swi-endo",
+     t:"SWI + ENDO",
+     client:"Test Shoot",
+     date:"June 15, 2026",
+     yr:"2026",
+     roles:["stills", "motion", "cd"],
+     selected:true,
+     tone:"clay",
+     gal:5,
+     overlay:"SWI + ENDO",
+     loc:"Orange County, California",
+     del:["Brand film", "Campaign stills"],
+     tags:["Photography", "Creative Direction", "Cinematography", "Cycling"],
+     video:"https://vimeo.com/1204022679",
+     desc:"A speculative photo and video project made in collaboration with SWI cycling and Endociety.",
+     credits:[{r:"DP",n:"Jake Caminero"},{r:"Photography",n:"Jake Caminero"},{r:"Creative Direction",n:"Jake Caminero"},{r:"Talent",n:"Michael Greene"},{r:"Talent",n:"Devon Polk"},{r:"Assistant",n:"Chase Thompson"},{r:"Assistant",n:"Zach Sorensen"},{r:"Special Thanks",n:"Josh Stiller, SWI"},{r:"Special Thanks",n:"Zev Friedman, SWI"}]},
+
+    {id:"fullest-25-26",
+     t:"The Fullest 25/26",
+     client:"The Fullest",
+     date:"2025 — 2026",
+     yr:"2025",
+     roles:["motion"],
+     selected:true,
+     tone:"sage",
+     gal:4,
+     loc:"Southern California",
+     del:["Social film series"],
+     tags:["Cinematography", "Campaign", "Wellness"],
+     desc:"A series of creative projects directed towards social media use.",
+     credits:[{r:"DP",n:"Jake Caminero"},{r:"Photography",n:"Chase Thompson"}]},
+
+    {id:"fullest-ecology-center",
+     t:"The Fullest + Ecology Center",
+     client:"The Fullest",
+     date:"April 10, 2026",
+     yr:"2026",
+     roles:["motion"],
+     selected:true,
+     tone:"forest",
+     gal:5,
+     loc:"San Juan Capistrano, California",
+     del:["Brand film", "Social cutdowns"],
+     tags:["Cinematography", "Brand Film", "Wellness"],
+     desc:"Video work for the collaboration of The Fullest with The Ecology Center.",
+     credits:[{r:"DP",n:"Jake Caminero"},{r:"Photography",n:"Chase Thompson"},{r:"Client Team",n:"The Fullest"}]},
+
+    {id:"agronomy-ss-launch",
+     t:"Agronomy S/S Launch",
+     client:"Agronomy Workshop",
+     date:"April 1, 2026",
+     yr:"2026",
+     roles:["motion"],
+     selected:true,
+     tone:"sage",
+     gal:4,
+     loc:"Costa Mesa, California",
+     del:["16mm and digital film", "Launch assets"],
+     tags:["Cinematography", "Brand Film", "Fashion"],
+     desc:"16mm and digital video work for the spring/summer launch for Agronomy Workshop.",
+     credits:[{r:"DP",n:"Jake Caminero"},{r:"Creative Direction",n:"Rob, Agronomy Workshop"},{r:"Photography",n:"Chase Thompson"}]},
+
+    {id:"buckhorn-foraging",
+     t:"Foraging for Cocktails",
+     client:"Cuyama Buckhorn",
+     date:"March 18, 2026",
+     yr:"2026",
+     roles:["stills"],
+     selected:true,
+     tone:"sage",
+     gal:6,
+     loc:"Los Padres National Forest, California",
+     del:["Documentary stills", "Web and social assets"],
+     tags:["Photography", "Documentary", "Food & Drink", "Hospitality"],
+     desc:"In partnership with Sam from Cuyama Rambler and the Cuyama Buckhorn, we followed Sam as he guided us on a hike through the Los Padres National Forest. The project involved documenting his knowledge of the land through foraging and blending of natural materials to create a botanically driven cocktail on the back of his tailgate.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Video",n:"Zach Sorensen"},{r:"Talent",n:"Sam, Cuyama Rambler"}]},
+
+    {id:"rally-tristan-detwiller",
+     t:"Tristan Detwiller",
+     client:"The Rally Project",
+     date:"February 2026",
+     yr:"2026",
+     roles:["cd", "motion"],
+     selected:true,
+     tone:"clay",
+     gal:5,
+     loc:"Los Angeles, California",
+     del:["Brand film", "Creative direction"],
+     tags:["Creative Direction", "Cinematography", "Brand Film", "Fashion"],
+     desc:"Tristan founded Stan with the vision of reinvigorating hand-crafted passion in clothing. He draws inspiration from timeless and classic fashions that have endured throughout various centuries. What sets Stan apart from other clothing companies is Tristan's use of ancient textiles — materials so carefully crafted that they have withstood the test of time and continue to be reused and cherished. Tristan selects his materials based on his philosophy that clothing is meant to be used, not just admired. He creates garments with textiles proven to endure, designed to be worn and to have life infused within them, continuing the stories built into each item.",
+     credits:[{r:"Creative Direction",n:"Jake Caminero"},{r:"Motion",n:"Jake Caminero"},{r:"Edit",n:"Jake Caminero"},{r:"Photography",n:"Chase Thompson"},{r:"Talent",n:"Tristan Detwiller"}]},
+
+    {id:"batch-farm-visit",
+     t:"Farm Visit",
+     client:"Batch",
+     date:"January 20, 2026",
+     yr:"2026",
+     roles:["motion"],
+     selected:true,
+     tone:"pale",
+     gal:6,
+     loc:"Viroqua, Wisconsin",
+     del:["Documentary film", "Stills selects"],
+     tags:["Cinematography", "Documentary", "Food & Drink"],
+     desc:"DP work from a visit to the Batch hemp farm in Wisconsin. We spent 3 days documenting their processes of farming and the special people that make it all happen.",
+     credits:[{r:"DP",n:"Jake Caminero"},{r:"Creative Direction",n:"Megan Powell"},{r:"Photography",n:"Zach Sorensen"},{r:"Client Team",n:"Batch"}]},
+
+    {id:"rally-luke-davis",
+     t:"Luke Davis",
+     client:"The Rally Project",
+     date:"January 1, 2026",
+     yr:"2026",
+     roles:["cd"],
+     selected:true,
+     tone:"black",
+     gal:5,
+     loc:"Los Angeles, California",
+     del:["Creative direction", "Short film"],
+     tags:["Creative Direction", "Documentary"],
+     video:"https://vimeo.com/1204339928",
+     desc:"Luke Davis. A man who seeks the creative ingenuity in all facets of life, Luke enthralls his viewers with paintings, drawings, poetry, and even food in his pursuit of self-expression. For the first time, Luke will be displaying all aspects of his creative process in his methodical, all-encompassing vision.",
+     credits:[{r:"Photography",n:"Zach Sorensen"},{r:"DP",n:"Nick Warren"},{r:"Edit",n:"Jake Caminero"},{r:"Talent",n:"Luke Davis"}]},
+
+    {id:"toyota-tundra-rathkamp",
+     t:"Toyota Tundra + Spencer Rathkamp",
+     client:"Spec Shoot",
+     date:"November 5, 2025",
+     yr:"2025",
+     roles:["stills"],
+     selected:true,
+     tone:"black",
+     gal:5,
+     overlay:"TUNDRA",
+     loc:"Mojave, California",
+     del:["Spec campaign stills", "CGI integration"],
+     tags:["Photography", "Campaign", "Automotive"],
+     desc:"A speculative project that focused on the use of CGI. The goal was to bring a tangible feeling to something that tends to lean clinical. We partnered with professional mountain biker Spencer Rathkamp to bring an edge to the Tundra's story.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"CGI",n:"Benjamin Grimes"},{r:"Talent",n:"Spencer Rathkamp"},{r:"Retouching",n:"Schinken Studio"}]},
+
+    {id:"velotric-nomad-2",
+     t:"Velotric",
+     client:"Velotric",
+     date:"October 2025",
+     yr:"2025",
+     roles:["stills"],
+     selected:false,
+     tone:"grey",
+     gal:4,
+     loc:"Long Beach, California",
+     del:["Social campaign stills"],
+     tags:["Photography", "Campaign", "Cycling"],
+     desc:"Social media campaign for the launch of the Nomad 2.",
+     credits:[{r:"Photography",n:"Jake Caminero"}]},
+
+    {id:"buckhorn-summer-cocktail",
+     t:"Summer Cocktail Menu",
+     client:"Cuyama Buckhorn",
+     date:"August 20, 2025",
+     yr:"2025",
+     roles:["stills"],
+     selected:true,
+     tone:"clay",
+     gal:5,
+     loc:"Cuyama Valley, California",
+     del:["Menu photography", "Web and social assets"],
+     tags:["Photography", "Food & Drink", "Hospitality"],
+     desc:"Photography work for the Cuyama Buckhorn's summer drink menu.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Talent",n:"Sam, Cuyama Rambler"}]},
+
+    {id:"batch-lifestyle-campaign",
+     t:"Batch Lifestyle Campaign",
+     client:"Batch",
+     date:"July 16, 2025",
+     yr:"2025",
+     roles:["motion"],
+     selected:true,
+     tone:"pale",
+     gal:6,
+     loc:"Los Angeles, California",
+     del:["Lifestyle film", "Social and web assets"],
+     tags:["Cinematography", "Campaign", "Food & Drink"],
+     desc:"Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
+     credits:[{r:"DP",n:"Jake Caminero"},{r:"Edit",n:"Jake Caminero"},{r:"Photography",n:"Zach Sorensen"},{r:"AC",n:"Thomas Kovacik"},{r:"Lighting Tech",n:"Chase Thompson"},{r:"Producer",n:"Matt Hume"},{r:"Production Manager",n:"Emalee Caminero"},{r:"Production Assistant",n:"Cherish McDonald"},{r:"Creative Direction",n:"Megan Powell"}]},
+
+    {id:"haus-of-wellness",
+     t:"Haus of Wellness",
+     client:"Haus of Wellness",
+     date:"2025",
+     yr:"2025",
+     roles:["stills"],
+     selected:false,
+     tone:"sage",
+     gal:4,
+     loc:"Costa Mesa, California",
+     del:["Lifestyle stills", "Social film"],
+     tags:["Photography", "Campaign", "Wellness"],
+     desc:"A lifestyle photo and video shoot for social media and web use.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Motion",n:"Nick Warren"}]},
+
+    {id:"pryml-hog-hunt",
+     t:"Hog Hunt",
+     client:"PRYML",
+     date:"May 5, 2025",
+     yr:"2025",
+     roles:["motion", "stills"],
+     selected:true,
+     tone:"forest",
+     gal:6,
+     loc:"Molnar Outfitters, Central Coast, California",
+     del:["Documentary film", "Documentary stills"],
+     tags:["Photography", "Cinematography", "Documentary", "Outdoor"],
+     video:"https://vimeo.com/1204363270",
+     desc:"A documentary project around a singular hunt for a wild California hog. The shoot took place on the Molnar Outfitters reserve in the central coast of California.",
+     credits:[{r:"Video",n:"Jake Caminero"},{r:"Video",n:"Nick Warren"},{r:"Stills",n:"Jake Caminero"},{r:"Edit",n:"Nick Warren"},{r:"Producer",n:"Brandon Nelson"},{r:"Talent",n:"Brandon Nelson"},{r:"Talent",n:"Brance Molnar"}]},
+
+    {id:"son-of-cobra-bristol",
+     t:"The Bristol Car",
+     client:"Son of Cobra",
+     date:"March 15, 2025",
+     yr:"2025",
+     roles:["stills"],
+     selected:true,
+     tone:"grey",
+     gal:5,
+     loc:"Julian, California",
+     del:["Documentary stills"],
+     tags:["Photography", "Documentary", "Automotive"],
+     desc:"The documentation of delivering the first complete production car from Son of Cobra to his client, Dave, the owner of Julian Pie Company.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Talent",n:"Paul Lefevre, Son of Cobra"}]},
+
+    {id:"rally-dylan-riin",
+     t:"Dylan + RiiN",
+     client:"The Rally Project",
+     date:"January 25, 2025",
+     yr:"2025",
+     roles:["stills", "motion"],
+     selected:true,
+     tone:"grey",
+     gal:5,
+     loc:"Southern California",
+     del:["Portrait stills", "Short film"],
+     tags:["Photography", "Creative Direction", "Documentary", "Fashion"],
+     desc:"Getting to know Dylan has been so refreshing. His overwhelming stoke and creativity is contagious, and his story is incredible. Having overcome having a brain tumor, Dylan has continued to pursue his creative project, RiiN, and live his life to the fullest.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Creative Direction",n:"Jake Caminero"},{r:"Camera Operator",n:"Zach Sorensen"},{r:"Edit",n:"Jake Caminero"},{r:"Talent",n:"Dylan Trumbul"}]},
+
+    {id:"oak-morning-ride",
+     t:"Morning Ride",
+     client:"Oak Cycling",
+     date:"January 18, 2025",
+     yr:"2025",
+     roles:["stills"],
+     selected:false,
+     tone:"forest",
+     gal:4,
+     loc:"Orange County, California",
+     del:["Documentary stills"],
+     tags:["Photography", "Cycling"],
+     desc:"A short ride with Wyatt Funk and Oak Cycling.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Talent",n:"Wyatt Funk"}]},
+
+    {id:"whitney",
+     t:"Whitney",
+     client:"Personal Project",
+     date:"October 7, 2024",
+     yr:"2024",
+     roles:["stills"],
+     selected:true,
+     tone:"black",
+     gal:6,
+     overlay:"WHITNEY",
+     loc:"Mount Whitney, California",
+     del:["Personal series"],
+     tags:["Photography", "Outdoor"],
+     desc:"Ever since I was a kid, I've dreamt of what the view would be like from the top of Whitney. I fantasized over the people who would make their way to the summit, thinking of them almost as heroes. I imagined the view would be so vast and every other mountain in the land would be microscopic compared to the top of Whitney. And now after making the journey, I realize that there's something special about making it to the peak. It's not the view. It wasn't romantic. It kind of sucked haha. But the feeling of accomplishment is so overwhelming. This day sparked something in me that I never knew I had, and I can't wait for the next one. I think little Jake would be proud.",
+     credits:[{r:"Photography",n:"Jake Caminero"}]},
+
+    {id:"joy-air",
+     t:"Joy Air",
+     client:"Joy Air",
+     date:"2024",
+     yr:"2024",
+     roles:["stills"],
+     selected:false,
+     tone:"forest",
+     gal:4,
+     loc:"Southern California",
+     del:["Social and web imagery"],
+     tags:["Photography", "Campaign", "Wellness"],
+     desc:"Social media and web imagery.",
+     credits:[{r:"Photography",n:"Jake Caminero"}]},
+
+    {id:"weekend-with-rivian",
+     t:"Weekend with Rivian",
+     client:"Test",
+     date:"August 25, 2024",
+     yr:"2024",
+     roles:["stills"],
+     selected:true,
+     tone:"pale",
+     gal:5,
+     loc:"San Francisco, California",
+     del:["Documentary stills"],
+     tags:["Photography", "Documentary", "Automotive"],
+     desc:"While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Friends & Partners",n:"Peden+Munk"}]},
+
+    {id:"tumbleweeds",
+     t:"Tumbleweeds",
+     client:"Max Griffin",
+     date:"August 1, 2024",
+     yr:"2024",
+     roles:["stills"],
+     selected:true,
+     tone:"clay",
+     gal:5,
+     loc:"Palmdale, California",
+     del:["Concept stills", "Promo imagery"],
+     tags:["Photography", "Documentary", "Sport"],
+     desc:"Images to support the concept for a documentary led by Max Griffin. The film and promo is centered around his home town of Palmdale but specifically the unique concentration of soccer talent that is cultivated there. Max played professionally in the MLS and is looking to give back to his community by telling their story.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Executive Producer and Director",n:"Max Griffin"}]},
+
+    {id:"dino-motorsport",
+     t:"Dino Motorsport",
+     client:"Dino Motorsport",
+     date:"2024",
+     yr:"2024",
+     roles:["stills"],
+     selected:false,
+     tone:"black",
+     gal:5,
+     loc:"Las Vegas, Nevada",
+     del:["Documentary stills"],
+     tags:["Photography", "Documentary", "Automotive"],
+     desc:"A visit to Las Vegas for a tour and documentation of Dino Motorsport's compound. The family has deep roots in the world of Alfa Romeos and are looking to help revive and reimagine one of the most iconic car companies of the 20th century.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Company",n:"Dino Motorsport"}]},
+
+    {id:"rally-matt-allen",
+     t:"Matt Allen",
+     client:"The Rally Project",
+     date:"May 1, 2024",
+     yr:"2024",
+     roles:["stills", "cd"],
+     selected:true,
+     tone:"sage",
+     gal:4,
+     loc:"Los Angeles, California",
+     del:["Portrait stills"],
+     tags:["Photography", "Creative Direction", "Documentary"],
+     desc:"A look into a day in the life of multifaceted artist, Matt Allen.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Creative Direction",n:"Jake Caminero"}]},
+
+    {id:"lucid-air-sapphire",
+     t:"Lucid Air Sapphire",
+     client:"Road & Track",
+     date:"February 1, 2024",
+     yr:"2024",
+     roles:["motion", "stills", "cd"],
+     selected:true,
+     tone:"black",
+     gal:6,
+     overlay:"SAPPHIRE",
+     loc:"Southern California",
+     del:["Editorial stills", "Editorial film"],
+     tags:["Photography", "Creative Direction", "Cinematography", "Editorial", "Automotive"],
+     desc:"An editorial piece focusing on the then unreleased Lucid Air Sapphire. We had the opportunity to take the car for 5 days and put it through its paces. Though the weather was unfavorable we were able to get both photo and video of the car.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Creative Direction",n:"Jake Caminero"},{r:"DP",n:"Rob Trent"},{r:"AC",n:"Asriel Jaska"},{r:"Photo Assistant and Driver",n:"Spencer Kofoed"},{r:"Editorial Creative Direction",n:"Cassidy Zobl"},{r:"Car",n:"Lucid Motors"}]},
+
+    {id:"honda-crv",
+     t:"Honda CR-V",
+     client:"Test",
+     date:"January 2, 2024",
+     yr:"2024",
+     roles:["stills", "cd"],
+     selected:true,
+     tone:"forest",
+     gal:5,
+     loc:"Angeles National Forest, California",
+     del:["Spec campaign stills"],
+     tags:["Photography", "Creative Direction", "Campaign", "Automotive"],
+     desc:"A speculative project highlighting the outdoor use and lifestyle that is capable with the Honda CR-V.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Assistant",n:"Spencer Kofoed"},{r:"Talent",n:"Laura Quintana"},{r:"Talent",n:"Kyleen Likas"},{r:"Special Thanks",n:"Cherish McDonald"},{r:"Special Thanks",n:"Zach Sorensen"}]},
+
+    {id:"rt-the-spot",
+     t:"The Spot",
+     client:"Road & Track",
+     date:"2023",
+     yr:"2023",
+     roles:["stills"],
+     selected:false,
+     tone:"grey",
+     gal:3,
+     loc:"Southern California",
+     del:["Single page commission"],
+     tags:["Photography", "Editorial", "Automotive"],
+     desc:"A single page commission for Road & Track.",
+     credits:[{r:"Photography",n:"Jake Caminero"}]},
+
+    {id:"rt-everatti",
+     t:"Everatti",
+     client:"Road & Track",
+     date:"2023",
+     yr:"2023",
+     roles:["stills"],
+     selected:false,
+     tone:"black",
+     gal:4,
+     loc:"Southern California",
+     del:["Editorial stills"],
+     tags:["Photography", "Editorial", "Automotive"],
+     desc:"Editorial project for Road & Track.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Photo Assistant",n:"Zach Sorensen"}]},
+
+    {id:"rt-breakdance",
+     t:"Breakdance",
+     client:"Road & Track",
+     date:"February 2, 2023",
+     yr:"2023",
+     roles:["stills"],
+     selected:true,
+     tone:"grey",
+     gal:6,
+     loc:"The Concours Club, Miami, Florida",
+     del:["Editorial stills"],
+     tags:["Photography", "Editorial", "Automotive"],
+     desc:"An editorial project for Road & Track documenting the record setting Le Mans car built by Briggs Cunningham, the Cunningham C5-R. The project was shot at the Concours Club in south Florida. What's really special about this car wasn't just the history or the sound of it, but the condition. The Revs Institute did an incredible job not restoring the vehicle, but keeping it in the same condition that it was in when it finished the 24 hours of Le Mans. You can literally see the sweat stains still on the seat.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Photo Assistant",n:"Jacob Outsen"},{r:"Digital Tech",n:"Tony Lai"},{r:"Editor in Chief",n:"Matt Farah"},{r:"Car",n:"The Revs Institute"},{r:"Publication",n:"Road & Track"},{r:"Location",n:"The Concours Club"}]},
+
+    {id:"rt-rimac-nevera",
+     t:"Rimac Nevera",
+     client:"Road & Track",
+     date:"2022",
+     yr:"2022",
+     roles:["stills"],
+     selected:false,
+     tone:"pale",
+     gal:5,
+     loc:"Big Sur, California",
+     del:["Editorial stills"],
+     tags:["Photography", "Editorial", "Automotive"],
+     desc:"Editorial project for Road & Track in Big Sur for the then unreleased Rimac Nevera.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Assistant",n:"Nick Warren"}]},
+
+    {id:"rt-cyan-p1800",
+     t:"Cyan P1800",
+     client:"Road & Track",
+     date:"2022",
+     yr:"2022",
+     roles:["stills"],
+     selected:false,
+     tone:"clay",
+     gal:5,
+     loc:"Malibu, California",
+     del:["Editorial stills"],
+     tags:["Photography", "Editorial", "Automotive"],
+     desc:"My first editorial project for Road & Track featuring the Volvo P1800 reimagined by Cyan Racing, formerly known as Polestar. The shoot took place in Malibu, California.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Photo Assistant",n:"Jeff Gros"},{r:"Photo Assistant",n:"Zach Sorensen"},{r:"Editor at Large",n:"Matt Farah"},{r:"Car",n:"Cyan Racing"},{r:"Editorial Creative Direction",n:"Cassidy Zobl"}]},
+
+    {id:"uniqlo-vans",
+     t:"Uniqlo + Vans",
+     client:"Test",
+     date:"2021",
+     yr:"2021",
+     roles:["stills", "cd"],
+     selected:false,
+     tone:"pale",
+     gal:4,
+     loc:"Los Angeles, California",
+     del:["Spec campaign stills"],
+     tags:["Photography", "Creative Direction", "Campaign", "Fashion"],
+     desc:"A speculative project of two brands.",
+     credits:[{r:"Photography",n:"Jake Caminero"},{r:"Motion & Assist",n:"Zach Sorensen"},{r:"Talent",n:"Andrew Simila"}]}
+  ]
+};
+
+/* ══════════════════════════════════════════════════════════════════════
+   PLACEHOLDER IMAGERY — delete once real assets are on the CDN.
+   ══════════════════════════════════════════════════════════════════════ */
+const TONES={
+  grey:["#c9c7c3","#8e8b86","#141414"], sage:["#cfd8c4","#9fb08c","#22301c"],
+  black:["#161616","#3a3a3a","#f4f3f1"], forest:["#2b3a2c","#546b4c","#e8ebe4"],
+  pale:["#eceae5","#cfccc4","#1a1a1a"], clay:["#8f6a52","#c6957a","#1c1210"]
+};
+function shot(seed,tone,ratio,overlay){
+  let h=0;for(let i=0;i<seed.length;i++)h=(h*33+seed.charCodeAt(i))>>>0;
+  const [a,b,fg]=TONES[tone]||TONES.grey, ang=(h%5)*24+12;
+  const w=1000,ht=Math.round(1000/ratio);
+  const label=overlay?`<text x="50%" y="${ht*0.62}" text-anchor="middle" fill="${fg}" fill-opacity=".9"
+     font-family="Helvetica,Arial,sans-serif" font-weight="700" font-size="${Math.min(w,ht)*0.115}"
+     letter-spacing="-2">${overlay}</text>`:"";
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${ht}">
+<defs><linearGradient id="g" gradientTransform="rotate(${ang} .5 .5)">
+<stop offset="0" stop-color="${a}"/><stop offset=".62" stop-color="${b}"/><stop offset="1" stop-color="${a}"/></linearGradient>
+<filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3"/><feColorMatrix type="saturate" values="0"/></filter>
+<radialGradient id="v" cx=".5" cy=".42" r=".8"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></radialGradient></defs>
+<rect width="${w}" height="${ht}" fill="url(#g)"/><rect width="${w}" height="${ht}" fill="url(#v)"/>
+${label}<rect width="${w}" height="${ht}" filter="url(#n)" opacity=".1"/></svg>`;
+  return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg.replace(/\n/g,""));
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   LAYOUT PATTERNS — design, not data. Projects cycle through these,
+   so adding or removing work never breaks a composition.
+   ══════════════════════════════════════════════════════════════════════ */
+const SLOTS=[{c:"1 / 8",r:1.28,pad:0},{c:"9 / 13",r:1.0,pad:0},{c:"3 / 13",r:1.92,pad:0},
+             {c:"1 / 5",r:1.24,pad:0},{c:"6 / 13",r:0.86,pad:60},{c:"5 / 10",r:1.32,pad:0}];
+const GAL_SLOTS=[{c:"1 / 8",r:1.5},{c:"8 / 13",r:0.8},{c:"1 / 6",r:1.0},
+                 {c:"6 / 13",r:1.62},{c:"3 / 11",r:1.78},{c:"1 / 7",r:0.78}];
+
+const ROLE={cd:"Creative Direction",stills:"Stills",motion:"Motion"};
+
+/* ── what appears where ──────────────────────────────────────────
+   Jake's brief treats "Selected Work" and "Archive" as two tiers, so:
+     Work    — the curated index, selects only
+     Archive — the complete record, everything
+     Home    — the newest HOME_MAX selects
+   The Selects filter therefore only earns its place on Archive, where
+   it's the one view holding both tiers. */
+const HOME_MAX=12;                       // two full cycles of the six-slot grid
+const SELECTS=CONTENT.projects.filter(p=>p.selected);
+const DISCIPLINES=["cd","stills","motion"];
+const ORDER=["cd","stills","motion"];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const byId=id=>CONTENT.projects.find(p=>p.id===id);
+const filters=new Set();
+/* ══════════════════════════════════════════════════════════════════════
+   IMAGE RESOLUTION
+   Drop photographs into assets/<project-id>/ and run prepare-images.mjs.
+   It writes assets/images.js, which sets window.JC_IMAGES:
+
+       {"swi-endo":{main:"swi-endo/main-1600.jpg",
+                    gallery:["swi-endo/01-1600.jpg", ...]}, ...}
+
+   That manifest is merged in below, so no image list is ever written by
+   hand. A browser can't read a directory over HTTP — there's no listing
+   to fetch — so the enumeration happens once at build time instead.
+   Any project the manifest doesn't mention keeps its generated
+   placeholder, which is what makes populating a few at a time safe.
+   ══════════════════════════════════════════════════════════════════════ */
+const IMG_BASE="assets/";
+const MANIFEST=(typeof window!=="undefined"&&window.JC_IMAGES)||{};
+CONTENT.projects.forEach(p=>{ if(MANIFEST[p.id]) p.images=MANIFEST[p.id]; });
+
+const mainImg  =(p,ratio)=> p.images&&p.images.main ? IMG_BASE+p.images.main
+                                                    : shot(p.id,p.tone,ratio,p.overlay);
+const seoImg   = p => p.images&&(p.images.og||p.images.main) ? IMG_BASE+(p.images.og||p.images.main)
+                                                            : shot(p.id,p.tone,1.91,p.overlay);
+const galleryOf= p => (p.images&&p.images.gallery&&p.images.gallery.length)
+    ? p.images.gallery.map(g=>IMG_BASE+g)
+    : Array.from({length:p.gal||4},(_,i)=>shot(p.id+"g"+i,p.tone,GAL_SLOTS[i%6].r,""));
+const hasReal  = p => !!(p.images&&p.images.main);
+
+CONTENT.projects.forEach(p=>{
+  p.main=mainImg(p,1.5);
+  p.gallery=galleryOf(p);
+});
+
+/* ── hero: nested aspect-ratio frames ───────────────── */
+(function(){
+  const ratios=[[2.39,"2.39:1"],[1.85,"1.85:1"],[1.78,"16:9"],[1.5,"3:2"],[1.25,"5:4"],[1,"1:1"]];
+  const W=400,H=272,cx=W/2,cy=138;
+  let s=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img"
+      aria-label="Nested frame ratios from 2.39 to 1 down to 1 to 1, on an axis from motion to stills">
+    <line class="axis" x1="${cx}" y1="24" x2="${cx}" y2="252"/>
+    <text class="axcap" x="${cx}" y="15" text-anchor="middle">MOTION</text>
+    <text class="axcap" x="${cx}" y="264" text-anchor="middle">STILLS</text>`;
+  ratios.forEach(([r,lab],i)=>{
+    const w=W*(0.90-i*0.07), h=w/r, x=cx-w/2, y=cy-h/2, len=Math.round((w+h)*2);
+    s+=`<rect class="fr" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" style="--len:${len};--d:${i*130+180}ms"/>
+        <text class="ratio" x="${x.toFixed(1)}" y="${(y-3.5).toFixed(1)}" style="--d:${i*130+700}ms">${lab}</text>`;
+  });
+  $("#heroArt").innerHTML=s+"</svg>";
+})();
+
+$("#intro").innerHTML=CONTENT.site.intro.replace(/\{([^}]+)\}/g,(_,n)=>`<a href="#/work">${n}</a>`);
+
+/* ── the filter key ──────────────────────────────────────────────
+   Same marks used on the index rows, drawn hollow when a filter is off
+   and solid when it's on. Selected gets a diamond — the one primitive
+   that stays legible next to the triangle, circle and square.
+   The count is faceted: it shows how many projects you'd be left with if
+   that mark were switched on alongside whatever else is already active,
+   so a zero warns you before you click. */
+const FACET=[
+  {k:"cd",     l:"Creative Direction", m:'<polygon points="11.5,2.5 21,20 2,20"/>'},
+  {k:"stills", l:"Stills",             m:'<circle cx="11.5" cy="11.5" r="9"/>'},
+  {k:"motion", l:"Motion",             m:'<rect x="2.5" y="2.5" width="18" height="18"/>'},
+  {k:"selected",l:"Selects",           m:'<rect x="4" y="4" width="15" height="15" transform="rotate(45 11.5 11.5)"/>'}
+];
+const hasFacet=(p,f)=> f==="selected" ? !!p.selected : p.roles.includes(f);
+function facet(f,pool){
+  const others=[...filters].filter(x=>x!==f);
+  return pool.filter(p=>hasFacet(p,f)&&others.every(x=>hasFacet(p,x))).length;
+}
+function paintKeys(el,keys,pool){
+  if(!el)return;
+  keys=keys||FACET.map(f=>f.k); pool=pool||CONTENT.projects;
+  el.innerHTML=FACET.filter(f=>keys.includes(f.k)).map(({k,l,m})=>
+    `<button class="key" data-role="${k}" aria-pressed="${filters.has(k)}">
+       <svg class="ky" viewBox="0 0 23 23" aria-hidden="true">${m}</svg>
+       <span class="kl">${l}</span><span class="kn">${facet(k,pool)}</span>
+     </button>`).join("");
+  el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    const r=b.dataset.role;
+    filters.has(r)?filters.delete(r):filters.add(r);
+    repaint();
+  }));
+}
+function repaint(){
+  /* The homepage only ever shows selects, so its key drops that cell and counts
+     against the selects pool — otherwise it would promise 11 projects and show 4. */
+  paintKeys($("#homeKeys"),DISCIPLINES,SELECTS.slice(0,HOME_MAX));
+  paintKeys($("#workKeys"),DISCIPLINES,SELECTS);
+  paintKeys($("#arcKeys"));
+  applyFilters();
+}
+
+const passes=p=>[...filters].every(f=>hasFacet(p,f));
+function applyFilters(){
+  $$("#workGrid .card").forEach(c=>c.classList.toggle("hidden",!passes(byId(c.dataset.id))));
+  let w=0;
+  $$("#idx .ientry").forEach(en=>{
+    const ok=passes(byId(en.dataset.id));
+    en.classList.toggle("hidden",!ok);
+    if(!ok) en.classList.remove("open");
+    if(ok)w++;
+  });
+  $("#workCount").textContent=w+(w===1?" project":" projects");
+  let n=0;
+  $$("#scatter .sc").forEach(s=>{const ok=passes(byId(s.dataset.id));s.classList.toggle("mute",!ok);if(ok)n++});
+  $("#arcCount").textContent=n+(n===1?" project":" projects");
+}
+
+/* ── home grid ──────────────────────────────────────── */
+$("#workGrid").innerHTML=SELECTS.slice(0,HOME_MAX).map((p,i)=>{
+  const s=SLOTS[i%SLOTS.length];
+  return `<a class="card" href="#/project/${p.id}" data-id="${p.id}" style="grid-column:${s.c};margin-top:${s.pad}px">
+    <div class="shot" style="aspect-ratio:${s.r}"><img src="${mainImg(p,s.r)}" alt="${p.t} for ${p.client}" loading="lazy"></div>
+    <div class="cap"><span class="t">${p.t}</span>
+    <div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div></div></a>`;
+}).join("");
+/* ── LINE ICONS ──────────────────────────────────────────────────
+   One hairline mark per capability and sector, drawn on a 20×20 grid
+   at the same weight as the rules around them. */
+const ICON={
+"Photography":'<rect x="2" y="6.6" width="16" height="10.4" rx="1.2"/><path d="M7.2 6.6l1.3-2.4h3l1.3 2.4"/><circle cx="10" cy="11.8" r="3.2"/>',
+"Cinematography":'<path d="M3 7V4.4A1.4 1.4 0 014.4 3H7M13 3h2.6A1.4 1.4 0 0117 4.4V7M17 13v2.6a1.4 1.4 0 01-1.4 1.4H13M7 17H4.4A1.4 1.4 0 013 15.6V13"/><circle cx="10" cy="10" r="2.3"/>',
+"Creative Direction":'<circle cx="10" cy="10" r="7.4"/><path d="M13.4 6.6l-2.2 4.6-4.6 2.2 2.2-4.6z"/>',
+"Documentary":'<rect x="2.6" y="8" width="14.8" height="9" rx="1"/><path d="M2.8 8l1.5-3.3 13.1 1.5L17.4 8"/><path d="M7.6 5.2 6.3 8M12.3 5.7 11 8"/>',
+"Campaign":'<circle cx="10" cy="10" r="1.9"/><path d="M14 6a5.6 5.6 0 010 8M6 14a5.6 5.6 0 010-8"/><path d="M16.6 3.4a9.3 9.3 0 010 13.2M3.4 16.6a9.3 9.3 0 010-13.2"/>',
+"Editorial":'<rect x="4.2" y="3" width="11.6" height="14" rx="1"/><path d="M7 7h6M7 10h6M7 13h3.6"/>',
+"Brand Film":'<rect x="2.6" y="5" width="14.8" height="10" rx="1"/><path d="M8.4 7.9l4.3 2.6-4.3 2.6z"/>',
+"Automotive":'<path d="M2.8 13.2h14.4M4.8 13.2V9.9l1.8-3.1h6.8l1.8 3.1v3.3"/><circle cx="6.7" cy="14.6" r="1.4"/><circle cx="13.3" cy="14.6" r="1.4"/>',
+"Cycling":'<circle cx="5" cy="13.2" r="3.6"/><circle cx="15" cy="13.2" r="3.6"/><path d="M5 13.2l3.6-5.4h4.2l2.2 5.4M8.6 7.8L7.4 5.4h2.4M12.8 7.8h-4.4"/>',
+"Fashion":'<path d="M10 4.2a1.6 1.6 0 011.6 1.6c0 1.7-1.6 1.4-1.6 2.7"/><path d="M10 8.5L3.4 13c-.8.5-.4 1.8.5 1.8h12.2c.9 0 1.3-1.3.5-1.8L10 8.5z"/>',
+"Food & Drink":'<path d="M6.4 4h7.2l-1 11.1a1 1 0 01-1 .9H8.4a1 1 0 01-1-.9z"/><path d="M6.9 8.4h6.2"/>',
+"Hospitality":'<circle cx="6.6" cy="10" r="3.2"/><path d="M9.8 10h7.2M14.4 10v2.6M16.6 10v2"/>',
+"Outdoor":'<path d="M2.4 15.4l4.6-7.4 2.9 4.5 2.2-3.4 5.5 6.3z"/><circle cx="14.6" cy="5.4" r="1.9"/>',
+"Sport":'<circle cx="10" cy="11.6" r="6.1"/><path d="M8.2 3h3.6M10 3v2.4M10 11.6V8.5"/>',
+"Wellness":'<path d="M10 3.2c2.6 3.5 4.4 5.8 4.4 8.1a4.4 4.4 0 01-8.8 0c0-2.3 1.8-4.6 4.4-8.1z"/>'
+};
+function ruledList(sel,names){
+  $(sel).innerHTML=names.map(t=>
+    `<li><svg viewBox="0 0 20 20" aria-hidden="true">${ICON[t]||""}</svg><span>${t}</span></li>`).join("");
+}
+ruledList("#capList",CONTENT.site.capabilities);
+ruledList("#secList",CONTENT.site.sectors);
+
+/* The crew list is read off the project credits, so anyone Jake works with
+   shows up by being credited. Talent, cars, publications and thank-yous are
+   credits but not crew, and one-off names aren't "regular", so both are held out. */
+const NOT_CREW=new Set(["Talent","Car","Publication","Location","Company",
+  "Special Thanks","Client Team","Friends & Partners","Retouching"]);
+(function crew(){
+  const seen=new Map();
+  CONTENT.projects.forEach(p=>p.credits.forEach(c=>{
+    if(c.n==="Jake Caminero"||NOT_CREW.has(c.r))return;
+    const e=seen.get(c.n)||{n:c.n,total:0,roles:{}};
+    e.total++; e.roles[c.r]=(e.roles[c.r]||0)+1;
+    seen.set(c.n,e);
+  }));
+  const people=[...seen.values()].filter(p=>p.total>1)
+    .sort((a,b)=>b.total-a.total||a.n.localeCompare(b.n)).slice(0,8);
+  $("#crewList").innerHTML=people.map(p=>{
+    const role=Object.entries(p.roles).sort((a,b)=>b[1]-a[1])[0][0];
+    return `<li><span>${p.n}</span><span class="r">${role}</span></li>`;
+  }).join("");
+})();
+$("#ecoGrid").innerHTML=CONTENT.site.ongoing.map((o,i)=>
+  `<div class="it"><div class="shot"><img src="${o.img?IMG_BASE+o.img:shot("eco"+i,o.tone,4/3,"")}" alt="${o.t}" loading="lazy"></div>
+   <h4>${o.t}</h4><p>${o.d}</p></div>`).join("");
+
+/* ══════════════════════════════════════════════════════════════════════
+   WORK — the index. Glyph triad encodes discipline by opacity;
+   hovering a row drives the sticky frame beside it.
+   ══════════════════════════════════════════════════════════════════════ */
+/* A row's subtitle is shown only when it tells you something the title doesn't.
+   Jake can write one explicitly in the `sub` field; otherwise the client name
+   appears only if it isn't already sitting in the title. */
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9]/g,"");
+function subtitleFor(p){
+  if(p.sub) return p.sub;
+  const t=norm(p.t), c=norm(p.client);
+  return (!c || t.includes(c) || c.includes(t)) ? "" : p.client;
+}
+$("#idx").innerHTML=SELECTS.map(p=>{
+  const sub=subtitleFor(p);
+  return `<div class="ientry" data-id="${p.id}">
+    <a class="irow${p.selected?" sel":""}" href="#/project/${p.id}" data-id="${p.id}"
+       aria-label="${p.t}, ${p.client}, ${p.yr}, ${p.roles.map(r=>ROLE[r]).join(", ")}">
+      <span class="tw">
+        <span class="t"><i class="star" aria-hidden="true"></i>${p.t}</span>
+        ${sub?`<span class="sub">${sub}</span>`:""}
+      </span>
+      <span class="yr">${p.yr}</span>
+      <span class="roles" aria-hidden="true">${ORDER.map(r=>`<i class="g ${r}${p.roles.includes(r)?" has":""}"></i>`).join("")}</span>
+      <span class="exp" aria-hidden="true"></span>
+    </a>
+    <div class="ipanel"><div class="ipin"><div class="ibody"></div></div></div>
+  </div>`;
+}).join("");
+
+(function(){
+  const idx=$("#idx"),A=$("#lyA"),B=$("#lyB"),meta=$("#idxMeta");
+  let front="A";
+  function preview(p){
+    const next=front==="A"?B:A, prev=front==="A"?A:B;
+    next.src=mainImg(p,4/5); next.alt=`${p.t} — ${p.client}`;
+    next.classList.add("live"); prev.classList.remove("live");
+    front=front==="A"?"B":"A";
+    meta.innerHTML=`<span class="who"><b>${p.client}</b> · ${p.loc} · ${p.date}</span>`
+      +p.credits.slice(0,4).map(c=>`<span class="cr">${c.r} — <b>${c.n}</b></span>`).join("")
+      +`<div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div>`;
+    $$("#idx .irow").forEach(r=>r.classList.toggle("on",r.dataset.id===p.id));
+  }
+  idx.addEventListener("pointerover",e=>{
+    const r=e.target.closest(".irow"); if(!r)return;
+    idx.classList.add("hot"); preview(byId(r.dataset.id));
+  });
+  idx.addEventListener("pointerleave",()=>idx.classList.remove("hot"));
+  idx.addEventListener("focusin",e=>{const r=e.target.closest(".irow");if(r)preview(byId(r.dataset.id))});
+  preview(CONTENT.projects[0]);
+
+  /* ── accordion (below 1000px) ─────────────────────────────────
+     Panels are built on first open rather than up front, so twenty
+     projects don't generate twenty images nobody asked to see. */
+  const small=matchMedia("(max-width:1000px)");
+  function fill(entry){
+    const body=entry.querySelector(".ibody");
+    if(body.dataset.done)return;
+    const p=byId(entry.dataset.id);
+    body.innerHTML=`
+      <div class="ishot"><img src="${mainImg(p,4/3)}" alt="${p.t} — ${p.client}"></div>
+      <p class="iwho"><b>${p.client}</b> · ${p.loc} · ${p.date}</p>
+      <p class="idesc">${p.desc}</p>
+      <div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div>
+      <a class="igo" href="#/project/${p.id}">View project ↗</a>`;
+    body.dataset.done="1";
+  }
+  idx.addEventListener("click",e=>{
+    if(!small.matches)return;                       // desktop: follow the link
+    const row=e.target.closest(".irow"); if(!row)return;
+    e.preventDefault();
+    const entry=row.parentElement, wasOpen=entry.classList.contains("open");
+    $$("#idx .ientry.open").forEach(x=>x.classList.remove("open"));
+    if(!wasOpen){ fill(entry); entry.classList.add("open");
+      row.setAttribute("aria-expanded","true"); }
+    else row.setAttribute("aria-expanded","false");
+  });
+  small.addEventListener("change",()=>$$("#idx .ientry.open").forEach(x=>x.classList.remove("open")));
+})();
+
+/* ══════════════════════════════════════════════════════════════════════
+   ARCHIVE — scattered titles, parallax drift, cursor-tracked preview
+   that lingers for PEEK_HOLD ms after you leave a title.
+   ══════════════════════════════════════════════════════════════════════ */
+const PEEK_HOLD=500;
+$("#scatter").innerHTML=CONTENT.projects.map(p=>{
+  let h=0;for(let i=0;i<p.id.length;i++)h=(h*31+p.id.charCodeAt(i))>>>0;
+  const indent=h%52, depth=((h>>3)%7-3)*0.055;
+  return `<a class="sc" href="#/project/${p.id}" data-id="${p.id}" data-depth="${depth.toFixed(3)}" style="margin-left:${indent}%">
+    <span class="t">${p.t}<span class="yr">${p.yr}</span></span>
+    <span class="rl">${p.roles.map(r=>ROLE[r]).join(" · ")} — ${p.client}</span></a>`;
+}).join("");
+
+(function(){
+  const scatter=$("#scatter"),peek=$("#peek"),peekImg=$("#peekImg");
+  /* The preview has to be a sibling of the titles for z-index to compare against
+     them — otherwise it always wins on top regardless of what's hovered. */
+  scatter.appendChild(peek);
+  let tx=innerWidth/2,ty=innerHeight/2,cx=tx,cy=ty,hold=null;
+
+  const arm=()=>{clearTimeout(hold);hold=setTimeout(()=>{
+    peek.classList.remove("on"); scatter.classList.remove("hot");
+  },PEEK_HOLD);};
+  const cancel=()=>clearTimeout(hold);
+
+  addEventListener("pointermove",e=>{tx=e.clientX;ty=e.clientY},{passive:true});
+  scatter.addEventListener("pointerover",e=>{
+    const a=e.target.closest(".sc"); if(!a||a.classList.contains("mute"))return;
+    const p=byId(a.dataset.id);
+    cancel();
+    peekImg.src=mainImg(p,4/5); peekImg.alt=p.t;
+    if(!peek.classList.contains("on")){cx=tx;cy=ty}
+    peek.classList.add("on"); scatter.classList.add("hot");
+  });
+  scatter.addEventListener("pointerout",e=>{
+    const from=e.target.closest(".sc");
+    const to=e.relatedTarget&&e.relatedTarget.closest?e.relatedTarget.closest(".sc"):null;
+    if(from&&!to) arm();                 // left a title but stayed on the page
+  });
+  scatter.addEventListener("pointerleave",arm);
+  addEventListener("hashchange",()=>{cancel();peek.classList.remove("on");scatter.classList.remove("hot")});
+
+  (function follow(){
+    const k=reduce?1:0.11;
+    cx+=(tx-cx)*k; cy+=(ty-cy)*k;
+    /* Re-read the container each frame. The cursor's viewport position is
+       unchanged by scrolling, but the scatter's origin moves — so this is what
+       keeps the preview pinned to the pointer while the page scrolls under it. */
+    const r=scatter.getBoundingClientRect();
+    peek.style.transform=
+      `translate(${(cx-r.left).toFixed(1)}px,${(cy-r.top).toFixed(1)}px) translate(-50%,-50%)`;
+    requestAnimationFrame(follow);
+  })();
+
+  if(!reduce){
+    const items=$$("#scatter .sc"); let ticking=false;
+    const drift=()=>{
+      const vh=innerHeight;
+      items.forEach(el=>{
+        const r=el.getBoundingClientRect();
+        const prog=(r.top+r.height/2-vh/2)/vh;
+        el.style.transform=`translate3d(0,${(prog*el.dataset.depth*220).toFixed(2)}px,0)`;
+      });
+      ticking=false;
+    };
+    addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(drift)}},{passive:true});
+    addEventListener("resize",drift); drift();
+  }
+})();
+
+/* ══════════════════════════════════════════════════════════════════════
+   PROJECT DETAIL
+   ══════════════════════════════════════════════════════════════════════ */
+function renderProject(id){
+  const p=byId(id); if(!p)return false;
+  const i=CONTENT.projects.indexOf(p);
+  const next=CONTENT.projects[(i+1)%CONTENT.projects.length];
+
+  $("#detWrap").innerHTML=`
+    <a class="back" href="#/work">← All work</a>
+    <div class="det-hero"><img src="${mainImg(p,16/9)}" alt="${p.t} for ${p.client}"></div>
+    <div class="det-top">
+      <h1 class="display h-sec">${p.t}</h1>
+      <div class="roles" aria-label="${p.roles.map(r=>ROLE[r]).join(', ')}">
+        ${ORDER.map(r=>`<i class="g ${r}" style="opacity:${p.roles.includes(r)?1:.16}"></i>`).join("")}
+      </div>
+    </div>
+    <div class="det-facts">
+      <div class="blk"><h3>Client</h3><p>${p.client}</p></div>
+      <div class="blk"><h3>Date</h3><p>${p.date}</p></div>
+      <div class="blk"><h3>Location</h3><p>${p.loc}</p></div>
+      <div class="blk"><h3>Discipline</h3><p>${p.roles.map(r=>ROLE[r]).join(", ")}</p></div>
+      <div class="blk"><h3>Deliverables</h3><ul>${p.del.map(d=>`<li>${d}</li>`).join("")}</ul></div>
+      ${p.press?`<div class="blk"><h3>Press</h3><ul>${p.press.map(x=>`<li>${x}</li>`).join("")}</ul></div>`:""}
+    </div>
+    <p class="det-desc statement">${p.desc}</p>
+    ${p.video?`<a class="film" href="${p.video}" target="_blank" rel="noopener">
+      <img src="${mainImg(p,16/9)}" alt=""><span class="pl">Watch the film ↗</span></a>`:""}
+    <div class="det-gal">${p.gallery.map((g,n)=>{
+      const s=GAL_SLOTS[n%GAL_SLOTS.length];
+      return `<div class="shot" style="grid-column:${s.c};aspect-ratio:${s.r}">
+        <img src="${g}" alt="${p.t} — frame ${n+1}" loading="lazy"></div>`;
+    }).join("")}</div>
+    <div class="det-credits">${p.credits.map(c=>
+      `<p class="c"><span>${c.r}</span>${c.n}</p>`).join("")}</div>
+    <a class="det-next" href="#/project/${next.id}">
+      <span class="label">Next project</span><span class="n">${next.t}</span></a>`;
+
+  /* Meta for share cards. In production these are baked into the static
+     page at build time; seoImage falls back to mainImage when unset. */
+  document.title=`${p.t} — Jake Caminero`;
+  $("#ogTitle").content=`${p.t} — Jake Caminero`;
+  $("#ogDesc").content=p.desc.slice(0,150);
+  $("#ogImage").content=seoImg(p);
+  return true;
+}
+
+/* ── info + contact ─────────────────────────────────── */
+$("#bio").textContent=CONTENT.site.bio;
+$("#portrait").src=CONTENT.site.portrait?IMG_BASE+CONTENT.site.portrait:shot("portrait","grey",4/5,"");
+$("#infoBlocks").innerHTML=CONTENT.site.info.map(b=>
+  `<div class="blk"><h3>${b.h}</h3>${b.list?`<ul>${b.list.map(x=>`<li>${x}</li>`).join("")}</ul>`:`<p class="body">${b.body}</p>`}</div>`).join("");
+
+/* Gear renders only if there's gear to show, so cutting it later is a data change. */
+(function gear(){
+  const g=CONTENT.site.gear||[];
+  if(!g.length){ $("#gearList").closest("div").remove?.(); return; }
+  $("#gearList").innerHTML=g.map(s=>
+    `<div class="gg"><h4>${s.h}</h4><ul>${s.list.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+})();
+const mails=CONTENT.site.emails.map(m=>`<a href="mailto:${m}">${m}</a>`).join("");
+$("#contactMails").innerHTML=mails; $("#footMails").innerHTML=mails;
+$("#contactGrid").innerHTML=CONTENT.site.contact.map(b=>
+  `<div class="blk"><h3>${b.h}</h3>${b.lines.map(l=>l.includes("@")?`<a href="mailto:${l}">${l}</a>`:`<p>${l}</p>`).join("")}</div>`).join("");
+$("#socials").innerHTML=CONTENT.site.socials.map(s=>`<li><a href="${s.u}" target="_blank" rel="noopener">${s.n}</a></li>`).join("");
+$("#year").textContent="© "+new Date().getFullYear();
+
+/* ── router ─────────────────────────────────────────── */
+const ROUTES={"/":"p-home","/work":"p-work","/archive":"p-archive","/info":"p-info","/contact":"p-contact"};
+const TITLES={"/":"Jake Caminero — Photography & Direction","/work":"Work — Jake Caminero",
+  "/archive":"Archive — Jake Caminero","/info":"Info — Jake Caminero","/contact":"Contact — Jake Caminero"};
+function route(){
+  const r=location.hash.replace(/^#/,"")||"/";
+  let id, navKey=r;
+  if(r.startsWith("/project/")&&renderProject(r.slice(9))){ id="p-project"; navKey="/work"; }
+  else { id=ROUTES[r]||ROUTES["/"]; document.title=TITLES[r]||TITLES["/"]; }
+  $$(".page").forEach(s=>s.classList.toggle("on",s.id===id));
+  $$(".nav .to").forEach(a=>a.classList.toggle("on",a.dataset.r===navKey));
+  scrollTo({top:0,behavior:"auto"});
+  dispatchEvent(new Event("scroll"));
+}
+addEventListener("hashchange",route);
+
+/* ── chrome ─────────────────────────────────────────── */
+addEventListener("scroll",()=>$("#nav").classList.toggle("stuck",scrollY>8),{passive:true});
+const sw=$("#swap");
+function theme(t){
+  document.documentElement.setAttribute("data-theme",t);
+  sw.setAttribute("aria-label",t==="light"?"Switch to dark mode":"Switch to light mode");
+  /* PRODUCTION: localStorage.setItem("jc-theme",t) — omitted, preview blocks storage. */
+}
+theme(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",e=>theme(e.matches?"dark":"light"));
+sw.addEventListener("click",()=>theme(document.documentElement.getAttribute("data-theme")==="light"?"dark":"light"));
+
+repaint(); route();
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "jake-caminero-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static portfolio for Jake Caminero — photographer and director.",
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "images:match": "node tools/prepare-images.mjs match ./assets-src",
+    "images:build": "node tools/prepare-images.mjs build ./assets-src ./assets",
+    "images": "npm run images:match && npm run images:build"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  },
+  "engines": { "node": ">=18" }
+}

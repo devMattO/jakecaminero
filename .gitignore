@@ -1,0 +1,9 @@
+node_modules/
+
+# Raw camera originals. Processed output in assets/ is what ships;
+# keep these archived somewhere else, not in git.
+assets-src/
+
+.DS_Store
+Thumbs.db
+*.log
