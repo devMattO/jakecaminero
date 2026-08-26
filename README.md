@@ -9,7 +9,23 @@ Static site. No framework, no build step for the site itself.
 `index.html` also opens directly from the filesystem if you'd rather not run a
 server. Everything works either way.
 
-## Add images
+## Editing content
+
+Jake edits project details and photos himself at `/admin` (Decap CMS) — no
+terminal, no repo. What he can and can't touch is defined in
+`admin/config.yml`; the underlying files are `content/projects/<id>.json` and
+`content/info.json`. Publishing in the CMS commits directly and Netlify
+redeploys automatically, running `npm run build` (see `netlify.toml`), which
+regenerates `assets/content.js` and processes any new/changed photos.
+
+`admin/config.yml` has two placeholder blocks (`backend`, `media_library`)
+that need real values from your DecapBridge and Cloudinary accounts before
+the CMS panel actually works — see the comments at the top of that file.
+
+For a large one-off bulk import instead (e.g. a full Pixieset export), the
+original local pipeline below still works unchanged.
+
+## Add images (bulk import)
 
 Drop one folder per project into `assets-src/`, named however you like:
 
@@ -34,9 +50,10 @@ Full detail in `docs/IMAGES.md`.
 
 ## Deploy
 
-Push to GitHub, connect Cloudflare Pages or Netlify. No build command, publish
-directory is the repo root. `_headers` sets long cache lifetimes on `/assets/*`
-and none on `index.html`.
+Push to GitHub, connect Netlify. `netlify.toml` sets the build command
+(`npm run build`) and publish directory (repo root) — nothing to configure by
+hand in Netlify's UI beyond connecting the repo. `_headers` sets long cache
+lifetimes on `/assets/*` and none on `index.html`.
 
 ## Working on it
 

@@ -9,22 +9,39 @@ hosted as flat files. The only tooling is the image pipeline in `tools/`.
 
 ## Layout
 
-    index.html              the entire site — markup, styles, data, behaviour
+    index.html              markup, styles, behaviour — no longer holds data
+    content/projects/<id>.json  one file per project, Jake-editable (via CMS)
+    content/info.json       site-wide singleton (bio, contact, gear, ...), Jake-editable
+    tools/placeholder-tones.json  tone/overlay/gal per project — design-only, not in the CMS
+    admin/config.yml        Decap CMS schema — what Jake can and can't edit
+    admin/index.html        Decap CMS admin panel entry point (served at /admin)
+    tools/build-content.mjs content/*.json -> assets/content.js (window.JC_CONTENT)
+    assets/content.js       generated; sets window.JC_CONTENT (projects + site)
     assets/images.js        generated manifest; maps project id -> image paths
     assets/<project-id>/    processed images, committed
-    assets-src/             raw originals, gitignored, never committed
-    tools/prepare-images.mjs image pipeline (match + build)
+    assets-src/             raw originals for local bulk imports, gitignored
+    tools/prepare-images.mjs image pipeline — match/build (local) + cms (Netlify)
+    tools/migrate-content.mjs one-time script that produced content/*.json — not part
+                             of the ongoing pipeline, kept for reference
     tools/serve.mjs          zero-dependency local server
-    mapping.json            folder name -> project id, curated, committed
-    docs/IMAGES.md          how to populate images
+    mapping.json            folder name -> project id, curated, committed (local bulk imports only)
+    netlify.toml             `npm run build` on every deploy
+    docs/IMAGES.md          how to populate images (local bulk-import path)
 
 ## The one rule that matters
 
 **Data and design are separated, and the separation is load-bearing.** Jake edits
-data. He never touches layout.
+data, through the Decap CMS at `/admin` — he never opens index.html or a repo.
 
-- `CONTENT` at the top of the script block is data. Everything Jake controls.
-- `SLOTS`, `GAL_SLOTS`, `FACET`, `ICON`, and all CSS are design. He never sees them.
+- `content/projects/*.json` and `content/info.json` are data. Everything the CMS
+  exposes (see `admin/config.yml`) is Jake's to control. `CONTENT` at the top of
+  the script block is assembled from these at build time (`window.JC_CONTENT`,
+  written by `tools/build-content.mjs`), plus `CAPABILITIES`/`SECTORS`.
+- `SLOTS`, `GAL_SLOTS`, `FACET`, `ICON`, `CAPABILITIES`, `SECTORS`, and all CSS
+  are design. He never sees them, and none of them are in `admin/config.yml`.
+  `CAPABILITIES`/`SECTORS` stay hardcoded in index.html rather than in the CMS
+  specifically because they drive `ICON`/`FACET` and the filter facets — letting
+  Jake edit that vocabulary risks silently breaking the filter UI.
 
 `SLOTS` is a repeating six-position rhythm on a twelve-column grid; homepage
 projects cycle through it by index. That is why adding or removing a project can
@@ -73,16 +90,31 @@ or the key promises more than the grid can show.
 ## Images
 
 A browser cannot list a directory, so enumeration happens at build time.
-`tools/prepare-images.mjs` walks `assets-src/<folder>/`, processes to AVIF, WebP
-and JPEG at 800/1600/2400, and writes `assets/images.js` setting
-`window.JC_IMAGES`. `index.html` merges that into `CONTENT.projects` on load.
+`tools/prepare-images.mjs` processes to AVIF, WebP and JPEG at 800/1600/2400,
+and writes `assets/images.js` setting `window.JC_IMAGES`. `index.html` merges
+that into `CONTENT.projects` on load. There are two ways images get into that
+manifest, both merging into the same `assets/images.json` rather than
+overwriting it wholesale — a project untouched by either keeps whatever it had:
 
-Only `main.*` and `og.*` are reserved filenames; everything else becomes a
-gallery frame in sorted order. Any project absent from the manifest keeps its
-generated SVG placeholder, which is what makes incremental population safe.
+- **CMS uploads** (`node tools/prepare-images.mjs cms ./assets`) — what
+  Netlify's build runs on every deploy. Reads the `images` block Decap CMS
+  writes into `content/projects/<id>.json` (Cloudinary URLs — see the
+  `media_library` config in `admin/config.yml`), fetches and processes
+  anything new or changed, and drops a project back to its placeholder if its
+  CMS images get cleared. Explicit fields (main/og/gallery, gallery
+  drag-reordered in the CMS), not a filename convention — a non-coder
+  shouldn't need to know `main.jpg` is special.
+- **Local bulk import** (`match` then `build`, via `assets-src/<folder>/` +
+  `mapping.json`) — unchanged from before the CMS existed, for you doing a
+  large one-off drop of a client's Pixieset export. Filename convention
+  (`main.*`/`og.*`/sorted gallery) still applies here. See `docs/IMAGES.md`.
 
-When real photographs are in, delete `shot()` and the `tone` / `overlay` / `gal`
-fields from every project — they exist only to generate placeholders.
+Any project absent from the manifest keeps its generated SVG placeholder,
+which is what makes incremental population safe either way.
+
+When real photographs are in for a project, its `tone`/`overlay`/`gal` entry in
+`tools/placeholder-tones.json` becomes dead weight — harmless to leave (it's
+just never read once `p.images.main` exists), fine to delete if tidying up.
 
 ## Real vs test data
 
@@ -114,13 +146,18 @@ will read as a bug on a live site.
 
 ## Next up, roughly in order
 
-1. **Populate images.** Everything else is cosmetic until real photographs land.
-   Check the homepage crops first — slots assume shapes and `object-fit: cover`
-   will crop a portrait hard through the middle in the wide band.
-2. **Info and Contact** haven't had a proper pass since the aesthetic settled.
+1. **Populate images**, the remaining ~20 projects — via the CMS now, once
+   DecapBridge/Cloudinary credentials are live in `admin/config.yml` (see the
+   placeholders in that file). Check homepage crops as they land — slots
+   assume shapes and `object-fit: cover` will crop a portrait hard through the
+   middle in the wide band.
+2. **Info and Contact** haven't had a proper pass since the aesthetic settled
+   — Recognition is still literal "TEST DATA" (`content/info.json`), and Gear
+   is a plausible-but-invented kit list. Both are now CMS-editable directly.
 3. **Static pages instead of hash routing.** `#/project/{id}` is invisible to
    search. A build step should emit real `/work/{id}/index.html` files with per
    project meta tags from the same `CONTENT` object.
-4. **Airtable as the CMS.** Attachment fields for images, build-time pull,
-   webhook redeploy. Airtable attachment URLs expire within hours — the build
-   must download them, never link.
+4. ~~Airtable as the CMS~~ — done, via Decap CMS instead (see `admin/`,
+   `content/`, `tools/build-content.mjs`). Same shape as originally planned
+   here (attachment/build-time-pull/never-link-directly), Cloudinary in place
+   of Airtable's attachment fields.
