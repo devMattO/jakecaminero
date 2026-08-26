@@ -1,22 +1,36 @@
 # Decap CMS config for jake-site.
-#
-# Two things below are PLACEHOLDERS that won't work until replaced:
-#
-# 1. `backend` — copy the real identity_url/gateway_url from your
-#    DecapBridge dashboard (decapbridge.com) after registering this site
-#    there. Don't hand-type these; DecapBridge generates the exact block.
-#
-# 2. `media_library` — cloud_name/api_key from your Cloudinary account
-#    (cloudinary.com, free tier). This is what makes uploaded photos never
-#    touch git — see CLAUDE.md for why.
-#
-# Everything else here is real and shouldn't need editing to get started.
+# backend: DecapBridge (decapbridge.com), PKCE auth — generated from the
+# DecapBridge dashboard for this site, not hand-typed.
+# media_library: Cloudinary (cloudinary.com) — uploaded photos never touch
+# git, see CLAUDE.md for why. api_key here is safe to publish: it identifies
+# the account for unsigned uploads, it's not a secret (no api_secret is ever
+# in this file).
 
 backend:
   name: git-gateway
+  repo: devMattO/jakecaminero
   branch: main
-  identity_url: "REPLACE_WITH_DECAPBRIDGE_IDENTITY_URL"
-  gateway_url: "REPLACE_WITH_DECAPBRIDGE_GATEWAY_URL"
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/25620201-14e0-4722-b57f-eb4fea945685/pkce
+  auth_token_endpoint: /sites/25620201-14e0-4722-b57f-eb4fea945685/token
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+site_url: https://jakecaminero.com
 
 # Required by Decap even though every image field below routes through
 # Cloudinary — this path is never actually used.
@@ -26,8 +40,8 @@ public_folder: "/uploads"
 media_library:
   name: cloudinary
   config:
-    cloud_name: "REPLACE_WITH_CLOUDINARY_CLOUD_NAME"
-    api_key: "REPLACE_WITH_CLOUDINARY_API_KEY"
+    cloud_name: "drgp7am1x"
+    api_key: "772626351116454"
 
 publish_mode: simple
 
