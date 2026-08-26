@@ -1,10 +1,17 @@
 # Decap CMS config for jake-site.
 # backend: DecapBridge (decapbridge.com), PKCE auth — generated from the
 # DecapBridge dashboard for this site, not hand-typed.
-# media_library: Cloudinary (cloudinary.com) — uploaded photos never touch
-# git, see CLAUDE.md for why. api_key here is safe to publish: it identifies
-# the account for unsigned uploads, it's not a secret (no api_secret is ever
-# in this file).
+#
+# Images use a custom "cloudinary-upload" widget (registered in
+# admin/index.html) instead of Decap's built-in Cloudinary media library.
+# The built-in one opens Cloudinary's Assets/DAM product, which needs a
+# separate sales-gated plan; this widget just does a plain unsigned upload
+# to Cloudinary's REST API — no gated product involved. Uploaded photos
+# never touch git either way — see CLAUDE.md for why that matters.
+#
+# REPLACE_WITH_UPLOAD_PRESET below: Cloudinary console → Settings (gear) →
+# Upload → Upload presets → Add upload preset → Signing Mode: Unsigned →
+# Save. Paste the generated preset name in both spots it appears below.
 
 backend:
   name: git-gateway
@@ -32,16 +39,10 @@ auth:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 site_url: https://jakecaminero.com
 
-# Required by Decap even though every image field below routes through
-# Cloudinary — this path is never actually used.
+# Required by Decap even though every image field below uses the custom
+# cloudinary-upload widget instead — this path is never actually used.
 media_folder: "static/uploads"
 public_folder: "/uploads"
-
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: "drgp7am1x"
-    api_key: "772626351116454"
 
 publish_mode: simple
 
@@ -119,14 +120,14 @@ collections:
         widget: object
         required: false
         fields:
-          - {label: "Main image", name: main, widget: image, choose_url: false, hint: "The lead photo for this project."}
-          - {label: "Social card image", name: og, widget: image, choose_url: false, required: false, hint: "Optional — falls back to the main image if left blank."}
+          - {label: "Main image", name: main, widget: cloudinary-upload, cloud_name: drgp7am1x, upload_preset: REPLACE_WITH_UPLOAD_PRESET, hint: "The lead photo for this project."}
+          - {label: "Social card image", name: og, widget: cloudinary-upload, cloud_name: drgp7am1x, upload_preset: REPLACE_WITH_UPLOAD_PRESET, required: false, hint: "Optional — falls back to the main image if left blank."}
           - label: "Gallery images"
             name: gallery
             widget: list
             required: false
             summary: "{{fields.src}}"
-            field: {label: Image, name: src, widget: image, choose_url: false}
+            field: {label: Image, name: src, widget: cloudinary-upload, cloud_name: drgp7am1x, upload_preset: REPLACE_WITH_UPLOAD_PRESET}
 
   - name: info
     label: "Site Info"
@@ -140,9 +141,10 @@ collections:
           - {label: Bio, name: bio, widget: text}
           - label: Portrait
             name: portrait
-            widget: image
+            widget: cloudinary-upload
+            cloud_name: drgp7am1x
+            upload_preset: REPLACE_WITH_UPLOAD_PRESET
             required: false
-            choose_url: false
           - {label: Emails, name: emails, widget: list}
           - label: Socials
             name: socials
