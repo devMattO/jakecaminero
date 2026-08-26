@@ -51,6 +51,8 @@ collections:
     label_singular: Project
     folder: content/projects
     create: true
+    extension: json
+    format: json
     slug: "{{fields.id}}"
     identifier_field: id
     summary: "{{order}} — {{t}} ({{client}})"
@@ -132,6 +134,7 @@ collections:
       - label: "Site Info"
         name: info
         file: content/info.json
+        format: json
         fields:
           - {label: Intro, name: intro, widget: text, hint: "Homepage statement. Wrap a client name in {curly braces} to auto-link it to the Work page."}
           - {label: Bio, name: bio, widget: text}
