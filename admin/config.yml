@@ -1,0 +1,158 @@
+# Decap CMS config for jake-site.
+#
+# Two things below are PLACEHOLDERS that won't work until replaced:
+#
+# 1. `backend` — copy the real identity_url/gateway_url from your
+#    DecapBridge dashboard (decapbridge.com) after registering this site
+#    there. Don't hand-type these; DecapBridge generates the exact block.
+#
+# 2. `media_library` — cloud_name/api_key from your Cloudinary account
+#    (cloudinary.com, free tier). This is what makes uploaded photos never
+#    touch git — see CLAUDE.md for why.
+#
+# Everything else here is real and shouldn't need editing to get started.
+
+backend:
+  name: git-gateway
+  branch: main
+  identity_url: "REPLACE_WITH_DECAPBRIDGE_IDENTITY_URL"
+  gateway_url: "REPLACE_WITH_DECAPBRIDGE_GATEWAY_URL"
+
+# Required by Decap even though every image field below routes through
+# Cloudinary — this path is never actually used.
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: "REPLACE_WITH_CLOUDINARY_CLOUD_NAME"
+    api_key: "REPLACE_WITH_CLOUDINARY_API_KEY"
+
+publish_mode: simple
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: content/projects
+    create: true
+    slug: "{{fields.id}}"
+    identifier_field: id
+    summary: "{{order}} — {{t}} ({{client}})"
+    sortable_fields: [order, t, yr]
+    fields:
+      - label: "Project ID"
+        name: id
+        widget: string
+        pattern: ["^[a-z0-9-]+$", "lowercase letters, numbers, hyphens only"]
+        hint: "Never change this after the project is created — it's also the image folder name."
+      - label: "Display order"
+        name: order
+        widget: number
+        hint: "Lower numbers show first on the homepage and Work page. Newest work should have the lowest number."
+      - {label: Title, name: t, widget: string}
+      - {label: Client, name: client, widget: string}
+      - {label: "Date (as displayed)", name: date, widget: string, hint: 'e.g. "March 18, 2026" or "2025 — 2026"'}
+      - {label: Year, name: yr, widget: string, pattern: ["^[0-9]{4}$", "4-digit year"]}
+      - label: Roles
+        name: roles
+        widget: select
+        multiple: true
+        min: 1
+        options:
+          - {label: "Creative Direction", value: cd}
+          - {label: Stills, value: stills}
+          - {label: Motion, value: motion}
+      - {label: "Selected Work", name: selected, widget: boolean, default: false, hint: "On = shows on the homepage and Work page. Off = Archive only."}
+      - {label: Location, name: loc, widget: string, required: false}
+      - {label: Deliverables, name: del, widget: list, required: false}
+      - label: Tags
+        name: tags
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - Photography
+          - Cinematography
+          - Creative Direction
+          - Documentary
+          - Campaign
+          - Editorial
+          - Brand Film
+          - Automotive
+          - Cycling
+          - Fashion
+          - Food & Drink
+          - Hospitality
+          - Outdoor
+          - Sport
+          - Wellness
+      - {label: Description, name: desc, widget: text}
+      - label: Credits
+        name: credits
+        widget: list
+        required: false
+        summary: "{{fields.r}} — {{fields.n}}"
+        fields:
+          - {label: Role, name: r, widget: string}
+          - {label: Name, name: n, widget: string}
+      - {label: "Video URL (Vimeo)", name: video, widget: string, required: false}
+      - label: Images
+        name: images
+        widget: object
+        required: false
+        fields:
+          - {label: "Main image", name: main, widget: image, choose_url: false, hint: "The lead photo for this project."}
+          - {label: "Social card image", name: og, widget: image, choose_url: false, required: false, hint: "Optional — falls back to the main image if left blank."}
+          - label: "Gallery images"
+            name: gallery
+            widget: list
+            required: false
+            summary: "{{fields.src}}"
+            field: {label: Image, name: src, widget: image, choose_url: false}
+
+  - name: info
+    label: "Site Info"
+    files:
+      - label: "Site Info"
+        name: info
+        file: content/info.json
+        fields:
+          - {label: Intro, name: intro, widget: text, hint: "Homepage statement. Wrap a client name in {curly braces} to auto-link it to the Work page."}
+          - {label: Bio, name: bio, widget: text}
+          - label: Portrait
+            name: portrait
+            widget: image
+            required: false
+            choose_url: false
+          - {label: Emails, name: emails, widget: list}
+          - label: Socials
+            name: socials
+            widget: list
+            fields:
+              - {label: Name, name: n, widget: string}
+              - {label: URL, name: u, widget: string}
+          - label: "Contact blocks"
+            name: contact
+            widget: list
+            fields:
+              - {label: Heading, name: h, widget: string}
+              - {label: Lines, name: lines, widget: list}
+          - label: Gear
+            name: gear
+            widget: list
+            required: false
+            fields:
+              - {label: Heading, name: h, widget: string}
+              - {label: Items, name: list, widget: list}
+          - {label: Clients, name: clients, widget: list}
+          - {label: Recognition, name: recognition, widget: list, required: false}
+          - {label: Approach, name: approach, widget: text}
+          - label: "Ongoing / Services"
+            name: ongoing
+            widget: list
+            required: false
+            fields:
+              - {label: Title, name: t, widget: string}
+              - {label: Description, name: d, widget: text}

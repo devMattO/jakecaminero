@@ -8,7 +8,8 @@ const ROOT = process.cwd(), PORT = Number(process.env.PORT) || 4321;
 const TYPES = { ".html":"text/html", ".js":"text/javascript", ".css":"text/css",
   ".json":"application/json", ".jpg":"image/jpeg", ".jpeg":"image/jpeg",
   ".png":"image/png", ".webp":"image/webp", ".avif":"image/avif",
-  ".svg":"image/svg+xml", ".woff2":"font/woff2", ".ico":"image/x-icon" };
+  ".svg":"image/svg+xml", ".woff2":"font/woff2", ".ico":"image/x-icon",
+  ".yml":"text/yaml", ".yaml":"text/yaml" };
 
 createServer(async (req, res) => {
   try {
