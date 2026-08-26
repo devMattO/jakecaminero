@@ -1293,7 +1293,7 @@ window.JC_CONTENT = {
   "site": {
     "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. Recent work includes {Road & Track}, {Batch}, and {Cuyama Buckhorn}.",
     "bio": "Jake Caminero is a photographer and director based in Costa Mesa, California. He works on location, in available light, across automotive, outdoor, and hospitality — and takes on creative direction when the whole campaign needs to hold together rather than just the frames.",
-    "portrait": null,
+    "portrait": "/content/media/site/img_0105.jpg",
     "emails": [
       "jake@jakecaminero.com"
     ],

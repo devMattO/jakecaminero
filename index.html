@@ -685,6 +685,7 @@ const filters=new Set();
 const IMG_BASE="assets/";
 const MANIFEST=(typeof window!=="undefined"&&window.JC_IMAGES)||{};
 CONTENT.projects.forEach(p=>{ if(MANIFEST[p.id]) p.images=MANIFEST[p.id]; });
+if(MANIFEST._site&&MANIFEST._site.portrait) CONTENT.site.portrait=MANIFEST._site.portrait;
 
 const mainImg  =(p,ratio)=> p.images&&p.images.main ? IMG_BASE+p.images.main
                                                     : shot(p.id,p.tone,ratio,p.overlay);

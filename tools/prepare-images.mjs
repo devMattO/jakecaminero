@@ -40,6 +40,7 @@ const FORMATS     = [["avif",{quality:58,effort:4}],["webp",{quality:80}],["jpeg
 const OK          = new Set([".jpg",".jpeg",".png",".tif",".tiff",".webp"]);
 const MAPFILE     = "mapping.json";
 const PROJECTS_DIR = "content/projects";
+const INFO_FILE    = "content/info.json";
 
 /* ── read the project list from content/, so it can never drift ──────── */
 async function readContentProjects() {
@@ -246,8 +247,37 @@ async function cms(out) {
     console.log(`  ${p.id}: processed (${1 + (p.images.og ? 1 : 0) + gallery.length} source file(s))`);
   }
 
+  await processSitePortrait(out, images);
+
   await writeManifest(out, images);
   console.log(`\n${processed} project(s) processed, ${skipped} unchanged, ${removed} removed, ${untouched} with no CMS images yet.`);
+}
+
+/* content/info.json's `portrait` isn't a project, so it doesn't go through
+   the loop above — index.html reads it from window.JC_CONTENT.site.portrait
+   directly (no per-project id to key JC_IMAGES by), so it needs its own
+   processed reference here, stashed under images._site and merged back into
+   CONTENT.site.portrait client-side (see index.html). Same
+   already-processed-vs-raw-upload and skip-if-unchanged handling as a
+   project's images. */
+async function processSitePortrait(out, images) {
+  let info;
+  try { info = JSON.parse(await readFile(INFO_FILE, "utf8")); } catch { return; }
+
+  if (!info.portrait) {
+    if (images._site) delete images._site;
+    return;
+  }
+  const srcKey = info.portrait;
+  if (images._site && images._site._src === srcKey) return;
+
+  try {
+    const ref = await resolveImage(info.portrait, join(out, "site"), "portrait", "site");
+    images._site = { portrait: ref, _src: srcKey };
+    console.log(`  site portrait: processed`);
+  } catch (e) {
+    console.error(`  site portrait: skipped — ${e.message}`);
+  }
 }
 
 function usage() {

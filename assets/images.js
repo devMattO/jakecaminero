@@ -576,5 +576,9 @@ window.JC_IMAGES = {
     ],
     "main": "swi-endo/01-800.jpg",
     "_src": "{\"main\":\"/assets/swi-endo/01-800.jpg\",\"og\":null,\"gallery\":[\"/assets/swi-endo/01-800.jpg\",\"/assets/swi-endo/02-800.jpg\",\"/assets/swi-endo/03-800.jpg\",\"/assets/swi-endo/04-800.jpg\",\"/assets/swi-endo/05-800.jpg\",\"/assets/swi-endo/06-800.jpg\",\"/assets/swi-endo/07-800.jpg\",\"/assets/swi-endo/08-800.jpg\",\"/assets/swi-endo/09-800.jpg\",\"/assets/swi-endo/10-800.jpg\",\"/assets/swi-endo/11-800.jpg\",\"/assets/swi-endo/12-800.jpg\",\"/assets/swi-endo/13-800.jpg\",\"/assets/swi-endo/14-800.jpg\",\"/assets/swi-endo/15-800.jpg\",\"/assets/swi-endo/16-800.jpg\",\"/assets/swi-endo/17-800.jpg\",\"/assets/swi-endo/18-800.jpg\",\"/assets/swi-endo/19-800.jpg\",\"/assets/swi-endo/20-800.jpg\",\"/assets/swi-endo/21-800.jpg\",\"/assets/swi-endo/22-800.jpg\",\"/assets/swi-endo/23-800.jpg\",\"/assets/swi-endo/24-800.jpg\",\"/assets/swi-endo/25-800.jpg\",\"/assets/swi-endo/26-800.jpg\",\"/assets/swi-endo/27-800.jpg\",\"/assets/swi-endo/28-800.jpg\",\"/assets/swi-endo/29-800.jpg\",\"/assets/swi-endo/30-800.jpg\",\"/assets/swi-endo/31-800.jpg\",\"/assets/swi-endo/32-800.jpg\",\"/assets/swi-endo/33-800.jpg\",\"/assets/swi-endo/34-800.jpg\",\"/assets/swi-endo/35-800.jpg\",\"/assets/swi-endo/36-800.jpg\",\"/assets/swi-endo/37-800.jpg\",\"/assets/swi-endo/38-800.jpg\",\"/assets/swi-endo/39-800.jpg\",\"/assets/swi-endo/40-800.jpg\",\"/assets/swi-endo/41-800.jpg\",\"/assets/swi-endo/42-800.jpg\",\"/assets/swi-endo/43-800.jpg\",\"/assets/swi-endo/44-800.jpg\",\"/assets/swi-endo/45-800.jpg\",\"/assets/swi-endo/46-800.jpg\",\"/assets/swi-endo/47-800.jpg\",\"/assets/swi-endo/48-800.jpg\",\"/assets/swi-endo/49-800.jpg\",\"/assets/swi-endo/50-800.jpg\",\"/assets/swi-endo/51-800.jpg\"]}"
+  },
+  "_site": {
+    "portrait": "site/portrait-7b93b280-800.jpg",
+    "_src": "/content/media/site/img_0105.jpg"
   }
 };
