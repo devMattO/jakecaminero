@@ -152,7 +152,11 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes fade{to{opacity:.55}}
 /* hero's copy runs much bigger — the point is to actually see the detail */
-.hero .frame-art{width:min(98%,1600px)}
+/* Capped well under the hero's own width: the hero is 16:10 (1.6) but
+   the animation is 400:272 (1.47) — at 1.6 those don't match, so sizing
+   it by width alone let its height run past the hero's own height and
+   overflow:hidden clipped the bottom "STILLS" label clean off. */
+.hero .frame-art{width:min(78%,1250px)}
 /* footer's copy stays at the size the hero one used to be, just centered
    in its own light-background context instead of the hero's dark band */
 .footer-art{width:min(80%,300px);aspect-ratio:400/272;margin:clamp(50px,8vw,90px) auto;
