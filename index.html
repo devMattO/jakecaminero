@@ -155,7 +155,8 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .hero .frame-art{width:min(98%,1600px)}
 /* footer's copy stays at the size the hero one used to be, just centered
    in its own light-background context instead of the hero's dark band */
-.footer-art{width:min(80%,300px);margin:clamp(50px,8vw,90px) auto;color:var(--ghost);overflow:hidden}
+.footer-art{width:min(80%,300px);aspect-ratio:400/272;margin:clamp(50px,8vw,90px) auto;
+  color:var(--ghost);overflow:hidden}
 
 .intro{padding:clamp(46px,7vw,86px) 0 clamp(64px,10vw,128px);max-width:74ch}
 .intro a{color:var(--ghost);transition:color 200ms var(--ease);border-bottom:1px solid transparent}
@@ -726,7 +727,15 @@ function frameArt(elId){
   el.innerHTML=s+"</svg>";
 }
 frameArt("#heroArt");
-frameArt("#footerArt");
+/* footer's copy waits until it's actually scrolled into view rather than
+   running (and finishing) immediately with everything else on load */
+const footerArtEl=$("#footerArt");
+if(footerArtEl){
+  const footerArtObs=new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){ frameArt("#footerArt"); footerArtObs.disconnect(); }
+  },{threshold:.2});
+  footerArtObs.observe(footerArtEl);
+}
 
 $("#intro").innerHTML=CONTENT.site.intro.replace(/\{([^}]+)\}/g,(_,n)=>`<a href="#/work">${n}</a>`);
 
