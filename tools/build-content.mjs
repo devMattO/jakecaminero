@@ -51,7 +51,7 @@ function reshapeSite(info) {
     contact: info.contact || [],
     gear: info.gear || [],
     info: [
-      { h: "Clients", list: info.clients || [] },
+      { h: "Selected Clients", list: info.clients || [] },
       { h: "Recognition", list: info.recognition || [] },
       { h: "Approach", body: info.approach || "" },
     ],

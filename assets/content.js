@@ -1112,26 +1112,21 @@ window.JC_CONTENT = {
       "gal": 4
     },
     {
-      "id": "rt-breakdance",
-      "order": 27,
-      "t": "Breakdance",
-      "client": "Road & Track",
-      "date": "February 2, 2023",
-      "yr": "2023",
-      "roles": [
-        "stills"
-      ],
-      "selected": true,
       "loc": "The Concours Club, Miami, Florida",
       "del": [
         "Editorial stills"
       ],
+      "client": "Road & Track",
+      "order": 27,
+      "date": "February 2, 2023",
+      "desc": "An editorial project for Road & Track documenting the record setting Le Mans car built by Briggs Cunningham, the Cunningham C5-R. The project was shot at the Concours Club in south Florida. What's really special about this car wasn't just the history or the sound of it, but the condition. The Revs Institute did an incredible job not restoring the vehicle, but keeping it in the same condition that it was in when it finished the 24 hours of Le Mans. You can literally see the sweat stains still on the seat.",
+      "t": "Breakdance",
       "tags": [
         "Photography",
         "Editorial",
         "Automotive"
       ],
-      "desc": "An editorial project for Road & Track documenting the record setting Le Mans car built by Briggs Cunningham, the Cunningham C5-R. The project was shot at the Concours Club in south Florida. What's really special about this car wasn't just the history or the sound of it, but the condition. The Revs Institute did an incredible job not restoring the vehicle, but keeping it in the same condition that it was in when it finished the 24 hours of Le Mans. You can literally see the sweat stains still on the seat.",
+      "yr": "2023",
       "credits": [
         {
           "r": "Photography",
@@ -1161,6 +1156,11 @@ window.JC_CONTENT = {
           "r": "Location",
           "n": "The Concours Club"
         }
+      ],
+      "id": "rt-breakdance",
+      "selected": true,
+      "roles": [
+        "stills"
       ],
       "tone": "grey",
       "gal": 6
@@ -1384,7 +1384,7 @@ window.JC_CONTENT = {
     ],
     "info": [
       {
-        "h": "Clients",
+        "h": "Selected Clients",
         "list": [
           "Road & Track",
           "Batch",
