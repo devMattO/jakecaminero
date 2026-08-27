@@ -1,0 +1,37 @@
+{
+  "loc": "Orange County",
+  "del": [
+    "Still Images"
+  ],
+  "client": "Endo",
+  "order": 1,
+  "date": "July 2026",
+  "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
+  "t": "Endo Fall Capsule 2026",
+  "images": {
+    "main": "/content/media/endo-july-2026/_09a9046.jpg",
+    "og": "/content/media/endo-july-2026/_09a9046.jpg",
+    "gallery": [
+      "/content/media/endo-july-2026/_09a8964.jpg",
+      "/content/media/endo-july-2026/_09a9009.jpg",
+      "/content/media/endo-july-2026/_09a8953.jpg",
+      "/content/media/endo-july-2026/_09a9097.jpg",
+      "/content/media/endo-july-2026/_09a9102.jpg",
+      "/content/media/endo-july-2026/_09a9055.jpg",
+      "/content/media/endo-july-2026/_09a8879.jpg",
+      "/content/media/endo-july-2026/_09a8826.jpg",
+      "/content/media/endo-july-2026/_09a90131.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Sport",
+    "Outdoor"
+  ],
+  "yr": "2026",
+  "id": "endo-july-2026",
+  "selected": true,
+  "roles": [
+    "stills"
+  ]
+}
