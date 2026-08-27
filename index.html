@@ -139,7 +139,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .hero{background:var(--deep);color:var(--deepink);margin-top:clamp(58px,8vw,104px);aspect-ratio:16/10;
   display:grid;place-items:center;position:relative;overflow:hidden}
 .frame-art{width:min(90%,1150px)}
-.frame-art svg{display:block;width:100%;height:auto;overflow:visible}
+.frame-art svg{display:block;width:100%;height:auto;aspect-ratio:400/272;overflow:visible}
 .frame-art .fr{fill:none;stroke:currentColor;stroke-width:1.2;vector-effect:non-scaling-stroke;
   stroke-dasharray:var(--len);stroke-dashoffset:var(--len);
   animation:draw 1.5s var(--ease) forwards;animation-delay:var(--d)}
@@ -155,7 +155,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .hero .frame-art{width:min(98%,1600px)}
 /* footer's copy stays at the size the hero one used to be, just centered
    in its own light-background context instead of the hero's dark band */
-.footer-art{margin:clamp(50px,8vw,90px) auto;color:var(--ghost);overflow:hidden}
+.footer-art{width:min(80%,300px);margin:clamp(50px,8vw,90px) auto;color:var(--ghost);overflow:hidden}
 
 .intro{padding:clamp(46px,7vw,86px) 0 clamp(64px,10vw,128px);max-width:74ch}
 .intro a{color:var(--ghost);transition:color 200ms var(--ease);border-bottom:1px solid transparent}
@@ -712,7 +712,14 @@ function frameArt(elId){
     <text class="axcap" x="${cx}" y="15" text-anchor="middle">MOTION</text>
     <text class="axcap" x="${cx}" y="264" text-anchor="middle">STILLS</text>`;
   ratios.forEach(([r,lab],i)=>{
-    const w=W*(0.90-i*0.07), h=w/r, x=cx-w/2, y=cy-h/2, len=Math.round((w+h)*2);
+    /* Each frame is the largest r:1 box that fits inside a shared,
+       uniformly-shrinking envelope — not just width/(0.90-i*0.07) with
+       height trailing off on its own, which let the squarer ratios
+       (5:4, 1:1) balloon far taller than the wider ones beside them. */
+    const scale=0.90-i*0.07;
+    let w=W*scale, h=w/r;
+    if(h>H*scale){ h=H*scale; w=h*r; }
+    const x=cx-w/2, y=cy-h/2, len=Math.round((w+h)*2);
     s+=`<rect class="fr" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" style="--len:${len};--d:${i*130+180}ms"/>
         <text class="ratio" x="${x.toFixed(1)}" y="${(y-3.5).toFixed(1)}" style="--d:${i*130+700}ms">${lab}</text>`;
   });
