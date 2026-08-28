@@ -1,25 +1,23 @@
 {
-  "id": "fullest-ecology-center",
-  "order": 2,
-  "t": "The Fullest + Ecology Center",
-  "client": "The Fullest",
-  "date": "April 10, 2026",
-  "yr": "2026",
-  "roles": [
-    "motion"
-  ],
-  "selected": true,
   "loc": "San Juan Capistrano, California",
   "del": [
     "Brand film",
     "Social cutdowns"
   ],
+  "client": "The Fullest",
+  "order": 15,
+  "date": "April 10, 2026",
+  "desc": "Video work for the collaboration of The Fullest with The Ecology Center.",
+  "t": "The Fullest + Ecology Center",
+  "images": {
+    "main": "/content/media/fullest-ecology-center/screenshot-2026-08-10-at-2.46.16 pm.png"
+  },
   "tags": [
     "Cinematography",
     "Brand Film",
     "Wellness"
   ],
-  "desc": "Video work for the collaboration of The Fullest with The Ecology Center.",
+  "yr": "2026",
   "credits": [
     {
       "r": "DP",
@@ -33,5 +31,10 @@
       "r": "Client Team",
       "n": "The Fullest"
     }
+  ],
+  "id": "fullest-ecology-center",
+  "selected": true,
+  "roles": [
+    "motion"
   ]
 }
