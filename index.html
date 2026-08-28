@@ -726,6 +726,22 @@ CONTENT.projects.forEach(p=>{
   p.gallery=galleryOf(p);
 });
 
+/* Vimeo's ?background=1 embed contain-fits the video at its own native
+   ratio inside the iframe — it does not crop to fill a mismatched
+   container, so a video whose shape doesn't match the hero's fixed
+   ratio shows as letterboxing (confirmed: the source video itself has
+   no bars baked in). Rather than force-crop it, size the container to
+   the video's real ratio via Vimeo's public, CORS-open oEmbed endpoint
+   — same "take the media's own shape, don't crop it" rule as a photo
+   hero. Silently leaves the existing fixed-ratio CSS in place if the
+   request fails, rather than breaking anything. */
+function sizeToVimeoRatio(vid,el){
+  fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${vid}`)
+    .then(r=>r.ok?r.json():null)
+    .then(j=>{ if(j&&j.width&&j.height) el.style.aspectRatio=`${j.width}/${j.height}`; })
+    .catch(()=>{});
+}
+
 /* ── nested aspect-ratio frames — rendered twice: large in the hero,
    at the original smaller size again in the footer ───────────────── */
 function frameArt(elId){
@@ -763,6 +779,7 @@ function frameArt(elId){
       +`<a class="hero-video" href="${CONTENT.site.heroVideo}" target="_blank" rel="noopener">
           <iframe src="https://player.vimeo.com/video/${heroVid}?background=1&autoplay=1&loop=1&muted=1&autopause=0"
             allow="autoplay" title="Jake Caminero"></iframe></a>`;
+    sizeToVimeoRatio(heroVid,heroEl);
   } else if(CONTENT.site.heroImage){
     heroEl.classList.add("has-image");
     heroEl.innerHTML=`<img class="hero-media" src="${IMG_BASE+CONTENT.site.heroImage}" alt="">`;
@@ -1091,6 +1108,7 @@ function renderProject(id){
     }).join("")}</div>
     <a class="det-next" href="#/project/${next.id}">
       <span class="label">Next project</span><span class="n">${next.t}</span></a>`;
+  if(vid) sizeToVimeoRatio(vid,$(".det-hero"));
 
   /* Meta for share cards. In production these are baked into the static
      page at build time; seoImage falls back to mainImage when unset. */

@@ -2,30 +2,94 @@
 window.JC_CONTENT = {
   "projects": [
     {
-      "id": "swi-endo",
-      "order": 0,
-      "t": "SWI + ENDO",
-      "client": "Test Shoot",
-      "date": "June 15, 2026",
-      "yr": "2026",
-      "roles": [
-        "stills",
-        "motion",
-        "cd"
+      "loc": "Orange County",
+      "del": [
+        "Still Images"
       ],
+      "client": "Endo",
+      "order": 0,
+      "date": "July 1, 2026",
+      "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
+      "t": "Endo Fall Capsule 2026",
+      "tags": [
+        "Photography",
+        "Sport",
+        "Outdoor"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Creative Direction",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Levi Fillies"
+        }
+      ],
+      "id": "endo-july-2026",
       "selected": true,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
+      "loc": "Costa Mesa, California",
+      "del": [
+        "16mm and digital film",
+        "Launch assets"
+      ],
+      "client": "Agronomy Workshop",
+      "order": 2,
+      "date": "April 1, 2026",
+      "desc": "16mm and digital video work for the spring/summer launch for Agronomy Workshop.",
+      "t": "Agronomy S/S Launch",
+      "tags": [
+        "Cinematography",
+        "Brand Film",
+        "Fashion"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "DP",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Creative Direction",
+          "n": "Rob Judge, Agronomy Workshop"
+        },
+        {
+          "r": "Photography",
+          "n": "Chase Thompson"
+        }
+      ],
+      "id": "agronomy-ss-launch",
+      "selected": true,
+      "roles": [
+        "motion"
+      ],
+      "tone": "sage",
+      "gal": 4
+    },
+    {
       "loc": "Orange County, California",
       "del": [
         "Brand film",
         "Campaign stills"
       ],
+      "client": "Test Shoot",
+      "order": 4,
+      "date": "June 15, 2026",
+      "desc": "A speculative photo and video project made in collaboration with SWI cycling and Endociety.",
+      "t": "Swi+Endo",
       "tags": [
         "Photography",
         "Creative Direction",
         "Cinematography",
         "Cycling"
       ],
-      "desc": "A speculative photo and video project made in collaboration with SWI cycling and Endociety.",
+      "yr": "2026",
       "credits": [
         {
           "r": "DP",
@@ -65,6 +129,13 @@ window.JC_CONTENT = {
         }
       ],
       "video": "https://vimeo.com/1204022679",
+      "id": "swi-endo",
+      "selected": true,
+      "roles": [
+        "stills",
+        "motion",
+        "cd"
+      ],
       "tone": "clay",
       "overlay": "SWI + ENDO",
       "gal": 5
@@ -72,176 +143,36 @@ window.JC_CONTENT = {
     {
       "loc": "Orange County",
       "del": [
-        "Still Images"
+        "Stills"
       ],
-      "client": "Endo",
-      "order": 1,
-      "date": "July 2026",
-      "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
-      "t": "Endo Fall Capsule 2026",
+      "client": "Endociety",
+      "order": 5,
+      "date": "August 10, 2026",
+      "desc": "Ecom/social imagery for fall capsule drop 2.0",
+      "t": "Endo Fall Capsule 2.0",
       "tags": [
+        "Campaign",
         "Photography",
+        "Outdoor",
         "Sport",
-        "Outdoor"
+        "Wellness"
       ],
       "yr": "2026",
-      "id": "endo-july-2026",
+      "credits": [
+        {
+          "r": "Creative Director",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Talent",
+          "n": "AJ Castillo"
+        }
+      ],
+      "id": "endo-fall-ii",
       "selected": true,
       "roles": [
         "stills"
       ]
-    },
-    {
-      "id": "fullest-25-26",
-      "order": 1,
-      "t": "The Fullest 25/26",
-      "client": "The Fullest",
-      "date": "2025 — 2026",
-      "yr": "2025",
-      "roles": [
-        "motion"
-      ],
-      "selected": true,
-      "loc": "Southern California",
-      "del": [
-        "Social film series"
-      ],
-      "tags": [
-        "Cinematography",
-        "Campaign",
-        "Wellness"
-      ],
-      "desc": "A series of creative projects directed towards social media use.",
-      "credits": [
-        {
-          "r": "DP",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Photography",
-          "n": "Chase Thompson"
-        }
-      ],
-      "tone": "sage",
-      "gal": 4
-    },
-    {
-      "id": "fullest-ecology-center",
-      "order": 2,
-      "t": "The Fullest + Ecology Center",
-      "client": "The Fullest",
-      "date": "April 10, 2026",
-      "yr": "2026",
-      "roles": [
-        "motion"
-      ],
-      "selected": true,
-      "loc": "San Juan Capistrano, California",
-      "del": [
-        "Brand film",
-        "Social cutdowns"
-      ],
-      "tags": [
-        "Cinematography",
-        "Brand Film",
-        "Wellness"
-      ],
-      "desc": "Video work for the collaboration of The Fullest with The Ecology Center.",
-      "credits": [
-        {
-          "r": "DP",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Photography",
-          "n": "Chase Thompson"
-        },
-        {
-          "r": "Client Team",
-          "n": "The Fullest"
-        }
-      ],
-      "tone": "forest",
-      "gal": 5
-    },
-    {
-      "id": "agronomy-ss-launch",
-      "order": 3,
-      "t": "Agronomy S/S Launch",
-      "client": "Agronomy Workshop",
-      "date": "April 1, 2026",
-      "yr": "2026",
-      "roles": [
-        "motion"
-      ],
-      "selected": true,
-      "loc": "Costa Mesa, California",
-      "del": [
-        "16mm and digital film",
-        "Launch assets"
-      ],
-      "tags": [
-        "Cinematography",
-        "Brand Film",
-        "Fashion"
-      ],
-      "desc": "16mm and digital video work for the spring/summer launch for Agronomy Workshop.",
-      "credits": [
-        {
-          "r": "DP",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Creative Direction",
-          "n": "Rob, Agronomy Workshop"
-        },
-        {
-          "r": "Photography",
-          "n": "Chase Thompson"
-        }
-      ],
-      "tone": "sage",
-      "gal": 4
-    },
-    {
-      "id": "buckhorn-foraging",
-      "order": 4,
-      "t": "Foraging for Cocktails",
-      "client": "Cuyama Buckhorn",
-      "date": "March 18, 2026",
-      "yr": "2026",
-      "roles": [
-        "stills"
-      ],
-      "selected": true,
-      "loc": "Los Padres National Forest, California",
-      "del": [
-        "Documentary stills",
-        "Web and social assets"
-      ],
-      "tags": [
-        "Photography",
-        "Documentary",
-        "Food & Drink",
-        "Hospitality"
-      ],
-      "desc": "In partnership with Sam from Cuyama Rambler and the Cuyama Buckhorn, we followed Sam as he guided us on a hike through the Los Padres National Forest. The project involved documenting his knowledge of the land through foraging and blending of natural materials to create a botanically driven cocktail on the back of his tailgate.",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Video",
-          "n": "Zach Sorensen"
-        },
-        {
-          "r": "Talent",
-          "n": "Sam, Cuyama Rambler"
-        }
-      ],
-      "tone": "sage",
-      "gal": 6
     },
     {
       "id": "rally-tristan-detwiller",
@@ -290,6 +221,50 @@ window.JC_CONTENT = {
         }
       ],
       "tone": "clay",
+      "gal": 5
+    },
+    {
+      "loc": "Mojave, California",
+      "del": [
+        "Spec campaign stills",
+        "CGI integration"
+      ],
+      "client": "Spec Shoot",
+      "order": 5,
+      "date": "November 5, 2025",
+      "desc": "A speculative project that focused on the use of CGI. The goal was to bring a tangible feeling to something that tends to lean clinical. We partnered with professional mountain biker Spencer Rathkamp to bring an edge to the Tundra's story.",
+      "t": "Toyota Tundra + Spencer Rathkamp",
+      "tags": [
+        "Photography",
+        "Campaign",
+        "Automotive"
+      ],
+      "yr": "2025",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "CGI",
+          "n": "Benjamin Grimes"
+        },
+        {
+          "r": "Talent",
+          "n": "Spencer Rathkamp"
+        },
+        {
+          "r": "Retouching",
+          "n": "Schinken Studio"
+        }
+      ],
+      "id": "toyota-tundra-rathkamp",
+      "selected": true,
+      "roles": [
+        "stills"
+      ],
+      "tone": "black",
+      "overlay": "TUNDRA",
       "gal": 5
     },
     {
@@ -376,50 +351,6 @@ window.JC_CONTENT = {
       ],
       "video": "https://vimeo.com/1204339928",
       "tone": "black",
-      "gal": 5
-    },
-    {
-      "id": "toyota-tundra-rathkamp",
-      "order": 8,
-      "t": "Toyota Tundra + Spencer Rathkamp",
-      "client": "Spec Shoot",
-      "date": "November 5, 2025",
-      "yr": "2025",
-      "roles": [
-        "stills"
-      ],
-      "selected": true,
-      "loc": "Mojave, California",
-      "del": [
-        "Spec campaign stills",
-        "CGI integration"
-      ],
-      "tags": [
-        "Photography",
-        "Campaign",
-        "Automotive"
-      ],
-      "desc": "A speculative project that focused on the use of CGI. The goal was to bring a tangible feeling to something that tends to lean clinical. We partnered with professional mountain biker Spencer Rathkamp to bring an edge to the Tundra's story.",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "CGI",
-          "n": "Benjamin Grimes"
-        },
-        {
-          "r": "Talent",
-          "n": "Spencer Rathkamp"
-        },
-        {
-          "r": "Retouching",
-          "n": "Schinken Studio"
-        }
-      ],
-      "tone": "black",
-      "overlay": "TUNDRA",
       "gal": 5
     },
     {
@@ -675,6 +606,45 @@ window.JC_CONTENT = {
         }
       ],
       "tone": "grey",
+      "gal": 5
+    },
+    {
+      "loc": "San Juan Capistrano, California",
+      "del": [
+        "Brand film",
+        "Social cutdowns"
+      ],
+      "client": "The Fullest",
+      "order": 15,
+      "date": "April 10, 2026",
+      "desc": "Video work for the collaboration of The Fullest with The Ecology Center.",
+      "t": "The Fullest + Ecology Center",
+      "tags": [
+        "Cinematography",
+        "Brand Film",
+        "Wellness"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "DP",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Photography",
+          "n": "Chase Thompson"
+        },
+        {
+          "r": "Client Team",
+          "n": "The Fullest"
+        }
+      ],
+      "id": "fullest-ecology-center",
+      "selected": true,
+      "roles": [
+        "motion"
+      ],
+      "tone": "forest",
       "gal": 5
     },
     {
@@ -1310,12 +1280,86 @@ window.JC_CONTENT = {
       ],
       "tone": "pale",
       "gal": 4
+    },
+    {
+      "loc": "Southern California",
+      "del": [
+        "Social film series"
+      ],
+      "client": "The Fullest",
+      "order": 31,
+      "date": "2025 — 2026",
+      "desc": "A series of creative projects directed towards social media use.",
+      "t": "The Fullest 25/26",
+      "tags": [
+        "Cinematography",
+        "Campaign",
+        "Wellness"
+      ],
+      "yr": "2025",
+      "credits": [
+        {
+          "r": "DP",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Photography",
+          "n": "Chase Thompson"
+        }
+      ],
+      "id": "fullest-25-26",
+      "selected": true,
+      "roles": [
+        "motion"
+      ],
+      "tone": "sage",
+      "gal": 4
+    },
+    {
+      "loc": "Los Padres National Forest, California",
+      "del": [
+        "Documentary stills",
+        "Web and social assets"
+      ],
+      "client": "Cuyama Buckhorn",
+      "order": 33,
+      "date": "March 18, 2026",
+      "desc": "In partnership with Sam from Cuyama Rambler and the Cuyama Buckhorn, we followed Sam as he guided us on a hike through the Los Padres National Forest. The project involved documenting his knowledge of the land through foraging and blending of natural materials to create a botanically driven cocktail on the back of his tailgate.",
+      "t": "Foraging for Cocktails",
+      "tags": [
+        "Photography",
+        "Documentary",
+        "Food & Drink",
+        "Hospitality"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Video",
+          "n": "Zach Sorensen"
+        },
+        {
+          "r": "Talent",
+          "n": "Sam, Cuyama Rambler"
+        }
+      ],
+      "id": "buckhorn-foraging",
+      "selected": false,
+      "roles": [
+        "stills"
+      ],
+      "tone": "sage",
+      "gal": 6
     }
   ],
   "site": {
     "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. Recent work includes {Road & Track}, {Batch}, and {Cuyama Buckhorn}.",
-    "heroImage": "/content/media/site/_09a9040.jpg",
-    "heroVideo": "",
+    "heroImage": null,
+    "heroVideo": "https://vimeo.com/1204022679",
     "bio": "Jake Caminero is a photographer and director based in Costa Mesa, California. He works on location, in available light, across automotive, outdoor, and hospitality — and takes on creative direction when the whole campaign needs to hold together rather than just the frames.",
     "portrait": "/content/media/site/img_0105.jpg",
     "emails": [
