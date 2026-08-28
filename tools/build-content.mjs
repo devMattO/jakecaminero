@@ -44,6 +44,8 @@ async function loadProjects() {
 function reshapeSite(info) {
   return {
     intro: info.intro || "",
+    heroImage: info.heroImage || null,
+    heroVideo: info.heroVideo || "",
     bio: info.bio || "",
     portrait: info.portrait || null,
     emails: info.emails || [],

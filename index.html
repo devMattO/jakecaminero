@@ -138,6 +138,13 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
    ════════════════════════════════════════════════════ */
 .hero{background:var(--deep);color:var(--deepink);margin-top:clamp(58px,8vw,104px);aspect-ratio:16/10;
   display:grid;place-items:center;position:relative;overflow:hidden}
+/* Hero as a photo or video instead of the animation — same
+   image-vs-video-poster object-fit split as a project's own .det-hero. */
+.hero .hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.hero.has-video .hero-media{object-fit:cover}
+.hero .hero-video{position:absolute;inset:0;display:block}
+.hero .hero-video iframe{position:absolute;inset:0;width:100%;height:100%;
+  border:0;pointer-events:none;z-index:1}
 .frame-art{width:min(90%,1150px)}
 .frame-art svg{display:block;width:100%;height:auto;aspect-ratio:400/272;overflow:visible}
 .frame-art .fr{fill:none;stroke:currentColor;stroke-width:1.2;vector-effect:non-scaling-stroke;
@@ -475,9 +482,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 <!-- ══════════════ HOME ══════════════ -->
 <section class="page top-pad" id="p-home">
   <div class="wrap">
-    <div class="hero">
-      <div id="heroArt" class="frame-art"></div>
-    </div>
+    <div class="hero" id="hero"></div>
     <p class="intro statement" id="intro"></p>
     <div class="shead">
       <div class="lhs">
@@ -690,6 +695,7 @@ const IMG_BASE="assets/";
 const MANIFEST=(typeof window!=="undefined"&&window.JC_IMAGES)||{};
 CONTENT.projects.forEach(p=>{ if(MANIFEST[p.id]) p.images=MANIFEST[p.id]; });
 if(MANIFEST._site&&MANIFEST._site.portrait) CONTENT.site.portrait=MANIFEST._site.portrait;
+if(MANIFEST._site&&MANIFEST._site.heroImage) CONTENT.site.heroImage=MANIFEST._site.heroImage;
 
 /* Decap omits an optional list field entirely when Jake leaves it empty,
    rather than writing []  — so every project needs to be able to trust
@@ -739,7 +745,25 @@ function frameArt(elId){
   });
   el.innerHTML=s+"</svg>";
 }
-frameArt("#heroArt");
+/* Homepage hero: video (if Jake set one) > image (if set, no video) >
+   the nested-frames animation, unchanged, as the default when neither is
+   set. Same automatic video-over-image rule as a project's own hero. */
+(function(){
+  const heroEl=$("#hero");
+  const heroVid=CONTENT.site.heroVideo&&(CONTENT.site.heroVideo.match(/vimeo\.com\/(\d+)/)||[])[1];
+  if(heroVid){
+    heroEl.classList.add("has-video");
+    heroEl.innerHTML=(CONTENT.site.heroImage?`<img class="hero-media" src="${IMG_BASE+CONTENT.site.heroImage}" alt="">`:"")
+      +`<a class="hero-video" href="${CONTENT.site.heroVideo}" target="_blank" rel="noopener">
+          <iframe src="https://player.vimeo.com/video/${heroVid}?background=1&autoplay=1&loop=1&muted=1&autopause=0"
+            allow="autoplay" title="Jake Caminero"></iframe></a>`;
+  } else if(CONTENT.site.heroImage){
+    heroEl.innerHTML=`<img class="hero-media" src="${IMG_BASE+CONTENT.site.heroImage}" alt="">`;
+  } else {
+    heroEl.innerHTML=`<div id="heroArt" class="frame-art"></div>`;
+    frameArt("#heroArt");
+  }
+})();
 /* footer's copy waits until it's actually scrolled into view rather than
    running (and finishing) immediately with everything else on load */
 const footerArtEl=$("#footerArt");

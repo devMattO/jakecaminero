@@ -579,7 +579,9 @@ window.JC_IMAGES = {
   },
   "_site": {
     "portrait": "site/portrait-7b93b280-800.jpg",
-    "_src": "/content/media/site/img_0105.jpg"
+    "_src": {
+      "portrait": "/content/media/site/img_0105.jpg"
+    }
   },
   "endo-july-2026": {
     "gallery": [

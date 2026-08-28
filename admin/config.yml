@@ -156,6 +156,19 @@ collections:
         format: json
         fields:
           - {label: Intro, name: intro, widget: text, hint: "Homepage statement. Wrap a client name in {curly braces} to auto-link it to the Work page."}
+          - label: "Homepage Hero Image"
+            name: heroImage
+            widget: image
+            choose_url: false
+            required: false
+            media_folder: "/content/media/site"
+            public_folder: "/content/media/site"
+            hint: "Replaces the nested-frames animation at the top of the homepage with this photo. Leave blank to keep the animation."
+          - label: "Homepage Hero Video (Vimeo)"
+            name: heroVideo
+            widget: string
+            required: false
+            hint: "If filled in, the homepage plays this as a looping, muted background video instead of a photo or the animation — same as a project's Video URL field. The Hero Image above (if also set) shows briefly while the video loads."
           - {label: Bio, name: bio, widget: text}
           - label: Portrait
             name: portrait

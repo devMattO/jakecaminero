@@ -247,37 +247,51 @@ async function cms(out) {
     console.log(`  ${p.id}: processed (${1 + (p.images.og ? 1 : 0) + gallery.length} source file(s))`);
   }
 
-  await processSitePortrait(out, images);
+  await processSiteImages(out, images);
 
   await writeManifest(out, images);
   console.log(`\n${processed} project(s) processed, ${skipped} unchanged, ${removed} removed, ${untouched} with no CMS images yet.`);
 }
 
-/* content/info.json's `portrait` isn't a project, so it doesn't go through
-   the loop above — index.html reads it from window.JC_CONTENT.site.portrait
-   directly (no per-project id to key JC_IMAGES by), so it needs its own
-   processed reference here, stashed under images._site and merged back into
-   CONTENT.site.portrait client-side (see index.html). Same
-   already-processed-vs-raw-upload and skip-if-unchanged handling as a
-   project's images. */
-async function processSitePortrait(out, images) {
+/* content/info.json's site-level images (portrait, homepage heroImage)
+   aren't projects, so they don't go through the loop above — index.html
+   reads them from window.JC_CONTENT.site directly (no per-project id to
+   key JC_IMAGES by), so each needs its own processed reference here,
+   stashed under images._site and merged back into CONTENT.site
+   client-side (see index.html). Same already-processed-vs-raw-upload and
+   skip-if-unchanged handling as a project's images, tracked per field
+   since portrait and heroImage change independently of each other. */
+const SITE_IMAGE_FIELDS = ["portrait", "heroImage"];
+async function processSiteImages(out, images) {
   let info;
   try { info = JSON.parse(await readFile(INFO_FILE, "utf8")); } catch { return; }
 
-  if (!info.portrait) {
-    if (images._site) delete images._site;
-    return;
-  }
-  const srcKey = info.portrait;
-  if (images._site && images._site._src === srcKey) return;
+  const site = images._site || {};
+  // Older manifests kept _src as a plain string (portrait was the only
+  // site image at the time) — treat anything not already a real object as
+  // empty rather than crash on it; worst case portrait reprocesses once.
+  const srcMap = (site._src && typeof site._src === "object") ? site._src : {};
 
-  try {
-    const ref = await resolveImage(info.portrait, join(out, "site"), "portrait", "site");
-    images._site = { portrait: ref, _src: srcKey };
-    console.log(`  site portrait: processed`);
-  } catch (e) {
-    console.error(`  site portrait: skipped — ${e.message}`);
+  for (const field of SITE_IMAGE_FIELDS) {
+    const val = info[field];
+    if (!val) {
+      if (field in site) delete site[field];
+      if (field in srcMap) delete srcMap[field];
+      continue;
+    }
+    if (srcMap[field] === val) continue; // unchanged since last run
+
+    try {
+      site[field] = await resolveImage(val, join(out, "site"), field, "site");
+      srcMap[field] = val;
+      console.log(`  site ${field}: processed`);
+    } catch (e) {
+      console.error(`  site ${field}: skipped — ${e.message}`);
+    }
   }
+
+  if (Object.keys(srcMap).length) site._src = srcMap; else delete site._src;
+  if (Object.keys(site).length) images._site = site; else delete images._site;
 }
 
 function usage() {
