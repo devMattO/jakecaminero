@@ -1,24 +1,22 @@
 {
-  "id": "fullest-25-26",
-  "order": 1,
-  "t": "The Fullest 25/26",
-  "client": "The Fullest",
-  "date": "2025 — 2026",
-  "yr": "2025",
-  "roles": [
-    "motion"
-  ],
-  "selected": true,
   "loc": "Southern California",
   "del": [
     "Social film series"
   ],
+  "client": "The Fullest",
+  "order": 31,
+  "date": "2025 — 2026",
+  "desc": "A series of creative projects directed towards social media use.",
+  "t": "The Fullest 25/26",
+  "images": {
+    "main": "/content/media/fullest-25-26/screenshot-2026-08-10-at-2.46.22 pm.png"
+  },
   "tags": [
     "Cinematography",
     "Campaign",
     "Wellness"
   ],
-  "desc": "A series of creative projects directed towards social media use.",
+  "yr": "2025",
   "credits": [
     {
       "r": "DP",
@@ -28,5 +26,10 @@
       "r": "Photography",
       "n": "Chase Thompson"
     }
+  ],
+  "id": "fullest-25-26",
+  "selected": true,
+  "roles": [
+    "motion"
   ]
 }
