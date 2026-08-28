@@ -1,40 +1,14 @@
 {
-  "id": "buckhorn-foraging",
-  "order": 4,
-  "t": "Foraging for Cocktails",
-  "client": "Cuyama Buckhorn",
-  "date": "March 18, 2026",
-  "yr": "2026",
-  "roles": [
-    "stills"
-  ],
-  "selected": true,
   "loc": "Los Padres National Forest, California",
   "del": [
     "Documentary stills",
     "Web and social assets"
   ],
-  "tags": [
-    "Photography",
-    "Documentary",
-    "Food & Drink",
-    "Hospitality"
-  ],
+  "client": "Cuyama Buckhorn",
+  "order": 4,
+  "date": "March 18, 2026",
   "desc": "In partnership with Sam from Cuyama Rambler and the Cuyama Buckhorn, we followed Sam as he guided us on a hike through the Los Padres National Forest. The project involved documenting his knowledge of the land through foraging and blending of natural materials to create a botanically driven cocktail on the back of his tailgate.",
-  "credits": [
-    {
-      "r": "Photography",
-      "n": "Jake Caminero"
-    },
-    {
-      "r": "Video",
-      "n": "Zach Sorensen"
-    },
-    {
-      "r": "Talent",
-      "n": "Sam, Cuyama Rambler"
-    }
-  ],
+  "t": "Foraging for Cocktails",
   "images": {
     "main": "/assets/buckhorn-foraging/01-800.jpg",
     "gallery": [
@@ -174,5 +148,31 @@
         "src": "/assets/buckhorn-foraging/45-800.jpg"
       }
     ]
-  }
+  },
+  "tags": [
+    "Photography",
+    "Documentary",
+    "Food & Drink",
+    "Hospitality"
+  ],
+  "yr": "2026",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Video",
+      "n": "Zach Sorensen"
+    },
+    {
+      "r": "Talent",
+      "n": "Sam, Cuyama Rambler"
+    }
+  ],
+  "id": "buckhorn-foraging",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
 }
