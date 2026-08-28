@@ -1,25 +1,23 @@
 {
-  "id": "batch-farm-visit",
-  "order": 6,
-  "t": "Farm Visit",
-  "client": "Batch",
-  "date": "January 20, 2026",
-  "yr": "2026",
-  "roles": [
-    "motion"
-  ],
-  "selected": true,
   "loc": "Viroqua, Wisconsin",
   "del": [
     "Documentary film",
     "Stills selects"
   ],
+  "client": "Batch",
+  "order": 6,
+  "date": "January 20, 2026",
+  "desc": "This project consisted of a directed lifestyle shoot and an on location docu-style shoot at the Batch farm in Wisconsin. This project in it’s entirety shows the process of how Batch creates their products from beginning to end and the hands that make the company what it is. The lifestyle portion was set to give Batch commercial assets to showcase the product being implemented and enjoyed in day to day living.",
+  "t": "Farm Visit",
+  "images": {
+    "main": "/content/media/batch-farm-visit/screenshot-2026-08-28-at-3.18.55 pm.png"
+  },
   "tags": [
     "Cinematography",
     "Documentary",
     "Food & Drink"
   ],
-  "desc": "DP work from a visit to the Batch hemp farm in Wisconsin. We spent 3 days documenting their processes of farming and the special people that make it all happen.",
+  "yr": "2026",
   "credits": [
     {
       "r": "DP",
@@ -37,5 +35,10 @@
       "r": "Client Team",
       "n": "Batch"
     }
+  ],
+  "id": "batch-farm-visit",
+  "selected": true,
+  "roles": [
+    "motion"
   ]
 }
