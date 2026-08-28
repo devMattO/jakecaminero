@@ -1,25 +1,25 @@
 {
-  "id": "agronomy-ss-launch",
-  "order": 3,
-  "t": "Agronomy S/S Launch",
-  "client": "Agronomy Workshop",
-  "date": "April 1, 2026",
-  "yr": "2026",
-  "roles": [
-    "motion"
-  ],
-  "selected": true,
   "loc": "Costa Mesa, California",
   "del": [
     "16mm and digital film",
     "Launch assets"
   ],
+  "client": "Agronomy Workshop",
+  "order": 2,
+  "date": "April 1, 2026",
+  "desc": "16mm and digital video work for the spring/summer launch for Agronomy Workshop.",
+  "t": "Agronomy S/S Launch",
+  "images": {
+    "main": "/content/media/agronomy-ss-launch/1.16.1_1.16.1.jpg",
+    "og": "/content/media/agronomy-ss-launch/1.16.1_1.16.1.jpg",
+    "gallery": []
+  },
   "tags": [
     "Cinematography",
     "Brand Film",
     "Fashion"
   ],
-  "desc": "16mm and digital video work for the spring/summer launch for Agronomy Workshop.",
+  "yr": "2026",
   "credits": [
     {
       "r": "DP",
@@ -27,11 +27,16 @@
     },
     {
       "r": "Creative Direction",
-      "n": "Rob, Agronomy Workshop"
+      "n": "Rob Judge, Agronomy Workshop"
     },
     {
       "r": "Photography",
       "n": "Chase Thompson"
     }
+  ],
+  "id": "agronomy-ss-launch",
+  "selected": true,
+  "roles": [
+    "motion"
   ]
 }
