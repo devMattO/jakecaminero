@@ -70,6 +70,28 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
+      "loc": "Orange County",
+      "del": [
+        "Still Images"
+      ],
+      "client": "Endo",
+      "order": 1,
+      "date": "July 2026",
+      "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
+      "t": "Endo Fall Capsule 2026",
+      "tags": [
+        "Photography",
+        "Sport",
+        "Outdoor"
+      ],
+      "yr": "2026",
+      "id": "endo-july-2026",
+      "selected": true,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
       "id": "fullest-25-26",
       "order": 1,
       "t": "The Fullest 25/26",

@@ -580,5 +580,21 @@ window.JC_IMAGES = {
   "_site": {
     "portrait": "site/portrait-7b93b280-800.jpg",
     "_src": "/content/media/site/img_0105.jpg"
+  },
+  "endo-july-2026": {
+    "gallery": [
+      "endo-july-2026/01-1351eb3e-2400.jpg",
+      "endo-july-2026/02-7c1c6979-2400.jpg",
+      "endo-july-2026/03-3604a4bb-2400.jpg",
+      "endo-july-2026/04-0d3d5ab4-2400.jpg",
+      "endo-july-2026/05-f2694684-2400.jpg",
+      "endo-july-2026/06-945ed2de-1600.jpg",
+      "endo-july-2026/07-ea64df0a-2400.jpg",
+      "endo-july-2026/08-ebf439b4-2400.jpg",
+      "endo-july-2026/09-feb5e5ae-2400.jpg"
+    ],
+    "main": "endo-july-2026/main-b8061cf3-2400.jpg",
+    "og": "endo-july-2026/og-b8061cf3-2400.jpg",
+    "_src": "{\"main\":\"/content/media/endo-july-2026/_09a9046.jpg\",\"og\":\"/content/media/endo-july-2026/_09a9046.jpg\",\"gallery\":[\"/content/media/endo-july-2026/_09a8964.jpg\",\"/content/media/endo-july-2026/_09a9009.jpg\",\"/content/media/endo-july-2026/_09a8953.jpg\",\"/content/media/endo-july-2026/_09a9097.jpg\",\"/content/media/endo-july-2026/_09a9102.jpg\",\"/content/media/endo-july-2026/_09a9055.jpg\",\"/content/media/endo-july-2026/_09a8879.jpg\",\"/content/media/endo-july-2026/_09a8826.jpg\",\"/content/media/endo-july-2026/_09a90131.jpg\"]}"
   }
 };

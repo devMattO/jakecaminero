@@ -691,6 +691,15 @@ const MANIFEST=(typeof window!=="undefined"&&window.JC_IMAGES)||{};
 CONTENT.projects.forEach(p=>{ if(MANIFEST[p.id]) p.images=MANIFEST[p.id]; });
 if(MANIFEST._site&&MANIFEST._site.portrait) CONTENT.site.portrait=MANIFEST._site.portrait;
 
+/* Decap omits an optional list field entirely when Jake leaves it empty,
+   rather than writing []  — so every project needs to be able to trust
+   these are always real arrays before anything below tries to .map/
+   .forEach/.includes them. Normalize once, here, rather than defensively
+   checking at every call site. */
+CONTENT.projects.forEach(p=>{
+  p.credits=p.credits||[]; p.tags=p.tags||[]; p.del=p.del||[]; p.roles=p.roles||[];
+});
+
 const mainImg  =(p,ratio)=> p.images&&p.images.main ? IMG_BASE+p.images.main
                                                     : shot(p.id,p.tone,ratio,p.overlay);
 const seoImg   = p => p.images&&(p.images.og||p.images.main) ? IMG_BASE+(p.images.og||p.images.main)
