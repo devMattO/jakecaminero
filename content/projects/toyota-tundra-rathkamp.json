@@ -1,45 +1,16 @@
 {
-  "id": "toyota-tundra-rathkamp",
-  "order": 8,
-  "t": "Toyota Tundra + Spencer Rathkamp",
-  "client": "Spec Shoot",
-  "date": "November 5, 2025",
-  "yr": "2025",
-  "roles": [
-    "stills"
-  ],
-  "selected": true,
   "loc": "Mojave, California",
   "del": [
     "Spec campaign stills",
     "CGI integration"
   ],
-  "tags": [
-    "Photography",
-    "Campaign",
-    "Automotive"
-  ],
+  "client": "Spec Shoot",
+  "order": 5,
+  "date": "November 5, 2025",
   "desc": "A speculative project that focused on the use of CGI. The goal was to bring a tangible feeling to something that tends to lean clinical. We partnered with professional mountain biker Spencer Rathkamp to bring an edge to the Tundra's story.",
-  "credits": [
-    {
-      "r": "Photography",
-      "n": "Jake Caminero"
-    },
-    {
-      "r": "CGI",
-      "n": "Benjamin Grimes"
-    },
-    {
-      "r": "Talent",
-      "n": "Spencer Rathkamp"
-    },
-    {
-      "r": "Retouching",
-      "n": "Schinken Studio"
-    }
-  ],
+  "t": "Toyota Tundra + Spencer Rathkamp",
   "images": {
-    "main": "/assets/toyota-tundra-rathkamp/01-800.jpg",
+    "main": "/content/media/toyota-tundra-rathkamp/screenshot-2026-08-28-at-1.45.26 pm.png",
     "gallery": [
       {
         "src": "/assets/toyota-tundra-rathkamp/01-800.jpg"
@@ -87,5 +58,34 @@
         "src": "/assets/toyota-tundra-rathkamp/15-800.jpg"
       }
     ]
-  }
+  },
+  "tags": [
+    "Photography",
+    "Campaign",
+    "Automotive"
+  ],
+  "yr": "2025",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "CGI",
+      "n": "Benjamin Grimes"
+    },
+    {
+      "r": "Talent",
+      "n": "Spencer Rathkamp"
+    },
+    {
+      "r": "Retouching",
+      "n": "Schinken Studio"
+    }
+  ],
+  "id": "toyota-tundra-rathkamp",
+  "selected": true,
+  "roles": [
+    "stills"
+  ]
 }
