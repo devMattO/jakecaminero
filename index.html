@@ -139,9 +139,15 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .hero{background:var(--deep);color:var(--deepink);margin-top:clamp(58px,8vw,104px);aspect-ratio:16/10;
   display:grid;place-items:center;position:relative;overflow:hidden}
 /* Hero as a photo or video instead of the animation — same
-   image-vs-video-poster object-fit split as a project's own .det-hero. */
+   image-vs-video-poster object-fit split as a project's own .det-hero.
+   A plain photo (no video) drops the fixed 16:10 band entirely and lets
+   the hero take the photo's own natural shape — no letterboxing, no
+   crop. Video keeps the fixed band; there's no single "natural ratio"
+   for a background video the way there is for a photo. */
 .hero .hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
 .hero.has-video .hero-media{object-fit:cover}
+.hero.has-image{aspect-ratio:auto;display:block}
+.hero.has-image .hero-media{position:static;width:100%;height:auto}
 .hero .hero-video{position:absolute;inset:0;display:block}
 .hero .hero-video iframe{position:absolute;inset:0;width:100%;height:100%;
   border:0;pointer-events:none;z-index:1}
@@ -758,6 +764,7 @@ function frameArt(elId){
           <iframe src="https://player.vimeo.com/video/${heroVid}?background=1&autoplay=1&loop=1&muted=1&autopause=0"
             allow="autoplay" title="Jake Caminero"></iframe></a>`;
   } else if(CONTENT.site.heroImage){
+    heroEl.classList.add("has-image");
     heroEl.innerHTML=`<img class="hero-media" src="${IMG_BASE+CONTENT.site.heroImage}" alt="">`;
   } else {
     heroEl.innerHTML=`<div id="heroArt" class="frame-art"></div>`;
