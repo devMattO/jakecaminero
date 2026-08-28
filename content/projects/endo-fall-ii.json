@@ -1,0 +1,47 @@
+{
+  "loc": "Orange County",
+  "del": [
+    "Stills"
+  ],
+  "client": "Endociety",
+  "order": 5,
+  "date": "August 10, 2026",
+  "desc": "Ecom/social imagery for fall capsule drop 2.0",
+  "t": "Endo Fall Capsule 2.0",
+  "images": {
+    "main": "/content/media/endo-fall-ii/dscf6508.jpg",
+    "og": "/content/media/endo-fall-ii/dscf6508.jpg",
+    "gallery": [
+      "/content/media/endo-fall-ii/dscf6508.jpg",
+      "/content/media/endo-fall-ii/dscf6536.jpg",
+      "/content/media/endo-fall-ii/dscf6427.jpg",
+      "/content/media/endo-fall-ii/dscf6539.jpg",
+      "/content/media/endo-fall-ii/dscf6447.jpg",
+      "/content/media/endo-fall-ii/dscf6586.jpg",
+      "/content/media/endo-fall-ii/gfx_endo_test_sl2_leica_07_29_2026_cs_07-30-2026.jpg"
+    ]
+  },
+  "tags": [
+    "Campaign",
+    "Photography",
+    "Outdoor",
+    "Sport",
+    "Wellness"
+  ],
+  "yr": "2026",
+  "credits": [
+    {
+      "r": "Creative Director",
+      "n": "Devon Polk"
+    },
+    {
+      "r": "Talent",
+      "n": "AJ Castillo"
+    }
+  ],
+  "id": "endo-fall-ii",
+  "selected": true,
+  "roles": [
+    "stills"
+  ]
+}
