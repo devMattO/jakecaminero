@@ -4,8 +4,8 @@
     "Still Images"
   ],
   "client": "Endo",
-  "order": 1,
-  "date": "July 2026",
+  "order": 0,
+  "date": "July 1, 2026",
   "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
   "t": "Endo Fall Capsule 2026",
   "images": {
@@ -29,6 +29,16 @@
     "Outdoor"
   ],
   "yr": "2026",
+  "credits": [
+    {
+      "r": "Creative Direction",
+      "n": "Devon Polk"
+    },
+    {
+      "r": "Photo Assistant",
+      "n": "Levi Fillies"
+    }
+  ],
   "id": "endo-july-2026",
   "selected": true,
   "roles": [
