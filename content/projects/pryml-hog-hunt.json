@@ -1,27 +1,24 @@
 {
-  "id": "pryml-hog-hunt",
-  "order": 13,
-  "t": "Hog Hunt",
-  "client": "PRYML",
-  "date": "May 5, 2025",
-  "yr": "2025",
-  "roles": [
-    "motion",
-    "stills"
-  ],
-  "selected": true,
   "loc": "Molnar Outfitters, Central Coast, California",
   "del": [
     "Documentary film",
     "Documentary stills"
   ],
+  "client": "PRYML",
+  "order": 13,
+  "date": "May 5, 2025",
+  "desc": "A documentary project around a singular hunt for a wild California hog. The shoot took place on the Molnar Outfitters reserve in the central coast of California.",
+  "t": "Hog Hunt",
+  "images": {
+    "main": "/content/media/pryml-hog-hunt/screenshot-2026-08-28-at-3.07.00 pm.png"
+  },
   "tags": [
     "Photography",
     "Cinematography",
     "Documentary",
     "Outdoor"
   ],
-  "desc": "A documentary project around a singular hunt for a wild California hog. The shoot took place on the Molnar Outfitters reserve in the central coast of California.",
+  "yr": "2025",
   "credits": [
     {
       "r": "Video",
@@ -52,5 +49,11 @@
       "n": "Brance Molnar"
     }
   ],
-  "video": "https://vimeo.com/1204363270"
+  "video": "https://vimeo.com/1204363270",
+  "id": "pryml-hog-hunt",
+  "selected": true,
+  "roles": [
+    "motion",
+    "stills"
+  ]
 }
