@@ -49,6 +49,7 @@ collections:
   - name: projects
     label: Projects
     label_singular: Project
+    description: "This list isn't in the order projects show on the site — that's set in Project Order. Use the columns above to sort while browsing, or search to find a project to edit."
     folder: content/projects
     create: true
     extension: json
