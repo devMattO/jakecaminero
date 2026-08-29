@@ -1,25 +1,23 @@
 {
-  "id": "batch-lifestyle-campaign",
-  "order": 11,
-  "t": "Batch Lifestyle Campaign",
-  "client": "Batch",
-  "date": "July 16, 2025",
-  "yr": "2025",
-  "roles": [
-    "motion"
-  ],
-  "selected": true,
   "loc": "Los Angeles, California",
   "del": [
     "Lifestyle film",
     "Social and web assets"
   ],
+  "client": "Batch",
+  "order": 11,
+  "date": "July 16, 2025",
+  "desc": "Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
+  "t": "Batch Lifestyle Campaign",
+  "images": {
+    "main": "/content/media/batch-lifestyle-campaign/a001_a050_0625kb.00_49_28_01.still004.jpg"
+  },
   "tags": [
     "Cinematography",
     "Campaign",
     "Food & Drink"
   ],
-  "desc": "Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
+  "yr": "2025",
   "credits": [
     {
       "r": "DP",
@@ -57,5 +55,10 @@
       "r": "Creative Direction",
       "n": "Megan Powell"
     }
+  ],
+  "id": "batch-lifestyle-campaign",
+  "selected": true,
+  "roles": [
+    "motion"
   ]
 }

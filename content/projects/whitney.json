@@ -1,31 +1,15 @@
 {
-  "id": "whitney",
-  "order": 17,
-  "t": "Whitney",
-  "client": "Personal Project",
-  "date": "October 7, 2024",
-  "yr": "2024",
-  "roles": [
-    "stills"
-  ],
-  "selected": true,
   "loc": "Mount Whitney, California",
   "del": [
     "Personal series"
   ],
-  "tags": [
-    "Photography",
-    "Outdoor"
-  ],
+  "client": "Personal Project",
+  "order": 17,
+  "date": "October 7, 2024",
   "desc": "Ever since I was a kid, I've dreamt of what the view would be like from the top of Whitney. I fantasized over the people who would make their way to the summit, thinking of them almost as heroes. I imagined the view would be so vast and every other mountain in the land would be microscopic compared to the top of Whitney. And now after making the journey, I realize that there's something special about making it to the peak. It's not the view. It wasn't romantic. It kind of sucked haha. But the feeling of accomplishment is so overwhelming. This day sparked something in me that I never knew I had, and I can't wait for the next one. I think little Jake would be proud.",
-  "credits": [
-    {
-      "r": "Photography",
-      "n": "Jake Caminero"
-    }
-  ],
+  "t": "Whitney",
   "images": {
-    "main": "/assets/whitney/01-800.jpg",
+    "main": "/content/media/whitney/v0030363.jpg",
     "gallery": [
       {
         "src": "/assets/whitney/01-800.jpg"
@@ -217,20 +201,27 @@
         "src": "/assets/whitney/63-800.jpg"
       },
       {
-        "src": "/assets/whitney/64-800.jpg"
-      },
-      {
-        "src": "/assets/whitney/65-800.jpg"
-      },
-      {
         "src": "/assets/whitney/66-800.jpg"
       },
       {
         "src": "/assets/whitney/67-800.jpg"
-      },
-      {
-        "src": "/assets/whitney/68-800.jpg"
       }
     ]
-  }
+  },
+  "tags": [
+    "Photography",
+    "Outdoor"
+  ],
+  "yr": "2024",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    }
+  ],
+  "id": "whitney",
+  "selected": true,
+  "roles": [
+    "stills"
+  ]
 }
