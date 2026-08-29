@@ -177,7 +177,23 @@ collections:
         file: content/info.json
         format: json
         fields:
-          - {label: Intro, name: intro, widget: text, hint: "Homepage statement. Wrap a client name in {curly braces} to auto-link it to the Work page."}
+          - {label: Intro, name: intro, widget: text, hint: "Homepage statement. Wrap a name in {curly braces}, then add a matching entry in Intro Links below to send it to a specific project. A name with no matching entry links to the Work page instead."}
+          - label: "Intro Links"
+            name: introLinks
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.label}}"
+            hint: "One entry per {name} used in Intro above. The label must match the text inside the curly braces exactly, including capitalization."
+            fields:
+              - {label: "Label (must match a {name} in Intro)", name: label, widget: string}
+              - label: Project
+                name: project
+                widget: relation
+                collection: projects
+                value_field: id
+                search_fields: [t, client]
+                display_fields: ["{{t}} — {{client}}"]
           - label: "Homepage Hero Image"
             name: heroImage
             widget: image

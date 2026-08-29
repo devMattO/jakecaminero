@@ -1352,6 +1352,20 @@ window.JC_CONTENT = {
   ],
   "site": {
     "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. Recent work includes {Road & Track}, {Batch}, and {Cuyama Buckhorn}.",
+    "introLinks": [
+      {
+        "label": "Road & Track",
+        "project": "rt-nowhere-sept-2026"
+      },
+      {
+        "label": "Batch",
+        "project": "batch-farm-visit"
+      },
+      {
+        "label": "Cuyama Buckhorn",
+        "project": "buckhorn-foraging"
+      }
+    ],
     "heroImage": null,
     "heroVideo": "https://vimeo.com/1204022679",
     "bio": "Jake Caminero is a photographer and director based in Costa Mesa, California. He works on location, in available light, across automotive, outdoor, and hospitality — and takes on creative direction when the whole campaign needs to hold together rather than just the frames.",

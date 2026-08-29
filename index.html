@@ -802,7 +802,16 @@ if(footerArtEl){
   footerArtObs.observe(footerArtEl);
 }
 
-$("#intro").innerHTML=CONTENT.site.intro.replace(/\{([^}]+)\}/g,(_,n)=>`<a href="#/work">${n}</a>`);
+/* {Name} in the intro links to whichever project Jake picked for that
+   exact label in introLinks (a client can have several projects, so
+   there's no way to infer "the" one — it has to be an explicit choice).
+   No match, or the picked project no longer exists, falls back to Work. */
+const introLinkMap=new Map((CONTENT.site.introLinks||[]).map(l=>[l.label,l.project]));
+$("#intro").innerHTML=CONTENT.site.intro.replace(/\{([^}]+)\}/g,(_,n)=>{
+  const pid=introLinkMap.get(n);
+  const href=pid&&byId(pid)?`#/project/${pid}`:"#/work";
+  return `<a href="${href}">${n}</a>`;
+});
 
 /* ── the filter key ──────────────────────────────────────────────
    Same marks used on the index rows, drawn hollow when a filter is off
