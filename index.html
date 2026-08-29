@@ -149,7 +149,11 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .hero.has-image{aspect-ratio:auto;display:block}
 .hero.has-image .hero-media{position:static;width:100%;height:auto}
 .hero .hero-video{position:absolute;inset:0;display:block}
-.hero .hero-video iframe{position:absolute;inset:0;width:100%;height:100%;
+/* Oversized 1% past the edge on every side, clipped by .hero's own
+   overflow:hidden — guarantees the video always fully covers its box
+   (no sliver of the dark background showing) even when the fetched
+   ratio is a rounded approximation of the real one, not bit-exact. */
+.hero .hero-video iframe{position:absolute;inset:-1%;width:102%;height:102%;
   border:0;pointer-events:none;z-index:1}
 .frame-art{width:min(90%,1150px)}
 .frame-art svg{display:block;width:100%;height:auto;aspect-ratio:400/272;overflow:visible}
@@ -351,7 +355,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .det-hero img{width:100%;height:100%;object-fit:contain;display:block}
 .det-hero.has-video img{object-fit:cover;position:absolute;inset:0}
 .det-hero .det-video{position:absolute;inset:0;display:block}
-.det-hero .det-video iframe{position:absolute;inset:0;width:100%;height:100%;
+.det-hero .det-video iframe{position:absolute;inset:-1%;width:102%;height:102%;
   border:0;pointer-events:none;z-index:1}
 .det-top{display:flex;justify-content:space-between;align-items:flex-start;gap:34px;flex-wrap:wrap;
   padding:clamp(26px,4vw,46px) 0 clamp(18px,2.6vw,30px)}
