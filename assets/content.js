@@ -6,7 +6,7 @@ window.JC_CONTENT = {
       "del": [
         "Still Images"
       ],
-      "client": "Endo",
+      "client": "Endociety",
       "order": 0,
       "date": "July 1, 2026",
       "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
@@ -71,6 +71,66 @@ window.JC_CONTENT = {
       ],
       "tone": "sage",
       "gal": 4
+    },
+    {
+      "loc": "Southern California",
+      "del": [
+        "Editorial stills",
+        "Editorial film"
+      ],
+      "client": "Road & Track",
+      "order": 3,
+      "date": "February 1, 2024",
+      "desc": "An editorial piece focusing on the then unreleased Lucid Air Sapphire. We had the opportunity to take the car for 5 days and put it through its paces. Though the weather was unfavorable we were able to get both photo and video of the car.",
+      "t": "Lucid Air Sapphire",
+      "tags": [
+        "Photography",
+        "Creative Direction",
+        "Cinematography",
+        "Editorial",
+        "Automotive"
+      ],
+      "yr": "2024",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Creative Direction",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "DP",
+          "n": "Rob Trent"
+        },
+        {
+          "r": "AC",
+          "n": "Asriel Jaska"
+        },
+        {
+          "r": "Photo Assistant and Driver",
+          "n": "Spencer Kofoed"
+        },
+        {
+          "r": "Editorial Creative Direction",
+          "n": "Cassidy Zobl"
+        },
+        {
+          "r": "Car",
+          "n": "Lucid Motors"
+        }
+      ],
+      "id": "lucid-air-sapphire",
+      "selected": true,
+      "roles": [
+        "motion",
+        "stills",
+        "cd"
+      ],
+      "tone": "black",
+      "overlay": "SAPPHIRE",
+      "gal": 6
     },
     {
       "loc": "Orange County, California",
@@ -175,29 +235,23 @@ window.JC_CONTENT = {
       ]
     },
     {
-      "id": "rally-tristan-detwiller",
-      "order": 5,
-      "t": "Tristan Detwiller",
-      "client": "The Rally Project",
-      "date": "February 2026",
-      "yr": "2026",
-      "roles": [
-        "cd",
-        "motion"
-      ],
-      "selected": true,
       "loc": "Los Angeles, California",
       "del": [
         "Brand film",
         "Creative direction"
       ],
+      "client": "The Rally Project",
+      "order": 5,
+      "date": "February 2026",
+      "desc": "Tristan founded Stan with the vision of reinvigorating hand-crafted passion in clothing. He draws inspiration from timeless and classic fashions that have endured throughout various centuries. What sets Stan apart from other clothing companies is Tristan's use of ancient textiles — materials so carefully crafted that they have withstood the test of time and continue to be reused and cherished. Tristan selects his materials based on his philosophy that clothing is meant to be used, not just admired. He creates garments with textiles proven to endure, designed to be worn and to have life infused within them, continuing the stories built into each item.",
+      "t": "Tristan Detwiller",
       "tags": [
         "Creative Direction",
         "Cinematography",
         "Brand Film",
         "Fashion"
       ],
-      "desc": "Tristan founded Stan with the vision of reinvigorating hand-crafted passion in clothing. He draws inspiration from timeless and classic fashions that have endured throughout various centuries. What sets Stan apart from other clothing companies is Tristan's use of ancient textiles — materials so carefully crafted that they have withstood the test of time and continue to be reused and cherished. Tristan selects his materials based on his philosophy that clothing is meant to be used, not just admired. He creates garments with textiles proven to endure, designed to be worn and to have life infused within them, continuing the stories built into each item.",
+      "yr": "2026",
       "credits": [
         {
           "r": "Creative Direction",
@@ -219,6 +273,13 @@ window.JC_CONTENT = {
           "r": "Talent",
           "n": "Tristan Detwiller"
         }
+      ],
+      "video": "https://vimeo.com/1204380444?share=copy&fl=sv&fe=ci",
+      "id": "rally-tristan-detwiller",
+      "selected": true,
+      "roles": [
+        "cd",
+        "motion"
       ],
       "tone": "clay",
       "gal": 5
@@ -268,27 +329,22 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
-      "id": "batch-farm-visit",
-      "order": 6,
-      "t": "Farm Visit",
-      "client": "Batch",
-      "date": "January 20, 2026",
-      "yr": "2026",
-      "roles": [
-        "motion"
-      ],
-      "selected": true,
       "loc": "Viroqua, Wisconsin",
       "del": [
         "Documentary film",
         "Stills selects"
       ],
+      "client": "Batch",
+      "order": 6,
+      "date": "January 20, 2026",
+      "desc": "This project consisted of a directed lifestyle shoot and an on location docu-style shoot at the Batch farm in Wisconsin. This project in it’s entirety shows the process of how Batch creates their products from beginning to end and the hands that make the company what it is. The lifestyle portion was set to give Batch commercial assets to showcase the product being implemented and enjoyed in day to day living.",
+      "t": "Farm Visit",
       "tags": [
         "Cinematography",
         "Documentary",
         "Food & Drink"
       ],
-      "desc": "DP work from a visit to the Batch hemp farm in Wisconsin. We spent 3 days documenting their processes of farming and the special people that make it all happen.",
+      "yr": "2026",
       "credits": [
         {
           "r": "DP",
@@ -307,51 +363,40 @@ window.JC_CONTENT = {
           "n": "Batch"
         }
       ],
+      "id": "batch-farm-visit",
+      "selected": true,
+      "roles": [
+        "motion"
+      ],
       "tone": "pale",
       "gal": 6
     },
     {
-      "id": "rally-luke-davis",
-      "order": 7,
-      "t": "Luke Davis",
-      "client": "The Rally Project",
-      "date": "January 1, 2026",
-      "yr": "2026",
-      "roles": [
-        "cd"
-      ],
-      "selected": true,
-      "loc": "Los Angeles, California",
-      "del": [
-        "Creative direction",
-        "Short film"
-      ],
+      "loc": "Los Angeles",
+      "del": [],
+      "client": "Road & Track",
+      "order": 8,
+      "date": "September 20, 2026",
+      "desc": "A commission from Road & Track to create an image using the first satellite phone. The image is meant to close the September issue titled, 'Nowhere' on the back cover of the magazine. ",
+      "t": "Nowhere Back Cover Image",
       "tags": [
-        "Creative Direction",
-        "Documentary"
+        "Photography",
+        "Automotive",
+        "Editorial",
+        "Creative Direction"
       ],
-      "desc": "Luke Davis. A man who seeks the creative ingenuity in all facets of life, Luke enthralls his viewers with paintings, drawings, poetry, and even food in his pursuit of self-expression. For the first time, Luke will be displaying all aspects of his creative process in his methodical, all-encompassing vision.",
+      "yr": "2026",
       "credits": [
         {
-          "r": "Photography",
-          "n": "Zach Sorensen"
-        },
-        {
-          "r": "DP",
-          "n": "Nick Warren"
-        },
-        {
-          "r": "Edit",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Talent",
-          "n": "Luke Davis"
+          "r": "Cassidy Zobl",
+          "n": "Deputy Creative Director for Road & Track"
         }
       ],
-      "video": "https://vimeo.com/1204339928",
-      "tone": "black",
-      "gal": 5
+      "id": "rt-nowhere-sept-2026",
+      "selected": true,
+      "roles": [
+        "stills"
+      ]
     },
     {
       "id": "velotric-nomad-2",
@@ -384,27 +429,22 @@ window.JC_CONTENT = {
       "gal": 4
     },
     {
-      "id": "buckhorn-summer-cocktail",
-      "order": 10,
-      "t": "Summer Cocktail Menu",
-      "client": "Cuyama Buckhorn",
-      "date": "August 20, 2025",
-      "yr": "2025",
-      "roles": [
-        "stills"
-      ],
-      "selected": true,
       "loc": "Cuyama Valley, California",
       "del": [
         "Menu photography",
         "Web and social assets"
       ],
+      "client": "Cuyama Buckhorn",
+      "order": 10,
+      "date": "August 20, 2025",
+      "desc": "Photography work for the Cuyama Buckhorn's summer drink menu.",
+      "t": "Summer Cocktail Menu",
       "tags": [
         "Photography",
         "Food & Drink",
         "Hospitality"
       ],
-      "desc": "Photography work for the Cuyama Buckhorn's summer drink menu.",
+      "yr": "2025",
       "credits": [
         {
           "r": "Photography",
@@ -415,31 +455,74 @@ window.JC_CONTENT = {
           "n": "Sam, Cuyama Rambler"
         }
       ],
+      "id": "buckhorn-summer-cocktail",
+      "selected": false,
+      "roles": [
+        "stills"
+      ],
       "tone": "clay",
       "gal": 5
     },
     {
-      "id": "batch-lifestyle-campaign",
-      "order": 11,
-      "t": "Batch Lifestyle Campaign",
-      "client": "Batch",
-      "date": "July 16, 2025",
-      "yr": "2025",
-      "roles": [
-        "motion"
+      "loc": "Los Angeles, California",
+      "del": [
+        "Creative direction",
+        "Short film"
       ],
+      "client": "The Rally Project",
+      "order": 10,
+      "date": "January 1, 2026",
+      "desc": "Luke Davis. A man who seeks the creative ingenuity in all facets of life, Luke enthralls his viewers with paintings, drawings, poetry, and even food in his pursuit of self-expression. For the first time, Luke will be displaying all aspects of his creative process in his methodical, all-encompassing vision.",
+      "t": "Luke Davis",
+      "tags": [
+        "Creative Direction",
+        "Documentary"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Edit",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "DP",
+          "n": "Nick Warren"
+        },
+        {
+          "r": "Photography",
+          "n": "Zach Sorensen"
+        },
+        {
+          "r": "Talent",
+          "n": "Luke Davis"
+        }
+      ],
+      "video": "https://vimeo.com/1204339928?share=copy&fl=sv&fe=ci",
+      "id": "rally-luke-davis",
       "selected": true,
+      "roles": [
+        "cd"
+      ],
+      "tone": "black",
+      "gal": 5
+    },
+    {
       "loc": "Los Angeles, California",
       "del": [
         "Lifestyle film",
         "Social and web assets"
       ],
+      "client": "Batch",
+      "order": 11,
+      "date": "July 16, 2025",
+      "desc": "Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
+      "t": "Batch Lifestyle Campaign",
       "tags": [
         "Cinematography",
         "Campaign",
         "Food & Drink"
       ],
-      "desc": "Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
+      "yr": "2025",
       "credits": [
         {
           "r": "DP",
@@ -477,6 +560,11 @@ window.JC_CONTENT = {
           "r": "Creative Direction",
           "n": "Megan Powell"
         }
+      ],
+      "id": "batch-lifestyle-campaign",
+      "selected": true,
+      "roles": [
+        "motion"
       ],
       "tone": "pale",
       "gal": 6
@@ -517,29 +605,23 @@ window.JC_CONTENT = {
       "gal": 4
     },
     {
-      "id": "pryml-hog-hunt",
-      "order": 13,
-      "t": "Hog Hunt",
-      "client": "PRYML",
-      "date": "May 5, 2025",
-      "yr": "2025",
-      "roles": [
-        "motion",
-        "stills"
-      ],
-      "selected": true,
       "loc": "Molnar Outfitters, Central Coast, California",
       "del": [
         "Documentary film",
         "Documentary stills"
       ],
+      "client": "PRYML",
+      "order": 13,
+      "date": "May 5, 2025",
+      "desc": "A documentary project around a singular hunt for a wild California hog. The shoot took place on the Molnar Outfitters reserve in the central coast of California.",
+      "t": "Hog Hunt",
       "tags": [
         "Photography",
         "Cinematography",
         "Documentary",
         "Outdoor"
       ],
-      "desc": "A documentary project around a singular hunt for a wild California hog. The shoot took place on the Molnar Outfitters reserve in the central coast of California.",
+      "yr": "2025",
       "credits": [
         {
           "r": "Video",
@@ -571,6 +653,12 @@ window.JC_CONTENT = {
         }
       ],
       "video": "https://vimeo.com/1204363270",
+      "id": "pryml-hog-hunt",
+      "selected": true,
+      "roles": [
+        "motion",
+        "stills"
+      ],
       "tone": "forest",
       "gal": 6
     },
@@ -640,7 +728,7 @@ window.JC_CONTENT = {
         }
       ],
       "id": "fullest-ecology-center",
-      "selected": true,
+      "selected": false,
       "roles": [
         "motion"
       ],
@@ -730,30 +818,30 @@ window.JC_CONTENT = {
       "gal": 4
     },
     {
-      "id": "whitney",
-      "order": 17,
-      "t": "Whitney",
-      "client": "Personal Project",
-      "date": "October 7, 2024",
-      "yr": "2024",
-      "roles": [
-        "stills"
-      ],
-      "selected": true,
       "loc": "Mount Whitney, California",
       "del": [
         "Personal series"
       ],
+      "client": "Personal Project",
+      "order": 17,
+      "date": "October 7, 2024",
+      "desc": "Ever since I was a kid, I've dreamt of what the view would be like from the top of Whitney. I fantasized over the people who would make their way to the summit, thinking of them almost as heroes. I imagined the view would be so vast and every other mountain in the land would be microscopic compared to the top of Whitney. And now after making the journey, I realize that there's something special about making it to the peak. It's not the view. It wasn't romantic. It kind of sucked haha. But the feeling of accomplishment is so overwhelming. This day sparked something in me that I never knew I had, and I can't wait for the next one. I think little Jake would be proud.",
+      "t": "Whitney",
       "tags": [
         "Photography",
         "Outdoor"
       ],
-      "desc": "Ever since I was a kid, I've dreamt of what the view would be like from the top of Whitney. I fantasized over the people who would make their way to the summit, thinking of them almost as heroes. I imagined the view would be so vast and every other mountain in the land would be microscopic compared to the top of Whitney. And now after making the journey, I realize that there's something special about making it to the peak. It's not the view. It wasn't romantic. It kind of sucked haha. But the feeling of accomplishment is so overwhelming. This day sparked something in me that I never knew I had, and I can't wait for the next one. I think little Jake would be proud.",
+      "yr": "2024",
       "credits": [
         {
           "r": "Photography",
           "n": "Jake Caminero"
         }
+      ],
+      "id": "whitney",
+      "selected": true,
+      "roles": [
+        "stills"
       ],
       "tone": "black",
       "overlay": "WHITNEY",
@@ -928,66 +1016,6 @@ window.JC_CONTENT = {
       "gal": 4
     },
     {
-      "id": "lucid-air-sapphire",
-      "order": 23,
-      "t": "Lucid Air Sapphire",
-      "client": "Road & Track",
-      "date": "February 1, 2024",
-      "yr": "2024",
-      "roles": [
-        "motion",
-        "stills",
-        "cd"
-      ],
-      "selected": true,
-      "loc": "Southern California",
-      "del": [
-        "Editorial stills",
-        "Editorial film"
-      ],
-      "tags": [
-        "Photography",
-        "Creative Direction",
-        "Cinematography",
-        "Editorial",
-        "Automotive"
-      ],
-      "desc": "An editorial piece focusing on the then unreleased Lucid Air Sapphire. We had the opportunity to take the car for 5 days and put it through its paces. Though the weather was unfavorable we were able to get both photo and video of the car.",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Creative Direction",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "DP",
-          "n": "Rob Trent"
-        },
-        {
-          "r": "AC",
-          "n": "Asriel Jaska"
-        },
-        {
-          "r": "Photo Assistant and Driver",
-          "n": "Spencer Kofoed"
-        },
-        {
-          "r": "Editorial Creative Direction",
-          "n": "Cassidy Zobl"
-        },
-        {
-          "r": "Car",
-          "n": "Lucid Motors"
-        }
-      ],
-      "tone": "black",
-      "overlay": "SAPPHIRE",
-      "gal": 6
-    },
-    {
       "id": "honda-crv",
       "order": 24,
       "t": "Honda CR-V",
@@ -1040,31 +1068,31 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
-      "id": "rt-the-spot",
-      "order": 25,
-      "t": "The Spot",
-      "client": "Road & Track",
-      "date": "2023",
-      "yr": "2023",
-      "roles": [
-        "stills"
-      ],
-      "selected": false,
       "loc": "Southern California",
       "del": [
         "Single page commission"
       ],
+      "client": "Road & Track",
+      "order": 25,
+      "date": "2023",
+      "desc": "A single page commission for Road & Track.",
+      "t": "The Spot",
       "tags": [
         "Photography",
         "Editorial",
         "Automotive"
       ],
-      "desc": "A single page commission for Road & Track.",
+      "yr": "2023",
       "credits": [
         {
           "r": "Photography",
           "n": "Jake Caminero"
         }
+      ],
+      "id": "rt-the-spot",
+      "selected": false,
+      "roles": [
+        "stills"
       ],
       "tone": "grey",
       "gal": 3
@@ -1308,7 +1336,7 @@ window.JC_CONTENT = {
         }
       ],
       "id": "fullest-25-26",
-      "selected": true,
+      "selected": false,
       "roles": [
         "motion"
       ],
@@ -1382,79 +1410,28 @@ window.JC_CONTENT = {
     "contact": [
       {
         "h": "Representation",
-        "lines": [
-          "Field & Range",
-          "reps@fieldandrange.com"
-        ]
+        "lines": []
       },
       {
         "h": "Studio",
         "lines": [
-          "1503 Superior Avenue",
-          "Costa Mesa, CA 92627"
-        ]
-      },
-      {
-        "h": "Phone",
-        "lines": [
-          "+1 949 555 0147"
+          "1638 Babcock St",
+          "Costa Mesa",
+          "CA 92627"
         ]
       },
       {
         "h": "Availability",
-        "lines": [
-          "Booking from October 2026",
-          "Travel-ready, US + Japan"
-        ]
+        "lines": []
       }
     ],
-    "gear": [
-      {
-        "h": "Bodies",
-        "list": [
-          "Sony FX3",
-          "Sony a7R V",
-          "Bolex H16 — 16mm",
-          "Mamiya 7II — 120",
-          "Contax G2 — 35mm"
-        ]
-      },
-      {
-        "h": "Glass",
-        "list": [
-          "Sony 24–70mm f/2.8 GM II",
-          "Sony 70–200mm f/2.8 GM II",
-          "Sigma 14–24mm f/2.8 Art",
-          "Zeiss Loxia 50mm f/2",
-          "Rehoused Canon FD primes"
-        ]
-      },
-      {
-        "h": "Motion & Support",
-        "list": [
-          "DJI RS 4 Pro",
-          "Tilta Nucleus-M",
-          "Sachtler flowtech 75",
-          "DJI Mavic 3 Pro",
-          "Low-mode and slider rig"
-        ]
-      },
-      {
-        "h": "Light & Sound",
-        "list": [
-          "Aputure 600d Pro",
-          "Aputure 300x",
-          "Astera Titan tubes",
-          "Sennheiser MKH 416",
-          "Zoom F6 recorder"
-        ]
-      }
-    ],
+    "gear": [],
     "info": [
       {
         "h": "Selected Clients",
         "list": [
           "Road & Track",
+          "Endociety",
           "Batch",
           "Cuyama Buckhorn",
           "The Rally Project",
@@ -1463,7 +1440,9 @@ window.JC_CONTENT = {
           "Agronomy Workshop",
           "Son of Cobra",
           "Oak Cycling",
+          "Frontrunner",
           "Velotric",
+          "Elwood",
           "Haus of Wellness",
           "Dino Motorsport",
           "Joy Air",
@@ -1472,11 +1451,7 @@ window.JC_CONTENT = {
       },
       {
         "h": "Recognition",
-        "list": [
-          "TEST DATA — replace with Jake's actual credits",
-          "TEST DATA — awards, features, publications",
-          "TEST DATA — or cut this block entirely"
-        ]
+        "list": []
       },
       {
         "h": "Approach",
@@ -1498,11 +1473,6 @@ window.JC_CONTENT = {
         "t": "The Cuyama Series",
         "d": "An ongoing personal record of a valley slowly changing hands.",
         "tone": "forest"
-      },
-      {
-        "t": "Mentorship",
-        "d": "Two open portfolio reviews each quarter for photographers starting out.",
-        "tone": "sage"
       }
     ]
   }
