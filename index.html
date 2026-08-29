@@ -952,8 +952,10 @@ $("#idx").innerHTML=SELECTS.map(p=>{
 
 (function(){
   const idx=$("#idx"),A=$("#lyA"),B=$("#lyB"),meta=$("#idxMeta");
-  let front="A";
+  let front="A",current=null;
   function preview(p){
+    if(p.id===current)return; // pointerover re-fires for every descendant crossed inside the same row
+    current=p.id;
     const next=front==="A"?B:A, prev=front==="A"?A:B;
     next.src=mainImg(p,4/5); next.alt=`${p.t} — ${p.client}`;
     next.classList.add("live"); prev.classList.remove("live");
