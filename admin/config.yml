@@ -157,15 +157,16 @@ collections:
             allow_reorder: true
             collapsed: true
             summary: "{{fields.project}}"
-            hint: "Drag these into the order you want projects to show on the homepage and Work page. A brand-new project shows first, automatically, until you drag it into place here — nothing to set on the project itself."
-            field:
-              label: Project
-              name: project
-              widget: relation
-              collection: projects
-              value_field: id
-              search_fields: [t, client]
-              display_fields: ["{{t}} — {{client}}"]
+            label_singular: "an existing project"
+            hint: "Drag these into the order you want projects to show on the homepage and Work page. A brand-new project shows first, automatically, until you drag it into place here — nothing to set on the project itself. To create a new project, use the Projects section, not this one."
+            fields:
+              - label: Project
+                name: project
+                widget: relation
+                collection: projects
+                value_field: id
+                search_fields: [t, client]
+                display_fields: ["{{t}} — {{client}}"]
 
   - name: info
     label: "Site Info"
