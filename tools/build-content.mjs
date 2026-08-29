@@ -18,7 +18,34 @@ import { join } from "node:path";
 const PROJECTS_DIR = "content/projects";
 const INFO_FILE = "content/info.json";
 const TONES_FILE = "tools/placeholder-tones.json";
+const ORDER_FILE = "content/project-order.json";
 const OUT = "assets/content.js";
+
+/* Sequence is Jake's own drag-and-drop list (content/project-order.json,
+   edited via the "Project Order" collection — a list widget, which is the
+   one thing in Decap that genuinely supports reordering by dragging;
+   there's no native way to drag-reorder a collection's entries directly).
+   A project not yet in that list — brand new, or the file's missing/
+   malformed — sorts before every listed one, newest-first-by-default,
+   until Jake drags it into place. */
+async function loadOrderIndex() {
+  try {
+    const { order } = JSON.parse(await readFile(ORDER_FILE, "utf8"));
+    return new Map((order || []).map((o, i) => [o.project, i]));
+  } catch {
+    return new Map();
+  }
+}
+function sortByOrder(projects, orderIndex) {
+  return projects.slice().sort((a, b) => {
+    const ai = orderIndex.has(a.id) ? orderIndex.get(a.id) : -1;
+    const bi = orderIndex.has(b.id) ? orderIndex.get(b.id) : -1;
+    if (ai === -1 && bi === -1) return 0; // both unlisted — leave as found
+    if (ai === -1) return -1; // a unlisted — goes first
+    if (bi === -1) return 1;  // b unlisted — goes first
+    return ai - bi;
+  });
+}
 
 async function loadProjects() {
   const files = (await readdir(PROJECTS_DIR)).filter(f => f.endsWith(".json")).sort();
@@ -33,10 +60,8 @@ async function loadProjects() {
     Object.assign(p, tones[p.id] || {});
     projects.push(p);
   }
-  // Display order (homepage "newest N", Work index) comes from this field,
-  // not file/array position — see the `order` field on each project.
-  projects.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
-  return projects;
+  const orderIndex = await loadOrderIndex();
+  return sortByOrder(projects, orderIndex);
 }
 
 /* Reshape the CMS's flatter authoring format for content/info.json back

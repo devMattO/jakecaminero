@@ -7,7 +7,6 @@ window.JC_CONTENT = {
         "Still Images"
       ],
       "client": "Endociety",
-      "order": 0,
       "date": "July 1, 2026",
       "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
       "t": "Endo Fall Capsule 2026",
@@ -40,7 +39,6 @@ window.JC_CONTENT = {
         "Launch assets"
       ],
       "client": "Agronomy Workshop",
-      "order": 2,
       "date": "April 1, 2026",
       "desc": "16mm and digital video work for the spring/summer launch for Agronomy Workshop.",
       "t": "Agronomy S/S Launch",
@@ -79,7 +77,6 @@ window.JC_CONTENT = {
         "Editorial film"
       ],
       "client": "Road & Track",
-      "order": 3,
       "date": "February 1, 2024",
       "desc": "An editorial piece focusing on the then unreleased Lucid Air Sapphire. We had the opportunity to take the car for 5 days and put it through its paces. Though the weather was unfavorable we were able to get both photo and video of the car.",
       "t": "Lucid Air Sapphire",
@@ -139,7 +136,6 @@ window.JC_CONTENT = {
         "Campaign stills"
       ],
       "client": "Test Shoot",
-      "order": 4,
       "date": "June 15, 2026",
       "desc": "A speculative photo and video project made in collaboration with SWI cycling and Endociety.",
       "t": "Swi+Endo",
@@ -206,7 +202,6 @@ window.JC_CONTENT = {
         "Stills"
       ],
       "client": "Endociety",
-      "order": 5,
       "date": "August 10, 2026",
       "desc": "Ecom/social imagery for fall capsule drop 2.0",
       "t": "Endo Fall Capsule 2.0",
@@ -241,7 +236,6 @@ window.JC_CONTENT = {
         "Creative direction"
       ],
       "client": "The Rally Project",
-      "order": 5,
       "date": "February 2026",
       "desc": "Tristan founded Stan with the vision of reinvigorating hand-crafted passion in clothing. He draws inspiration from timeless and classic fashions that have endured throughout various centuries. What sets Stan apart from other clothing companies is Tristan's use of ancient textiles — materials so carefully crafted that they have withstood the test of time and continue to be reused and cherished. Tristan selects his materials based on his philosophy that clothing is meant to be used, not just admired. He creates garments with textiles proven to endure, designed to be worn and to have life infused within them, continuing the stories built into each item.",
       "t": "Tristan Detwiller",
@@ -291,7 +285,6 @@ window.JC_CONTENT = {
         "CGI integration"
       ],
       "client": "Spec Shoot",
-      "order": 5,
       "date": "November 5, 2025",
       "desc": "A speculative project that focused on the use of CGI. The goal was to bring a tangible feeling to something that tends to lean clinical. We partnered with professional mountain biker Spencer Rathkamp to bring an edge to the Tundra's story.",
       "t": "Toyota Tundra + Spencer Rathkamp",
@@ -335,7 +328,6 @@ window.JC_CONTENT = {
         "Stills selects"
       ],
       "client": "Batch",
-      "order": 6,
       "date": "January 20, 2026",
       "desc": "This project consisted of a directed lifestyle shoot and an on location docu-style shoot at the Batch farm in Wisconsin. This project in it’s entirety shows the process of how Batch creates their products from beginning to end and the hands that make the company what it is. The lifestyle portion was set to give Batch commercial assets to showcase the product being implemented and enjoyed in day to day living.",
       "t": "Farm Visit",
@@ -375,7 +367,6 @@ window.JC_CONTENT = {
       "loc": "Los Angeles",
       "del": [],
       "client": "Road & Track",
-      "order": 8,
       "date": "September 20, 2026",
       "desc": "A commission from Road & Track to create an image using the first satellite phone. The image is meant to close the September issue titled, 'Nowhere' on the back cover of the magazine. ",
       "t": "Nowhere Back Cover Image",
@@ -400,7 +391,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "velotric-nomad-2",
-      "order": 9,
       "t": "Velotric",
       "client": "Velotric",
       "date": "October 2025",
@@ -435,7 +425,6 @@ window.JC_CONTENT = {
         "Web and social assets"
       ],
       "client": "Cuyama Buckhorn",
-      "order": 10,
       "date": "August 20, 2025",
       "desc": "Photography work for the Cuyama Buckhorn's summer drink menu.",
       "t": "Summer Cocktail Menu",
@@ -470,7 +459,6 @@ window.JC_CONTENT = {
         "Short film"
       ],
       "client": "The Rally Project",
-      "order": 10,
       "date": "January 1, 2026",
       "desc": "Luke Davis. A man who seeks the creative ingenuity in all facets of life, Luke enthralls his viewers with paintings, drawings, poetry, and even food in his pursuit of self-expression. For the first time, Luke will be displaying all aspects of his creative process in his methodical, all-encompassing vision.",
       "t": "Luke Davis",
@@ -513,7 +501,6 @@ window.JC_CONTENT = {
         "Social and web assets"
       ],
       "client": "Batch",
-      "order": 11,
       "date": "July 16, 2025",
       "desc": "Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
       "t": "Batch Lifestyle Campaign",
@@ -571,7 +558,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "haus-of-wellness",
-      "order": 12,
       "t": "Haus of Wellness",
       "client": "Haus of Wellness",
       "date": "2025",
@@ -611,7 +597,6 @@ window.JC_CONTENT = {
         "Documentary stills"
       ],
       "client": "PRYML",
-      "order": 13,
       "date": "May 5, 2025",
       "desc": "A documentary project around a singular hunt for a wild California hog. The shoot took place on the Molnar Outfitters reserve in the central coast of California.",
       "t": "Hog Hunt",
@@ -664,7 +649,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "son-of-cobra-bristol",
-      "order": 14,
       "t": "The Bristol Car",
       "client": "Son of Cobra",
       "date": "March 15, 2025",
@@ -703,7 +687,6 @@ window.JC_CONTENT = {
         "Social cutdowns"
       ],
       "client": "The Fullest",
-      "order": 15,
       "date": "April 10, 2026",
       "desc": "Video work for the collaboration of The Fullest with The Ecology Center.",
       "t": "The Fullest + Ecology Center",
@@ -742,7 +725,6 @@ window.JC_CONTENT = {
         "Short film"
       ],
       "client": "The Rally Project",
-      "order": 15,
       "date": "January 25, 2025",
       "desc": "Getting to know Dylan has been so refreshing. His overwhelming stoke and creativity is contagious, and his story is incredible. Having overcome having a brain tumor, Dylan has continued to pursue his creative project, RiiN, and live his life to the fullest.",
       "t": "Dylan + RiiN",
@@ -786,7 +768,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "oak-morning-ride",
-      "order": 16,
       "t": "Morning Ride",
       "client": "Oak Cycling",
       "date": "January 18, 2025",
@@ -823,7 +804,6 @@ window.JC_CONTENT = {
         "Personal series"
       ],
       "client": "Personal Project",
-      "order": 17,
       "date": "October 7, 2024",
       "desc": "Ever since I was a kid, I've dreamt of what the view would be like from the top of Whitney. I fantasized over the people who would make their way to the summit, thinking of them almost as heroes. I imagined the view would be so vast and every other mountain in the land would be microscopic compared to the top of Whitney. And now after making the journey, I realize that there's something special about making it to the peak. It's not the view. It wasn't romantic. It kind of sucked haha. But the feeling of accomplishment is so overwhelming. This day sparked something in me that I never knew I had, and I can't wait for the next one. I think little Jake would be proud.",
       "t": "Whitney",
@@ -849,7 +829,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "joy-air",
-      "order": 18,
       "t": "Joy Air",
       "client": "Joy Air",
       "date": "2024",
@@ -879,7 +858,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "weekend-with-rivian",
-      "order": 19,
       "t": "Weekend with Rivian",
       "client": "Test",
       "date": "August 25, 2024",
@@ -913,7 +891,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "tumbleweeds",
-      "order": 20,
       "t": "Tumbleweeds",
       "client": "Max Griffin",
       "date": "August 1, 2024",
@@ -948,7 +925,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "dino-motorsport",
-      "order": 21,
       "t": "Dino Motorsport",
       "client": "Dino Motorsport",
       "date": "2024",
@@ -982,7 +958,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "rally-matt-allen",
-      "order": 22,
       "t": "Matt Allen",
       "client": "The Rally Project",
       "date": "May 1, 2024",
@@ -1017,7 +992,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "honda-crv",
-      "order": 24,
       "t": "Honda CR-V",
       "client": "Test",
       "date": "January 2, 2024",
@@ -1073,7 +1047,6 @@ window.JC_CONTENT = {
         "Single page commission"
       ],
       "client": "Road & Track",
-      "order": 25,
       "date": "2023",
       "desc": "A single page commission for Road & Track.",
       "t": "The Spot",
@@ -1099,7 +1072,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "rt-everatti",
-      "order": 26,
       "t": "Everatti",
       "client": "Road & Track",
       "date": "2023",
@@ -1137,7 +1109,6 @@ window.JC_CONTENT = {
         "Editorial stills"
       ],
       "client": "Road & Track",
-      "order": 27,
       "date": "February 2, 2023",
       "desc": "An editorial project for Road & Track documenting the record setting Le Mans car built by Briggs Cunningham, the Cunningham C5-R. The project was shot at the Concours Club in south Florida. What's really special about this car wasn't just the history or the sound of it, but the condition. The Revs Institute did an incredible job not restoring the vehicle, but keeping it in the same condition that it was in when it finished the 24 hours of Le Mans. You can literally see the sweat stains still on the seat.",
       "t": "Breakdance",
@@ -1187,7 +1158,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "rt-rimac-nevera",
-      "order": 28,
       "t": "Rimac Nevera",
       "client": "Road & Track",
       "date": "2022",
@@ -1221,7 +1191,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "rt-cyan-p1800",
-      "order": 29,
       "t": "Cyan P1800",
       "client": "Road & Track",
       "date": "2022",
@@ -1271,7 +1240,6 @@ window.JC_CONTENT = {
     },
     {
       "id": "uniqlo-vans",
-      "order": 30,
       "t": "Uniqlo + Vans",
       "client": "Test",
       "date": "2021",
@@ -1315,7 +1283,6 @@ window.JC_CONTENT = {
         "Social film series"
       ],
       "client": "The Fullest",
-      "order": 31,
       "date": "2025 — 2026",
       "desc": "A series of creative projects directed towards social media use.",
       "t": "The Fullest 25/26",
@@ -1350,7 +1317,6 @@ window.JC_CONTENT = {
         "Web and social assets"
       ],
       "client": "Cuyama Buckhorn",
-      "order": 33,
       "date": "March 18, 2026",
       "desc": "In partnership with Sam from Cuyama Rambler and the Cuyama Buckhorn, we followed Sam as he guided us on a hike through the Los Padres National Forest. The project involved documenting his knowledge of the land through foraging and blending of natural materials to create a botanically driven cocktail on the back of his tailgate.",
       "t": "Foraging for Cocktails",

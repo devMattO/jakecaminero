@@ -11,6 +11,7 @@ hosted as flat files. The only tooling is the image pipeline in `tools/`.
 
     index.html              markup, styles, behaviour — no longer holds data
     content/projects/<id>.json  one file per project, Jake-editable (via CMS)
+    content/project-order.json  display order, Jake-editable via drag-and-drop (see below)
     content/info.json       site-wide singleton (bio, contact, gear, ...), Jake-editable
     tools/placeholder-tones.json  tone/overlay/gal per project — design-only, not in the CMS
     admin/config.yml        Decap CMS schema — what Jake can and can't edit
@@ -84,6 +85,18 @@ Jake's brief treats Selected Work and Archive as two tiers, not a highlight flag
 
 The Selects filter therefore only appears on Archive, which is the one view
 holding both tiers. Home and Work show three discipline facets.
+
+**Order** across all three views comes from `content/project-order.json`
+(`{"order":[{"project":"<id>"},...]}`), edited via the CMS's "Project Order"
+collection — a `list` widget with `allow_reorder: true`, the one place Decap
+genuinely supports drag-and-drop (there's no native way to drag-reorder a
+collection's entries directly, per a still-open GitHub issue with no
+roadmap). `tools/build-content.mjs` sorts projects by position in that file;
+a project not yet listed there — brand new, or the file missing/malformed —
+sorts before every listed one, so new work shows first by default until Jake
+drags it into place. This replaced an earlier numeric "Display order" field
+on each project, which reliably produced ties (Jake would reuse a number
+another project already had).
 
 Filter counts are **faceted**: each shows how many projects remain if that mark
 is switched on alongside whatever is already active, so a zero warns before the
