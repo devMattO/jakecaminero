@@ -155,9 +155,9 @@ collections:
             name: order
             widget: list
             allow_reorder: true
+            allow_add: false
             collapsed: true
             summary: "{{fields.project}}"
-            label_singular: "an existing project"
             hint: "Drag these into the order you want projects to show on the homepage and Work page. A brand-new project shows first, automatically, until you drag it into place here — nothing to set on the project itself. To create a new project, use the Projects section, not this one."
             fields:
               - label: Project

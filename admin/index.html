@@ -9,5 +9,25 @@
 <body>
   <!-- DecapBridge needs Decap CMS >= 3.8.3 — pinned, not a loose range. -->
   <script src="https://unpkg.com/decap-cms@3.8.3/dist/decap-cms.js"></script>
+  <script>
+    // Numbered preview for the "Project Order" file (content/project-order.json)
+    // — the default preview just lists project ids with no sense of position,
+    // which is the one thing this page exists to show. createClass/h are
+    // globals Decap exposes for inline components with no build step.
+    var OrderPreview = createClass({
+      render: function () {
+        var order = this.props.entry.getIn(["data", "order"]);
+        if (!order || !order.size) return h("p", {}, "No projects in the order list yet.");
+        return h(
+          "ol",
+          { style: { fontSize: "16px", lineHeight: "2", paddingLeft: "1.5em" } },
+          order.map(function (item, i) {
+            return h("li", { key: i }, item.get("project") || "(unknown project)");
+          }).toArray()
+        );
+      },
+    });
+    CMS.registerPreviewTemplate("order", OrderPreview);
+  </script>
 </body>
 </html>
