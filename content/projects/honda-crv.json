@@ -1,53 +1,14 @@
 {
-  "id": "honda-crv",
-  "t": "Honda CR-V",
-  "client": "Test",
-  "date": "January 2, 2024",
-  "yr": "2024",
-  "roles": [
-    "stills",
-    "cd"
-  ],
-  "selected": true,
   "loc": "Angeles National Forest, California",
   "del": [
     "Spec campaign stills"
   ],
-  "tags": [
-    "Photography",
-    "Creative Direction",
-    "Campaign",
-    "Automotive"
-  ],
+  "client": "Test",
+  "date": "January 2, 2024",
   "desc": "A speculative project highlighting the outdoor use and lifestyle that is capable with the Honda CR-V.",
-  "credits": [
-    {
-      "r": "Photography",
-      "n": "Jake Caminero"
-    },
-    {
-      "r": "Assistant",
-      "n": "Spencer Kofoed"
-    },
-    {
-      "r": "Talent",
-      "n": "Laura Quintana"
-    },
-    {
-      "r": "Talent",
-      "n": "Kyleen Likas"
-    },
-    {
-      "r": "Special Thanks",
-      "n": "Cherish McDonald"
-    },
-    {
-      "r": "Special Thanks",
-      "n": "Zach Sorensen"
-    }
-  ],
+  "t": "Honda CR-V",
   "images": {
-    "main": "/assets/honda-crv/01-800.jpg",
+    "main": "/content/media/honda-crv/honda_crv_spec_jtree_2886.jpg",
     "gallery": [
       {
         "src": "/assets/honda-crv/01-800.jpg"
@@ -194,5 +155,44 @@
         "src": "/assets/honda-crv/48-800.jpg"
       }
     ]
-  }
+  },
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Campaign",
+    "Automotive"
+  ],
+  "yr": "2024",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Assistant",
+      "n": "Spencer Kofoed"
+    },
+    {
+      "r": "Talent",
+      "n": "Laura Quintana"
+    },
+    {
+      "r": "Talent",
+      "n": "Kyleen Likas"
+    },
+    {
+      "r": "Special Thanks",
+      "n": "Cherish McDonald"
+    },
+    {
+      "r": "Special Thanks",
+      "n": "Zach Sorensen"
+    }
+  ],
+  "id": "honda-crv",
+  "selected": true,
+  "roles": [
+    "stills",
+    "cd"
+  ]
 }
