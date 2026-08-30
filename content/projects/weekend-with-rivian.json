@@ -1,23 +1,21 @@
 {
-  "id": "weekend-with-rivian",
-  "t": "Weekend with Rivian",
-  "client": "Test",
-  "date": "August 25, 2024",
-  "yr": "2024",
-  "roles": [
-    "stills"
-  ],
-  "selected": true,
   "loc": "San Francisco, California",
   "del": [
     "Documentary stills"
   ],
+  "client": "Test",
+  "date": "August 25, 2024",
+  "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
+  "t": "Weekend with Rivian",
+  "images": {
+    "main": "/content/media/weekend-with-rivian/_dsc5526.webp"
+  },
   "tags": [
     "Photography",
     "Documentary",
     "Automotive"
   ],
-  "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
+  "yr": "2024",
   "credits": [
     {
       "r": "Photography",
@@ -27,5 +25,10 @@
       "r": "Friends & Partners",
       "n": "Peden+Munk"
     }
+  ],
+  "id": "weekend-with-rivian",
+  "selected": true,
+  "roles": [
+    "stills"
   ]
 }
