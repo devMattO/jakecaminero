@@ -1,36 +1,15 @@
 {
-  "id": "tumbleweeds",
-  "t": "Tumbleweeds",
-  "client": "Max Griffin",
-  "date": "August 1, 2024",
-  "yr": "2024",
-  "roles": [
-    "stills"
-  ],
-  "selected": true,
   "loc": "Palmdale, California",
   "del": [
     "Concept stills",
     "Promo imagery"
   ],
-  "tags": [
-    "Photography",
-    "Documentary",
-    "Sport"
-  ],
+  "client": "Max Griffin",
+  "date": "August 1, 2024",
   "desc": "Images to support the concept for a documentary led by Max Griffin. The film and promo is centered around his home town of Palmdale but specifically the unique concentration of soccer talent that is cultivated there. Max played professionally in the MLS and is looking to give back to his community by telling their story.",
-  "credits": [
-    {
-      "r": "Photography",
-      "n": "Jake Caminero"
-    },
-    {
-      "r": "Executive Producer and Director",
-      "n": "Max Griffin"
-    }
-  ],
+  "t": "Tumbleweeds",
   "images": {
-    "main": "/assets/tumbleweeds/01-800.jpg",
+    "main": "/content/media/tumbleweeds/screenshot-2026-08-30-at-9.12.49 am.png",
     "gallery": [
       {
         "src": "/assets/tumbleweeds/01-800.jpg"
@@ -96,5 +75,26 @@
         "src": "/assets/tumbleweeds/21-800.jpg"
       }
     ]
-  }
+  },
+  "tags": [
+    "Photography",
+    "Documentary",
+    "Sport"
+  ],
+  "yr": "2024",
+  "credits": [
+    {
+      "r": "Photography",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Executive Producer and Director",
+      "n": "Max Griffin"
+    }
+  ],
+  "id": "tumbleweeds",
+  "selected": true,
+  "roles": [
+    "stills"
+  ]
 }
