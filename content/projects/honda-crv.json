@@ -11,13 +11,22 @@
     "main": "/content/media/honda-crv/honda_crv_spec_jtree_2885.jpg",
     "gallery": [
       {
+        "src": "/assets/honda-crv/45-800.jpg"
+      },
+      {
+        "src": "/assets/honda-crv/32-800.jpg"
+      },
+      {
+        "src": "/assets/honda-crv/08-800.jpg"
+      },
+      {
         "src": "/assets/honda-crv/01-800.jpg"
       },
       {
-        "src": "/assets/honda-crv/02-800.jpg"
+        "src": "/assets/honda-crv/03-800.jpg"
       },
       {
-        "src": "/assets/honda-crv/03-800.jpg"
+        "src": "/assets/honda-crv/33-800.jpg"
       },
       {
         "src": "/assets/honda-crv/04-800.jpg"
@@ -32,7 +41,7 @@
         "src": "/assets/honda-crv/07-800.jpg"
       },
       {
-        "src": "/assets/honda-crv/08-800.jpg"
+        "src": "/assets/honda-crv/02-800.jpg"
       },
       {
         "src": "/assets/honda-crv/09-800.jpg"
@@ -104,12 +113,6 @@
         "src": "/assets/honda-crv/31-800.jpg"
       },
       {
-        "src": "/assets/honda-crv/32-800.jpg"
-      },
-      {
-        "src": "/assets/honda-crv/33-800.jpg"
-      },
-      {
         "src": "/assets/honda-crv/34-800.jpg"
       },
       {
@@ -141,9 +144,6 @@
       },
       {
         "src": "/assets/honda-crv/44-800.jpg"
-      },
-      {
-        "src": "/assets/honda-crv/45-800.jpg"
       },
       {
         "src": "/assets/honda-crv/46-800.jpg"
