@@ -10,14 +10,13 @@
   "images": {
     "main": "/content/media/rally-matt-allen/4018048-r1-e003.jpg",
     "gallery": [
+      "/content/media/rally-matt-allen/4018221-r1-048-22a.jpg",
       {
         "src": "/assets/rally-matt-allen/01-800.jpg"
       },
+      "/content/media/rally-matt-allen/4018222-r1-e006.jpg",
       {
         "src": "/assets/rally-matt-allen/02-800.jpg"
-      },
-      {
-        "src": "/assets/rally-matt-allen/03-800.jpg"
       },
       {
         "src": "/assets/rally-matt-allen/04-800.jpg"
@@ -40,6 +39,7 @@
       {
         "src": "/assets/rally-matt-allen/10-800.jpg"
       },
+      "/content/media/rally-matt-allen/4018221-r1-078-37a.jpg",
       {
         "src": "/assets/rally-matt-allen/11-800.jpg"
       },
@@ -78,7 +78,11 @@
       },
       {
         "src": "/assets/rally-matt-allen/23-800.jpg"
-      }
+      },
+      "/content/media/rally-matt-allen/4018221-r1-010-3a.jpg",
+      "/content/media/rally-matt-allen/4018222-r1-e010.jpg",
+      "/content/media/rally-matt-allen/4018222-r1-e004.jpg",
+      "/content/media/rally-matt-allen/4018221-r1-066-31a.jpg"
     ]
   },
   "tags": [
