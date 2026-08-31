@@ -8,7 +8,19 @@
   "desc": "Social media and web imagery.",
   "t": "Joy Air",
   "images": {
-    "main": "/content/media/joy-air/_09a2230.webp"
+    "main": "/content/media/joy-air/_09a2230.webp",
+    "gallery": [
+      "/content/media/joy-air/ijgx5687.webp",
+      "/content/media/joy-air/dscf6138.webp",
+      "/content/media/joy-air/_09a2797.webp",
+      "/content/media/joy-air/_09a2734.webp",
+      "/content/media/joy-air/_09a2675.webp",
+      "/content/media/joy-air/_09a2610.webp",
+      "/content/media/joy-air/_09a2576.webp",
+      "/content/media/joy-air/_09a2400.webp",
+      "/content/media/joy-air/_09a2258.webp",
+      "/content/media/joy-air/_09a2214.webp"
+    ]
   },
   "tags": [
     "Photography",
