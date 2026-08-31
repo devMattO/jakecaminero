@@ -12,22 +12,22 @@
     "main": "/content/media/tumbleweeds/screenshot-2026-08-30-at-9.12.49 am.png",
     "gallery": [
       {
-        "src": "/assets/tumbleweeds/01-800.jpg"
-      },
-      {
-        "src": "/assets/tumbleweeds/02-800.jpg"
+        "src": "/assets/tumbleweeds/04-800.jpg"
       },
       {
         "src": "/assets/tumbleweeds/03-800.jpg"
       },
       {
-        "src": "/assets/tumbleweeds/04-800.jpg"
+        "src": "/assets/tumbleweeds/02-800.jpg"
       },
       {
-        "src": "/assets/tumbleweeds/05-800.jpg"
+        "src": "/assets/tumbleweeds/01-800.jpg"
       },
       {
         "src": "/assets/tumbleweeds/06-800.jpg"
+      },
+      {
+        "src": "/assets/tumbleweeds/05-800.jpg"
       },
       {
         "src": "/assets/tumbleweeds/07-800.jpg"
@@ -36,22 +36,19 @@
         "src": "/assets/tumbleweeds/08-800.jpg"
       },
       {
+        "src": "/assets/tumbleweeds/11-800.jpg"
+      },
+      {
         "src": "/assets/tumbleweeds/09-800.jpg"
       },
       {
         "src": "/assets/tumbleweeds/10-800.jpg"
       },
       {
-        "src": "/assets/tumbleweeds/11-800.jpg"
-      },
-      {
         "src": "/assets/tumbleweeds/12-800.jpg"
       },
       {
         "src": "/assets/tumbleweeds/13-800.jpg"
-      },
-      {
-        "src": "/assets/tumbleweeds/14-800.jpg"
       },
       {
         "src": "/assets/tumbleweeds/15-800.jpg"
@@ -63,16 +60,16 @@
         "src": "/assets/tumbleweeds/17-800.jpg"
       },
       {
-        "src": "/assets/tumbleweeds/18-800.jpg"
-      },
-      {
         "src": "/assets/tumbleweeds/19-800.jpg"
       },
       {
-        "src": "/assets/tumbleweeds/20-800.jpg"
+        "src": "/assets/tumbleweeds/18-800.jpg"
       },
       {
-        "src": "/assets/tumbleweeds/21-800.jpg"
+        "src": "/assets/tumbleweeds/14-800.jpg"
+      },
+      {
+        "src": "/assets/tumbleweeds/20-800.jpg"
       }
     ]
   },
