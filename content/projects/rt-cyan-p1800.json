@@ -8,7 +8,21 @@
   "desc": "My first editorial project for Road & Track featuring the Volvo P1800 reimagined by Cyan Racing, formerly known as Polestar. The shoot took place in Malibu, California.",
   "t": "Cyan P1800",
   "images": {
-    "main": "/content/media/rt-cyan-p1800/cyan-article-0-1.webp"
+    "main": "/content/media/rt-cyan-p1800/cyan-article-0-1.webp",
+    "gallery": [
+      "/content/media/rt-cyan-p1800/cyan-artical-0-2.webp",
+      "/content/media/rt-cyan-p1800/img_5538.webp",
+      "/content/media/rt-cyan-p1800/rdm_8186.webp",
+      "/content/media/rt-cyan-p1800/rdm_8496.webp",
+      "/content/media/rt-cyan-p1800/rdm_8655.webp",
+      "/content/media/rt-cyan-p1800/rdm_8695.webp",
+      "/content/media/rt-cyan-p1800/rdm_8928.webp",
+      "/content/media/rt-cyan-p1800/rdm_8941.webp",
+      "/content/media/rt-cyan-p1800/rdm_8945.webp",
+      "/content/media/rt-cyan-p1800/rdm_9057.webp",
+      "/content/media/rt-cyan-p1800/rdm_9490.webp",
+      "/content/media/rt-cyan-p1800/rdm_9917.webp"
+    ]
   },
   "tags": [
     "Photography",
