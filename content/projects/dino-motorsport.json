@@ -1,23 +1,21 @@
 {
-  "id": "dino-motorsport",
-  "t": "Dino Motorsport",
-  "client": "Dino Motorsport",
-  "date": "2024",
-  "yr": "2024",
-  "roles": [
-    "stills"
-  ],
-  "selected": false,
   "loc": "Las Vegas, Nevada",
   "del": [
     "Documentary stills"
   ],
+  "client": "Dino Motorsport",
+  "date": "2024",
+  "desc": "A visit to Las Vegas for a tour and documentation of Dino Motorsport's compound. The family has deep roots in the world of Alfa Romeos and are looking to help revive and reimagine one of the most iconic car companies of the 20th century.",
+  "t": "Dino Motorsport",
+  "images": {
+    "main": "/content/media/dino-motorsport/dscf4083.webp"
+  },
   "tags": [
     "Photography",
     "Documentary",
     "Automotive"
   ],
-  "desc": "A visit to Las Vegas for a tour and documentation of Dino Motorsport's compound. The family has deep roots in the world of Alfa Romeos and are looking to help revive and reimagine one of the most iconic car companies of the 20th century.",
+  "yr": "2024",
   "credits": [
     {
       "r": "Photography",
@@ -27,5 +25,10 @@
       "r": "Company",
       "n": "Dino Motorsport"
     }
+  ],
+  "id": "dino-motorsport",
+  "selected": false,
+  "roles": [
+    "stills"
   ]
 }
