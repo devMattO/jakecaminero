@@ -8,7 +8,15 @@
   "desc": "Editorial project for Road & Track in Big Sur for the then unreleased Rimac Nevera.",
   "t": "Rimac Nevera",
   "images": {
-    "main": "/content/media/rt-rimac-nevera/rdm_4252-3.webp"
+    "main": "/content/media/rt-rimac-nevera/rdm_4252-3.webp",
+    "gallery": [
+      "/content/media/rt-rimac-nevera/nevera-article-0-1.webp",
+      "/content/media/rt-rimac-nevera/rdm_4264.webp",
+      "/content/media/rt-rimac-nevera/rdm_4349.webp",
+      "/content/media/rt-rimac-nevera/rdm_4354.jpg",
+      "/content/media/rt-rimac-nevera/rdm_4767.webp",
+      "/content/media/rt-rimac-nevera/rdm_5429.webp"
+    ]
   },
   "tags": [
     "Photography",
