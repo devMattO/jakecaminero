@@ -8,7 +8,17 @@
   "desc": "A single page commission for Road & Track.",
   "t": "The Spot",
   "images": {
-    "main": "/content/media/rt-the-spot/dsc06396.jpg"
+    "main": "/content/media/rt-the-spot/dsc06396.jpg",
+    "gallery": [
+      "/content/media/rt-the-spot/dsc07660.webp",
+      "/content/media/rt-the-spot/dsc08982-1.webp",
+      "/content/media/rt-the-spot/dsc07357.webp",
+      "/content/media/rt-the-spot/dsc08013.webp",
+      "/content/media/rt-the-spot/dsc07153.webp",
+      "/content/media/rt-the-spot/dsc06853.webp",
+      "/content/media/rt-the-spot/dsc05806.webp",
+      "/content/media/rt-the-spot/dsc06438.webp"
+    ]
   },
   "tags": [
     "Photography",
