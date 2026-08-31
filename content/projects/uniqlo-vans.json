@@ -1,25 +1,22 @@
 {
-  "id": "uniqlo-vans",
-  "t": "Uniqlo + Vans",
-  "client": "Test",
-  "date": "2021",
-  "yr": "2021",
-  "roles": [
-    "stills",
-    "cd"
-  ],
-  "selected": false,
   "loc": "Los Angeles, California",
   "del": [
     "Spec campaign stills"
   ],
+  "client": "Test",
+  "date": "2021",
+  "desc": "A speculative project of two brands.",
+  "t": "Uniqlo + Vans",
+  "images": {
+    "main": "/content/media/uniqlo-vans/screenshot-2023-03-26-at-1.37.07-pm.webp"
+  },
   "tags": [
     "Photography",
     "Creative Direction",
     "Campaign",
     "Fashion"
   ],
-  "desc": "A speculative project of two brands.",
+  "yr": "2021",
   "credits": [
     {
       "r": "Photography",
@@ -33,5 +30,11 @@
       "r": "Talent",
       "n": "Andrew Simila"
     }
+  ],
+  "id": "uniqlo-vans",
+  "selected": false,
+  "roles": [
+    "stills",
+    "cd"
   ]
 }
