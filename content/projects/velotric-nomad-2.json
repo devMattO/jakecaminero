@@ -1,27 +1,30 @@
 {
-  "id": "velotric-nomad-2",
-  "t": "Velotric",
-  "client": "Velotric",
-  "date": "October 2025",
-  "yr": "2025",
-  "roles": [
-    "stills"
-  ],
-  "selected": false,
   "loc": "Long Beach, California",
   "del": [
     "Social campaign stills"
   ],
+  "client": "Velotric",
+  "date": "October 2025",
+  "desc": "Social media campaign for the launch of the Nomad 2.",
+  "t": "Velotric",
+  "images": {
+    "main": "/content/media/velotric-nomad-2/dsc00704.webp"
+  },
   "tags": [
     "Photography",
     "Campaign",
     "Cycling"
   ],
-  "desc": "Social media campaign for the launch of the Nomad 2.",
+  "yr": "2025",
   "credits": [
     {
       "r": "Photography",
       "n": "Jake Caminero"
     }
+  ],
+  "id": "velotric-nomad-2",
+  "selected": false,
+  "roles": [
+    "stills"
   ]
 }
