@@ -1,23 +1,21 @@
 {
-  "id": "rt-cyan-p1800",
-  "t": "Cyan P1800",
-  "client": "Road & Track",
-  "date": "2022",
-  "yr": "2022",
-  "roles": [
-    "stills"
-  ],
-  "selected": false,
   "loc": "Malibu, California",
   "del": [
     "Editorial stills"
   ],
+  "client": "Road & Track",
+  "date": "2022",
+  "desc": "My first editorial project for Road & Track featuring the Volvo P1800 reimagined by Cyan Racing, formerly known as Polestar. The shoot took place in Malibu, California.",
+  "t": "Cyan P1800",
+  "images": {
+    "main": "/content/media/rt-cyan-p1800/cyan-article-0-1.webp"
+  },
   "tags": [
     "Photography",
     "Editorial",
     "Automotive"
   ],
-  "desc": "My first editorial project for Road & Track featuring the Volvo P1800 reimagined by Cyan Racing, formerly known as Polestar. The shoot took place in Malibu, California.",
+  "yr": "2022",
   "credits": [
     {
       "r": "Photography",
@@ -43,5 +41,10 @@
       "r": "Editorial Creative Direction",
       "n": "Cassidy Zobl"
     }
+  ],
+  "id": "rt-cyan-p1800",
+  "selected": false,
+  "roles": [
+    "stills"
   ]
 }
