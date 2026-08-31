@@ -1,24 +1,22 @@
 {
-  "id": "haus-of-wellness",
-  "t": "Haus of Wellness",
-  "client": "Haus of Wellness",
-  "date": "2025",
-  "yr": "2025",
-  "roles": [
-    "stills"
-  ],
-  "selected": false,
   "loc": "Costa Mesa, California",
   "del": [
     "Lifestyle stills",
     "Social film"
   ],
+  "client": "Haus of Wellness",
+  "date": "2025",
+  "desc": "A lifestyle photo and video shoot for social media and web use.",
+  "t": "Haus of Wellness",
+  "images": {
+    "main": "/content/media/haus-of-wellness/dsc03033.webp"
+  },
   "tags": [
     "Photography",
     "Campaign",
     "Wellness"
   ],
-  "desc": "A lifestyle photo and video shoot for social media and web use.",
+  "yr": "2025",
   "credits": [
     {
       "r": "Photography",
@@ -28,5 +26,10 @@
       "r": "Motion",
       "n": "Nick Warren"
     }
+  ],
+  "id": "haus-of-wellness",
+  "selected": false,
+  "roles": [
+    "stills"
   ]
 }
