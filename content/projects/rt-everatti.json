@@ -8,7 +8,14 @@
   "desc": "Editorial project for Road & Track.",
   "t": "Everatti",
   "images": {
-    "main": "/content/media/rt-everatti/dsc02420-1.webp"
+    "main": "/content/media/rt-everatti/dsc02420-1.webp",
+    "gallery": [
+      "/content/media/rt-everatti/dsc02519.webp",
+      "/content/media/rt-everatti/dsc02529.webp",
+      "/content/media/rt-everatti/everatti0052.webp",
+      "/content/media/rt-everatti/everatti0056.webp",
+      "/content/media/rt-everatti/everatti0130.webp"
+    ]
   },
   "tags": [
     "Photography",
