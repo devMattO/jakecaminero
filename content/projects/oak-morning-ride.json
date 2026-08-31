@@ -1,22 +1,30 @@
 {
-  "id": "oak-morning-ride",
-  "t": "Morning Ride",
-  "client": "Oak Cycling",
-  "date": "January 18, 2025",
-  "yr": "2025",
-  "roles": [
-    "stills"
-  ],
-  "selected": false,
   "loc": "Orange County, California",
   "del": [
     "Documentary stills"
   ],
+  "client": "Oak Cycling",
+  "date": "January 18, 2025",
+  "desc": "A short ride with Wyatt Funk and Oak Cycling.",
+  "t": "Morning Ride",
+  "images": {
+    "main": "/content/media/oak-morning-ride/dsc_5664.webp",
+    "og": "/content/media/oak-morning-ride/dsc_5664.webp",
+    "gallery": [
+      "/content/media/oak-morning-ride/dsc_5680.webp",
+      "/content/media/oak-morning-ride/dsc07718.webp",
+      "/content/media/oak-morning-ride/dsc_5669.webp",
+      "/content/media/oak-morning-ride/dsc_5479-2.webp",
+      "/content/media/oak-morning-ride/dsc_5393.webp",
+      "/content/media/oak-morning-ride/dsc_5694.webp",
+      "/content/media/oak-morning-ride/dsc_5614.webp"
+    ]
+  },
   "tags": [
     "Photography",
     "Cycling"
   ],
-  "desc": "A short ride with Wyatt Funk and Oak Cycling.",
+  "yr": "2025",
   "credits": [
     {
       "r": "Photography",
@@ -26,5 +34,10 @@
       "r": "Talent",
       "n": "Wyatt Funk"
     }
+  ],
+  "id": "oak-morning-ride",
+  "selected": false,
+  "roles": [
+    "stills"
   ]
 }
