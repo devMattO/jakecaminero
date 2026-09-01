@@ -11,7 +11,9 @@
   "images": {
     "main": "/content/media/agronomy-ss-launch/1.16.1_1.16.1.jpg",
     "og": "/content/media/agronomy-ss-launch/1.16.1_1.16.1.jpg",
-    "gallery": []
+    "gallery": [
+      "/content/media/agronomy-ss-launch/1.5.1_1.5.1.jpg"
+    ]
   },
   "tags": [
     "Cinematography",
