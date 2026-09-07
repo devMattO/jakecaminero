@@ -1,5 +1,4 @@
 {
-  "showApproachOngoing": true,
   "heroVideo": "https://vimeo.com/1204022679",
   "heroImage": "",
   "socials": [
@@ -43,6 +42,7 @@
       "project": "rt-nowhere-sept-2026"
     }
   ],
+  "showApproachOngoing": false,
   "emails": [
     "jake@jakecaminero.com"
   ],
