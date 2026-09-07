@@ -6,7 +6,13 @@
   "desc": "A commission from Road & Track to create an image using the first satellite phone. The image is meant to close the September issue titled, 'Nowhere' on the back cover of the magazine. ",
   "t": "Nowhere Back Cover Image",
   "images": {
-    "main": "/content/media/rt-nowhere-sept-2026/r-t_08_03_2026_september_issue2571.jpg"
+    "main": "/content/media/rt-nowhere-sept-2026/r-t_08_03_2026_september_issue2571.jpg",
+    "gallery": [
+      "/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.47 pm.png",
+      "/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.29 pm.png",
+      "/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.55 pm.png",
+      "/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.27.52 pm.png"
+    ]
   },
   "tags": [
     "Photography",
