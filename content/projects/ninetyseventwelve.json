@@ -1,0 +1,33 @@
+{
+  "client": "Ninetyseveltwelve",
+  "date": "January 5, 2025",
+  "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
+  "t": "Ninetyseveltwelve",
+  "images": {
+    "main": "/content/media/ninetyseventwelve/frame-8.jpg",
+    "gallery": [
+      "/content/media/ninetyseventwelve/frame-2.jpg",
+      "/content/media/ninetyseventwelve/frame-3.jpg",
+      "/content/media/ninetyseventwelve/frame-4.jpg",
+      "/content/media/ninetyseventwelve/frame-5.jpg",
+      "/content/media/ninetyseventwelve/frame-6.jpg",
+      "/content/media/ninetyseventwelve/frame-7.jpg",
+      "/content/media/ninetyseventwelve/frame-9.jpg",
+      "/content/media/ninetyseventwelve/frame-11.jpg",
+      "/content/media/ninetyseventwelve/frame-12.jpg",
+      "/content/media/ninetyseventwelve/frame-13.jpg",
+      "/content/media/ninetyseventwelve/frame-10.jpg",
+      "/content/media/ninetyseventwelve/frame-14.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Wellness"
+  ],
+  "yr": "2025",
+  "id": "ninetyseventwelve",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
