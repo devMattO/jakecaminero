@@ -519,7 +519,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
       <div class="keyrow" id="homeKeys" role="group" aria-label="Filter by discipline"></div>
     </div>
     <div class="grid" id="workGrid"></div>
-    <div class="approach">
+    <div class="approach apong">
       <div>
         <span class="label keyhead">Approach</span>
         <h2 class="h-sub">Small Crews,<br>Long Days</h2>
@@ -532,8 +532,10 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
         <div class="aplist"><span class="label keyhead">Sectors</span><ul id="secList"></ul></div>
       </div>
     </div>
-    <h2 class="display h-sec">Ongoing</h2>
-    <div class="eco" id="ecoGrid"></div>
+    <div class="ongoing-sec apong">
+      <h2 class="display h-sec">Ongoing</h2>
+      <div class="eco" id="ecoGrid"></div>
+    </div>
   </div>
 </section>
 
@@ -965,6 +967,9 @@ const NOT_CREW=new Set(["Talent","Car","Publication","Location","Company",
 $("#ecoGrid").innerHTML=CONTENT.site.ongoing.map((o,i)=>
   `<div class="it"><div class="shot"><img src="${o.img?IMG_BASE+o.img:shot("eco"+i,o.tone,4/3,"")}" alt="${o.t}" loading="lazy"></div>
    <h4>${o.t}</h4><p>${o.d}</p></div>`).join("");
+/* Jake can turn the Approach + Ongoing sections off from Site Info without
+   losing the underlying content — nothing here is deleted, just not shown. */
+if(CONTENT.site.showApproachOngoing===false) $$(".apong").forEach(el=>el.remove());
 
 /* ══════════════════════════════════════════════════════════════════════
    WORK — the index. Glyph triad encodes discipline by opacity;

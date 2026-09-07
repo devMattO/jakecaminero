@@ -195,6 +195,11 @@ collections:
                 value_field: id
                 search_fields: [t, client]
                 display_fields: ["{{t}} — {{client}}"]
+          - label: "Show Approach & Ongoing Sections"
+            name: showApproachOngoing
+            widget: boolean
+            default: true
+            hint: "Turns off the \"Small Crews, Long Days\" statement, the Capabilities/Sectors lists, and the Ongoing section on the homepage. Nothing is deleted — turn it back on any time."
           - label: "Homepage Hero Image"
             name: heroImage
             widget: image

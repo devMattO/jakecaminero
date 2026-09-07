@@ -70,6 +70,7 @@ function reshapeSite(info) {
   return {
     intro: info.intro || "",
     introLinks: info.introLinks || [],
+    showApproachOngoing: info.showApproachOngoing !== false,
     heroImage: info.heroImage || null,
     heroVideo: info.heroVideo || "",
     bio: info.bio || "",

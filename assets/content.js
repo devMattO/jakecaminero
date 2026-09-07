@@ -1423,6 +1423,7 @@ window.JC_CONTENT = {
         "project": "rt-nowhere-sept-2026"
       }
     ],
+    "showApproachOngoing": true,
     "heroImage": null,
     "heroVideo": "https://vimeo.com/1204022679",
     "bio": "Jake Caminero is a photographer and director specializing in active lifestyle, hospitality, and adventure-driven brands.",
