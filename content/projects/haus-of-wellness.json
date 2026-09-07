@@ -9,7 +9,32 @@
   "desc": "A lifestyle photo and video shoot for social media and web use.",
   "t": "Haus of Wellness",
   "images": {
-    "main": "/content/media/haus-of-wellness/dsc03033.webp"
+    "main": "/content/media/haus-of-wellness/dsc03078.webp",
+    "gallery": [
+      "/content/media/haus-of-wellness/dsc03033.webp",
+      "/content/media/haus-of-wellness/dsc03163.webp",
+      "/content/media/haus-of-wellness/dsc03165.webp",
+      "/content/media/haus-of-wellness/dsc02667.webp",
+      "/content/media/haus-of-wellness/dsc03172.webp",
+      "/content/media/haus-of-wellness/dsc03101.webp",
+      "/content/media/haus-of-wellness/dsc02726.webp",
+      "/content/media/haus-of-wellness/dsc02752.webp",
+      "/content/media/haus-of-wellness/dsc02741.webp",
+      "/content/media/haus-of-wellness/dsc02758.webp",
+      "/content/media/haus-of-wellness/dsc02782.webp",
+      "/content/media/haus-of-wellness/dsc02784.webp",
+      "/content/media/haus-of-wellness/dsc02784.webp",
+      "/content/media/haus-of-wellness/dsc02799.webp",
+      "/content/media/haus-of-wellness/dsc02806.webp",
+      "/content/media/haus-of-wellness/dsc02825.webp",
+      "/content/media/haus-of-wellness/dsc02876.webp",
+      "/content/media/haus-of-wellness/dsc02893.webp",
+      "/content/media/haus-of-wellness/dsc02955.webp",
+      "/content/media/haus-of-wellness/dsc03061.webp",
+      "/content/media/haus-of-wellness/dsc02902.webp",
+      "/content/media/haus-of-wellness/dsc03071.webp",
+      "/content/media/haus-of-wellness/dsc03077.webp"
+    ]
   },
   "tags": [
     "Photography",

@@ -15,7 +15,7 @@
       "u": "https://linkedin.com"
     }
   ],
-  "bio": "Jake Caminero is a photographer and director based in Costa Mesa, California. He works on location, in available light, across automotive, outdoor, and hospitality — and takes on creative direction when the whole campaign needs to hold together rather than just the frames.",
+  "bio": "Jake Caminero is a photographer and director specializing in active lifestyle, hospitality, and adventure-driven brands.",
   "clients": [
     "Road & Track",
     "Endociety",
@@ -34,20 +34,12 @@
     "Dino Motorsport",
     "AV SC"
   ],
-  "approach": "A bias toward the location over the studio, and toward available light over rigs. Most projects run two to five shoot days with a producer, a first AC, and whatever the terrain will allow. Full campaign packages — direction, stills, and film planned together rather than bid out separately — are the work he likes best.",
-  "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. Recent work includes {Road & Track}, {Batch}, and {Cuyama Buckhorn}.",
+  "approach": "Jake Caminero is a photographer and director specializing in active lifestyle, hospitality, and adventure-driven brands.\nHis work blends documentary storytelling with commercial production, creating imagery that feels lived-in, human, and emotionally resonant. From endurance athletes and outdoor pursuits to boutique hotels and destination campaigns, Jake helps brands tell stories that connect people to experiences—not just products.\nWith a background spanning photography, filmmaking, editing, and creative direction, he approaches each project as a complete storyteller, building cohesive campaigns across stills and motion.\nBased in Southern California and available worldwide.",
+  "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. {Road & Track}",
   "introLinks": [
     {
       "label": "Road & Track",
       "project": "rt-nowhere-sept-2026"
-    },
-    {
-      "label": "Batch",
-      "project": "batch-farm-visit"
-    },
-    {
-      "label": "Cuyama Buckhorn",
-      "project": "buckhorn-foraging"
     }
   ],
   "gear": [],

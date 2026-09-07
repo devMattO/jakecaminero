@@ -1,0 +1,71 @@
+{
+  "loc": "San Diego, CA",
+  "del": [
+    "Stills"
+  ],
+  "client": "Banana Boat",
+  "date": "November 14, 2024",
+  "desc": "Our job was to capture all product imagery with an 'in world' feel. The shoot had two portions, a lifestyle primary shoot that was shot by Jordan & Dani Lutes, and the still life team which was myself and my lighting team.",
+  "t": "Banana Boat SS 25",
+  "images": {
+    "main": "/content/media/banana-boat-ss-24/_o4a8795.jpg",
+    "gallery": [
+      "/content/media/banana-boat-ss-24/_o4a8787.jpg",
+      "/content/media/banana-boat-ss-24/_o4a9726.jpg",
+      "/content/media/banana-boat-ss-24/_o4a9062.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8910.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8907.jpg",
+      "/content/media/banana-boat-ss-24/_o4a9399.jpg",
+      "/content/media/banana-boat-ss-24/_o4a9479.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8680.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8521.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8513.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8409.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8359.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8246.jpg",
+      "/content/media/banana-boat-ss-24/_o4a8167.jpg",
+      "/content/media/banana-boat-ss-24/_o4a7972.jpg",
+      "/content/media/banana-boat-ss-24/_o4a7936.jpg",
+      "/content/media/banana-boat-ss-24/_o4a0986.jpg",
+      "/content/media/banana-boat-ss-24/_o4a0959.jpg",
+      "/content/media/banana-boat-ss-24/_o4a0890.jpg",
+      "/content/media/banana-boat-ss-24/_o4a0617.jpg",
+      "/content/media/banana-boat-ss-24/_o4a0085.jpg",
+      "/content/media/banana-boat-ss-24/_o4a0125.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Sport",
+    "Wellness",
+    "Outdoor"
+  ],
+  "yr": "2025",
+  "credits": [
+    {
+      "r": "Still Life Photographer",
+      "n": "Jake Caminero"
+    },
+    {
+      "r": "Lifestyle Photographer",
+      "n": "Jordan Lutes"
+    },
+    {
+      "r": "DP",
+      "n": "Dani Lutes"
+    },
+    {
+      "r": "Photo Assistants",
+      "n": "Hugh Foster & Team"
+    },
+    {
+      "r": "Grip & Lighting EQ",
+      "n": "Load Bearing Studio"
+    }
+  ],
+  "id": "banana-boat-ss-24",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
