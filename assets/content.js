@@ -2,32 +2,61 @@
 window.JC_CONTENT = {
   "projects": [
     {
-      "loc": "Orange County",
+      "loc": "San Diego, CA",
       "del": [
-        "Still Images"
+        "Stills"
       ],
-      "client": "Endociety",
-      "date": "July 1, 2026",
-      "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
-      "t": "Endo Fall Capsule 2026",
+      "client": "Banana Boat",
+      "date": "November 14, 2024",
+      "desc": "Our job was to capture all product imagery with an 'in world' feel. The shoot had two portions, a lifestyle primary shoot that was shot by Jordan & Dani Lutes, and the still life team which was myself and my lighting team.",
+      "t": "Banana Boat SS 25",
       "tags": [
         "Photography",
         "Sport",
+        "Wellness",
         "Outdoor"
       ],
-      "yr": "2026",
+      "yr": "2025",
       "credits": [
         {
-          "r": "Creative Direction",
-          "n": "Devon Polk"
+          "r": "Still Life Photographer",
+          "n": "Jake Caminero"
         },
         {
-          "r": "Photo Assistant",
-          "n": "Levi Fillies"
+          "r": "Lifestyle Photographer",
+          "n": "Jordan Lutes"
+        },
+        {
+          "r": "DP",
+          "n": "Dani Lutes"
+        },
+        {
+          "r": "Photo Assistants",
+          "n": "Hugh Foster & Team"
+        },
+        {
+          "r": "Grip & Lighting EQ",
+          "n": "Load Bearing Studio"
         }
       ],
-      "id": "endo-july-2026",
-      "selected": true,
+      "id": "banana-boat-ss-24",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
+      "client": "Ninetyseveltwelve",
+      "date": "January 5, 2025",
+      "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
+      "t": "Ninetyseveltwelve",
+      "tags": [
+        "Photography",
+        "Wellness"
+      ],
+      "yr": "2025",
+      "id": "ninetyseventwelve",
+      "selected": false,
       "roles": [
         "stills"
       ]
@@ -70,6 +99,37 @@ window.JC_CONTENT = {
       ],
       "tone": "sage",
       "gal": 4
+    },
+    {
+      "loc": "Orange County",
+      "del": [
+        "Still Images"
+      ],
+      "client": "Endociety",
+      "date": "July 1, 2026",
+      "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
+      "t": "Endo Fall Capsule 2026",
+      "tags": [
+        "Photography",
+        "Sport",
+        "Outdoor"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Creative Direction",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Levi Fillies"
+        }
+      ],
+      "id": "endo-july-2026",
+      "selected": true,
+      "roles": [
+        "stills"
+      ]
     },
     {
       "loc": "Southern California",
@@ -502,6 +562,10 @@ window.JC_CONTENT = {
       ],
       "yr": "2026",
       "credits": [
+        {
+          "r": "Direction",
+          "n": "Jake Caminero"
+        },
         {
           "r": "Edit",
           "n": "Jake Caminero"
@@ -1352,24 +1416,16 @@ window.JC_CONTENT = {
     }
   ],
   "site": {
-    "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. Recent work includes {Road & Track}, {Batch}, and {Cuyama Buckhorn}.",
+    "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. {Road & Track}",
     "introLinks": [
       {
         "label": "Road & Track",
         "project": "rt-nowhere-sept-2026"
-      },
-      {
-        "label": "Batch",
-        "project": "batch-farm-visit"
-      },
-      {
-        "label": "Cuyama Buckhorn",
-        "project": "buckhorn-foraging"
       }
     ],
     "heroImage": null,
     "heroVideo": "https://vimeo.com/1204022679",
-    "bio": "Jake Caminero is a photographer and director based in Costa Mesa, California. He works on location, in available light, across automotive, outdoor, and hospitality — and takes on creative direction when the whole campaign needs to hold together rather than just the frames.",
+    "bio": "Jake Caminero is a photographer and director specializing in active lifestyle, hospitality, and adventure-driven brands.",
     "portrait": "/content/media/site/dscf6215.webp",
     "emails": [
       "jake@jakecaminero.com"
@@ -1418,7 +1474,7 @@ window.JC_CONTENT = {
       },
       {
         "h": "Bio",
-        "body": "A bias toward the location over the studio, and toward available light over rigs. Most projects run two to five shoot days with a producer, a first AC, and whatever the terrain will allow. Full campaign packages — direction, stills, and film planned together rather than bid out separately — are the work he likes best."
+        "body": "Jake Caminero is a photographer and director specializing in active lifestyle, hospitality, and adventure-driven brands.\nHis work blends documentary storytelling with commercial production, creating imagery that feels lived-in, human, and emotionally resonant. From endurance athletes and outdoor pursuits to boutique hotels and destination campaigns, Jake helps brands tell stories that connect people to experiences—not just products.\nWith a background spanning photography, filmmaking, editing, and creative direction, he approaches each project as a complete storyteller, building cohesive campaigns across stills and motion.\nBased in Southern California and available worldwide."
       },
       {
         "h": "Get in touch",
