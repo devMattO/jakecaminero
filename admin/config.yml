@@ -157,6 +157,7 @@ collections:
             name: order
             widget: list
             allow_reorder: true
+            add_to_top: true
             label_singular: "an existing project"
             collapsed: true
             summary: "{{fields.project}}"
