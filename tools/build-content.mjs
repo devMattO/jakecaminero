@@ -76,12 +76,13 @@ function reshapeSite(info) {
     portrait: info.portrait || null,
     emails: info.emails || [],
     socials: info.socials || [],
-    contact: info.contact || [],
     gear: info.gear || [],
+    bts: info.bts || [],
     info: [
       { h: "Selected Clients", list: info.clients || [] },
       { h: "Recognition", list: info.recognition || [] },
-      { h: "Approach", body: info.approach || "" },
+      { h: "Bio", body: info.approach || "" },
+      { h: "Get in touch", list: info.emails || [] },
     ],
     ongoing: (info.ongoing || []).map((o, i) => ({ ...o, tone: ONGOING_TONES[i % ONGOING_TONES.length] })),
   };

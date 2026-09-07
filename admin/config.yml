@@ -101,6 +101,7 @@ collections:
           - Outdoor
           - Sport
           - Wellness
+          - Director
       - {label: Description, name: desc, widget: text}
       - label: Credits
         name: credits
@@ -177,7 +178,7 @@ collections:
         file: content/info.json
         format: json
         fields:
-          - {label: Intro, name: intro, widget: text, hint: "Homepage statement. Wrap a name in {curly braces}, then add a matching entry in Intro Links below to send it to a specific project. A name with no matching entry links to the Work page instead."}
+          - {label: "Homepage intro", name: intro, widget: text, hint: "Homepage statement. Wrap a name in {curly braces}, then add a matching entry in Intro Links below to send it to a specific project. A name with no matching entry links to the Work page instead."}
           - label: "Intro Links"
             name: introLinks
             widget: list
@@ -207,7 +208,7 @@ collections:
             widget: string
             required: false
             hint: "If filled in, the homepage plays this as a looping, muted background video instead of a photo or the animation — same as a project's Video URL field. The Hero Image above (if also set) shows briefly while the video loads."
-          - {label: Bio, name: bio, widget: text}
+          - {label: "Info Header", name: bio, widget: text}
           - label: Portrait
             name: portrait
             widget: image
@@ -222,12 +223,6 @@ collections:
             fields:
               - {label: Name, name: n, widget: string}
               - {label: URL, name: u, widget: string}
-          - label: "Contact blocks"
-            name: contact
-            widget: list
-            fields:
-              - {label: Heading, name: h, widget: string}
-              - {label: Lines, name: lines, widget: list}
           - label: Gear
             name: gear
             widget: list
@@ -235,9 +230,22 @@ collections:
             fields:
               - {label: Heading, name: h, widget: string}
               - {label: Items, name: list, widget: list}
+          - label: "BTS Gallery"
+            name: bts
+            widget: list
+            required: false
+            summary: "{{fields.src}}"
+            hint: "Behind-the-scenes shots — crew, kit, in-between moments — shown as an auto-scrolling gallery on the Info page. Leave empty to hide that section."
+            field:
+              label: Image
+              name: src
+              widget: image
+              choose_url: false
+              media_folder: "/content/media/site/bts"
+              public_folder: "/content/media/site/bts"
           - {label: Clients, name: clients, widget: list}
           - {label: Recognition, name: recognition, widget: list, required: false}
-          - {label: Approach, name: approach, widget: text}
+          - {label: Bio, name: approach, widget: text}
           - label: "Ongoing / Services"
             name: ongoing
             widget: list

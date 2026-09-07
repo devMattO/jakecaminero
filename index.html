@@ -407,7 +407,6 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 /* Info page: crew + gear band, sharing the ruled-row grammar */
 .iband-head{display:flex;align-items:baseline;justify-content:space-between;
   gap:24px;flex-wrap:wrap;padding-bottom:clamp(16px,2.4vw,28px)}
-.leadin{font-size:12px;line-height:1.6;color:var(--ghost);max-width:34ch}
 .ibands{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,2fr);
   gap:clamp(28px,5vw,74px);align-items:start;
   border-top:1px solid var(--hair);padding:clamp(30px,4.5vw,54px) 0 clamp(50px,8vw,110px)}
@@ -418,17 +417,28 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .geargrid .gg li{font-size:11.5px;line-height:1.4;padding:8px 0;border-bottom:1px solid var(--hair)}
 .gearnote{margin-top:18px;font-size:11px;line-height:1.6;color:var(--whisper);max-width:56ch}
 
-.contact-hero{padding:clamp(64px,10vw,130px) 0 clamp(40px,6vw,74px)}
-.contact-hero .mails a{display:block;font-weight:500;letter-spacing:-.028em;
-  font-size:clamp(24px,4.4vw,62px);line-height:1.14;color:var(--ghost);transition:color 220ms var(--ease)}
-.contact-hero .mails a:hover{color:var(--ink)}
-.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,44px);
-  border-top:1px solid var(--hair);padding-top:26px}
-.cgrid .blk h3{font:inherit;font-weight:500;font-size:var(--micro);letter-spacing:.055em;
-  text-transform:uppercase;color:var(--ghost);margin-bottom:9px}
-.cgrid .blk p,.cgrid .blk a{font-size:12.5px;line-height:1.65;display:block}
-.cgrid .blk a{transition:color 180ms var(--ease)}
-.cgrid .blk a:hover{color:var(--ghost)}
+/* BTS Gallery — Jake's own behind-the-scenes shots (crew, kit, in-between
+   moments), not polished project photography. Two rows scroll in opposite
+   directions at slightly different speeds so they don't feel mechanically
+   synced. Each row's track is the photo list duplicated once, so animating
+   translateX from 0 to exactly -50% loops seamlessly — the point where the
+   duplicate begins lines up pixel-for-pixel with where the original ended. */
+.btsgal{border-top:1px solid var(--hair);
+  padding:clamp(30px,4.5vw,54px) 0 clamp(40px,6vw,70px);
+  display:grid;gap:clamp(14px,2vw,22px);overflow:hidden}
+.bts-row{overflow:hidden}
+.bts-row:hover .bts-track{animation-play-state:paused}
+.bts-track{display:flex;width:max-content;gap:clamp(10px,1.6vw,18px);
+  animation:bts-scroll 46s linear infinite}
+.bts-row:nth-child(2) .bts-track{animation-name:bts-scroll-rev;animation-duration:52s}
+.bts-cell{height:clamp(160px,22vw,300px);flex:none;overflow:hidden}
+.bts-cell img{width:100%;height:100%;object-fit:cover;display:block}
+/* aria-hidden duplicate half — display:contents keeps its images as plain
+   flex items (so the seamless-loop math still holds) while removing the
+   wrapper from the box model entirely. */
+.bts-dup{display:contents}
+@keyframes bts-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes bts-scroll-rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 /* ════════════════════════════════════════════════════
    RESPONSIVE + MOTION
@@ -453,7 +463,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 @media (max-width:900px){
   .approach,.ibands{grid-template-columns:1fr}
   .geargrid{grid-template-columns:repeat(2,1fr)}
-  .eco,.cgrid,.det-facts{grid-template-columns:repeat(2,1fr)}
+  .eco,.det-facts{grid-template-columns:repeat(2,1fr)}
   .split{grid-template-columns:1fr}
   .hero{aspect-ratio:4/3.1}
   .hero .frame-art{width:96%}
@@ -461,7 +471,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 }
 @media (max-width:620px){
   .grid>.card,.det-gal>.shot{grid-column:1/-1 !important;margin-top:0 !important}
-  .eco,.cgrid,.det-facts,.aplists,.geargrid{grid-template-columns:1fr}
+  .eco,.det-facts,.aplists,.geargrid{grid-template-columns:1fr}
   .nav .wrap{gap:12px;font-size:11px}
   .mark{margin-right:4px}
   .irow{grid-template-columns:1fr auto auto 12px;row-gap:4px}
@@ -472,6 +482,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;transition-duration:.01ms !important}
   html{scroll-behavior:auto}
+  .bts-track{animation:none}
 }
 </style>
 </head>
@@ -580,7 +591,10 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
     </div>
     <div class="iband-head">
       <h2 class="display h-sec">On Set</h2>
-      <p class="leadin">The people who turn up, and the kit that comes with them.</p>
+    </div>
+    <div class="btsgal" id="btsGal">
+      <div class="bts-row"><div class="bts-track"></div></div>
+      <div class="bts-row"><div class="bts-track"></div></div>
     </div>
     <div class="ibands">
       <div class="aplist">
@@ -594,11 +608,6 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
           gets packaged through a rental house and quoted with the bid.</p>
       </div>
     </div>
-    <div class="contact-hero">
-      <p class="label dim" style="margin-bottom:20px">Get in touch</p>
-      <div class="mails" id="contactMails"></div>
-    </div>
-    <div class="cgrid" id="contactGrid"></div>
   </div>
 </section>
 
@@ -709,6 +718,7 @@ const MANIFEST=(typeof window!=="undefined"&&window.JC_IMAGES)||{};
 CONTENT.projects.forEach(p=>{ if(MANIFEST[p.id]) p.images=MANIFEST[p.id]; });
 if(MANIFEST._site&&MANIFEST._site.portrait) CONTENT.site.portrait=MANIFEST._site.portrait;
 if(MANIFEST._site&&MANIFEST._site.heroImage) CONTENT.site.heroImage=MANIFEST._site.heroImage;
+if(MANIFEST._site&&MANIFEST._site.bts) CONTENT.site.bts=MANIFEST._site.bts;
 
 /* Decap omits an optional list field entirely when Jake leaves it empty,
    rather than writing []  — so every project needs to be able to trust
@@ -1162,10 +1172,19 @@ function renderProject(id){
 }
 
 /* ── info + contact ─────────────────────────────────── */
-$("#bio").textContent=CONTENT.site.bio;
+/* #bio has no wrapper div of its own — hiding it if Jake leaves the Info
+   Header field blank just means hiding the <p> itself. */
+const bioEl=$("#bio");
+if(CONTENT.site.bio) bioEl.textContent=CONTENT.site.bio;
+else bioEl.style.display="none";
 $("#portrait").src=CONTENT.site.portrait?IMG_BASE+CONTENT.site.portrait:shot("portrait","grey",4/5,"");
-$("#infoBlocks").innerHTML=CONTENT.site.info.map(b=>
-  `<div class="blk"><h3>${b.h}</h3>${b.list?`<ul>${b.list.map(x=>`<li>${x}</li>`).join("")}</ul>`:`<p class="body">${b.body}</p>`}</div>`).join("");
+/* A block with nothing to show (Recognition, most of the time) is skipped
+   entirely rather than rendering an empty shell — general fix, not a
+   Recognition special-case, so any block added later gets this for free.
+   A list item that's an email renders as a real mailto: link (Get in
+   touch reuses this exact same block format, deliberately, per the brief). */
+$("#infoBlocks").innerHTML=CONTENT.site.info.filter(b=>(b.list&&b.list.length)||b.body).map(b=>
+  `<div class="blk"><h3>${b.h}</h3>${b.list?`<ul>${b.list.map(x=>`<li>${x.includes("@")?`<a href="mailto:${x}">${x}</a>`:x}</li>`).join("")}</ul>`:`<p class="body">${b.body}</p>`}</div>`).join("");
 
 /* Gear renders only if there's gear to show, so cutting it later is a data change. */
 (function gear(){
@@ -1174,10 +1193,29 @@ $("#infoBlocks").innerHTML=CONTENT.site.info.map(b=>
   $("#gearList").innerHTML=g.map(s=>
     `<div class="gg"><h4>${s.h}</h4><ul>${s.list.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
 })();
+/* BTS Gallery — same idea as SLOTS/GAL_SLOTS ("cycle a small set of aspect
+   ratios by index"), applied to a horizontal flex row instead of a CSS
+   grid. Hides entirely if Jake hasn't uploaded anything yet, same as Gear
+   above. Photos alternate into two rows by index so each row gets a mixed
+   set of shapes rather than one row inheriting a whole run of similarly
+   -shaped uploads. */
+const BTS_RATIOS=[1.5,0.78,1.15,1.7,0.9,1.3];
+(function btsGallery(){
+  const photos=CONTENT.site.bts||[];
+  const wrap=$("#btsGal");
+  if(!photos.length){ wrap.remove(); return; }
+  const rows=[[],[]];
+  photos.forEach((src,i)=>rows[i%2].push(src));
+  [...wrap.querySelectorAll(".bts-track")].forEach((track,ri)=>{
+    const row=rows[ri];
+    if(!row.length){ track.closest(".bts-row").remove(); return; }
+    const cell=(src,i)=>`<div class="bts-cell" style="aspect-ratio:${BTS_RATIOS[i%BTS_RATIOS.length]}">
+      <img src="${IMG_BASE+src}" alt="Behind the scenes with Jake Caminero" loading="lazy"></div>`;
+    track.innerHTML=row.map(cell).join("")+`<div class="bts-dup" aria-hidden="true">${row.map(cell).join("")}</div>`;
+  });
+})();
 const mails=CONTENT.site.emails.map(m=>`<a href="mailto:${m}">${m}</a>`).join("");
-$("#contactMails").innerHTML=mails; $("#footMails").innerHTML=mails;
-$("#contactGrid").innerHTML=CONTENT.site.contact.map(b=>
-  `<div class="blk"><h3>${b.h}</h3>${b.lines.map(l=>l.includes("@")?`<a href="mailto:${l}">${l}</a>`:`<p>${l}</p>`).join("")}</div>`).join("");
+$("#footMails").innerHTML=mails;
 $("#socials").innerHTML=CONTENT.site.socials.map(s=>`<li><a href="${s.u}" target="_blank" rel="noopener">${s.n}</a></li>`).join("");
 $("#year").textContent="© "+new Date().getFullYear();
 

@@ -1,22 +1,4 @@
 {
-  "contact": [
-    {
-      "h": "Representation",
-      "lines": []
-    },
-    {
-      "h": "Studio",
-      "lines": [
-        "1638 Babcock St",
-        "Costa Mesa",
-        "CA 92627"
-      ]
-    },
-    {
-      "h": "Availability",
-      "lines": []
-    }
-  ],
   "heroVideo": "https://vimeo.com/1204022679",
   "heroImage": "",
   "socials": [

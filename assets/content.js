@@ -1388,25 +1388,8 @@ window.JC_CONTENT = {
         "u": "https://linkedin.com"
       }
     ],
-    "contact": [
-      {
-        "h": "Representation",
-        "lines": []
-      },
-      {
-        "h": "Studio",
-        "lines": [
-          "1638 Babcock St",
-          "Costa Mesa",
-          "CA 92627"
-        ]
-      },
-      {
-        "h": "Availability",
-        "lines": []
-      }
-    ],
     "gear": [],
+    "bts": [],
     "info": [
       {
         "h": "Selected Clients",
@@ -1434,8 +1417,14 @@ window.JC_CONTENT = {
         "list": []
       },
       {
-        "h": "Approach",
+        "h": "Bio",
         "body": "A bias toward the location over the studio, and toward available light over rigs. Most projects run two to five shoot days with a producer, a first AC, and whatever the terrain will allow. Full campaign packages — direction, stills, and film planned together rather than bid out separately — are the work he likes best."
+      },
+      {
+        "h": "Get in touch",
+        "list": [
+          "jake@jakecaminero.com"
+        ]
       }
     ],
     "ongoing": [

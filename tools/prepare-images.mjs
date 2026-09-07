@@ -262,6 +262,11 @@ async function cms(out) {
    skip-if-unchanged handling as a project's images, tracked per field
    since portrait and heroImage change independently of each other. */
 const SITE_IMAGE_FIELDS = ["portrait", "heroImage"];
+// Same idea as SITE_IMAGE_FIELDS, but for a *list* of images rather than a
+// single one (the BTS Gallery) — gets its own loop below since a whole-list
+// skip/replace is the right granularity here, same as a project's gallery
+// in cms() above, not per-image diffing.
+const SITE_IMAGE_LIST_FIELDS = ["bts"];
 async function processSiteImages(out, images) {
   let info;
   try { info = JSON.parse(await readFile(INFO_FILE, "utf8")); } catch { return; }
@@ -285,6 +290,31 @@ async function processSiteImages(out, images) {
       site[field] = await resolveImage(val, join(out, "site"), field, "site");
       srcMap[field] = val;
       console.log(`  site ${field}: processed`);
+    } catch (e) {
+      console.error(`  site ${field}: skipped — ${e.message}`);
+    }
+  }
+
+  for (const field of SITE_IMAGE_LIST_FIELDS) {
+    const raw = galleryPaths(info[field]);
+    if (!raw.length) {
+      if (field in site) delete site[field];
+      if (field in srcMap) delete srcMap[field];
+      continue;
+    }
+    const srcKey = JSON.stringify(raw);
+    if (srcMap[field] === srcKey) continue; // unchanged since last run
+
+    try {
+      const list = [];
+      let n = 0;
+      for (const path of raw) {
+        const stem = `${field}-${String(++n).padStart(2, "0")}`;
+        list.push(await resolveImage(path, join(out, "site"), stem, "site"));
+      }
+      site[field] = list;
+      srcMap[field] = srcKey;
+      console.log(`  site ${field}: processed (${list.length} image(s))`);
     } catch (e) {
       console.error(`  site ${field}: skipped — ${e.message}`);
     }
