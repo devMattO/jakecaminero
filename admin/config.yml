@@ -228,13 +228,6 @@ collections:
             fields:
               - {label: Name, name: n, widget: string}
               - {label: URL, name: u, widget: string}
-          - label: Gear
-            name: gear
-            widget: list
-            required: false
-            fields:
-              - {label: Heading, name: h, widget: string}
-              - {label: Items, name: list, widget: list}
           - label: "BTS Gallery"
             name: bts
             widget: list

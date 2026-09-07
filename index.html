@@ -404,18 +404,9 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 .deets .blk ul{list-style:none;columns:2;column-gap:22px}
 .deets .blk .body{max-width:52ch}
 
-/* Info page: crew + gear band, sharing the ruled-row grammar */
+/* Info page: On Set heading band, sharing the ruled-row grammar */
 .iband-head{display:flex;align-items:baseline;justify-content:space-between;
   gap:24px;flex-wrap:wrap;padding-bottom:clamp(16px,2.4vw,28px)}
-.ibands{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,2fr);
-  gap:clamp(28px,5vw,74px);align-items:start;
-  border-top:1px solid var(--hair);padding:clamp(30px,4.5vw,54px) 0 clamp(50px,8vw,110px)}
-.geargrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2.2vw,32px);margin-top:13px}
-.geargrid .gg h4{font:inherit;font-weight:500;font-size:var(--micro);letter-spacing:.055em;
-  text-transform:uppercase;color:var(--whisper);margin-bottom:8px}
-.geargrid .gg ul{list-style:none;border-top:1px solid var(--hair)}
-.geargrid .gg li{font-size:11.5px;line-height:1.4;padding:8px 0;border-bottom:1px solid var(--hair)}
-.gearnote{margin-top:18px;font-size:11px;line-height:1.6;color:var(--whisper);max-width:56ch}
 
 /* BTS Gallery — Jake's own behind-the-scenes shots (crew, kit, in-between
    moments), not polished project photography. Two rows scroll in opposite
@@ -461,8 +452,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
   .ientry.open .irow .t{color:var(--ink)}
 }
 @media (max-width:900px){
-  .approach,.ibands{grid-template-columns:1fr}
-  .geargrid{grid-template-columns:repeat(2,1fr)}
+  .approach{grid-template-columns:1fr}
   .eco,.det-facts{grid-template-columns:repeat(2,1fr)}
   .split{grid-template-columns:1fr}
   .hero{aspect-ratio:4/3.1}
@@ -471,7 +461,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
 }
 @media (max-width:620px){
   .grid>.card,.det-gal>.shot{grid-column:1/-1 !important;margin-top:0 !important}
-  .eco,.det-facts,.aplists,.geargrid{grid-template-columns:1fr}
+  .eco,.det-facts,.aplists{grid-template-columns:1fr}
   .nav .wrap{gap:12px;font-size:11px}
   .mark{margin-right:4px}
   .irow{grid-template-columns:1fr auto auto 12px;row-gap:4px}
@@ -597,18 +587,6 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
     <div class="btsgal" id="btsGal">
       <div class="bts-row"><div class="bts-track"></div></div>
       <div class="bts-row"><div class="bts-track"></div></div>
-    </div>
-    <div class="ibands">
-      <div class="aplist">
-        <span class="label keyhead">Regular Crew</span>
-        <ul id="crewList"></ul>
-      </div>
-      <div>
-        <span class="label keyhead">Gear</span>
-        <div class="geargrid" id="gearList"></div>
-        <p class="gearnote">Owned and travels with him. Anything a job needs beyond this
-          gets packaged through a rental house and quoted with the bid.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -944,26 +922,6 @@ function ruledList(sel,names){
 ruledList("#capList",CONTENT.site.capabilities);
 ruledList("#secList",CONTENT.site.sectors);
 
-/* The crew list is read off the project credits, so anyone Jake works with
-   shows up by being credited. Talent, cars, publications and thank-yous are
-   credits but not crew, and one-off names aren't "regular", so both are held out. */
-const NOT_CREW=new Set(["Talent","Car","Publication","Location","Company",
-  "Special Thanks","Client Team","Friends & Partners","Retouching"]);
-(function crew(){
-  const seen=new Map();
-  CONTENT.projects.forEach(p=>p.credits.forEach(c=>{
-    if(c.n==="Jake Caminero"||NOT_CREW.has(c.r))return;
-    const e=seen.get(c.n)||{n:c.n,total:0,roles:{}};
-    e.total++; e.roles[c.r]=(e.roles[c.r]||0)+1;
-    seen.set(c.n,e);
-  }));
-  const people=[...seen.values()].filter(p=>p.total>1)
-    .sort((a,b)=>b.total-a.total||a.n.localeCompare(b.n)).slice(0,8);
-  $("#crewList").innerHTML=people.map(p=>{
-    const role=Object.entries(p.roles).sort((a,b)=>b[1]-a[1])[0][0];
-    return `<li><span>${p.n}</span><span class="r">${role}</span></li>`;
-  }).join("");
-})();
 $("#ecoGrid").innerHTML=CONTENT.site.ongoing.map((o,i)=>
   `<div class="it"><div class="shot"><img src="${o.img?IMG_BASE+o.img:shot("eco"+i,o.tone,4/3,"")}" alt="${o.t}" loading="lazy"></div>
    <h4>${o.t}</h4><p>${o.d}</p></div>`).join("");
@@ -1191,19 +1149,12 @@ $("#portrait").src=CONTENT.site.portrait?IMG_BASE+CONTENT.site.portrait:shot("po
 $("#infoBlocks").innerHTML=CONTENT.site.info.filter(b=>(b.list&&b.list.length)||b.body).map(b=>
   `<div class="blk"><h3>${b.h}</h3>${b.list?`<ul>${b.list.map(x=>`<li>${x.includes("@")?`<a href="mailto:${x}">${x}</a>`:x}</li>`).join("")}</ul>`:`<p class="body">${b.body}</p>`}</div>`).join("");
 
-/* Gear renders only if there's gear to show, so cutting it later is a data change. */
-(function gear(){
-  const g=CONTENT.site.gear||[];
-  if(!g.length){ $("#gearList").closest("div").remove?.(); return; }
-  $("#gearList").innerHTML=g.map(s=>
-    `<div class="gg"><h4>${s.h}</h4><ul>${s.list.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
-})();
 /* BTS Gallery — same idea as SLOTS/GAL_SLOTS ("cycle a small set of aspect
    ratios by index"), applied to a horizontal flex row instead of a CSS
-   grid. Hides entirely if Jake hasn't uploaded anything yet, same as Gear
-   above. Photos alternate into two rows by index so each row gets a mixed
-   set of shapes rather than one row inheriting a whole run of similarly
-   -shaped uploads. */
+   grid. Hides entirely if Jake hasn't uploaded anything yet. Photos
+   alternate into two rows by index so each row gets a mixed set of
+   shapes rather than one row inheriting a whole run of similarly-shaped
+   uploads. */
 const BTS_RATIOS=[1.5,0.78,1.15,1.7,0.9,1.3];
 (function btsGallery(){
   const photos=CONTENT.site.bts||[];

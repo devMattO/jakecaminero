@@ -1445,7 +1445,6 @@ window.JC_CONTENT = {
         "u": "https://linkedin.com"
       }
     ],
-    "gear": [],
     "bts": [],
     "info": [
       {

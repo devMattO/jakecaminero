@@ -77,7 +77,6 @@ function reshapeSite(info) {
     portrait: info.portrait || null,
     emails: info.emails || [],
     socials: info.socials || [],
-    gear: info.gear || [],
     bts: info.bts || [],
     info: [
       { h: "Selected Clients", list: info.clients || [] },
