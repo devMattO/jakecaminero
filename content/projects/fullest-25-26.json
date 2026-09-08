@@ -8,7 +8,16 @@
   "desc": "A series of creative projects directed towards social media use.",
   "t": "The Fullest 25/26",
   "images": {
-    "main": "/content/media/fullest-25-26/still-2026-01-07-135552_4.3.2.webp"
+    "main": "/content/media/fullest-25-26/still-2026-01-07-135552_4.3.2.webp",
+    "gallery": [
+      "/content/media/fullest-25-26/2.1.1_2.1.1.jpg",
+      "/content/media/fullest-25-26/1.23.1_1.23.1.jpg",
+      "/content/media/fullest-25-26/still-2026-01-07-135552_4.3.2.webp",
+      "/content/media/fullest-25-26/1.12.1_1.12.1.jpg",
+      "/content/media/fullest-25-26/1.17.1_1.17.1.jpg",
+      "/content/media/fullest-25-26/1.34.1_1.34.1.jpg",
+      "/content/media/fullest-25-26/1.25.2_1.25.2.jpg"
+    ]
   },
   "tags": [
     "Cinematography",
@@ -26,6 +35,7 @@
       "n": "Chase Thompson"
     }
   ],
+  "video": "https://vimeo.com/1225064292?share=copy&fl=sv&fe=ci",
   "id": "fullest-25-26",
   "selected": false,
   "roles": [
