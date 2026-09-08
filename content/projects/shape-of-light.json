@@ -1,0 +1,46 @@
+{
+  "loc": "Costa Mesa, CA",
+  "client": "The Rally Project",
+  "date": "August 14, 2024",
+  "desc": "Promotional imagery for the collaboration between The Rally Project and SOC in the event, Shape of Light.",
+  "t": "Shape of Light",
+  "images": {
+    "main": "/content/media/shape-of-light/img_5602.jpg",
+    "gallery": [
+      "/content/media/shape-of-light/rally_soc.jpg",
+      "/content/media/shape-of-light/dscf3903.jpg",
+      "/content/media/shape-of-light/img_5616.jpg",
+      "/content/media/shape-of-light/img_5580.jpg",
+      "/content/media/shape-of-light/dscf3687.jpg",
+      "/content/media/shape-of-light/dscf3733.jpg",
+      "/content/media/shape-of-light/dscf3808.jpg",
+      "/content/media/shape-of-light/dscf3840.jpg",
+      "/content/media/shape-of-light/img_5584.jpg",
+      "/content/media/shape-of-light/img_5585.jpg",
+      "/content/media/shape-of-light/img_5589.jpg",
+      "/content/media/shape-of-light/img_5600.jpg",
+      "/content/media/shape-of-light/img_5601.jpg",
+      "/content/media/shape-of-light/img_5603.jpg",
+      "/content/media/shape-of-light/img_5605.jpg",
+      "/content/media/shape-of-light/img_5609.jpg",
+      "/content/media/shape-of-light/img_5610.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Automotive"
+  ],
+  "yr": "2024",
+  "credits": [
+    {
+      "r": "Talent",
+      "n": "Paul Lefevre (Son of Cobra)"
+    }
+  ],
+  "id": "shape-of-light",
+  "selected": false,
+  "roles": [
+    "cd",
+    "stills"
+  ]
+}
