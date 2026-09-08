@@ -1,7 +1,8 @@
 {
+  "loc": "San Francisco, CA",
   "client": "Spec Shoot",
   "date": "April 24, 2024",
-  "desc": "A fun weekend in SF with a Rivian",
+  "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
   "t": "A Weekend with Rivian",
   "images": {
     "main": "/content/media/weekend-with-rivian/_dsc5596.jpg",
@@ -37,7 +38,7 @@
   ],
   "yr": "2024",
   "id": "weekend-with-rivian",
-  "selected": false,
+  "selected": true,
   "roles": [
     "stills"
   ]
