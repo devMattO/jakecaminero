@@ -1,0 +1,23 @@
+{
+  "client": "Snapchat",
+  "date": "August, 2025",
+  "desc": "Landscape images of Snapchat's 'Say it in a Snap' Billboards to be used for social media and web assets.",
+  "t": "Say it in a Snap",
+  "images": {
+    "main": "/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.13.34 pm.png",
+    "gallery": [
+      "/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.15.04 pm.png",
+      "/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.14.54 pm.png",
+      "/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.14.38 pm.png",
+      "/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.13.49 pm.png",
+      "/content/media/snapchat-say-it-in-a-snap/1_contact-sheet_chicago-copy.jpg",
+      "/content/media/snapchat-say-it-in-a-snap/2_contact-sheet_la-sf.jpg"
+    ]
+  },
+  "yr": "2025",
+  "id": "snapchat-say-it-in-a-snap",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
