@@ -2,66 +2,6 @@
 window.JC_CONTENT = {
   "projects": [
     {
-      "loc": "San Diego, CA",
-      "del": [
-        "Stills"
-      ],
-      "client": "Banana Boat",
-      "date": "November 14, 2024",
-      "desc": "Our job was to capture all product imagery with an 'in world' feel. The shoot had two portions, a lifestyle primary shoot that was shot by Jordan & Dani Lutes, and the still life team which was myself and my lighting team.",
-      "t": "Banana Boat SS 25",
-      "tags": [
-        "Photography",
-        "Sport",
-        "Wellness",
-        "Outdoor"
-      ],
-      "yr": "2025",
-      "credits": [
-        {
-          "r": "Still Life Photographer",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Lifestyle Photographer",
-          "n": "Jordan Lutes"
-        },
-        {
-          "r": "DP",
-          "n": "Dani Lutes"
-        },
-        {
-          "r": "Photo Assistants",
-          "n": "Hugh Foster & Team"
-        },
-        {
-          "r": "Grip & Lighting EQ",
-          "n": "Load Bearing Studio"
-        }
-      ],
-      "id": "banana-boat-ss-24",
-      "selected": false,
-      "roles": [
-        "stills"
-      ]
-    },
-    {
-      "client": "Ninetyseveltwelve",
-      "date": "January 5, 2025",
-      "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
-      "t": "Ninetyseveltwelve",
-      "tags": [
-        "Photography",
-        "Wellness"
-      ],
-      "yr": "2025",
-      "id": "ninetyseventwelve",
-      "selected": false,
-      "roles": [
-        "stills"
-      ]
-    },
-    {
       "loc": "Costa Mesa, California",
       "del": [
         "16mm and digital film",
@@ -108,11 +48,12 @@ window.JC_CONTENT = {
       "client": "Endociety",
       "date": "July 1, 2026",
       "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
-      "t": "Endo Fall Capsule 2026",
+      "t": "Endo Fall Capsule",
       "tags": [
         "Photography",
         "Sport",
-        "Outdoor"
+        "Outdoor",
+        "Wellness"
       ],
       "yr": "2026",
       "credits": [
@@ -125,6 +66,7 @@ window.JC_CONTENT = {
           "n": "Levi Fillies"
         }
       ],
+      "video": "https://vimeo.com/1224736728?share=copy&fl=sv&fe=ci",
       "id": "endo-july-2026",
       "selected": true,
       "roles": [
@@ -258,73 +200,6 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
-      "loc": "Palmdale, California",
-      "del": [
-        "Concept stills",
-        "Promo imagery"
-      ],
-      "client": "AV SC, Max Griffin",
-      "date": "August 1, 2024",
-      "desc": "Images to support the concept for a documentary led by Max Griffin. The film and promo is centered around his home town of Palmdale but specifically the unique concentration of soccer talent that is cultivated there. Max played professionally in the MLS and is looking to give back to his community by telling their story.",
-      "t": "Tumbleweeds",
-      "tags": [
-        "Photography",
-        "Documentary",
-        "Sport"
-      ],
-      "yr": "2024",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Executive Producer and Director",
-          "n": "Max Griffin"
-        }
-      ],
-      "id": "tumbleweeds",
-      "selected": true,
-      "roles": [
-        "stills"
-      ],
-      "tone": "clay",
-      "gal": 5
-    },
-    {
-      "loc": "Orange County",
-      "del": [
-        "Stills"
-      ],
-      "client": "Endociety",
-      "date": "August 10, 2026",
-      "desc": "Ecom/social imagery for fall capsule drop 2.0",
-      "t": "Endo Fall Capsule 2.0",
-      "tags": [
-        "Campaign",
-        "Photography",
-        "Outdoor",
-        "Sport",
-        "Wellness"
-      ],
-      "yr": "2026",
-      "credits": [
-        {
-          "r": "Creative Director",
-          "n": "Devon Polk"
-        },
-        {
-          "r": "Talent",
-          "n": "AJ Castillo"
-        }
-      ],
-      "id": "endo-fall-ii",
-      "selected": true,
-      "roles": [
-        "stills"
-      ]
-    },
-    {
       "loc": "Mojave, California",
       "del": [
         "Spec campaign stills",
@@ -365,6 +240,40 @@ window.JC_CONTENT = {
       ],
       "tone": "black",
       "overlay": "TUNDRA",
+      "gal": 5
+    },
+    {
+      "loc": "Palmdale, California",
+      "del": [
+        "Concept stills",
+        "Promo imagery"
+      ],
+      "client": "AV SC, Max Griffin",
+      "date": "August 1, 2024",
+      "desc": "Images to support the concept for a documentary led by Max Griffin. The film and promo is centered around his home town of Palmdale but specifically the unique concentration of soccer talent that is cultivated there. Max played professionally in the MLS and is looking to give back to his community by telling their story.",
+      "t": "Tumbleweeds",
+      "tags": [
+        "Photography",
+        "Documentary",
+        "Sport"
+      ],
+      "yr": "2024",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Executive Producer and Director",
+          "n": "Max Griffin"
+        }
+      ],
+      "id": "tumbleweeds",
+      "selected": true,
+      "roles": [
+        "stills"
+      ],
+      "tone": "clay",
       "gal": 5
     },
     {
@@ -431,6 +340,55 @@ window.JC_CONTENT = {
       ],
       "id": "rt-nowhere-sept-2026",
       "selected": true,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
+      "loc": "Orange County",
+      "del": [
+        "Stills"
+      ],
+      "client": "Endociety",
+      "date": "August 10, 2026",
+      "desc": "Ecom/social imagery for fall capsule drop 2.0",
+      "t": "Endo Fall Capsule 2.0",
+      "tags": [
+        "Campaign",
+        "Photography",
+        "Outdoor",
+        "Sport",
+        "Wellness"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Creative Director",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Talent",
+          "n": "AJ Castillo"
+        }
+      ],
+      "id": "endo-fall-ii",
+      "selected": true,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
+      "client": "Ninetyseveltwelve",
+      "date": "January 5, 2025",
+      "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
+      "t": "Ninetyseveltwelve",
+      "tags": [
+        "Photography",
+        "Wellness"
+      ],
+      "yr": "2025",
+      "id": "ninetyseventwelve",
+      "selected": false,
       "roles": [
         "stills"
       ]
@@ -547,86 +505,6 @@ window.JC_CONTENT = {
       "gal": 6
     },
     {
-      "loc": "Los Angeles, California",
-      "del": [
-        "Creative direction",
-        "Short film"
-      ],
-      "client": "The Rally Project",
-      "date": "January 1, 2026",
-      "desc": "Luke Davis. A man who seeks the creative ingenuity in all facets of life, Luke enthralls his viewers with paintings, drawings, poetry, and even food in his pursuit of self-expression. For the first time, Luke will be displaying all aspects of his creative process in his methodical, all-encompassing vision.",
-      "t": "Luke Davis",
-      "tags": [
-        "Creative Direction",
-        "Documentary"
-      ],
-      "yr": "2026",
-      "credits": [
-        {
-          "r": "Direction",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Edit",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "DP",
-          "n": "Nick Warren"
-        },
-        {
-          "r": "Photography",
-          "n": "Zach Sorensen"
-        },
-        {
-          "r": "Talent",
-          "n": "Luke Davis"
-        }
-      ],
-      "video": "https://vimeo.com/1204339928?share=copy&fl=sv&fe=ci",
-      "id": "rally-luke-davis",
-      "selected": true,
-      "roles": [
-        "cd"
-      ],
-      "tone": "black",
-      "gal": 5
-    },
-    {
-      "loc": "Costa Mesa, California",
-      "del": [
-        "Lifestyle stills",
-        "Social film"
-      ],
-      "client": "Haus of Wellness",
-      "date": "2025",
-      "desc": "A lifestyle photo and video shoot for social media and web use.",
-      "t": "Haus of Wellness",
-      "tags": [
-        "Photography",
-        "Campaign",
-        "Wellness"
-      ],
-      "yr": "2025",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Motion",
-          "n": "Nick Warren"
-        }
-      ],
-      "id": "haus-of-wellness",
-      "selected": false,
-      "roles": [
-        "stills"
-      ],
-      "tone": "sage",
-      "gal": 4
-    },
-    {
       "loc": "Joshua Tree National Park, CA",
       "del": [
         "Spec campaign stills"
@@ -678,6 +556,107 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
+      "loc": "Costa Mesa, California",
+      "del": [
+        "Lifestyle stills",
+        "Social film"
+      ],
+      "client": "Haus of Wellness",
+      "date": "2025",
+      "desc": "A lifestyle photo and video shoot for social media and web use.",
+      "t": "Haus of Wellness",
+      "tags": [
+        "Photography",
+        "Campaign",
+        "Wellness"
+      ],
+      "yr": "2025",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Motion",
+          "n": "Nick Warren"
+        }
+      ],
+      "id": "haus-of-wellness",
+      "selected": false,
+      "roles": [
+        "stills"
+      ],
+      "tone": "sage",
+      "gal": 4
+    },
+    {
+      "loc": "Los Angeles, California",
+      "del": [
+        "Creative direction",
+        "Short film"
+      ],
+      "client": "The Rally Project",
+      "date": "January 1, 2026",
+      "desc": "Luke Davis. A man who seeks the creative ingenuity in all facets of life, Luke enthralls his viewers with paintings, drawings, poetry, and even food in his pursuit of self-expression. For the first time, Luke will be displaying all aspects of his creative process in his methodical, all-encompassing vision.",
+      "t": "Luke Davis",
+      "tags": [
+        "Creative Direction",
+        "Documentary"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Direction",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Edit",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "DP",
+          "n": "Nick Warren"
+        },
+        {
+          "r": "Photography",
+          "n": "Zach Sorensen"
+        },
+        {
+          "r": "Talent",
+          "n": "Luke Davis"
+        }
+      ],
+      "video": "https://vimeo.com/1204339928?share=copy&fl=sv&fe=ci",
+      "id": "rally-luke-davis",
+      "selected": true,
+      "roles": [
+        "cd"
+      ],
+      "tone": "black",
+      "gal": 5
+    },
+    {
+      "loc": "San Francisco, CA",
+      "client": "Spec Shoot",
+      "date": "April 24, 2024",
+      "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
+      "t": "Weekend with Rivian",
+      "tags": [
+        "Photography",
+        "Automotive",
+        "Documentary",
+        "Outdoor"
+      ],
+      "yr": "2024",
+      "id": "weekend-with-rivian",
+      "selected": true,
+      "roles": [
+        "stills"
+      ],
+      "tone": "pale",
+      "gal": 5
+    },
+    {
       "loc": "Mount Whitney, California",
       "del": [
         "Personal series"
@@ -707,37 +686,302 @@ window.JC_CONTENT = {
       "gal": 6
     },
     {
-      "loc": "San Francisco, California",
+      "loc": "San Diego, CA",
       "del": [
-        "Documentary stills"
+        "Stills"
       ],
-      "client": "Personal",
-      "date": "August 25, 2024",
-      "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
-      "t": "Weekend with Rivian",
+      "client": "Banana Boat",
+      "date": "November 14, 2024",
+      "desc": "Our job was to capture all product imagery with an 'in world' feel. The shoot had two portions, a lifestyle primary shoot that was shot by Jordan & Dani Lutes, and the still life team which was myself and my lighting team.",
+      "t": "Banana Boat SS 25",
       "tags": [
         "Photography",
-        "Documentary",
+        "Sport",
+        "Wellness",
+        "Outdoor"
+      ],
+      "yr": "2025",
+      "credits": [
+        {
+          "r": "Still Life Photographer",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Lifestyle Photographer",
+          "n": "Jordan Lutes"
+        },
+        {
+          "r": "DP",
+          "n": "Dani Lutes"
+        },
+        {
+          "r": "Photo Assistants",
+          "n": "Hugh Foster & Team"
+        },
+        {
+          "r": "Grip & Lighting EQ",
+          "n": "Load Bearing Studio"
+        }
+      ],
+      "id": "banana-boat-ss-24",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
+      "loc": "Costa Mesa, CA",
+      "client": "The Rally Project",
+      "date": "August 14, 2024",
+      "desc": "Promotional imagery for the collaboration between The Rally Project and SOC in the event, Shape of Light.",
+      "t": "Shape of Light",
+      "tags": [
+        "Photography",
         "Automotive"
       ],
       "yr": "2024",
+      "credits": [
+        {
+          "r": "Talent",
+          "n": "Paul Lefevre (Son of Cobra)"
+        }
+      ],
+      "id": "shape-of-light",
+      "selected": false,
+      "roles": [
+        "cd",
+        "stills"
+      ]
+    },
+    {
+      "loc": "Southern California",
+      "del": [
+        "Social film series"
+      ],
+      "client": "The Fullest",
+      "date": "2025 — 2026",
+      "desc": "A series of creative projects directed towards social media use.",
+      "t": "The Fullest 25/26",
+      "tags": [
+        "Cinematography",
+        "Campaign",
+        "Wellness"
+      ],
+      "yr": "2025",
+      "credits": [
+        {
+          "r": "DP",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Photography",
+          "n": "Chase Thompson"
+        }
+      ],
+      "id": "fullest-25-26",
+      "selected": false,
+      "roles": [
+        "motion"
+      ],
+      "tone": "sage",
+      "gal": 4
+    },
+    {
+      "loc": "The Concours Club, Miami, Florida",
+      "del": [
+        "Editorial stills"
+      ],
+      "client": "Road & Track",
+      "date": "February 2, 2023",
+      "desc": "An editorial project for Road & Track documenting the record setting Le Mans car built by Briggs Cunningham, the Cunningham C5-R. The project was shot at the Concours Club in south Florida. What's really special about this car wasn't just the history or the sound of it, but the condition. The Revs Institute did an incredible job not restoring the vehicle, but keeping it in the same condition that it was in when it finished the 24 hours of Le Mans. You can literally see the sweat stains still on the seat.",
+      "t": "Breakdance",
+      "tags": [
+        "Photography",
+        "Editorial",
+        "Automotive"
+      ],
+      "yr": "2023",
       "credits": [
         {
           "r": "Photography",
           "n": "Jake Caminero"
         },
         {
-          "r": "Friends & Partners",
-          "n": "Peden+Munk"
+          "r": "Photo Assistant",
+          "n": "Jacob Outsen"
+        },
+        {
+          "r": "Digital Tech",
+          "n": "Tony Lai"
+        },
+        {
+          "r": "Editor in Chief",
+          "n": "Matt Farah"
+        },
+        {
+          "r": "Car",
+          "n": "The Revs Institute"
+        },
+        {
+          "r": "Publication",
+          "n": "Road & Track"
+        },
+        {
+          "r": "Location",
+          "n": "The Concours Club"
         }
       ],
-      "id": "weekend-with-rivian",
+      "id": "rt-breakdance",
       "selected": true,
+      "roles": [
+        "stills"
+      ],
+      "tone": "grey",
+      "gal": 6
+    },
+    {
+      "loc": "Big Sur, California",
+      "del": [
+        "Editorial stills"
+      ],
+      "client": "Road & Track",
+      "date": "2022",
+      "desc": "Editorial project for Road & Track in Big Sur for the then unreleased Rimac Nevera.",
+      "t": "Rimac Nevera",
+      "tags": [
+        "Photography",
+        "Editorial",
+        "Automotive"
+      ],
+      "yr": "2022",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Assistant",
+          "n": "Nick Warren"
+        }
+      ],
+      "id": "rt-rimac-nevera",
+      "selected": false,
       "roles": [
         "stills"
       ],
       "tone": "pale",
       "gal": 5
+    },
+    {
+      "loc": "Southern California",
+      "del": [
+        "Editorial stills"
+      ],
+      "client": "Road & Track",
+      "date": "2023",
+      "desc": "Editorial project for Road & Track.",
+      "t": "Everatti",
+      "tags": [
+        "Photography",
+        "Editorial",
+        "Automotive"
+      ],
+      "yr": "2023",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Zach Sorensen"
+        }
+      ],
+      "id": "rt-everatti",
+      "selected": false,
+      "roles": [
+        "stills"
+      ],
+      "tone": "black",
+      "gal": 4
+    },
+    {
+      "loc": "Malibu, California",
+      "del": [
+        "Editorial stills"
+      ],
+      "client": "Road & Track",
+      "date": "2022",
+      "desc": "My first editorial project for Road & Track featuring the Volvo P1800 reimagined by Cyan Racing, formerly known as Polestar. The shoot took place in Malibu, California.",
+      "t": "Cyan P1800",
+      "tags": [
+        "Photography",
+        "Editorial",
+        "Automotive"
+      ],
+      "yr": "2022",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Jeff Gros"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Zach Sorensen"
+        },
+        {
+          "r": "Editor at Large",
+          "n": "Matt Farah"
+        },
+        {
+          "r": "Car",
+          "n": "Cyan Racing"
+        },
+        {
+          "r": "Editorial Creative Direction",
+          "n": "Cassidy Zobl"
+        }
+      ],
+      "id": "rt-cyan-p1800",
+      "selected": false,
+      "roles": [
+        "stills"
+      ],
+      "tone": "clay",
+      "gal": 5
+    },
+    {
+      "loc": "Southern California",
+      "del": [
+        "Single page commission"
+      ],
+      "client": "Road & Track",
+      "date": "2023",
+      "desc": "A single page commission for Road & Track.",
+      "t": "The Spot",
+      "tags": [
+        "Photography",
+        "Editorial",
+        "Automotive"
+      ],
+      "yr": "2023",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        }
+      ],
+      "id": "rt-the-spot",
+      "selected": false,
+      "roles": [
+        "stills"
+      ],
+      "tone": "grey",
+      "gal": 3
     },
     {
       "id": "son-of-cobra-bristol",
@@ -878,38 +1122,6 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
-      "loc": "Orange County, California",
-      "del": [
-        "Documentary stills"
-      ],
-      "client": "Oak Cycling",
-      "date": "January 18, 2025",
-      "desc": "A short ride with Wyatt Funk and Oak Cycling.",
-      "t": "Morning Ride",
-      "tags": [
-        "Photography",
-        "Cycling"
-      ],
-      "yr": "2025",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Talent",
-          "n": "Wyatt Funk"
-        }
-      ],
-      "id": "oak-morning-ride",
-      "selected": false,
-      "roles": [
-        "stills"
-      ],
-      "tone": "forest",
-      "gal": 4
-    },
-    {
       "loc": "San Juan Capistrano, California",
       "del": [
         "Brand film",
@@ -981,203 +1193,6 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
-      "loc": "The Concours Club, Miami, Florida",
-      "del": [
-        "Editorial stills"
-      ],
-      "client": "Road & Track",
-      "date": "February 2, 2023",
-      "desc": "An editorial project for Road & Track documenting the record setting Le Mans car built by Briggs Cunningham, the Cunningham C5-R. The project was shot at the Concours Club in south Florida. What's really special about this car wasn't just the history or the sound of it, but the condition. The Revs Institute did an incredible job not restoring the vehicle, but keeping it in the same condition that it was in when it finished the 24 hours of Le Mans. You can literally see the sweat stains still on the seat.",
-      "t": "Breakdance",
-      "tags": [
-        "Photography",
-        "Editorial",
-        "Automotive"
-      ],
-      "yr": "2023",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Photo Assistant",
-          "n": "Jacob Outsen"
-        },
-        {
-          "r": "Digital Tech",
-          "n": "Tony Lai"
-        },
-        {
-          "r": "Editor in Chief",
-          "n": "Matt Farah"
-        },
-        {
-          "r": "Car",
-          "n": "The Revs Institute"
-        },
-        {
-          "r": "Publication",
-          "n": "Road & Track"
-        },
-        {
-          "r": "Location",
-          "n": "The Concours Club"
-        }
-      ],
-      "id": "rt-breakdance",
-      "selected": true,
-      "roles": [
-        "stills"
-      ],
-      "tone": "grey",
-      "gal": 6
-    },
-    {
-      "loc": "Big Sur, California",
-      "del": [
-        "Editorial stills"
-      ],
-      "client": "Road & Track",
-      "date": "2022",
-      "desc": "Editorial project for Road & Track in Big Sur for the then unreleased Rimac Nevera.",
-      "t": "Rimac Nevera",
-      "tags": [
-        "Photography",
-        "Editorial",
-        "Automotive"
-      ],
-      "yr": "2022",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Assistant",
-          "n": "Nick Warren"
-        }
-      ],
-      "id": "rt-rimac-nevera",
-      "selected": false,
-      "roles": [
-        "stills"
-      ],
-      "tone": "pale",
-      "gal": 5
-    },
-    {
-      "loc": "Southern California",
-      "del": [
-        "Single page commission"
-      ],
-      "client": "Road & Track",
-      "date": "2023",
-      "desc": "A single page commission for Road & Track.",
-      "t": "The Spot",
-      "tags": [
-        "Photography",
-        "Editorial",
-        "Automotive"
-      ],
-      "yr": "2023",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        }
-      ],
-      "id": "rt-the-spot",
-      "selected": false,
-      "roles": [
-        "stills"
-      ],
-      "tone": "grey",
-      "gal": 3
-    },
-    {
-      "loc": "Southern California",
-      "del": [
-        "Editorial stills"
-      ],
-      "client": "Road & Track",
-      "date": "2023",
-      "desc": "Editorial project for Road & Track.",
-      "t": "Everatti",
-      "tags": [
-        "Photography",
-        "Editorial",
-        "Automotive"
-      ],
-      "yr": "2023",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Photo Assistant",
-          "n": "Zach Sorensen"
-        }
-      ],
-      "id": "rt-everatti",
-      "selected": false,
-      "roles": [
-        "stills"
-      ],
-      "tone": "black",
-      "gal": 4
-    },
-    {
-      "loc": "Malibu, California",
-      "del": [
-        "Editorial stills"
-      ],
-      "client": "Road & Track",
-      "date": "2022",
-      "desc": "My first editorial project for Road & Track featuring the Volvo P1800 reimagined by Cyan Racing, formerly known as Polestar. The shoot took place in Malibu, California.",
-      "t": "Cyan P1800",
-      "tags": [
-        "Photography",
-        "Editorial",
-        "Automotive"
-      ],
-      "yr": "2022",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Photo Assistant",
-          "n": "Jeff Gros"
-        },
-        {
-          "r": "Photo Assistant",
-          "n": "Zach Sorensen"
-        },
-        {
-          "r": "Editor at Large",
-          "n": "Matt Farah"
-        },
-        {
-          "r": "Car",
-          "n": "Cyan Racing"
-        },
-        {
-          "r": "Editorial Creative Direction",
-          "n": "Cassidy Zobl"
-        }
-      ],
-      "id": "rt-cyan-p1800",
-      "selected": false,
-      "roles": [
-        "stills"
-      ],
-      "tone": "clay",
-      "gal": 5
-    },
-    {
       "loc": "Los Angeles, California",
       "del": [
         "Portrait stills"
@@ -1241,37 +1256,20 @@ window.JC_CONTENT = {
       "gal": 4
     },
     {
-      "loc": "Southern California",
-      "del": [
-        "Social film series"
-      ],
-      "client": "The Fullest",
-      "date": "2025 — 2026",
-      "desc": "A series of creative projects directed towards social media use.",
-      "t": "The Fullest 25/26",
+      "loc": "Cuyama, CA",
+      "client": "Cuyama Buckhorn",
+      "date": "2024",
+      "desc": "Imagery of The Buckhorn and the surrounding area.",
+      "t": "The Buckhorn",
       "tags": [
-        "Cinematography",
-        "Campaign",
-        "Wellness"
+        "Photography"
       ],
-      "yr": "2025",
-      "credits": [
-        {
-          "r": "DP",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Photography",
-          "n": "Chase Thompson"
-        }
-      ],
-      "id": "fullest-25-26",
+      "yr": "2024",
+      "id": "cuyama-buckhorn",
       "selected": false,
       "roles": [
-        "motion"
-      ],
-      "tone": "sage",
-      "gal": 4
+        "stills"
+      ]
     },
     {
       "loc": "Cuyama Valley, California",
@@ -1347,6 +1345,65 @@ window.JC_CONTENT = {
       "gal": 6
     },
     {
+      "loc": "Orange County, California",
+      "del": [
+        "Documentary stills"
+      ],
+      "client": "Oak Cycling",
+      "date": "January 18, 2025",
+      "desc": "A short ride with Wyatt Funk and Oak Cycling.",
+      "t": "Morning Ride",
+      "tags": [
+        "Photography",
+        "Cycling"
+      ],
+      "yr": "2025",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Talent",
+          "n": "Wyatt Funk"
+        }
+      ],
+      "id": "oak-morning-ride",
+      "selected": false,
+      "roles": [
+        "stills"
+      ],
+      "tone": "forest",
+      "gal": 4
+    },
+    {
+      "client": "Endure & Stereoscope",
+      "date": "November, 2024",
+      "desc": "Launch of Endure Cycling and Stereoscope Coffee's collaborative merch.",
+      "t": "Endure+Stereoscope",
+      "yr": "2024",
+      "video": "https://vimeo.com/1224791979/feac6161a5?share=copy&fl=sv&fe=ci",
+      "id": "endure-cycling-stereoscope",
+      "selected": false,
+      "roles": [
+        "motion",
+        "stills"
+      ]
+    },
+    {
+      "loc": "California",
+      "client": "Frontrunner",
+      "date": "2024",
+      "desc": "Stills of product in use for web and social",
+      "t": "Frontrunner",
+      "yr": "2024",
+      "id": "frontrunner",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
       "loc": "Los Angeles, California",
       "del": [
         "Spec campaign stills"
@@ -1384,6 +1441,18 @@ window.JC_CONTENT = {
       ],
       "tone": "pale",
       "gal": 4
+    },
+    {
+      "client": "Snapchat",
+      "date": "August, 2025",
+      "desc": "Landscape images of Snapchat's 'Say it in a Snap' Billboards to be used for social media and web assets.",
+      "t": "Say it in a Snap",
+      "yr": "2025",
+      "id": "snapchat-say-it-in-a-snap",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
     },
     {
       "loc": "Southern California",
@@ -1445,7 +1514,53 @@ window.JC_CONTENT = {
         "u": "https://linkedin.com"
       }
     ],
-    "bts": [],
+    "bts": [
+      "/content/media/site/bts/000067280020.webp",
+      "/content/media/site/bts/385444020004.jpg",
+      "/content/media/site/bts/1d37a33b-2765-4d78-ad14-b7a0839b3cd5.webp",
+      "/content/media/site/bts/240b8799.webp",
+      "/content/media/site/bts/385444020008.jpg",
+      "/content/media/site/bts/dsc05357.webp",
+      "/content/media/site/bts/b24i8578-16.webp",
+      "/content/media/site/bts/000067280027.webp",
+      "/content/media/site/bts/b24i8520-3.webp",
+      "/content/media/site/bts/240b8791.webp",
+      "/content/media/site/bts/dsc05765.webp",
+      "/content/media/site/bts/dsc06491.webp",
+      "/content/media/site/bts/dsc06549.webp",
+      "/content/media/site/bts/dscf4212-1.webp",
+      "/content/media/site/bts/dscf6215.webp",
+      "/content/media/site/bts/dscf6217.webp",
+      "/content/media/site/bts/img_0874.webp",
+      "/content/media/site/bts/img_0894.webp",
+      "/content/media/site/bts/img_0903.webp",
+      "/content/media/site/bts/img_0919.webp",
+      "/content/media/site/bts/img_1492.webp",
+      "/content/media/site/bts/v0040793.webp",
+      "/content/media/site/bts/rt_lucid_20230193.webp",
+      "/content/media/site/bts/v0040794.webp",
+      "/content/media/site/bts/rdm_9057.webp",
+      "/content/media/site/bts/rdm_8597.webp",
+      "/content/media/site/bts/rdm_8929.webp",
+      "/content/media/site/bts/ninjav_s001_s001_t070.webp",
+      "/content/media/site/bts/p1004853.webp",
+      "/content/media/site/bts/p1004843.webp",
+      "/content/media/site/bts/img_7218.webp",
+      "/content/media/site/bts/img_8672.webp",
+      "/content/media/site/bts/img_7094.webp",
+      "/content/media/site/bts/img_6377.webp",
+      "/content/media/site/bts/img_7019.webp",
+      "/content/media/site/bts/img_6909.webp",
+      "/content/media/site/bts/img_6375.webp",
+      "/content/media/site/bts/img_2380.webp",
+      "/content/media/site/bts/img_3368.webp",
+      "/content/media/site/bts/img_5252.webp",
+      "/content/media/site/bts/img_5253-1.webp",
+      "/content/media/site/bts/img_5436.webp",
+      "/content/media/site/bts/img_2507.webp",
+      "/content/media/site/bts/img_2066.webp",
+      "/content/media/site/bts/img_2288.webp"
+    ],
     "info": [
       {
         "h": "Selected Clients",
