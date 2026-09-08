@@ -1,0 +1,36 @@
+{
+  "loc": "Cuyama, CA",
+  "client": "Cuyama Buckhorn",
+  "date": "2024",
+  "desc": "Imagery of The Buckhorn and the surrounding area.",
+  "t": "The Buckhorn",
+  "images": {
+    "main": "/content/media/cuyama-buckhorn/v0031391.jpg",
+    "gallery": [
+      "/content/media/cuyama-buckhorn/dscf6808.jpg",
+      "/content/media/cuyama-buckhorn/dscf6852-1.jpg",
+      "/content/media/cuyama-buckhorn/dscf6874.jpg",
+      "/content/media/cuyama-buckhorn/dscf6894.jpg",
+      "/content/media/cuyama-buckhorn/dscf6884-1.jpg",
+      "/content/media/cuyama-buckhorn/dscf6975.jpg",
+      "/content/media/cuyama-buckhorn/dscf6988.jpg",
+      "/content/media/cuyama-buckhorn/dscf6990.jpg",
+      "/content/media/cuyama-buckhorn/dscf6995.jpg",
+      "/content/media/cuyama-buckhorn/dscf7011.jpg",
+      "/content/media/cuyama-buckhorn/dscf7065.jpg",
+      "/content/media/cuyama-buckhorn/v0031293.jpg",
+      "/content/media/cuyama-buckhorn/v0031380.jpg",
+      "/content/media/cuyama-buckhorn/v0031431.jpg",
+      "/content/media/cuyama-buckhorn/v0031557-1.jpg"
+    ]
+  },
+  "tags": [
+    "Photography"
+  ],
+  "yr": "2024",
+  "id": "cuyama-buckhorn",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
