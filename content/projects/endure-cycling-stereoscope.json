@@ -1,0 +1,24 @@
+{
+  "client": "Endure & Stereoscope",
+  "date": "November, 2024",
+  "desc": "Launch of Endure Cycling and Stereoscope Coffee's collaborative merch.",
+  "t": "Endure+Stereoscope",
+  "images": {
+    "main": "/content/media/endure-cycling-stereoscope/g09a0588.jpg",
+    "gallery": [
+      "/content/media/endure-cycling-stereoscope/v0030020.jpg",
+      "/content/media/endure-cycling-stereoscope/g09a0680.jpg",
+      "/content/media/endure-cycling-stereoscope/v0030017.jpg",
+      "/content/media/endure-cycling-stereoscope/g09a0660.jpg",
+      "/content/media/endure-cycling-stereoscope/g09a0560.jpg"
+    ]
+  },
+  "yr": "2024",
+  "video": "https://vimeo.com/1224791979?share=copy&fl=sv&fe=ci",
+  "id": "endure-cycling-stereoscope",
+  "selected": false,
+  "roles": [
+    "motion",
+    "stills"
+  ]
+}
