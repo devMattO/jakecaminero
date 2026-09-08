@@ -1,0 +1,44 @@
+{
+  "client": "Spec Shoot",
+  "date": "April 24, 2024",
+  "desc": "A fun weekend in SF with a Rivian",
+  "t": "A Weekend with Rivian",
+  "images": {
+    "main": "/content/media/weekend-with-rivian/_dsc5596.jpg",
+    "gallery": [
+      "/content/media/weekend-with-rivian/_dsc5343.jpg",
+      "/content/media/weekend-with-rivian/_dsc5413.jpg",
+      "/content/media/weekend-with-rivian/_dsc5526.jpg",
+      "/content/media/weekend-with-rivian/_dsc5454.jpg",
+      "/content/media/weekend-with-rivian/_dsc5331.jpg",
+      "/content/media/weekend-with-rivian/_dsc5381.jpg",
+      "/content/media/weekend-with-rivian/_dsc5307.jpg",
+      "/content/media/weekend-with-rivian/_dsc5475.jpg",
+      "/content/media/weekend-with-rivian/_dsc5506-1.jpg",
+      "/content/media/weekend-with-rivian/_dsc5589.jpg",
+      "/content/media/weekend-with-rivian/_dsc5831.jpg",
+      "/content/media/weekend-with-rivian/_dsc5603.jpg",
+      "/content/media/weekend-with-rivian/_dsc6052.jpg",
+      "/content/media/weekend-with-rivian/_dsc5880.jpg",
+      "/content/media/weekend-with-rivian/_dsc5991.jpg",
+      "/content/media/weekend-with-rivian/_dsc6038.jpg",
+      "/content/media/weekend-with-rivian/_dsc5947.jpg",
+      "/content/media/weekend-with-rivian/_dsc5916.jpg",
+      "/content/media/weekend-with-rivian/_dsc5903.jpg",
+      "/content/media/weekend-with-rivian/_dsc5646.jpg",
+      "/content/media/weekend-with-rivian/contact_riri_02.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Automotive",
+    "Documentary",
+    "Outdoor"
+  ],
+  "yr": "2024",
+  "id": "weekend-with-rivian",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
