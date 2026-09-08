@@ -1,0 +1,27 @@
+{
+  "loc": "California",
+  "client": "Frontrunner",
+  "date": "2024",
+  "desc": "Stills of product in use for web and social",
+  "t": "Frontrunner",
+  "images": {
+    "main": "/content/media/frontrunner/img_4705.jpg",
+    "gallery": [
+      "/content/media/frontrunner/dsc01683-1.jpg",
+      "/content/media/frontrunner/ijgx5278.jpg",
+      "/content/media/frontrunner/ijgx5332.jpg",
+      "/content/media/frontrunner/ijgx5523.jpg",
+      "/content/media/frontrunner/ijgx5499.jpg",
+      "/content/media/frontrunner/ijgx5465.jpg",
+      "/content/media/frontrunner/ijgx5412.jpg",
+      "/content/media/frontrunner/dsc04996.jpg",
+      "/content/media/frontrunner/ijgx5201.jpg"
+    ]
+  },
+  "yr": "2024",
+  "id": "frontrunner",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
