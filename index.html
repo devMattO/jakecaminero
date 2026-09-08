@@ -413,15 +413,20 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
    directions at slightly different speeds so they don't feel mechanically
    synced. Each row's track is the photo list duplicated once, so animating
    translateX from 0 to exactly -50% loops seamlessly — the point where the
-   duplicate begins lines up pixel-for-pixel with where the original ended. */
+   duplicate begins lines up pixel-for-pixel with where the original ended.
+   Rows are also natively scrollable — overflow-x:auto lets a trackpad/touch
+   swipe move them directly, scrollbar hidden to keep the look clean; the
+   first real scroll a visitor makes turns the animation off for that row
+   (see btsGallery()), so a manual scroll never fights the auto-scroll. */
 .btsgal{border-top:1px solid var(--hair);
   padding:clamp(30px,4.5vw,54px) 0 clamp(40px,6vw,70px);
   display:grid;gap:clamp(14px,2vw,22px);overflow:hidden}
-.bts-row{overflow:hidden}
+.bts-row{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none}
+.bts-row::-webkit-scrollbar{display:none}
 .bts-row:hover .bts-track{animation-play-state:paused}
 .bts-track{display:flex;width:max-content;gap:clamp(10px,1.6vw,18px);
-  animation:bts-scroll 46s linear infinite}
-.bts-row:nth-child(2) .bts-track{animation-name:bts-scroll-rev;animation-duration:52s}
+  animation:bts-scroll 100s linear infinite}
+.bts-row:nth-child(2) .bts-track{animation-name:bts-scroll-rev;animation-duration:112s}
 .bts-cell{height:clamp(160px,22vw,300px);flex:none;overflow:hidden}
 .bts-cell img{width:100%;height:100%;object-fit:cover;display:block}
 /* aria-hidden duplicate half — display:contents keeps its images as plain
@@ -1156,6 +1161,14 @@ $("#infoBlocks").innerHTML=CONTENT.site.info.filter(b=>(b.list&&b.list.length)||
    shapes rather than one row inheriting a whole run of similarly-shaped
    uploads. */
 const BTS_RATIOS=[1.5,0.78,1.15,1.7,0.9,1.3];
+/* Slow, ambient px/sec per row (not a fixed animation-duration) — the CSS
+   duration alone would keep feeling faster every time Jake uploads more
+   BTS photos, since the same 100s/112s would then have to cover an
+   ever-longer track. Measuring the real track width and setting the
+   duration from a constant speed keeps the pace the same regardless of
+   how many photos end up in a row. Row 2 is deliberately a bit slower so
+   the two never feel mechanically synced. */
+const BTS_PX_PER_SEC=[34,29];
 (function btsGallery(){
   const photos=CONTENT.site.bts||[];
   const wrap=$("#btsGal");
@@ -1168,6 +1181,26 @@ const BTS_RATIOS=[1.5,0.78,1.15,1.7,0.9,1.3];
     const cell=(src,i)=>`<div class="bts-cell" style="aspect-ratio:${BTS_RATIOS[i%BTS_RATIOS.length]}">
       <img src="${IMG_BASE+src}" alt="Behind the scenes with Jake Caminero" loading="lazy"></div>`;
     track.innerHTML=row.map(cell).join("")+`<div class="bts-dup" aria-hidden="true">${row.map(cell).join("")}</div>`;
+    const rowEl=track.closest(".bts-row");
+    /* Measuring scrollWidth right here would read 0 — the Info page is
+       .page{display:none} until its route is active (index.html:115-116),
+       so at this point in the script nothing here has real layout yet.
+       Defer to whenever the row is actually visible, same
+       IntersectionObserver pattern already used for the footer's copy
+       elsewhere on this page. */
+    new IntersectionObserver((entries,obs)=>{
+      if(!entries[0].isIntersecting)return;
+      const singleWidth=track.scrollWidth/2; // the track is the row's photos duplicated once
+      if(singleWidth>0) track.style.animationDuration=(singleWidth/BTS_PX_PER_SEC[ri]).toFixed(1)+"s";
+      obs.disconnect();
+    }).observe(rowEl);
+    /* A manual scroll (trackpad/touch swipe) turns the animation off for
+       good on that row, rather than trying to keep it running alongside —
+       a still-running transform and a user actively dragging the same row
+       would otherwise fight each other. scroll only ever fires here from a
+       real user gesture: our own animation moves the track via transform,
+       which never changes scrollLeft or dispatches scroll on its own. */
+    rowEl.addEventListener("scroll",()=>{track.style.animation="none"},{once:true,passive:true});
   });
 })();
 const mails=CONTENT.site.emails.map(m=>`<a href="mailto:${m}">${m}</a>`).join("");
