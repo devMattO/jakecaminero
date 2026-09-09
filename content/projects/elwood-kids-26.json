@@ -1,0 +1,42 @@
+{
+  "loc": "Los Angeles, CA",
+  "client": "Elwood",
+  "date": "July, 2026",
+  "desc": "Look book for Elwood kids ",
+  "t": "Elwood Kids",
+  "images": {
+    "main": "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260333.jpg",
+    "gallery": [
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260337.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260381.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260461.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260463.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260489.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260705.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260875.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20260902.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261041.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261078.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261211.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261298.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261398.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261460.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261808.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261940.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261960-1.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261962-1.jpg",
+      "/content/media/elwood-kids-26/elwood_kids_core_07_07_20261963.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Campaign",
+    "Fashion"
+  ],
+  "yr": "2026",
+  "id": "elwood-kids-26",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
