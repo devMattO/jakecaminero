@@ -1,0 +1,33 @@
+{
+  "loc": "Los Angeles, CA",
+  "client": "Elwood",
+  "date": "July, 2026",
+  "desc": "Core collection look book.",
+  "t": "Elwood Core",
+  "images": {
+    "main": "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3932-1.jpg",
+    "gallery": [
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3959.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4001.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4260.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4286.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4159.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3921.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3893.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3906.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3917.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4307.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4150.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3546.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4195.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_2648.jpg",
+      "/content/media/elwood-core/elwood_shades_of_red_07_08_2026_2985.jpg"
+    ]
+  },
+  "yr": "2026",
+  "id": "elwood-core",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
