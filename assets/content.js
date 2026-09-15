@@ -2,6 +2,19 @@
 window.JC_CONTENT = {
   "projects": [
     {
+      "loc": "Los Angeles, CA",
+      "client": "Elwood",
+      "date": "July, 2026",
+      "desc": "Core collection look book.",
+      "t": "Elwood Core",
+      "yr": "2026",
+      "id": "elwood-core",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
       "loc": "Costa Mesa, California",
       "del": [
         "16mm and digital film",
@@ -778,6 +791,7 @@ window.JC_CONTENT = {
           "n": "Chase Thompson"
         }
       ],
+      "video": "https://vimeo.com/1225064292?share=copy&fl=sv&fe=ci",
       "id": "fullest-25-26",
       "selected": false,
       "roles": [
@@ -984,6 +998,24 @@ window.JC_CONTENT = {
       "gal": 3
     },
     {
+      "loc": "Los Angeles, CA",
+      "client": "Elwood",
+      "date": "July, 2026",
+      "desc": "Look book for Elwood kids ",
+      "t": "Elwood Kids",
+      "tags": [
+        "Photography",
+        "Campaign",
+        "Fashion"
+      ],
+      "yr": "2026",
+      "id": "elwood-kids-26",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
       "id": "son-of-cobra-bristol",
       "t": "The Bristol Car",
       "client": "Son of Cobra",
@@ -1151,8 +1183,9 @@ window.JC_CONTENT = {
           "n": "The Fullest"
         }
       ],
+      "video": "https://vimeo.com/1225131840?share=copy&fl=sv&fe=ci",
       "id": "fullest-ecology-center",
-      "selected": false,
+      "selected": true,
       "roles": [
         "motion"
       ],

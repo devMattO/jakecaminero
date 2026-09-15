@@ -204,6 +204,19 @@ async function resolveImage(path, destDir, stem, id) {
   return `${id}/${stem}-${info.hash}-${info.widest}.jpg`;
 }
 
+/* Same as resolveImage(), but also surfaces the real width/height ratio —
+   for a gallery that sizes each cell to the photo's own shape instead of
+   forcing it into a fixed box and cropping. The already-processed
+   passthrough case has no metadata to give back (nothing here re-reads a
+   backfilled file's dimensions), so callers get `ratio: null` and fall
+   back to something reasonable client-side. */
+async function resolveImageWithRatio(path, destDir, stem, id) {
+  const local = resolveLocal(path);
+  if (local.startsWith("assets/")) return { ref: local.slice("assets/".length), ratio: null };
+  const info = await variants(local, destDir, stem);
+  return { ref: `${id}/${stem}-${info.hash}-${info.widest}.jpg`, ratio: info.w / info.h };
+}
+
 async function cms(out) {
   const images = await loadManifest(out);
   const projects = await readContentProjects();
@@ -310,7 +323,8 @@ async function processSiteImages(out, images) {
       let n = 0;
       for (const path of raw) {
         const stem = `${field}-${String(++n).padStart(2, "0")}`;
-        list.push(await resolveImage(path, join(out, "site"), stem, "site"));
+        const { ref, ratio } = await resolveImageWithRatio(path, join(out, "site"), stem, "site");
+        list.push({ src: ref, r: ratio });
       }
       site[field] = list;
       srcMap[field] = srcKey;

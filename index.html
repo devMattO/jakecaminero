@@ -1154,13 +1154,17 @@ $("#portrait").src=CONTENT.site.portrait?IMG_BASE+CONTENT.site.portrait:shot("po
 $("#infoBlocks").innerHTML=CONTENT.site.info.filter(b=>(b.list&&b.list.length)||b.body).map(b=>
   `<div class="blk"><h3>${b.h}</h3>${b.list?`<ul>${b.list.map(x=>`<li>${x.includes("@")?`<a href="mailto:${x}">${x}</a>`:x}</li>`).join("")}</ul>`:`<p class="body">${b.body}</p>`}</div>`).join("");
 
-/* BTS Gallery — same idea as SLOTS/GAL_SLOTS ("cycle a small set of aspect
-   ratios by index"), applied to a horizontal flex row instead of a CSS
-   grid. Hides entirely if Jake hasn't uploaded anything yet. Photos
-   alternate into two rows by index so each row gets a mixed set of
-   shapes rather than one row inheriting a whole run of similarly-shaped
-   uploads. */
-const BTS_RATIOS=[1.5,0.78,1.15,1.7,0.9,1.3];
+/* BTS Gallery — applied to a horizontal flex row instead of a CSS grid.
+   Hides entirely if Jake hasn't uploaded anything yet. Photos alternate
+   into two rows by index so each row gets a mixed set of shapes rather
+   than one row inheriting a whole run of similarly-shaped uploads. Each
+   cell keeps the photo's own real aspect ratio (r, captured server-side
+   in prepare-images.mjs) instead of being forced into one of a handful of
+   fixed shapes and cropped to fit — that was cropping real photos,
+   sometimes badly. A missing ratio (the already-processed-passthrough
+   edge case, which never actually happens for BTS uploads today) falls
+   back to a plain 4:3 rather than guessing further. */
+const BTS_FALLBACK_RATIO=4/3;
 /* Slow, ambient px/sec per row (not a fixed animation-duration) — the CSS
    duration alone would keep feeling faster every time Jake uploads more
    BTS photos, since the same 100s/112s would then have to cover an
@@ -1174,12 +1178,12 @@ const BTS_PX_PER_SEC=[34,29];
   const wrap=$("#btsGal");
   if(!photos.length){ wrap.remove(); return; }
   const rows=[[],[]];
-  photos.forEach((src,i)=>rows[i%2].push(src));
+  photos.forEach((p,i)=>rows[i%2].push(p));
   [...wrap.querySelectorAll(".bts-track")].forEach((track,ri)=>{
     const row=rows[ri];
     if(!row.length){ track.closest(".bts-row").remove(); return; }
-    const cell=(src,i)=>`<div class="bts-cell" style="aspect-ratio:${BTS_RATIOS[i%BTS_RATIOS.length]}">
-      <img src="${IMG_BASE+src}" alt="Behind the scenes with Jake Caminero" loading="lazy"></div>`;
+    const cell=p=>`<div class="bts-cell" style="aspect-ratio:${p.r||BTS_FALLBACK_RATIO}">
+      <img src="${IMG_BASE+p.src}" alt="Behind the scenes with Jake Caminero" loading="lazy"></div>`;
     track.innerHTML=row.map(cell).join("")+`<div class="bts-dup" aria-hidden="true">${row.map(cell).join("")}</div>`;
     const rowEl=track.closest(".bts-row");
     /* Measuring scrollWidth right here would read 0 — the Info page is

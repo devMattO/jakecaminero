@@ -543,51 +543,186 @@
       "bts": "[\"/content/media/site/bts/000067280020.webp\",\"/content/media/site/bts/385444020004.jpg\",\"/content/media/site/bts/1d37a33b-2765-4d78-ad14-b7a0839b3cd5.webp\",\"/content/media/site/bts/240b8799.webp\",\"/content/media/site/bts/385444020008.jpg\",\"/content/media/site/bts/dsc05357.webp\",\"/content/media/site/bts/b24i8578-16.webp\",\"/content/media/site/bts/000067280027.webp\",\"/content/media/site/bts/b24i8520-3.webp\",\"/content/media/site/bts/240b8791.webp\",\"/content/media/site/bts/dsc05765.webp\",\"/content/media/site/bts/dsc06491.webp\",\"/content/media/site/bts/dsc06549.webp\",\"/content/media/site/bts/dscf4212-1.webp\",\"/content/media/site/bts/dscf6215.webp\",\"/content/media/site/bts/dscf6217.webp\",\"/content/media/site/bts/img_0874.webp\",\"/content/media/site/bts/img_0894.webp\",\"/content/media/site/bts/img_0903.webp\",\"/content/media/site/bts/img_0919.webp\",\"/content/media/site/bts/img_1492.webp\",\"/content/media/site/bts/v0040793.webp\",\"/content/media/site/bts/rt_lucid_20230193.webp\",\"/content/media/site/bts/v0040794.webp\",\"/content/media/site/bts/rdm_9057.webp\",\"/content/media/site/bts/rdm_8597.webp\",\"/content/media/site/bts/rdm_8929.webp\",\"/content/media/site/bts/ninjav_s001_s001_t070.webp\",\"/content/media/site/bts/p1004853.webp\",\"/content/media/site/bts/p1004843.webp\",\"/content/media/site/bts/img_7218.webp\",\"/content/media/site/bts/img_8672.webp\",\"/content/media/site/bts/img_7094.webp\",\"/content/media/site/bts/img_6377.webp\",\"/content/media/site/bts/img_7019.webp\",\"/content/media/site/bts/img_6909.webp\",\"/content/media/site/bts/img_6375.webp\",\"/content/media/site/bts/img_2380.webp\",\"/content/media/site/bts/img_3368.webp\",\"/content/media/site/bts/img_5252.webp\",\"/content/media/site/bts/img_5253-1.webp\",\"/content/media/site/bts/img_5436.webp\",\"/content/media/site/bts/img_2507.webp\",\"/content/media/site/bts/img_2066.webp\",\"/content/media/site/bts/img_2288.webp\"]"
     },
     "bts": [
-      "site/bts-01-e4f9e66f-800.jpg",
-      "site/bts-02-6ec736dd-2400.jpg",
-      "site/bts-03-84e5e71a-800.jpg",
-      "site/bts-04-ef554d1e-800.jpg",
-      "site/bts-05-f1a3c759-2400.jpg",
-      "site/bts-06-37c6df20-800.jpg",
-      "site/bts-07-f3a09b8c-800.jpg",
-      "site/bts-08-f2ff8777-800.jpg",
-      "site/bts-09-d789bbd6-800.jpg",
-      "site/bts-10-1fbba7ea-800.jpg",
-      "site/bts-11-36b825cf-800.jpg",
-      "site/bts-12-d57af019-800.jpg",
-      "site/bts-13-1de4e6da-800.jpg",
-      "site/bts-14-c1be702f-800.jpg",
-      "site/bts-15-320c102b-800.jpg",
-      "site/bts-16-05213e08-800.jpg",
-      "site/bts-17-24151d92-800.jpg",
-      "site/bts-18-8bf646c3-800.jpg",
-      "site/bts-19-2b631573-800.jpg",
-      "site/bts-20-8fc7925f-800.jpg",
-      "site/bts-21-a3d61d98-800.jpg",
-      "site/bts-22-85dc19af-800.jpg",
-      "site/bts-23-a69dcc5e-800.jpg",
-      "site/bts-24-402e629c-800.jpg",
-      "site/bts-25-1310b787-800.jpg",
-      "site/bts-26-ffd7e2ab-800.jpg",
-      "site/bts-27-ff068a57-800.jpg",
-      "site/bts-28-a33c5869-800.jpg",
-      "site/bts-29-1aa985ef-800.jpg",
-      "site/bts-30-386ba993-800.jpg",
-      "site/bts-31-960d0fef-800.jpg",
-      "site/bts-32-24b2bfc7-800.jpg",
-      "site/bts-33-72738e15-800.jpg",
-      "site/bts-34-625d1c69-800.jpg",
-      "site/bts-35-9cbc5d60-800.jpg",
-      "site/bts-36-74036bec-800.jpg",
-      "site/bts-37-e6a87179-800.jpg",
-      "site/bts-38-960372c9-800.jpg",
-      "site/bts-39-d6b8fb8f-800.jpg",
-      "site/bts-40-e715c55c-800.jpg",
-      "site/bts-41-5467357b-800.jpg",
-      "site/bts-42-66477991-800.jpg",
-      "site/bts-43-c2b2ad5a-800.jpg",
-      "site/bts-44-d0e45dab-800.jpg",
-      "site/bts-45-14b9281c-800.jpg"
+      {
+        "src": "site/bts-01-e4f9e66f-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-02-6ec736dd-2400.jpg",
+        "r": 1.2257528556593977
+      },
+      {
+        "src": "site/bts-03-84e5e71a-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-04-ef554d1e-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-05-f1a3c759-2400.jpg",
+        "r": 1.2257528556593977
+      },
+      {
+        "src": "site/bts-06-37c6df20-800.jpg",
+        "r": 1.5
+      },
+      {
+        "src": "site/bts-07-f3a09b8c-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-08-f2ff8777-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-09-d789bbd6-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-10-1fbba7ea-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-11-36b825cf-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-12-d57af019-800.jpg",
+        "r": 1.5
+      },
+      {
+        "src": "site/bts-13-1de4e6da-800.jpg",
+        "r": 1.5
+      },
+      {
+        "src": "site/bts-14-c1be702f-800.jpg",
+        "r": 0.75
+      },
+      {
+        "src": "site/bts-15-320c102b-800.jpg",
+        "r": 1.5
+      },
+      {
+        "src": "site/bts-16-05213e08-800.jpg",
+        "r": 0.7142857142857143
+      },
+      {
+        "src": "site/bts-17-24151d92-800.jpg",
+        "r": 0.75
+      },
+      {
+        "src": "site/bts-18-8bf646c3-800.jpg",
+        "r": 0.75
+      },
+      {
+        "src": "site/bts-19-2b631573-800.jpg",
+        "r": 0.75
+      },
+      {
+        "src": "site/bts-20-8fc7925f-800.jpg",
+        "r": 0.75
+      },
+      {
+        "src": "site/bts-21-a3d61d98-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-22-85dc19af-800.jpg",
+        "r": 1.5090543259557343
+      },
+      {
+        "src": "site/bts-23-a69dcc5e-800.jpg",
+        "r": 1.5
+      },
+      {
+        "src": "site/bts-24-402e629c-800.jpg",
+        "r": 1.5090543259557343
+      },
+      {
+        "src": "site/bts-25-1310b787-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-26-ffd7e2ab-800.jpg",
+        "r": 0.799664241745943
+      },
+      {
+        "src": "site/bts-27-ff068a57-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-28-a33c5869-800.jpg",
+        "r": 1.7772511848341233
+      },
+      {
+        "src": "site/bts-29-1aa985ef-800.jpg",
+        "r": 1.7772511848341233
+      },
+      {
+        "src": "site/bts-30-386ba993-800.jpg",
+        "r": 1.7772511848341233
+      },
+      {
+        "src": "site/bts-31-960d0fef-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-32-24b2bfc7-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-33-72738e15-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-34-625d1c69-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-35-9cbc5d60-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-36-74036bec-800.jpg",
+        "r": 0.7995735607675906
+      },
+      {
+        "src": "site/bts-37-e6a87179-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-38-960372c9-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-39-d6b8fb8f-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-40-e715c55c-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-41-5467357b-800.jpg",
+        "r": 0.80042689434365
+      },
+      {
+        "src": "site/bts-42-66477991-800.jpg",
+        "r": 1.25
+      },
+      {
+        "src": "site/bts-43-c2b2ad5a-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-44-d0e45dab-800.jpg",
+        "r": 0.8
+      },
+      {
+        "src": "site/bts-45-14b9281c-800.jpg",
+        "r": 0.8
+      }
     ]
   },
   "endo-july-2026": {
@@ -634,12 +769,37 @@
     "_src": "{\"main\":\"/content/media/endo-fall-ii/dscf6508.jpg\",\"og\":\"/content/media/endo-fall-ii/dscf6508.jpg\",\"gallery\":[\"/content/media/endo-fall-ii/dscf6508.jpg\",\"/content/media/endo-fall-ii/dscf6536.jpg\",\"/content/media/endo-fall-ii/dscf6427.jpg\",\"/content/media/endo-fall-ii/dscf6539.jpg\",\"/content/media/endo-fall-ii/dscf6447.jpg\",\"/content/media/endo-fall-ii/dscf6586.jpg\",\"/content/media/endo-fall-ii/gfx_endo_test_sl2_leica_07_29_2026_cs_07-30-2026.jpg\"]}"
   },
   "fullest-25-26": {
+    "gallery": [
+      "fullest-25-26/01-054d22f6-800.jpg",
+      "fullest-25-26/02-8bbfb161-800.jpg",
+      "fullest-25-26/03-9d0b0f60-2400.jpg",
+      "fullest-25-26/04-490b3182-800.jpg",
+      "fullest-25-26/05-16018116-800.jpg",
+      "fullest-25-26/06-76c8c8e6-800.jpg",
+      "fullest-25-26/07-2541689f-800.jpg"
+    ],
     "main": "fullest-25-26/main-9d0b0f60-2400.jpg",
-    "_src": "{\"main\":\"/content/media/fullest-25-26/still-2026-01-07-135552_4.3.2.webp\",\"og\":null,\"gallery\":[]}"
+    "_src": "{\"main\":\"/content/media/fullest-25-26/still-2026-01-07-135552_4.3.2.webp\",\"og\":null,\"gallery\":[\"/content/media/fullest-25-26/2.1.1_2.1.1.jpg\",\"/content/media/fullest-25-26/1.23.1_1.23.1.jpg\",\"/content/media/fullest-25-26/still-2026-01-07-135552_4.3.2.webp\",\"/content/media/fullest-25-26/1.12.1_1.12.1.jpg\",\"/content/media/fullest-25-26/1.17.1_1.17.1.jpg\",\"/content/media/fullest-25-26/1.34.1_1.34.1.jpg\",\"/content/media/fullest-25-26/1.25.2_1.25.2.jpg\"]}"
   },
   "fullest-ecology-center": {
-    "main": "fullest-ecology-center/main-7014bef4-1600.jpg",
-    "_src": "{\"main\":\"/content/media/fullest-ecology-center/screenshot-2026-08-10-at-2.46.16 pm.png\",\"og\":null,\"gallery\":[]}"
+    "gallery": [
+      "fullest-ecology-center/01-b3b14639-1600.jpg",
+      "fullest-ecology-center/02-f302ddba-1600.jpg",
+      "fullest-ecology-center/03-604c7b4a-1600.jpg",
+      "fullest-ecology-center/04-042a3420-1600.jpg",
+      "fullest-ecology-center/05-a1a60f0d-1600.jpg",
+      "fullest-ecology-center/06-58ae32fc-1600.jpg",
+      "fullest-ecology-center/07-d2f30f3a-1600.jpg",
+      "fullest-ecology-center/08-fab51616-1600.jpg",
+      "fullest-ecology-center/09-0617fae5-1600.jpg",
+      "fullest-ecology-center/10-cf81af30-1600.jpg",
+      "fullest-ecology-center/11-9ffdd0fb-1600.jpg",
+      "fullest-ecology-center/12-17f73484-1600.jpg",
+      "fullest-ecology-center/13-bbff4116-1600.jpg",
+      "fullest-ecology-center/14-301fb4a8-1600.jpg"
+    ],
+    "main": "fullest-ecology-center/main-d2665c88-1600.jpg",
+    "_src": "{\"main\":\"/content/media/fullest-ecology-center/1.1.1_1.1.1.jpg\",\"og\":null,\"gallery\":[\"/content/media/fullest-ecology-center/1.42.1_1.42.1.jpg\",\"/content/media/fullest-ecology-center/1.15.1_1.15.1.jpg\",\"/content/media/fullest-ecology-center/1.10.1_1.10.1.jpg\",\"/content/media/fullest-ecology-center/3.5.1_3.5.1.jpg\",\"/content/media/fullest-ecology-center/1.38.1_1.38.1.jpg\",\"/content/media/fullest-ecology-center/1.11.1_1.11.1.jpg\",\"/content/media/fullest-ecology-center/1.32.1_1.32.1.jpg\",\"/content/media/fullest-ecology-center/1.36.1_1.36.1.jpg\",\"/content/media/fullest-ecology-center/1.34.1_1.34.1.jpg\",\"/content/media/fullest-ecology-center/1.24.1_1.24.1.jpg\",\"/content/media/fullest-ecology-center/1.27.1_1.27.1.jpg\",\"/content/media/fullest-ecology-center/2.2.1_2.2.1.jpg\",\"/content/media/fullest-ecology-center/2.1.1_2.1.1.jpg\",\"/content/media/fullest-ecology-center/3.24.1_3.24.1.jpg\"]}"
   },
   "batch-farm-visit": {
     "main": "batch-farm-visit/main-f528ec4c-1600.jpg",
@@ -1050,5 +1210,51 @@
     ],
     "main": "snapchat-say-it-in-a-snap/main-ea6327f9-2400.jpg",
     "_src": "{\"main\":\"/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.13.34 pm.png\",\"og\":null,\"gallery\":[\"/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.15.04 pm.png\",\"/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.14.54 pm.png\",\"/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.14.38 pm.png\",\"/content/media/snapchat-say-it-in-a-snap/screenshot-2026-09-07-at-12.13.49 pm.png\",\"/content/media/snapchat-say-it-in-a-snap/1_contact-sheet_chicago-copy.jpg\",\"/content/media/snapchat-say-it-in-a-snap/2_contact-sheet_la-sf.jpg\"]}"
+  },
+  "elwood-core": {
+    "gallery": [
+      "elwood-core/01-a42c0572-2400.jpg",
+      "elwood-core/02-103fe322-2400.jpg",
+      "elwood-core/03-2345ecb6-2400.jpg",
+      "elwood-core/04-efb175e2-2400.jpg",
+      "elwood-core/05-d768e284-2400.jpg",
+      "elwood-core/06-ff5216e0-2400.jpg",
+      "elwood-core/07-511c1a2b-2400.jpg",
+      "elwood-core/08-7230ace1-2400.jpg",
+      "elwood-core/09-0d0d701b-2400.jpg",
+      "elwood-core/10-3ebe7d50-2400.jpg",
+      "elwood-core/11-245c18a8-2400.jpg",
+      "elwood-core/12-43d72509-2400.jpg",
+      "elwood-core/13-034b4782-2400.jpg",
+      "elwood-core/14-167b18be-2400.jpg",
+      "elwood-core/15-a00255bf-2400.jpg"
+    ],
+    "main": "elwood-core/main-db392192-2400.jpg",
+    "_src": "{\"main\":\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3932-1.jpg\",\"og\":null,\"gallery\":[\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3959.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4001.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4260.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4286.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4159.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3921.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3893.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3906.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3917.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4307.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4150.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_3546.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_4195.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_2648.jpg\",\"/content/media/elwood-core/elwood_shades_of_red_07_08_2026_2985.jpg\"]}"
+  },
+  "elwood-kids-26": {
+    "gallery": [
+      "elwood-kids-26/01-e8c03abf-2400.jpg",
+      "elwood-kids-26/02-efbd2e69-2400.jpg",
+      "elwood-kids-26/03-94f5c1c5-2400.jpg",
+      "elwood-kids-26/04-8fd6f1b4-2400.jpg",
+      "elwood-kids-26/05-5eb877d8-2400.jpg",
+      "elwood-kids-26/06-440fd574-2400.jpg",
+      "elwood-kids-26/07-999af8e5-2400.jpg",
+      "elwood-kids-26/08-a9bed106-2400.jpg",
+      "elwood-kids-26/09-12e1c59b-2400.jpg",
+      "elwood-kids-26/10-4636e1e6-2400.jpg",
+      "elwood-kids-26/11-f4a97119-2400.jpg",
+      "elwood-kids-26/12-b0986078-2400.jpg",
+      "elwood-kids-26/13-452fe152-2400.jpg",
+      "elwood-kids-26/14-8c37fa5b-2400.jpg",
+      "elwood-kids-26/15-a5e5de48-2400.jpg",
+      "elwood-kids-26/16-a916f185-2400.jpg",
+      "elwood-kids-26/17-0407df30-2400.jpg",
+      "elwood-kids-26/18-c9a59ae4-2400.jpg",
+      "elwood-kids-26/19-5a0d21e4-2400.jpg"
+    ],
+    "main": "elwood-kids-26/main-63db26d2-2400.jpg",
+    "_src": "{\"main\":\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260333.jpg\",\"og\":null,\"gallery\":[\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260337.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260381.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260461.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260463.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260489.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260705.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260875.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20260902.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261041.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261078.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261211.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261298.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261398.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261460.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261808.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261940.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261960-1.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261962-1.jpg\",\"/content/media/elwood-kids-26/elwood_kids_core_07_07_20261963.jpg\"]}"
   }
 }
