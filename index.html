@@ -551,7 +551,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
       </div>
       <div class="idx-view">
         <div class="idx-frame" id="idxFrame">
-          <img id="lyA" alt=""><img id="lyB" alt="">
+          <picture id="lyA"><source type="image/avif"><source type="image/webp"><img alt=""></picture><picture id="lyB"><source type="image/avif"><source type="image/webp"><img alt=""></picture>
         </div>
         <div class="idx-meta" id="idxMeta"></div>
       </div>
@@ -573,7 +573,7 @@ html[data-theme="dark"] .swap i{transform:translateX(13px)}
     <div class="scatter" id="scatter"></div>
   </div>
 </section>
-<div class="peek" id="peek"><img id="peekImg" alt=""></div>
+<div class="peek" id="peek"><picture id="peekImg"><source type="image/avif"><source type="image/webp"><img alt=""></picture></div>
 
 <!-- ══════════════ PROJECT DETAIL ══════════════ -->
 <section class="page top-pad" id="p-project"><div class="wrap" id="detWrap"></div></section>
@@ -716,12 +716,103 @@ CONTENT.projects.forEach(p=>{
 
 const mainImg  =(p,ratio)=> p.images&&p.images.main ? IMG_BASE+p.images.main
                                                     : shot(p.id,p.tone,ratio,p.overlay);
-const seoImg   = p => p.images&&(p.images.og||p.images.main) ? IMG_BASE+(p.images.og||p.images.main)
-                                                            : shot(p.id,p.tone,1.91,p.overlay);
+/* Feeds only <meta property="og:image">, never a rendered <img> — a meta
+   tag can't carry srcset, but link-preview consumers (Slack/iMessage/
+   Twitter/Facebook) render this small and mostly expect plain JPEG, so
+   there's no reason to hand them the full 2400w original. */
+const seoImg   = p => {
+  const resolved=p.images&&(p.images.og||p.images.main) ? IMG_BASE+(p.images.og||p.images.main)
+                                                          : shot(p.id,p.tone,1.91,p.overlay);
+  const v=parseVariants(resolved);
+  if(!v) return resolved;
+  const w=[...v.tiers].reverse().find(w=>w<=1600) || v.widest;
+  return v.urlFor(w,"jpg");
+};
 const galleryOf= p => (p.images&&p.images.gallery&&p.images.gallery.length)
     ? p.images.gallery.map(g=>IMG_BASE+g)
     : Array.from({length:p.gal||4},(_,i)=>shot(p.id+"g"+i,p.tone,GAL_SLOTS[i%6].r,""));
 const hasReal  = p => !!(p.images&&p.images.main);
+
+/* Responsive images — every <img> on the site used to reference one fixed
+   URL per photo (always the widest processed variant, always JPEG),
+   regardless of how small the actual display box was — confirmed a small
+   ~290px hover-preview box was loading the same 1.1MB 2400px-wide JPEG a
+   full-bleed hero would. tools/prepare-images.mjs already writes every
+   width tier <= the source's own width in all three formats
+   (avif/webp/jpeg) for every photo; the site just never referenced
+   anything but the single largest .jpg. This derives the other tiers from
+   the one stored reference by filename convention, so no manifest/pipeline
+   change is needed — everything below is real, present on disk already. */
+const IMG_WIDTHS=[800,1600,2400]; // must mirror tools/prepare-images.mjs's WIDTHS
+
+/* "<stem>-<hash>-<width>.<ext>" — stem may itself contain hyphens ("bts-01"),
+   so anchor on the hash (always exactly 8 hex chars) rather than assume
+   anything about stem's shape. Returns null for anything that isn't a
+   processed reference (a shot() data: URI placeholder), so callers can
+   fall back to a plain <img>. */
+function parseVariants(resolved){
+  if(!resolved||resolved.startsWith("data:")) return null;
+  const slash=resolved.lastIndexOf("/");
+  const dir=resolved.slice(0,slash+1), file=resolved.slice(slash+1);
+  const m=file.match(/^(.+)-([0-9a-f]{8})-(\d+)\.(?:jpg|jpeg)$/i);
+  if(!m) return null;
+  const [,stem,hash,widestStr]=m;
+  const widest=parseInt(widestStr,10);
+  const tiers=IMG_WIDTHS.filter(w=>w<=widest);
+  if(!tiers.length) tiers.push(widest);
+  const urlFor=(w,fmt)=>`${dir}${stem}-${hash}-${w}.${fmt}`;
+  const srcsetFor=fmt=>tiers.map(w=>`${urlFor(w,fmt)} ${w}w`).join(", ");
+  return {widest,tiers,urlFor,srcsetFor};
+}
+
+/* Fresh template-string render: <picture> for a real image, an untouched
+   plain <img> for a shot() placeholder. extraAttrs carries whatever the
+   call site needs on the <img> itself (class, loading="lazy", ...). */
+function pictureHTML(resolved,alt,sizes,extraAttrs=""){
+  const v=parseVariants(resolved);
+  if(!v) return `<img src="${resolved}" alt="${alt}" ${extraAttrs}>`;
+  return `<picture>
+    <source type="image/avif" srcset="${v.srcsetFor("avif")}" sizes="${sizes}">
+    <source type="image/webp" srcset="${v.srcsetFor("webp")}" sizes="${sizes}">
+    <img src="${v.urlFor(v.widest,"jpg")}" srcset="${v.srcsetFor("jpg")}" sizes="${sizes}" alt="${alt}" ${extraAttrs}></picture>`;
+}
+
+/* For the two persistent hover-preview nodes (lyA/lyB, peekImg), which are
+   mutated in place on every hover rather than re-rendered from a template —
+   updates an existing <picture>'s two <source>s + <img> together. */
+function setPictureSrc(pic,resolved,alt,sizes){
+  const img=pic.querySelector("img");
+  const av=pic.querySelector('source[type="image/avif"]');
+  const wp=pic.querySelector('source[type="image/webp"]');
+  const v=parseVariants(resolved);
+  if(!v){
+    av.removeAttribute("srcset"); av.removeAttribute("sizes");
+    wp.removeAttribute("srcset"); wp.removeAttribute("sizes");
+    img.removeAttribute("srcset"); img.removeAttribute("sizes");
+    img.src=resolved; img.alt=alt;
+    return;
+  }
+  av.srcset=v.srcsetFor("avif"); av.sizes=sizes;
+  wp.srcset=v.srcsetFor("webp"); wp.sizes=sizes;
+  img.srcset=v.srcsetFor("jpg"); img.sizes=sizes;
+  img.src=v.urlFor(v.widest,"jpg"); // fallback for browsers with no srcset support
+  img.alt=alt;
+}
+
+/* Home cards and the project gallery share the same 12-col .wrap grid —
+   derive `sizes` from the slot's own column span (SLOTS/GAL_SLOTS) instead
+   of a hand-maintained parallel table, so it can't drift from the actual
+   layout math. --shell is 1360px, --gut maxes at 44px each side. */
+const WRAP_MAX=1360-2*44; // 1272
+function slotSizes(c){
+  const [a,b]=c.split("/").map(n=>parseInt(n,10));
+  const pct=Math.round((b-a)/12*100);
+  return `(max-width:620px) 100vw, (max-width:1360px) ${pct}vw, ${Math.round(WRAP_MAX*pct/100)}px`;
+}
+/* Full-bleed contexts (homepage hero, a project's own hero) — keeps the
+   widest tier reachable on a large screen, so this is a pure format
+   (avif/webp) saving rather than a size reduction. */
+const HERO_SIZES=`(max-width:1360px) 100vw, ${WRAP_MAX}px`;
 
 CONTENT.projects.forEach(p=>{
   p.main=mainImg(p,1.5);
@@ -777,14 +868,14 @@ function frameArt(elId){
   const heroVid=CONTENT.site.heroVideo&&(CONTENT.site.heroVideo.match(/vimeo\.com\/(\d+)/)||[])[1];
   if(heroVid){
     heroEl.classList.add("has-video");
-    heroEl.innerHTML=(CONTENT.site.heroImage?`<img class="hero-media" src="${IMG_BASE+CONTENT.site.heroImage}" alt="">`:"")
+    heroEl.innerHTML=(CONTENT.site.heroImage?pictureHTML(IMG_BASE+CONTENT.site.heroImage,"",HERO_SIZES,'class="hero-media"'):"")
       +`<a class="hero-video" href="${CONTENT.site.heroVideo}" target="_blank" rel="noopener">
           <iframe src="https://player.vimeo.com/video/${heroVid}?background=1&autoplay=1&loop=1&muted=1&autopause=0"
             allow="autoplay" title="Jake Caminero"></iframe></a>`;
     sizeToVimeoRatio(heroVid,heroEl);
   } else if(CONTENT.site.heroImage){
     heroEl.classList.add("has-image");
-    heroEl.innerHTML=`<img class="hero-media" src="${IMG_BASE+CONTENT.site.heroImage}" alt="">`;
+    heroEl.innerHTML=pictureHTML(IMG_BASE+CONTENT.site.heroImage,"",HERO_SIZES,'class="hero-media"');
   } else {
     heroEl.innerHTML=`<div id="heroArt" class="frame-art"></div>`;
     frameArt("#heroArt");
@@ -896,7 +987,7 @@ function applyFilters(){
 $("#workGrid").innerHTML=SELECTS.slice(0,HOME_MAX).map((p,i)=>{
   const s=SLOTS[i%SLOTS.length];
   return `<a class="card" href="#/project/${p.id}" data-id="${p.id}" style="grid-column:${s.c};margin-top:${s.pad}px">
-    <div class="shot" style="aspect-ratio:${s.r}"><img src="${mainImg(p,s.r)}" alt="${p.t} for ${p.client}" loading="lazy"></div>
+    <div class="shot" style="aspect-ratio:${s.r}">${pictureHTML(mainImg(p,s.r),`${p.t} for ${p.client}`,slotSizes(s.c),'loading="lazy"')}</div>
     <div class="cap"><span class="t">${p.t}</span>
     <div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div></div></a>`;
 }).join("");
@@ -927,8 +1018,9 @@ function ruledList(sel,names){
 ruledList("#capList",CONTENT.site.capabilities);
 ruledList("#secList",CONTENT.site.sectors);
 
+const ECO_SIZES="(max-width:620px) 100vw, (max-width:900px) 50vw, (max-width:1360px) 25vw, 318px";
 $("#ecoGrid").innerHTML=CONTENT.site.ongoing.map((o,i)=>
-  `<div class="it"><div class="shot"><img src="${o.img?IMG_BASE+o.img:shot("eco"+i,o.tone,4/3,"")}" alt="${o.t}" loading="lazy"></div>
+  `<div class="it"><div class="shot">${pictureHTML(o.img?IMG_BASE+o.img:shot("eco"+i,o.tone,4/3,""),o.t,ECO_SIZES,'loading="lazy"')}</div>
    <h4>${o.t}</h4><p>${o.d}</p></div>`).join("");
 /* Jake can turn the Approach + Ongoing sections off from Site Info without
    losing the underlying content — nothing here is deleted, just not shown. */
@@ -965,13 +1057,15 @@ $("#idx").innerHTML=SELECTS.map(p=>{
 }).join("");
 
 (function(){
-  const idx=$("#idx"),A=$("#lyA"),B=$("#lyB"),meta=$("#idxMeta");
+  const idx=$("#idx"),picA=$("#lyA"),picB=$("#lyB"),
+        A=picA.querySelector("img"),B=picB.querySelector("img"),meta=$("#idxMeta");
+  const LY_SIZES="(max-width:999px) 0px, (max-width:1360px) 38vw, 483px";
   let front="A",current=null;
   function preview(p){
     if(p.id===current)return; // pointerover re-fires for every descendant crossed inside the same row
     current=p.id;
-    const next=front==="A"?B:A, prev=front==="A"?A:B;
-    next.src=mainImg(p,4/5); next.alt=`${p.t} — ${p.client}`;
+    const nextPic=front==="A"?picB:picA, next=front==="A"?B:A, prev=front==="A"?A:B;
+    setPictureSrc(nextPic,mainImg(p,4/5),`${p.t} — ${p.client}`,LY_SIZES);
     next.classList.add("live"); prev.classList.remove("live");
     front=front==="A"?"B":"A";
     meta.innerHTML=`<span class="who"><b>${p.client}</b> · ${p.loc} · ${p.date}</span>`
@@ -996,7 +1090,7 @@ $("#idx").innerHTML=SELECTS.map(p=>{
     if(body.dataset.done)return;
     const p=byId(entry.dataset.id);
     body.innerHTML=`
-      <div class="ishot"><img src="${mainImg(p,4/3)}" alt="${p.t} — ${p.client}"></div>
+      <div class="ishot">${pictureHTML(mainImg(p,4/3),`${p.t} — ${p.client}`,"100vw")}</div>
       <p class="iwho"><b>${p.client}</b> · ${p.loc} · ${p.date}</p>
       <p class="idesc">${p.desc}</p>
       <div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div>
@@ -1030,7 +1124,8 @@ $("#scatter").innerHTML=CONTENT.projects.map(p=>{
 }).join("");
 
 (function(){
-  const scatter=$("#scatter"),peek=$("#peek"),peekImg=$("#peekImg");
+  const scatter=$("#scatter"),peek=$("#peek"),peekPic=$("#peekImg");
+  const PEEK_SIZES="(hover:none) 0px, (max-width:950px) 190px, (max-width:1450px) 20vw, 290px";
   /* The preview has to be a sibling of the titles for z-index to compare against
      them — otherwise it always wins on top regardless of what's hovered. */
   scatter.appendChild(peek);
@@ -1046,7 +1141,7 @@ $("#scatter").innerHTML=CONTENT.projects.map(p=>{
     const a=e.target.closest(".sc"); if(!a||a.classList.contains("mute"))return;
     const p=byId(a.dataset.id);
     cancel();
-    peekImg.src=mainImg(p,4/5); peekImg.alt=p.t;
+    setPictureSrc(peekPic,mainImg(p,4/5),p.t,PEEK_SIZES);
     if(!peek.classList.contains("on")){cx=tx;cy=ty}
     peek.classList.add("on"); scatter.classList.add("hot");
   });
@@ -1096,10 +1191,10 @@ function renderProject(id){
 
   const vid=p.video&&(p.video.match(/vimeo\.com\/(\d+)/)||[])[1];
   const hero=vid?`<a class="det-video" href="${p.video}" target="_blank" rel="noopener">
-      <img src="${mainImg(p,16/9)}" alt="${p.t} for ${p.client}">
+      ${pictureHTML(mainImg(p,16/9),`${p.t} for ${p.client}`,HERO_SIZES)}
       <iframe src="https://player.vimeo.com/video/${vid}?background=1&autoplay=1&loop=1&muted=1&autopause=0"
         allow="autoplay" title="${p.t}"></iframe></a>`
-    :`<img src="${mainImg(p,16/9)}" alt="${p.t} for ${p.client}">`;
+    :pictureHTML(mainImg(p,16/9),`${p.t} for ${p.client}`,HERO_SIZES);
 
   $("#detWrap").innerHTML=`
     <a class="back" href="#/work">← All work</a>
@@ -1124,7 +1219,7 @@ function renderProject(id){
     <div class="det-gal">${p.gallery.map((g,n)=>{
       const s=GAL_SLOTS[n%GAL_SLOTS.length];
       return `<div class="shot" style="grid-column:${s.c};aspect-ratio:${s.r}">
-        <img src="${g}" alt="${p.t} — frame ${n+1}" loading="lazy"></div>`;
+        ${pictureHTML(g,`${p.t} — frame ${n+1}`,slotSizes(s.c),'loading="lazy"')}</div>`;
     }).join("")}</div>
     <a class="det-next" href="#/project/${next.id}">
       <span class="label">Next project</span><span class="n">${next.t}</span></a>`;
@@ -1145,7 +1240,14 @@ function renderProject(id){
 const bioEl=$("#bio");
 if(CONTENT.site.bio) bioEl.textContent=CONTENT.site.bio;
 else bioEl.style.display="none";
-$("#portrait").src=CONTENT.site.portrait?IMG_BASE+CONTENT.site.portrait:shot("portrait","grey",4/5,"");
+/* #portrait is only ever set once (no re-render on route changes), so a
+   one-time outerHTML swap to real <picture> markup is simpler than wiring
+   up setPictureSrc() for a node that never gets touched again. */
+$("#portrait").outerHTML=pictureHTML(
+  CONTENT.site.portrait?IMG_BASE+CONTENT.site.portrait:shot("portrait","grey",4/5,""),
+  "Jake Caminero on location",
+  "(max-width:900px) 100vw, (max-width:1360px) 50vw, 636px"
+);
 /* A block with nothing to show (Recognition, most of the time) is skipped
    entirely rather than rendering an empty shell — general fix, not a
    Recognition special-case, so any block added later gets this for free.
@@ -1182,8 +1284,16 @@ const BTS_PX_PER_SEC=[34,29];
   [...wrap.querySelectorAll(".bts-track")].forEach((track,ri)=>{
     const row=rows[ri];
     if(!row.length){ track.closest(".bts-row").remove(); return; }
-    const cell=p=>`<div class="bts-cell" style="aspect-ratio:${p.r||BTS_FALLBACK_RATIO}">
-      <img src="${IMG_BASE+p.src}" alt="Behind the scenes with Jake Caminero" loading="lazy"></div>`;
+    /* Cell width = height x its own ratio (aspect-ratio-driven, no fixed
+       width in CSS), so sizes has to be derived per-photo, matching the
+       .bts-cell height clamp(160px,22vw,300px) breakpoints (727/1364px
+       are where 22vw crosses the 160/300px floor/ceiling). */
+    const cell=p=>{
+      const r=p.r||BTS_FALLBACK_RATIO;
+      const sizes=`(max-width:727px) ${Math.round(160*r)}px, (max-width:1364px) calc(22vw*${r}), ${Math.round(300*r)}px`;
+      return `<div class="bts-cell" style="aspect-ratio:${r}">
+      ${pictureHTML(IMG_BASE+p.src,"Behind the scenes with Jake Caminero",sizes,'loading="lazy"')}</div>`;
+    };
     track.innerHTML=row.map(cell).join("")+`<div class="bts-dup" aria-hidden="true">${row.map(cell).join("")}</div>`;
     const rowEl=track.closest(".bts-row");
     /* Measuring scrollWidth right here would read 0 — the Info page is
