@@ -9,7 +9,17 @@
   "desc": "This project consisted of a directed lifestyle shoot and an on location docu-style shoot at the Batch farm in Wisconsin. This project in it’s entirety shows the process of how Batch creates their products from beginning to end and the hands that make the company what it is. The lifestyle portion was set to give Batch commercial assets to showcase the product being implemented and enjoyed in day to day living.",
   "t": "Farm Visit",
   "images": {
-    "main": "/content/media/batch-farm-visit/screenshot-2026-08-28-at-3.18.55 pm.png"
+    "main": "/content/media/batch-farm-visit/1.43.1_1.43.1.jpg",
+    "gallery": [
+      "/content/media/batch-farm-visit/1.43.1_1.43.1.jpg",
+      "/content/media/batch-farm-visit/screenshot-2026-08-28-at-3.18.55 pm.png",
+      "/content/media/batch-farm-visit/1.4.1_1.4.1.jpg",
+      "/content/media/batch-farm-visit/1.15.1_1.15.1.jpg",
+      "/content/media/batch-farm-visit/1.16.1_1.16.1.jpg",
+      "/content/media/batch-farm-visit/1.29.1_1.29.1.jpg",
+      "/content/media/batch-farm-visit/1.38.1_1.38.1.jpg",
+      "/content/media/batch-farm-visit/2.1.1_2.1.1.jpg"
+    ]
   },
   "tags": [
     "Cinematography",
@@ -35,6 +45,7 @@
       "n": "Batch"
     }
   ],
+  "video": "https://vimeo.com/1227511721?share=copy&fl=sv&fe=ci",
   "id": "batch-farm-visit",
   "selected": true,
   "roles": [
