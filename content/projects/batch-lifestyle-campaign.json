@@ -9,7 +9,24 @@
   "desc": "Lifestyle refresh shoot for Batch. Imagery was geared towards social media and web use for the company's brand refresh.",
   "t": "Batch Lifestyle Campaign",
   "images": {
-    "main": "/content/media/batch-lifestyle-campaign/a001_a050_0625kb.00_49_28_01.still004.jpg"
+    "main": "/content/media/batch-lifestyle-campaign/a001_a050_0625kb.00_49_28_01.still004.jpg",
+    "gallery": [
+      "/content/media/batch-lifestyle-campaign/1.1.1_1.1.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.15.2_1.15.2.jpg",
+      "/content/media/batch-lifestyle-campaign/1.11.1_1.11.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.13.1_1.13.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.14.1_1.14.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.16.1_1.16.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.17.1_1.17.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.22.1_1.22.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.33.1_1.33.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.36.1_1.36.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.39.1_1.39.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.46.1_1.46.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.50.1_1.50.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.53.1_1.53.1.jpg",
+      "/content/media/batch-lifestyle-campaign/1.54.1_1.54.1.jpg"
+    ]
   },
   "tags": [
     "Cinematography",
@@ -55,6 +72,7 @@
       "n": "Megan Powell"
     }
   ],
+  "video": "https://vimeo.com/1227784857?share=copy&fl=sv&fe=ci",
   "id": "batch-lifestyle-campaign",
   "selected": true,
   "roles": [
