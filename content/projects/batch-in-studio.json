@@ -1,0 +1,25 @@
+{
+  "loc": "Costa Mesa, CA",
+  "client": "Batch",
+  "date": "September 2026",
+  "desc": "Still life video for email and social ads.",
+  "t": "Batch Studio",
+  "images": {
+    "main": "/content/media/batch-in-studio/1.1.1_1.1.1.jpg",
+    "gallery": [
+      "/content/media/batch-in-studio/1.1.1_1.1.1.jpg",
+      "/content/media/batch-in-studio/1.22.1_1.22.1.jpg",
+      "/content/media/batch-in-studio/3.3.1_3.3.1.jpg",
+      "/content/media/batch-in-studio/1.54.1_1.54.1.jpg",
+      "/content/media/batch-in-studio/1.27.1_1.27.1.jpg",
+      "/content/media/batch-in-studio/1.23.1_1.23.1.jpg"
+    ]
+  },
+  "yr": "2026",
+  "video": "https://vimeo.com/1227865755?share=copy&fl=sv&fe=ci",
+  "id": "batch-in-studio",
+  "selected": false,
+  "roles": [
+    "motion"
+  ]
+}
