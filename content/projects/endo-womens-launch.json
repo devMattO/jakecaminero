@@ -1,0 +1,37 @@
+{
+  "loc": "Orange County, CA",
+  "del": [],
+  "client": "Endo",
+  "date": "September 21, 2026",
+  "desc": "Photography and motion direction for the launch of Endo's first women's collection.",
+  "t": "Endo Womens",
+  "images": {
+    "main": "/content/media/endo-womens-launch/endo_womens_drop_3150-1_ps.jpg",
+    "gallery": [
+      "/content/media/endo-womens-launch/endo_womens_drop_2711.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Campaign",
+    "Sport",
+    "Wellness",
+    "Outdoor",
+    "Director",
+    "Creative Direction"
+  ],
+  "yr": "2026",
+  "credits": [
+    {
+      "r": "Talent ",
+      "n": "Katie"
+    }
+  ],
+  "id": "endo-womens-launch",
+  "selected": true,
+  "roles": [
+    "cd",
+    "stills",
+    "motion"
+  ]
+}
