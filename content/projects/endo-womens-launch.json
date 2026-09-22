@@ -1,6 +1,9 @@
 {
   "loc": "Orange County, CA",
-  "del": [],
+  "del": [
+    "Stills",
+    "Motion"
+  ],
   "client": "Endo",
   "date": "September 21, 2026",
   "desc": "Photography and motion direction for the launch of Endo's first women's collection.",
@@ -47,6 +50,14 @@
     {
       "r": "Talent ",
       "n": "Katie"
+    },
+    {
+      "r": "Endo",
+      "n": "Devon Polk"
+    },
+    {
+      "r": "Photo Assistant",
+      "n": "Zach Sorensen"
     }
   ],
   "video": "https://vimeo.com/1228991997?share=copy&fl=sv&fe=ci",
