@@ -4,13 +4,14 @@
     "Stills",
     "Motion"
   ],
-  "client": "Endo",
+  "client": "Endociety",
   "date": "September 21, 2026",
   "desc": "Photography and motion direction for the launch of Endo's first women's collection.",
   "t": "Endo Womens Launch",
   "images": {
     "main": "/content/media/endo-womens-launch/dscf6748.jpg",
     "gallery": [
+      "/content/media/endo-womens-launch/dscf6748.jpg",
       "/content/media/endo-womens-launch/dscf6676.jpg",
       "/content/media/endo-womens-launch/dscf6678.jpg",
       "/content/media/endo-womens-launch/dscf6821.jpg",
