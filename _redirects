@@ -1,0 +1,75 @@
+# Redirects from Jake's previous site (retired when jakecaminero.com was
+# pointed at Netlify). This is a hash-routed single-page app, so a target
+# like "/#/project/<id>" is deliberate, not a typo — confirmed a server
+# 301 with a "#" in its Location header is honored by the browser exactly
+# like a normal link (the fragment is a client-side concern, the browser
+# navigates to the full target including it; only the path portion ever
+# reaches the server). www already 301s to the apex domain first and
+# preserves the full path, so these match regardless of which one a link
+# used.
+#
+# Anything not listed here — a typo, a link from somewhere we don't know
+# about — falls through to the on-brand 404.html (Netlify serves that
+# automatically for any unmatched path; no rule needed for it here).
+
+# The old About page is the closest equivalent to today's Info page.
+/about                                          /#/info  301
+
+# Confident 1:1 matches — same project, clearly named.
+/riin-x-rally                                   /#/project/rally-dylan-riin       301
+/out-west-hog-hunt                              /#/project/pryml-hog-hunt         301
+/cuyama-buckhorn                                /#/project/cuyama-buckhorn        301
+/haus-of-wellness                               /#/project/haus-of-wellness       301
+/lucid-air-sapphire                             /#/project/lucid-air-sapphire     301
+/velotric                                       /#/project/velotric-nomad-2       301
+/dino-motorsports                               /#/project/dino-motorsport        301
+/frontrunneroutfitters                          /#/project/frontrunner            301
+/oak                                            /#/project/oak-morning-ride       301
+/morning-ride                                   /#/project/oak-morning-ride       301
+/brake-dance                                    /#/project/rt-breakdance          301
+/son-of-cobra                                   /#/project/son-of-cobra-bristol   301
+/endure-stereoscope                             /#/project/endure-cycling-stereoscope 301
+/joy-air                                        /#/project/joy-air                301
+/everatti                                       /#/project/rt-everatti            301
+/the-nevera                                     /#/project/rt-rimac-nevera        301
+/cyan-p1800                                     /#/project/rt-cyan-p1800          301
+/matt-allen                                     /#/project/rally-matt-allen       301
+/luke-davis                                     /#/project/rally-luke-davis       301
+/lucid                                          /#/project/lucid-air-sapphire     301
+/pryml                                          /#/project/pryml-hog-hunt         301
+/whitney                                        /#/project/whitney                301
+/tumbleweeds                                    /#/project/tumbleweeds            301
+/honda-jtree                                    /#/project/honda-crv              301
+/a-weekend-with-a-rivian                        /#/project/weekend-with-rivian    301
+/uniqlo-x-vans                                  /#/project/uniqlo-vans            301
+
+# Matched by description text, not just the slug — confirmed against each
+# project's own copy since the old URL's wording didn't match the new
+# title closely enough to trust on name alone:
+#   - buckhorn-foraging's description names "Sam from Cuyama Rambler"
+#   - buckhorn-summer-cocktail is literally the Cuyama Buckhorn's summer
+#     drink menu (matches "farm-to-glass-sum25")
+/cuyama-buckhorn-rambler-spr25                  /#/project/buckhorn-foraging        301
+/cuyama-buckhorn-farm-to-glass-sum25            /#/project/buckhorn-summer-cocktail 301
+
+# Best-guess matches — the old site had one page per client name, but
+# that client now has multiple projects on the new site with no way to
+# tell which one the old link pointed at. Picked the earliest/most general
+# one of each; worth a manual check against Jake's own memory of these:
+/endo                                           /#/project/endo-july-2026          301
+/the-fullest                                    /#/project/fullest-25-26           301
+/batch                                          /#/project/batch-lifestyle-campaign 301
+
+# No corresponding project found on the new site (category/listing pages,
+# blog-style posts, or a client/theme that doesn't match anything current)
+# — sent to Work per the instruction to default anything unmatched there.
+/COMMISSIONS                                    /#/work  301
+/personal                                       /#/work  301
+/targa                                          /#/work  301
+/brockketchum-x-rally                           /#/work  301
+/hwy-brewing-project                            /#/work  301
+/malibu                                         /#/work  301
+/a-trip-to-the-rockies                          /#/work  301
+/my-pajero                                      /#/work  301
+/the-process/p/style-01-ej5na-b8tm2             /#/work  301
+/the-icons-collection/p/red-c5557-fdt84         /#/work  301

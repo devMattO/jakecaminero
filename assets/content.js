@@ -2,19 +2,6 @@
 window.JC_CONTENT = {
   "projects": [
     {
-      "loc": "Los Angeles, CA",
-      "client": "Elwood",
-      "date": "July, 2026",
-      "desc": "Core collection look book.",
-      "t": "Elwood Core",
-      "yr": "2026",
-      "id": "elwood-core",
-      "selected": false,
-      "roles": [
-        "stills"
-      ]
-    },
-    {
       "loc": "Costa Mesa, California",
       "del": [
         "16mm and digital film",
@@ -52,6 +39,49 @@ window.JC_CONTENT = {
       ],
       "tone": "sage",
       "gal": 4
+    },
+    {
+      "loc": "Orange County, CA",
+      "del": [
+        "Stills",
+        "Motion"
+      ],
+      "client": "Endociety",
+      "date": "September 21, 2026",
+      "desc": "Photography and motion direction for the launch of Endo's first women's collection.",
+      "t": "Endo Womens Launch",
+      "tags": [
+        "Photography",
+        "Campaign",
+        "Sport",
+        "Wellness",
+        "Outdoor",
+        "Director",
+        "Creative Direction"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Talent ",
+          "n": "Katie"
+        },
+        {
+          "r": "Endo",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Zach Sorensen"
+        }
+      ],
+      "video": "https://vimeo.com/1228991997?share=copy&fl=sv&fe=ci",
+      "id": "endo-womens-launch",
+      "selected": true,
+      "roles": [
+        "cd",
+        "stills",
+        "motion"
+      ]
     },
     {
       "loc": "Orange County",
@@ -146,6 +176,109 @@ window.JC_CONTENT = {
       "gal": 6
     },
     {
+      "loc": "Mojave, California",
+      "del": [
+        "Spec campaign stills",
+        "CGI integration"
+      ],
+      "client": "Spec Shoot",
+      "date": "November 5, 2025",
+      "desc": "A speculative project that focused on the use of CGI. The goal was to bring a tangible feeling to something that tends to lean clinical. We partnered with professional mountain biker Spencer Rathkamp to bring an edge to the Tundra's story.",
+      "t": "Toyota Tundra + Spencer Rathkamp",
+      "tags": [
+        "Photography",
+        "Campaign",
+        "Automotive"
+      ],
+      "yr": "2025",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "CGI",
+          "n": "Benjamin Grimes"
+        },
+        {
+          "r": "Talent",
+          "n": "Spencer Rathkamp"
+        },
+        {
+          "r": "Retouching",
+          "n": "Schinken Studio"
+        }
+      ],
+      "id": "toyota-tundra-rathkamp",
+      "selected": true,
+      "roles": [
+        "stills"
+      ],
+      "tone": "black",
+      "overlay": "TUNDRA",
+      "gal": 5
+    },
+    {
+      "loc": "Los Angeles",
+      "del": [],
+      "client": "Road & Track",
+      "date": "September 20, 2026",
+      "desc": "A commission from Road & Track to create an image using the first satellite phone. The image is meant to close the September issue titled, 'Nowhere' on the back cover of the magazine. ",
+      "t": "Nowhere Back Cover Image",
+      "tags": [
+        "Photography",
+        "Automotive",
+        "Editorial",
+        "Creative Direction"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Cassidy Zobl",
+          "n": "Deputy Creative Director for Road & Track"
+        }
+      ],
+      "id": "rt-nowhere-sept-2026",
+      "selected": true,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
+      "loc": "Palmdale, California",
+      "del": [
+        "Concept stills",
+        "Promo imagery"
+      ],
+      "client": "AV SC, Max Griffin",
+      "date": "August 1, 2024",
+      "desc": "Images to support the concept for a documentary led by Max Griffin. The film and promo is centered around his home town of Palmdale but specifically the unique concentration of soccer talent that is cultivated there. Max played professionally in the MLS and is looking to give back to his community by telling their story.",
+      "t": "Tumbleweeds",
+      "tags": [
+        "Photography",
+        "Documentary",
+        "Sport"
+      ],
+      "yr": "2024",
+      "credits": [
+        {
+          "r": "Photography",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Executive Producer and Director",
+          "n": "Max Griffin"
+        }
+      ],
+      "id": "tumbleweeds",
+      "selected": true,
+      "roles": [
+        "stills"
+      ],
+      "tone": "clay",
+      "gal": 5
+    },
+    {
       "loc": "Orange County, California",
       "del": [
         "Brand film",
@@ -213,146 +346,17 @@ window.JC_CONTENT = {
       "gal": 5
     },
     {
-      "loc": "Mojave, California",
-      "del": [
-        "Spec campaign stills",
-        "CGI integration"
-      ],
-      "client": "Spec Shoot",
-      "date": "November 5, 2025",
-      "desc": "A speculative project that focused on the use of CGI. The goal was to bring a tangible feeling to something that tends to lean clinical. We partnered with professional mountain biker Spencer Rathkamp to bring an edge to the Tundra's story.",
-      "t": "Toyota Tundra + Spencer Rathkamp",
+      "client": "Ninetyseveltwelve",
+      "date": "January 5, 2025",
+      "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
+      "t": "Ninetyseveltwelve",
       "tags": [
         "Photography",
-        "Campaign",
-        "Automotive"
+        "Wellness"
       ],
       "yr": "2025",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "CGI",
-          "n": "Benjamin Grimes"
-        },
-        {
-          "r": "Talent",
-          "n": "Spencer Rathkamp"
-        },
-        {
-          "r": "Retouching",
-          "n": "Schinken Studio"
-        }
-      ],
-      "id": "toyota-tundra-rathkamp",
-      "selected": true,
-      "roles": [
-        "stills"
-      ],
-      "tone": "black",
-      "overlay": "TUNDRA",
-      "gal": 5
-    },
-    {
-      "loc": "Palmdale, California",
-      "del": [
-        "Concept stills",
-        "Promo imagery"
-      ],
-      "client": "AV SC, Max Griffin",
-      "date": "August 1, 2024",
-      "desc": "Images to support the concept for a documentary led by Max Griffin. The film and promo is centered around his home town of Palmdale but specifically the unique concentration of soccer talent that is cultivated there. Max played professionally in the MLS and is looking to give back to his community by telling their story.",
-      "t": "Tumbleweeds",
-      "tags": [
-        "Photography",
-        "Documentary",
-        "Sport"
-      ],
-      "yr": "2024",
-      "credits": [
-        {
-          "r": "Photography",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Executive Producer and Director",
-          "n": "Max Griffin"
-        }
-      ],
-      "id": "tumbleweeds",
-      "selected": true,
-      "roles": [
-        "stills"
-      ],
-      "tone": "clay",
-      "gal": 5
-    },
-    {
-      "loc": "Viroqua, Wisconsin",
-      "del": [
-        "Documentary film",
-        "Stills selects"
-      ],
-      "client": "Batch",
-      "date": "January 20, 2026",
-      "desc": "This project consisted of a directed lifestyle shoot and an on location docu-style shoot at the Batch farm in Wisconsin. This project in it’s entirety shows the process of how Batch creates their products from beginning to end and the hands that make the company what it is. The lifestyle portion was set to give Batch commercial assets to showcase the product being implemented and enjoyed in day to day living.",
-      "t": "Farm Visit",
-      "tags": [
-        "Cinematography",
-        "Documentary",
-        "Food & Drink"
-      ],
-      "yr": "2026",
-      "credits": [
-        {
-          "r": "DP",
-          "n": "Jake Caminero"
-        },
-        {
-          "r": "Creative Direction",
-          "n": "Megan Powell"
-        },
-        {
-          "r": "Photography",
-          "n": "Zach Sorensen"
-        },
-        {
-          "r": "Client Team",
-          "n": "Batch"
-        }
-      ],
-      "id": "batch-farm-visit",
-      "selected": true,
-      "roles": [
-        "motion"
-      ],
-      "tone": "pale",
-      "gal": 6
-    },
-    {
-      "loc": "Los Angeles",
-      "del": [],
-      "client": "Road & Track",
-      "date": "September 20, 2026",
-      "desc": "A commission from Road & Track to create an image using the first satellite phone. The image is meant to close the September issue titled, 'Nowhere' on the back cover of the magazine. ",
-      "t": "Nowhere Back Cover Image",
-      "tags": [
-        "Photography",
-        "Automotive",
-        "Editorial",
-        "Creative Direction"
-      ],
-      "yr": "2026",
-      "credits": [
-        {
-          "r": "Cassidy Zobl",
-          "n": "Deputy Creative Director for Road & Track"
-        }
-      ],
-      "id": "rt-nowhere-sept-2026",
-      "selected": true,
+      "id": "ninetyseventwelve",
+      "selected": false,
       "roles": [
         "stills"
       ]
@@ -391,16 +395,31 @@ window.JC_CONTENT = {
       ]
     },
     {
-      "client": "Ninetyseveltwelve",
-      "date": "January 5, 2025",
-      "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
-      "t": "Ninetyseveltwelve",
+      "loc": "Los Angeles, CA",
+      "client": "Elwood",
+      "date": "July, 2026",
+      "desc": "Core collection look book.",
+      "t": "Elwood Core",
+      "yr": "2026",
+      "id": "elwood-core",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
+      "loc": "Los Angeles, CA",
+      "client": "Elwood",
+      "date": "July, 2026",
+      "desc": "Look book for Elwood kids ",
+      "t": "Elwood Kids",
       "tags": [
         "Photography",
-        "Wellness"
+        "Campaign",
+        "Fashion"
       ],
-      "yr": "2025",
-      "id": "ninetyseventwelve",
+      "yr": "2026",
+      "id": "elwood-kids-26",
       "selected": false,
       "roles": [
         "stills"
@@ -509,6 +528,7 @@ window.JC_CONTENT = {
           "n": "Megan Powell"
         }
       ],
+      "video": "https://vimeo.com/1227784857?share=copy&fl=sv&fe=ci",
       "id": "batch-lifestyle-campaign",
       "selected": true,
       "roles": [
@@ -516,6 +536,84 @@ window.JC_CONTENT = {
       ],
       "tone": "pale",
       "gal": 6
+    },
+    {
+      "loc": "San Francisco, CA",
+      "client": "Spec Shoot",
+      "date": "April 24, 2024",
+      "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
+      "t": "Weekend with Rivian",
+      "tags": [
+        "Photography",
+        "Automotive",
+        "Documentary",
+        "Outdoor"
+      ],
+      "yr": "2024",
+      "id": "weekend-with-rivian",
+      "selected": true,
+      "roles": [
+        "stills"
+      ],
+      "tone": "pale",
+      "gal": 5
+    },
+    {
+      "loc": "Viroqua, Wisconsin",
+      "del": [
+        "Documentary film",
+        "Stills selects"
+      ],
+      "client": "Batch",
+      "date": "January 20, 2026",
+      "desc": "This project consisted of a directed lifestyle shoot and an on location docu-style shoot at the Batch farm in Wisconsin. This project in it’s entirety shows the process of how Batch creates their products from beginning to end and the hands that make the company what it is. The lifestyle portion was set to give Batch commercial assets to showcase the product being implemented and enjoyed in day to day living.",
+      "t": "Farm Visit",
+      "tags": [
+        "Cinematography",
+        "Documentary",
+        "Food & Drink"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "DP",
+          "n": "Jake Caminero"
+        },
+        {
+          "r": "Creative Direction",
+          "n": "Megan Powell"
+        },
+        {
+          "r": "Photography",
+          "n": "Zach Sorensen"
+        },
+        {
+          "r": "Client Team",
+          "n": "Batch"
+        }
+      ],
+      "video": "https://vimeo.com/1227511721?share=copy&fl=sv&fe=ci",
+      "id": "batch-farm-visit",
+      "selected": true,
+      "roles": [
+        "motion"
+      ],
+      "tone": "pale",
+      "gal": 6
+    },
+    {
+      "loc": "Costa Mesa, CA",
+      "client": "Batch",
+      "date": "September 2026",
+      "desc": "Still life video for email and social ads.",
+      "t": "Batch Studio",
+      "yr": "2026",
+      "video": "https://vimeo.com/1227865755?share=copy&fl=sv&fe=ci",
+      "id": "batch-in-studio",
+      "selected": false,
+      "roles": [
+        "motion"
+      ]
     },
     {
       "loc": "Joshua Tree National Park, CA",
@@ -646,27 +744,6 @@ window.JC_CONTENT = {
         "cd"
       ],
       "tone": "black",
-      "gal": 5
-    },
-    {
-      "loc": "San Francisco, CA",
-      "client": "Spec Shoot",
-      "date": "April 24, 2024",
-      "desc": "While visiting the Bay Area, we decided to rent a Rivian and take it around San Francisco.",
-      "t": "Weekend with Rivian",
-      "tags": [
-        "Photography",
-        "Automotive",
-        "Documentary",
-        "Outdoor"
-      ],
-      "yr": "2024",
-      "id": "weekend-with-rivian",
-      "selected": true,
-      "roles": [
-        "stills"
-      ],
-      "tone": "pale",
       "gal": 5
     },
     {
@@ -996,24 +1073,6 @@ window.JC_CONTENT = {
       ],
       "tone": "grey",
       "gal": 3
-    },
-    {
-      "loc": "Los Angeles, CA",
-      "client": "Elwood",
-      "date": "July, 2026",
-      "desc": "Look book for Elwood kids ",
-      "t": "Elwood Kids",
-      "tags": [
-        "Photography",
-        "Campaign",
-        "Fashion"
-      ],
-      "yr": "2026",
-      "id": "elwood-kids-26",
-      "selected": false,
-      "roles": [
-        "stills"
-      ]
     },
     {
       "id": "son-of-cobra-bristol",
@@ -1518,7 +1577,7 @@ window.JC_CONTENT = {
     }
   ],
   "site": {
-    "intro": "Jake Caminero is a photographer and director working in stills, motion, and creative direction, partnering with brands that make physical things worth looking at. {Road & Track}",
+    "intro": "Jake Caminero is a photographer and director who specializes in stills, motion, and creative direction- previous creative projects include: {Road&Track}, {Endo}, and {Agronomy}, among others. ",
     "introLinks": [
       {
         "label": "Road & Track",
@@ -1528,8 +1587,8 @@ window.JC_CONTENT = {
     "showApproachOngoing": false,
     "heroImage": null,
     "heroVideo": "https://vimeo.com/1204022679",
-    "bio": "Jake Caminero is a photographer and director specializing in active lifestyle, hospitality, and adventure-driven brands.",
-    "portrait": "/content/media/site/dscf6215.webp",
+    "bio": "Jake Caminero is a photographer and creative director specializing in active lifestyle and adventure-driven brands.",
+    "portrait": "/content/media/site/screenshot-2026-09-15-at-3.29.22 pm.png",
     "emails": [
       "jake@jakecaminero.com"
     ],
@@ -1550,9 +1609,6 @@ window.JC_CONTENT = {
     "bts": [
       "/content/media/site/bts/000067280020.webp",
       "/content/media/site/bts/385444020004.jpg",
-      "/content/media/site/bts/1d37a33b-2765-4d78-ad14-b7a0839b3cd5.webp",
-      "/content/media/site/bts/240b8799.webp",
-      "/content/media/site/bts/385444020008.jpg",
       "/content/media/site/bts/dsc05357.webp",
       "/content/media/site/bts/b24i8578-16.webp",
       "/content/media/site/bts/000067280027.webp",
@@ -1578,6 +1634,7 @@ window.JC_CONTENT = {
       "/content/media/site/bts/ninjav_s001_s001_t070.webp",
       "/content/media/site/bts/p1004853.webp",
       "/content/media/site/bts/p1004843.webp",
+      "/content/media/site/bts/img_5253-1.webp",
       "/content/media/site/bts/img_7218.webp",
       "/content/media/site/bts/img_8672.webp",
       "/content/media/site/bts/img_7094.webp",
@@ -1586,9 +1643,10 @@ window.JC_CONTENT = {
       "/content/media/site/bts/img_6909.webp",
       "/content/media/site/bts/img_6375.webp",
       "/content/media/site/bts/img_2380.webp",
+      "/content/media/site/bts/240b8799.webp",
+      "/content/media/site/bts/1d37a33b-2765-4d78-ad14-b7a0839b3cd5.webp",
       "/content/media/site/bts/img_3368.webp",
       "/content/media/site/bts/img_5252.webp",
-      "/content/media/site/bts/img_5253-1.webp",
       "/content/media/site/bts/img_5436.webp",
       "/content/media/site/bts/img_2507.webp",
       "/content/media/site/bts/img_2066.webp",
@@ -1613,7 +1671,7 @@ window.JC_CONTENT = {
           "Elwood",
           "Haus of Wellness",
           "Dino Motorsport",
-          "AV SC"
+          "AV ALTA FC"
         ]
       },
       {
@@ -1622,7 +1680,7 @@ window.JC_CONTENT = {
       },
       {
         "h": "Bio",
-        "body": "Jake Caminero is a photographer and director specializing in active lifestyle, hospitality, and adventure-driven brands.\nHis work blends documentary storytelling with commercial production, creating imagery that feels lived-in, human, and emotionally resonant. From endurance athletes and outdoor pursuits to boutique hotels and destination campaigns, Jake helps brands tell stories that connect people to experiences—not just products.\nWith a background spanning photography, filmmaking, editing, and creative direction, he approaches each project as a complete storyteller, building cohesive campaigns across stills and motion.\nBased in Southern California and available worldwide."
+        "body": "Jake Caminero is a photographer and creative director specializing in active lifestyle and adventure-driven brands. His work blends documentary storytelling with commercial production, creating imagery that feels lived-in, human, and emotionally resonant. From endurance athletes and outdoor pursuits, to apparel and destination campaigns, Jake helps brands tell stories that connect people to experiences, not just products. With a background spanning photography, filmmaking, and creative direction, he approaches each project as a complete storyteller, building cohesive campaigns across stills and motion. Based in Southern California and available worldwide."
       },
       {
         "h": "Get in touch",

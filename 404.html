@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Jake Caminero</title>
+<meta name="robots" content="noindex">
+<style>
+/* Same tokens as index.html's :root (light only — the main site defaults
+   to light on every load too, no persisted/system-driven dark mode, so
+   this stays consistent with what a visitor actually sees there). Kept
+   deliberately standalone and dependency-free — this has to render even
+   when something upstream (a broken asset path, a bad deploy) is why
+   someone landed here in the first place. */
+:root{
+  --shell:1360px;
+  --gut:clamp(18px,3.4vw,44px);
+  --ease:cubic-bezier(.19,1,.22,1);
+  --grot:"Helvetica Neue",Helvetica,Inter,"Segoe UI",system-ui,Arial,sans-serif;
+  --micro:10.5px;
+  --paper:#f2f1ef; --ink:#0b0b0a;
+  --ghost:#6e6c67; --hair:rgba(11,11,10,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font:400 13px/1.5 var(--grot);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--shell);margin:0 auto;padding:0 var(--gut)}
+nav{position:fixed;top:0;left:0;right:0;border-bottom:1px solid var(--hair);background:var(--paper)}
+nav .wrap{display:flex;align-items:center;gap:clamp(14px,2.6vw,32px);height:46px;font-size:11.5px}
+.mark{font-weight:600;letter-spacing:-.02em;font-size:14px;margin-right:clamp(8px,3vw,48px)}
+nav a{color:var(--ghost);transition:color 180ms var(--ease)}
+nav a:hover{color:var(--ink)}
+.end{margin-left:auto}
+main{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 0 80px}
+.label{display:block;font-size:var(--micro);letter-spacing:.055em;text-transform:uppercase;
+  font-weight:500;color:var(--ghost);margin-bottom:14px}
+h1{font-weight:500;letter-spacing:-.028em;line-height:1.08;font-size:clamp(32px,6vw,64px);margin-bottom:20px}
+p{color:var(--ghost);max-width:46ch;margin-bottom:32px;font-size:14px;line-height:1.6}
+.links{display:flex;gap:24px;flex-wrap:wrap}
+.links a{border-bottom:1px solid var(--hair);padding-bottom:4px;
+  transition:border-color 180ms var(--ease),color 180ms var(--ease)}
+.links a:hover{border-color:var(--ink);color:var(--ink)}
+</style>
+</head>
+<body>
+<!-- Absolute paths throughout ("/", "/#/work") — Netlify serves this exact
+     file's content for whatever broken path the visitor is actually on, so
+     a relative link here would resolve against that path, not the site
+     root. -->
+<nav>
+  <div class="wrap">
+    <a href="/" class="mark">J.C</a>
+    <a href="/#/work">Work</a>
+    <a href="/#/archive">Archive</a>
+    <a href="/#/info" class="end">Info</a>
+  </div>
+</nav>
+<main class="wrap">
+  <span class="label">404</span>
+  <h1>This page moved,<br>or never existed.</h1>
+  <p>The link you followed doesn't match anything here anymore. Try the current work, or head back home.</p>
+  <div class="links">
+    <a href="/#/work">View Work →</a>
+    <a href="/#/archive">Browse Archive →</a>
+    <a href="/">Back Home →</a>
+  </div>
+</main>
+</body>
+</html>
