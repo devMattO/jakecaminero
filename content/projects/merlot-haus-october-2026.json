@@ -1,0 +1,42 @@
+{
+  "loc": "Costa Mesa, CA",
+  "del": [],
+  "client": "Merlot Haus",
+  "date": "October 27,2026",
+  "desc": "Still imagery for Merlot Haus October drop.",
+  "t": "Merlot Haus",
+  "images": {
+    "main": "/content/media/merlot-haus-october-2026/haus5504_grained.jpg",
+    "gallery": [
+      "/content/media/merlot-haus-october-2026/haus5504_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5332_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5506_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5360_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5362_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5349_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5374_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5378_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5369_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5386_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5410_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5505_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5388_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5406_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5433_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5437_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5441_grained.jpg",
+      "/content/media/merlot-haus-october-2026/haus5469_grained.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Fashion"
+  ],
+  "yr": "2026",
+  "credits": [],
+  "id": "merlot-haus-october-2026",
+  "selected": false,
+  "roles": [
+    "stills"
+  ]
+}
