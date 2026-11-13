@@ -1,0 +1,29 @@
+{
+  "loc": "Costa Mesa, CA",
+  "del": [
+    "Stills"
+  ],
+  "client": "Endo Concepts",
+  "date": "November, 2026",
+  "desc": "Stills for Endo's refined vision",
+  "t": "Endo",
+  "images": {
+    "main": "/content/media/endo-ecom/l1280009.jpg",
+    "gallery": [
+      "/content/media/endo-ecom/l1280009.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Fashion",
+    "Sport"
+  ],
+  "yr": "2026",
+  "id": "endo-ecom",
+  "selected": true,
+  "roles": [
+    "cd",
+    "stills"
+  ]
+}
