@@ -3,3 +3,13 @@
 
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
+
+# Not content-hashed (same filename, rewritten on every CMS edit), so they
+# must revalidate — the /assets/* rule above would otherwise pin them for a
+# year and returning visitors would never see new content.
+/assets/content.js
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/images.js
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/images.json
+  Cache-Control: public, max-age=0, must-revalidate
