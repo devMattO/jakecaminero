@@ -1,0 +1,49 @@
+{
+  "loc": "Costa Mesa. CA",
+  "del": [
+    "Stills"
+  ],
+  "client": "Endo Concepts",
+  "date": "October, 2026",
+  "desc": "Still and direction for Endo's brand refresh for fall & winter 2026",
+  "t": "Endo FW 26",
+  "images": {
+    "main": "/content/media/endo-fw-26/l1280100.jpg",
+    "gallery": [
+      "/content/media/endo-fw-26/l1280100.jpg",
+      "/content/media/endo-fw-26/4042551-r1-e037.jpg",
+      "/content/media/endo-fw-26/4042551-r1-e032.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh4741-1_grained.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh5066_grained.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh4721_grained.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh5093-1_grained.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh4709_grained.jpg",
+      "/content/media/endo-fw-26/4042551-r1-e028.jpg",
+      "/content/media/endo-fw-26/4042551-r1-e014.jpg",
+      "/content/media/endo-fw-26/4042551-r1-e013.jpg",
+      "/content/media/endo-fw-26/l1280013.jpg",
+      "/content/media/endo-fw-26/l1280009.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh5161_grained.jpg",
+      "/content/media/endo-fw-26/l1280045.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh5316_grained.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh4691_grained.jpg",
+      "/content/media/endo-fw-26/endo_brand_refresh4889_grained.jpg"
+    ]
+  },
+  "tags": [
+    "Photography",
+    "Creative Direction",
+    "Campaign",
+    "Fashion",
+    "Outdoor",
+    "Sport",
+    "Wellness"
+  ],
+  "yr": "2026",
+  "id": "endo-fw-26",
+  "selected": true,
+  "roles": [
+    "stills",
+    "cd"
+  ]
+}
