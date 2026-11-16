@@ -2,6 +2,62 @@
 window.JC_CONTENT = {
   "projects": [
     {
+      "loc": "Costa Mesa, CA",
+      "del": [
+        "Stills"
+      ],
+      "client": "Endo Concepts",
+      "date": "November, 2026",
+      "desc": "Stills for Endo's brand refresh.",
+      "t": "Endo 003",
+      "tags": [
+        "Photography",
+        "Creative Direction",
+        "Fashion",
+        "Sport"
+      ],
+      "yr": "2026",
+      "id": "endo-ecom",
+      "selected": true,
+      "roles": [
+        "cd",
+        "stills"
+      ]
+    },
+    {
+      "loc": "Orange County",
+      "del": [
+        "Stills"
+      ],
+      "client": "Endo Concepts",
+      "date": "August 10, 2026",
+      "desc": "Ecom/social imagery for Endo Drop 002",
+      "t": "Endo Restock",
+      "tags": [
+        "Campaign",
+        "Photography",
+        "Outdoor",
+        "Sport",
+        "Wellness"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Creative Director",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Talent",
+          "n": "AJ Castillo"
+        }
+      ],
+      "id": "endo-restock-ss26",
+      "selected": true,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
       "loc": "Costa Mesa, California",
       "del": [
         "16mm and digital film",
@@ -41,76 +97,19 @@ window.JC_CONTENT = {
       "gal": 4
     },
     {
-      "loc": "Orange County, CA",
-      "del": [
-        "Stills",
-        "Motion"
-      ],
-      "client": "Endociety",
-      "date": "September 21, 2026",
-      "desc": "Photography and motion direction for the launch of Endo's first women's collection.",
-      "t": "Endo Womens Launch",
+      "loc": "Costa Mesa, CA",
+      "del": [],
+      "client": "Merlot Haus",
+      "date": "October 27,2026",
+      "desc": "Still imagery for Merlot Haus October drop.",
+      "t": "Merlot Haus",
       "tags": [
         "Photography",
-        "Campaign",
-        "Sport",
-        "Wellness",
-        "Outdoor",
-        "Director",
-        "Creative Direction"
+        "Fashion"
       ],
       "yr": "2026",
-      "credits": [
-        {
-          "r": "Talent ",
-          "n": "Katie"
-        },
-        {
-          "r": "Endo",
-          "n": "Devon Polk"
-        },
-        {
-          "r": "Photo Assistant",
-          "n": "Zach Sorensen"
-        }
-      ],
-      "video": "https://vimeo.com/1228991997?share=copy&fl=sv&fe=ci",
-      "id": "endo-womens-launch",
-      "selected": true,
-      "roles": [
-        "cd",
-        "stills",
-        "motion"
-      ]
-    },
-    {
-      "loc": "Orange County",
-      "del": [
-        "Still Images"
-      ],
-      "client": "Endociety",
-      "date": "July 1, 2026",
-      "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
-      "t": "Endo Fall Capsule",
-      "tags": [
-        "Photography",
-        "Sport",
-        "Outdoor",
-        "Wellness"
-      ],
-      "yr": "2026",
-      "credits": [
-        {
-          "r": "Creative Direction",
-          "n": "Devon Polk"
-        },
-        {
-          "r": "Photo Assistant",
-          "n": "Levi Fillies"
-        }
-      ],
-      "video": "https://vimeo.com/1224736728?share=copy&fl=sv&fe=ci",
-      "id": "endo-july-2026",
+      "credits": [],
+      "id": "merlot-haus-october-2026",
       "selected": true,
       "roles": [
         "stills"
@@ -176,6 +175,61 @@ window.JC_CONTENT = {
       "gal": 6
     },
     {
+      "loc": "Costa Mesa, CA",
+      "client": "Nova",
+      "date": "October 25, 2026",
+      "desc": "Stills and motion for Nova's new CloudForm line. ",
+      "t": "Nova - CloudForm",
+      "tags": [
+        "Photography",
+        "Fashion",
+        "Sport",
+        "Outdoor",
+        "Wellness",
+        "Creative Direction"
+      ],
+      "yr": "2026",
+      "id": "nova-cloudform",
+      "selected": false,
+      "roles": [
+        "stills",
+        "cd"
+      ]
+    },
+    {
+      "loc": "Orange County",
+      "del": [
+        "Still Images"
+      ],
+      "client": "Endo Concepts",
+      "date": "July 1, 2026",
+      "desc": "Working in collaboration with Devon Polk to create images for the launch of Endo's fall capsule",
+      "t": "Endo SS 26",
+      "tags": [
+        "Photography",
+        "Sport",
+        "Outdoor",
+        "Wellness"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Creative Direction",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Levi Fillies"
+        }
+      ],
+      "video": "https://vimeo.com/1224736728?share=copy&fl=sv&fe=ci",
+      "id": "endo-july-2026",
+      "selected": true,
+      "roles": [
+        "stills"
+      ]
+    },
+    {
       "loc": "Mojave, California",
       "del": [
         "Spec campaign stills",
@@ -224,7 +278,7 @@ window.JC_CONTENT = {
       "client": "Road & Track",
       "date": "September 20, 2026",
       "desc": "A commission from Road & Track to create an image using the first satellite phone. The image is meant to close the September issue titled, 'Nowhere' on the back cover of the magazine. ",
-      "t": "Nowhere Back Cover Image",
+      "t": "Nowhere",
       "tags": [
         "Photography",
         "Automotive",
@@ -242,6 +296,49 @@ window.JC_CONTENT = {
       "selected": true,
       "roles": [
         "stills"
+      ]
+    },
+    {
+      "loc": "Orange County, CA",
+      "del": [
+        "Stills",
+        "Motion"
+      ],
+      "client": "Endo Concepts",
+      "date": "September 21, 2026",
+      "desc": "Photography and motion direction for the launch of Endo's first women's collection.",
+      "t": "Endo Womens Launch",
+      "tags": [
+        "Photography",
+        "Campaign",
+        "Sport",
+        "Wellness",
+        "Outdoor",
+        "Director",
+        "Creative Direction"
+      ],
+      "yr": "2026",
+      "credits": [
+        {
+          "r": "Talent ",
+          "n": "Katie"
+        },
+        {
+          "r": "Endo",
+          "n": "Devon Polk"
+        },
+        {
+          "r": "Photo Assistant",
+          "n": "Zach Sorensen"
+        }
+      ],
+      "video": "https://vimeo.com/1228991997?share=copy&fl=sv&fe=ci",
+      "id": "endo-womens-launch",
+      "selected": true,
+      "roles": [
+        "cd",
+        "stills",
+        "motion"
       ]
     },
     {
@@ -277,6 +374,22 @@ window.JC_CONTENT = {
       ],
       "tone": "clay",
       "gal": 5
+    },
+    {
+      "client": "Ninetyseveltwelve",
+      "date": "January 5, 2025",
+      "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
+      "t": "Ninetyseveltwelve",
+      "tags": [
+        "Photography",
+        "Wellness"
+      ],
+      "yr": "2025",
+      "id": "ninetyseventwelve",
+      "selected": false,
+      "roles": [
+        "stills"
+      ]
     },
     {
       "loc": "Orange County, California",
@@ -344,55 +457,6 @@ window.JC_CONTENT = {
       "tone": "clay",
       "overlay": "SWI + ENDO",
       "gal": 5
-    },
-    {
-      "client": "Ninetyseveltwelve",
-      "date": "January 5, 2025",
-      "desc": "Social Imagery for the barber NINETYSEVENTWELVE",
-      "t": "Ninetyseveltwelve",
-      "tags": [
-        "Photography",
-        "Wellness"
-      ],
-      "yr": "2025",
-      "id": "ninetyseventwelve",
-      "selected": false,
-      "roles": [
-        "stills"
-      ]
-    },
-    {
-      "loc": "Orange County",
-      "del": [
-        "Stills"
-      ],
-      "client": "Endociety",
-      "date": "August 10, 2026",
-      "desc": "Ecom/social imagery for fall capsule drop 2.0",
-      "t": "Endo Fall Capsule 2.0",
-      "tags": [
-        "Campaign",
-        "Photography",
-        "Outdoor",
-        "Sport",
-        "Wellness"
-      ],
-      "yr": "2026",
-      "credits": [
-        {
-          "r": "Creative Director",
-          "n": "Devon Polk"
-        },
-        {
-          "r": "Talent",
-          "n": "AJ Castillo"
-        }
-      ],
-      "id": "endo-fall-ii",
-      "selected": true,
-      "roles": [
-        "stills"
-      ]
     },
     {
       "loc": "Los Angeles, CA",

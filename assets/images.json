@@ -732,11 +732,17 @@
       "endo-july-2026/07-945ed2de-1600.jpg",
       "endo-july-2026/08-ea64df0a-2400.jpg",
       "endo-july-2026/09-ebf439b4-2400.jpg",
-      "endo-july-2026/10-feb5e5ae-2400.jpg"
+      "endo-july-2026/10-feb5e5ae-2400.jpg",
+      "endo-july-2026/11-b7162a8d-2400.jpg",
+      "endo-july-2026/12-f3cb1423-1600.jpg",
+      "endo-july-2026/13-14c3dc3f-1600.jpg",
+      "endo-july-2026/14-86bd3ef9-2400.jpg",
+      "endo-july-2026/15-cb165404-1600.jpg",
+      "endo-july-2026/16-740b8e48-1600.jpg"
     ],
     "main": "endo-july-2026/main-b8061cf3-2400.jpg",
     "og": "endo-july-2026/og-b8061cf3-2400.jpg",
-    "_src": "{\"main\":\"/content/media/endo-july-2026/_09a9046.jpg\",\"og\":\"/content/media/endo-july-2026/_09a9046.jpg\",\"gallery\":[\"/content/media/endo-july-2026/_09a9046.jpg\",\"/content/media/endo-july-2026/_09a8964.jpg\",\"/content/media/endo-july-2026/_09a9009.jpg\",\"/content/media/endo-july-2026/_09a8953.jpg\",\"/content/media/endo-july-2026/_09a9097.jpg\",\"/content/media/endo-july-2026/_09a9102.jpg\",\"/content/media/endo-july-2026/_09a9055.jpg\",\"/content/media/endo-july-2026/_09a8879.jpg\",\"/content/media/endo-july-2026/_09a8826.jpg\",\"/content/media/endo-july-2026/_09a90131.jpg\"]}"
+    "_src": "{\"main\":\"/content/media/endo-july-2026/_09a9046.jpg\",\"og\":\"/content/media/endo-july-2026/_09a9046.jpg\",\"gallery\":[\"/content/media/endo-july-2026/_09a9046.jpg\",\"/content/media/endo-july-2026/_09a8964.jpg\",\"/content/media/endo-july-2026/_09a9009.jpg\",\"/content/media/endo-july-2026/_09a8953.jpg\",\"/content/media/endo-july-2026/_09a9097.jpg\",\"/content/media/endo-july-2026/_09a9102.jpg\",\"/content/media/endo-july-2026/_09a9055.jpg\",\"/content/media/endo-july-2026/_09a8879.jpg\",\"/content/media/endo-july-2026/_09a8826.jpg\",\"/content/media/endo-july-2026/_09a90131.jpg\",\"/content/media/endo-july-2026/main-f90ae040-2400.avif\",\"/content/media/endo-july-2026/02-53d3b7a9-1600.avif\",\"/content/media/endo-july-2026/04-8f67375a-1600.avif\",\"/content/media/endo-july-2026/05-167e4bf0-2400.avif\",\"/content/media/endo-july-2026/06-53f6b902-1600.avif\",\"/content/media/endo-july-2026/07-3d7b8bb2-1600.avif\"]}"
   },
   "agronomy-ss-launch": {
     "gallery": [
@@ -907,14 +913,16 @@
   },
   "rt-nowhere-sept-2026": {
     "gallery": [
-      "rt-nowhere-sept-2026/01-19e1f43d-800.jpg",
-      "rt-nowhere-sept-2026/02-e282bd2c-1600.jpg",
-      "rt-nowhere-sept-2026/03-96dabda0-1600.jpg",
-      "rt-nowhere-sept-2026/04-81d5f16d-1600.jpg",
-      "rt-nowhere-sept-2026/05-4ebb43b0-2400.jpg"
+      "rt-nowhere-sept-2026/01-7cbde1d3-2400.jpg",
+      "rt-nowhere-sept-2026/02-9d98ffca-2400.jpg",
+      "rt-nowhere-sept-2026/03-e282bd2c-1600.jpg",
+      "rt-nowhere-sept-2026/04-19e1f43d-800.jpg",
+      "rt-nowhere-sept-2026/05-96dabda0-1600.jpg",
+      "rt-nowhere-sept-2026/06-81d5f16d-1600.jpg",
+      "rt-nowhere-sept-2026/07-4ebb43b0-2400.jpg"
     ],
-    "main": "rt-nowhere-sept-2026/main-d2d33ed5-2400.jpg",
-    "_src": "{\"main\":\"/content/media/rt-nowhere-sept-2026/r-t_08_03_2026_september_issue2571.jpg\",\"og\":null,\"gallery\":[\"/content/media/rt-nowhere-sept-2026/img_0700.jpg\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.47 pm.png\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.29 pm.png\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.55 pm.png\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.27.52 pm.png\"]}"
+    "main": "rt-nowhere-sept-2026/main-7cbde1d3-2400.jpg",
+    "_src": "{\"main\":\"/content/media/rt-nowhere-sept-2026/dscf6859.jpg\",\"og\":null,\"gallery\":[\"/content/media/rt-nowhere-sept-2026/dscf6859.jpg\",\"/content/media/rt-nowhere-sept-2026/dscf6865.jpg\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.47 pm.png\",\"/content/media/rt-nowhere-sept-2026/img_0700.jpg\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.29 pm.png\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.29.55 pm.png\",\"/content/media/rt-nowhere-sept-2026/screenshot-2026-09-07-at-12.27.52 pm.png\"]}"
   },
   "rt-the-spot": {
     "gallery": [
@@ -1354,5 +1362,79 @@
     ],
     "main": "endo-womens-launch/main-e15bde52-2400.jpg",
     "_src": "{\"main\":\"/content/media/endo-womens-launch/dscf6748.jpg\",\"og\":null,\"gallery\":[\"/content/media/endo-womens-launch/dscf6748.jpg\",\"/content/media/endo-womens-launch/dscf6676.jpg\",\"/content/media/endo-womens-launch/dscf6678.jpg\",\"/content/media/endo-womens-launch/dscf6821.jpg\",\"/content/media/endo-womens-launch/dscf6824.jpg\",\"/content/media/endo-womens-launch/frame-20.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3112.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_2983.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3152.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_2996.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3009.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3011.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_2925.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3150.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3054.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3026.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3150-1.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_2703.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_2808.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3323.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3174.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3158.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3325.jpg\",\"/content/media/endo-womens-launch/endo_womens_drop_3299.jpg\"]}"
+  },
+  "endo-ecom": {
+    "gallery": [
+      "endo-ecom/01-1707b537-2400.jpg"
+    ],
+    "main": "endo-ecom/main-1707b537-2400.jpg",
+    "_src": "{\"main\":\"/content/media/endo-ecom/l1280009.jpg\",\"og\":null,\"gallery\":[\"/content/media/endo-ecom/l1280009.jpg\"]}"
+  },
+  "endo-restock-ss26": {
+    "gallery": [
+      "endo-restock-ss26/01-f90ae040-2400.jpg",
+      "endo-restock-ss26/02-53d3b7a9-2400.jpg",
+      "endo-restock-ss26/03-2cab0015-2400.jpg",
+      "endo-restock-ss26/04-8f67375a-2400.jpg",
+      "endo-restock-ss26/05-167e4bf0-2400.jpg",
+      "endo-restock-ss26/06-53f6b902-2400.jpg",
+      "endo-restock-ss26/07-3d7b8bb2-2400.jpg"
+    ],
+    "main": "endo-restock-ss26/main-f90ae040-2400.jpg",
+    "og": "endo-restock-ss26/og-f90ae040-2400.jpg",
+    "_src": "{\"main\":\"/content/media/endo-fall-ii/dscf6508.jpg\",\"og\":\"/content/media/endo-fall-ii/dscf6508.jpg\",\"gallery\":[\"/content/media/endo-fall-ii/dscf6508.jpg\",\"/content/media/endo-fall-ii/dscf6536.jpg\",\"/content/media/endo-fall-ii/dscf6427.jpg\",\"/content/media/endo-fall-ii/dscf6539.jpg\",\"/content/media/endo-fall-ii/dscf6447.jpg\",\"/content/media/endo-fall-ii/dscf6586.jpg\",\"/content/media/endo-fall-ii/gfx_endo_test_sl2_leica_07_29_2026_cs_07-30-2026.jpg\"]}"
+  },
+  "merlot-haus-october-2026": {
+    "gallery": [
+      "merlot-haus-october-2026/01-806f317d-2400.jpg",
+      "merlot-haus-october-2026/02-5b681cfc-2400.jpg",
+      "merlot-haus-october-2026/03-d988f6c1-2400.jpg",
+      "merlot-haus-october-2026/04-c38ceffb-2400.jpg",
+      "merlot-haus-october-2026/05-7c045eec-2400.jpg",
+      "merlot-haus-october-2026/06-9ffa65e5-2400.jpg",
+      "merlot-haus-october-2026/07-d0659742-2400.jpg",
+      "merlot-haus-october-2026/08-c72b7f6e-2400.jpg",
+      "merlot-haus-october-2026/09-9d987783-2400.jpg",
+      "merlot-haus-october-2026/10-f3612710-2400.jpg",
+      "merlot-haus-october-2026/11-e2691138-2400.jpg",
+      "merlot-haus-october-2026/12-74b4d863-2400.jpg",
+      "merlot-haus-october-2026/13-54850e9b-2400.jpg",
+      "merlot-haus-october-2026/14-8a3140c0-2400.jpg",
+      "merlot-haus-october-2026/15-f3b42ea6-2400.jpg",
+      "merlot-haus-october-2026/16-0b5e527c-2400.jpg",
+      "merlot-haus-october-2026/17-8a2e21b3-2400.jpg",
+      "merlot-haus-october-2026/18-864ecb5c-2400.jpg"
+    ],
+    "main": "merlot-haus-october-2026/main-806f317d-2400.jpg",
+    "_src": "{\"main\":\"/content/media/merlot-haus-october-2026/haus5504_grained.jpg\",\"og\":null,\"gallery\":[\"/content/media/merlot-haus-october-2026/haus5504_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5332_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5506_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5360_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5362_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5349_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5374_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5378_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5369_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5386_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5410_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5505_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5388_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5406_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5433_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5437_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5441_grained.jpg\",\"/content/media/merlot-haus-october-2026/haus5469_grained.jpg\"]}"
+  },
+  "nova-cloudform": {
+    "gallery": [
+      "nova-cloudform/01-5ad8f15b-2400.jpg",
+      "nova-cloudform/02-a46397e6-2400.jpg",
+      "nova-cloudform/03-2ad2e62e-2400.jpg",
+      "nova-cloudform/04-7f862825-2400.jpg",
+      "nova-cloudform/05-bcf5d889-2400.jpg",
+      "nova-cloudform/06-857df733-2400.jpg",
+      "nova-cloudform/07-df30e200-2400.jpg",
+      "nova-cloudform/08-e09792f9-2400.jpg",
+      "nova-cloudform/09-8ba62520-2400.jpg",
+      "nova-cloudform/10-f72fe495-2400.jpg",
+      "nova-cloudform/11-5e1dcd9e-2400.jpg",
+      "nova-cloudform/12-5b9142b7-2400.jpg",
+      "nova-cloudform/13-cd7e7ac3-2400.jpg",
+      "nova-cloudform/14-a71a49d9-2400.jpg",
+      "nova-cloudform/15-53d4ae5f-2400.jpg",
+      "nova-cloudform/16-188796e2-2400.jpg",
+      "nova-cloudform/17-9ef2b3b3-2400.jpg",
+      "nova-cloudform/18-2e0fbb79-2400.jpg",
+      "nova-cloudform/19-822356c9-2400.jpg",
+      "nova-cloudform/20-dfd702f3-2400.jpg",
+      "nova-cloudform/21-4ce5237c-2400.jpg",
+      "nova-cloudform/22-324459c1-2400.jpg",
+      "nova-cloudform/23-5d456675-2400.jpg"
+    ],
+    "main": "nova-cloudform/main-5ad8f15b-2400.jpg",
+    "_src": "{\"main\":\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4117_grained.jpg\",\"og\":null,\"gallery\":[\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4117_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_3978_grained.jpg\",\"/content/media/nova-cloudform/dscf6868_grained.jpg\",\"/content/media/nova-cloudform/dscf6881_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4383_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_3869_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4051_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4081_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4187_grained.jpg\",\"/content/media/nova-cloudform/dscf6915_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4232_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4227_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4242_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4294_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4271_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4309_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4314_grained.jpg\",\"/content/media/nova-cloudform/dscf6925_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4358_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4463_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4470_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4519_grained.jpg\",\"/content/media/nova-cloudform/nova_cloud_form_10_21_2026_4583_grained.jpg\"]}"
   }
 }
